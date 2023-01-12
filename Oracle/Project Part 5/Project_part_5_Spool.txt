@@ -1,0 +1,158 @@
+Connected.
+
+TimeLine                                                                        
+--------------------------------------------------------------------------------
+20 October   2022 Thursday  11:18:14                                            
+
+'============== Question 1 =============='
+Connected.
+
+Procedure created.
+
+'************** Testing **************'
+Term ID is: 1. Term Description is: Fall 2005. Status is: CLOSED                
+Term ID is: 2. Term Description is: Spring 2006. Status is: CLOSED              
+Term ID is: 3. Term Description is: Summer 2006. Status is: CLOSED              
+Term ID is: 4. Term Description is: Fall 2006. Status is: CLOSED                
+Term ID is: 5. Term Description is: Spring 2007. Status is: CLOSED              
+Term ID is: 6. Term Description is: Summer 2007. Status is: OPEN                
+
+PL/SQL procedure successfully completed.
+
+'============== Question 2 =============='
+Connected.
+
+Procedure created.
+
+'************** Testing **************'
+The item descrption: 3-Season Tent. The price: 259.99. The color: Sky Blue.     
+Quantity on Hand: 16                                                            
+The item descrption: 3-Season Tent. The price: 259.99. The color: Light Grey.   
+Quantity on Hand: 12                                                            
+The item descrption: Women's Hiking Shorts. The price: 29.95. The color: Khaki. 
+Quantity on Hand: 150                                                           
+The item descrption: Women's Hiking Shorts. The price: 29.95. The color: Khaki. 
+Quantity on Hand: 147                                                           
+The item descrption: Women's Hiking Shorts. The price: 29.95. The color: Khaki. 
+Quantity on Hand: 0                                                             
+The item descrption: Women's Hiking Shorts. The price: 29.95. The color: Navy.  
+Quantity on Hand: 139                                                           
+The item descrption: Women's Hiking Shorts. The price: 29.95. The color: Navy.  
+Quantity on Hand: 137                                                           
+The item descrption: Women's Hiking Shorts. The price: 29.95. The color: Navy.  
+Quantity on Hand: 115                                                           
+The item descrption: Women's Fleece Pullover. The price: 59.95. The color:      
+Eggplant. Quantity on Hand: 135                                                 
+The item descrption: Women's Fleece Pullover. The price: 59.95. The color:      
+Eggplant. Quantity on Hand: 168                                                 
+The item descrption: Women's Fleece Pullover. The price: 59.95. The color:      
+Eggplant. Quantity on Hand: 187                                                 
+The item descrption: Women's Fleece Pullover. The price: 59.95. The color:      
+Royal. Quantity on Hand: 0                                                      
+The item descrption: Women's Fleece Pullover. The price: 59.95. The color:      
+Royal. Quantity on Hand: 124                                                    
+The item descrption: Women's Fleece Pullover. The price: 59.95. The color:      
+Royal. Quantity on Hand: 112                                                    
+The item descrption: Children's Beachcomber Sandals. The price: 15.99. The      
+color: Turquoise. Quantity on Hand: 121                                         
+The item descrption: Children's Beachcomber Sandals. The price: 15.99. The      
+color: Turquoise. Quantity on Hand: 111                                         
+The item descrption: Children's Beachcomber Sandals. The price: 15.99. The      
+color: Turquoise. Quantity on Hand: 113                                         
+The item descrption: Children's Beachcomber Sandals. The price: 15.99. The      
+color: Turquoise. Quantity on Hand: 121                                         
+The item descrption: Children's Beachcomber Sandals. The price: 15.99. The      
+color: Bright Pink. Quantity on Hand: 148                                       
+The item descrption: Children's Beachcomber Sandals. The price: 15.99. The      
+color: Bright Pink. Quantity on Hand: 137                                       
+The item descrption: Children's Beachcomber Sandals. The price: 15.99. The      
+color: Bright Pink. Quantity on Hand: 134                                       
+The item descrption: Children's Beachcomber Sandals. The price: 15.99. The      
+color: Bright Pink. Quantity on Hand: 123                                       
+The item descrption: Men's Expedition Parka. The price: 199.95. The color:      
+Spruce. Quantity on Hand: 114                                                   
+The item descrption: Men's Expedition Parka. The price: 199.95. The color:      
+Spruce. Quantity on Hand: 17                                                    
+The item descrption: Men's Expedition Parka. The price: 209.95. The color:      
+Spruce. Quantity on Hand: 0                                                     
+The item descrption: Men's Expedition Parka. The price: 209.95. The color:      
+Spruce. Quantity on Hand: 12                                                    
+The item descrption: Boy's Surf Shorts. The price: 15.95. The color: Blue.      
+Quantity on Hand: 50                                                            
+The item descrption: Boy's Surf Shorts. The price: 15.95. The color: Blue.      
+Quantity on Hand: 100                                                           
+The item descrption: Boy's Surf Shorts. The price: 15.95. The color: Blue.      
+Quantity on Hand: 100                                                           
+The item descrption: Girl's Soccer Tee. The price: 19.99. The color: White.     
+Quantity on Hand: 100                                                           
+The item descrption: Girl's Soccer Tee. The price: 19.99. The color: White.     
+Quantity on Hand: 100                                                           
+The item descrption: Girl's Soccer Tee. The price: 19.99. The color: White.     
+Quantity on Hand: 100                                                           
+The item descrption: Girl's Soccer Tee. The price: 19.99. The color: White.     
+Quantity on Hand: 100                                                           
+
+PL/SQL procedure successfully completed.
+
+'============== Question 3 =============='
+
+Procedure created.
+
+'************** Testing **************'
+The old price of inventory number 1 is: 259.99. The new price is: 519.98        
+The old price of inventory number 2 is: 259.99. The new price is: 519.98        
+The old price of inventory number 3 is: 29.95. The new price is: 59.9           
+The old price of inventory number 4 is: 29.95. The new price is: 59.9           
+The old price of inventory number 5 is: 29.95. The new price is: 59.9           
+The old price of inventory number 6 is: 29.95. The new price is: 59.9           
+The old price of inventory number 7 is: 29.95. The new price is: 59.9           
+The old price of inventory number 8 is: 29.95. The new price is: 59.9           
+The old price of inventory number 9 is: 59.95. The new price is: 119.9          
+The old price of inventory number 10 is: 59.95. The new price is: 119.9         
+The old price of inventory number 11 is: 59.95. The new price is: 119.9         
+The old price of inventory number 12 is: 59.95. The new price is: 119.9         
+The old price of inventory number 13 is: 59.95. The new price is: 119.9         
+The old price of inventory number 14 is: 59.95. The new price is: 119.9         
+The old price of inventory number 15 is: 15.99. The new price is: 31.98         
+The old price of inventory number 16 is: 15.99. The new price is: 31.98         
+The old price of inventory number 17 is: 15.99. The new price is: 31.98         
+The old price of inventory number 18 is: 15.99. The new price is: 31.98         
+The old price of inventory number 19 is: 15.99. The new price is: 31.98         
+The old price of inventory number 20 is: 15.99. The new price is: 31.98         
+The old price of inventory number 21 is: 15.99. The new price is: 31.98         
+The old price of inventory number 22 is: 15.99. The new price is: 31.98         
+The old price of inventory number 23 is: 199.95. The new price is: 399.9        
+The old price of inventory number 24 is: 199.95. The new price is: 399.9        
+The old price of inventory number 25 is: 209.95. The new price is: 419.9        
+The old price of inventory number 26 is: 209.95. The new price is: 419.9        
+The old price of inventory number 27 is: 15.95. The new price is: 31.9          
+The old price of inventory number 28 is: 15.95. The new price is: 31.9          
+The old price of inventory number 29 is: 15.95. The new price is: 31.9          
+The old price of inventory number 30 is: 19.99. The new price is: 39.98         
+The old price of inventory number 31 is: 19.99. The new price is: 39.98         
+The old price of inventory number 32 is: 19.99. The new price is: 39.98         
+
+PL/SQL procedure successfully completed.
+
+'============== Question 4 =============='
+Connected.
+
+Procedure created.
+
+'************** First test with 2 employees with highest **************'
+Top 2 employees are                                                             
+KING 5000                                                                       
+SCOTT 3000                                                                      
+
+PL/SQL procedure successfully completed.
+
+'************** Second test with 5 employees with highest **************'
+Top 5 employees are                                                             
+KING 5000                                                                       
+SCOTT 3000                                                                      
+FORD 3000                                                                       
+JONES 2975                                                                      
+BLAKE 2850                                                                      
+
+PL/SQL procedure successfully completed.
+

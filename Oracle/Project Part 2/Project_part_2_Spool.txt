@@ -1,0 +1,96 @@
+
+TIMELINE                                                                        
+--------------------------------------------------------------------------------
+12 September 2022 Monday    10:47:37                                            
+
+'***************** Project Part 2 *****************'
+'================= Question 1 ================='
+
+Function created.
+
+'================= Test first time with 2 parameters: 2 and 3 ================='
+
+ 2 times 3                                                                      
+----------                                                                      
+         6                                                                      
+
+'=================Test second time with 2 parameters: 8 and 9 ================='
+
+ 8 times 9                                                                      
+----------                                                                      
+        72                                                                      
+
+'================= Question 2 ================='
+
+Procedure created.
+
+'================= Test first time with 2 parameters: 6 and 8 ================='
+For a rectangle of size 6 by 8 the area is 48.                                  
+
+PL/SQL procedure successfully completed.
+
+'================= Test second time with 2 parameters: 9 and 10 ================='
+For a rectangle of size 9 by 10 the area is 90.                                 
+
+PL/SQL procedure successfully completed.
+
+'================= Question 3 ================='
+
+Procedure created.
+
+'================= Test first time with 2 parameters: 6 and 7 ================='
+For a rectangle of size 6 by 7 the area is 42.                                  
+
+PL/SQL procedure successfully completed.
+
+'================= Test second time with 2 parameters: 5 and 5 ================='
+For a square of size 5 by 5 the area is 25.                                     
+
+PL/SQL procedure successfully completed.
+
+'================= Question 4 ================='
+
+Procedure created.
+
+'================= Test first time with 2 parameters: 2 and Y ================='
+For 2 dollars Canadian, you will have 200 YEN                                   
+
+PL/SQL procedure successfully completed.
+
+'================= Test second time with 2 parameters: 3 and V ================='
+For 3 dollars Canadian, you will have 30000 Viet Nam DONG                       
+
+PL/SQL procedure successfully completed.
+
+'================= Question 5 ================='
+
+Function created.
+
+'================= Question 6 ================='
+
+Procedure created.
+
+'================= Test first time with a parameter: 6 ================='
+Number 6 is EVEN                                                                
+
+PL/SQL procedure successfully completed.
+
+'================= Test second time with a parameter: 5 ================='
+Number 5 is ODD                                                                 
+
+PL/SQL procedure successfully completed.
+
+'================= BONUS QUESTION ================='
+
+Procedure created.
+
+'================= Test first time with a parameter: 6 ================='
+For 2 YEN, you will have 200 Viet Nam DONG                                      
+
+PL/SQL procedure successfully completed.
+
+'================= Test second time with a parameter: 5 ================='
+For 20000 Viet Nam DONG, you will have 2 dollars Canadian                       
+
+PL/SQL procedure successfully completed.
+

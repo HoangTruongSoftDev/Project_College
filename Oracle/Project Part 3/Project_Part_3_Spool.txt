@@ -1,0 +1,110 @@
+
+Session altered.
+
+'========================= Question 1 ========================='
+Connected.
+
+TimeLine                                                                                                                                                                                                
+------------------------------------------------------------------------------------------                                                                                                              
+02 October   2022 Sunday    01:29:09                                                                                                                                                                    
+
+
+Procedure created.
+
+'************** First Test with correct input **************'
+The information of Employee whose ID is 7900
+Department Name: SALES
+Employee name: JAMES
+Annual salary: 11400                                                                                           
+
+PL/SQL procedure successfully completed.
+
+'************** Second Test with incorrect input **************'
+There is no data match with Employee ID: 1. Please insert another ID!                                                                                                                                   
+
+PL/SQL procedure successfully completed.
+
+'========================= Question 2 ========================='
+Connected.
+
+Procedure created.
+
+'************** First Test with correct input **************'
+The information of inventory is:
+Description of item is: 3-Season Tent
+The price is: 259.99
+The color is: Sky Blue
+The quantity on hand is: 16
+The value is: 4159.84                                    
+
+PL/SQL procedure successfully completed.
+
+'************** Second Test with incorrect input **************'
+Your input inventory id 1000 doesn't exist. Please try another inventory id.                                                                                                                            
+
+PL/SQL procedure successfully completed.
+
+'========================= Question 3 ========================='
+Connected.
+
+Session altered.
+
+
+Function created.
+
+
+Procedure created.
+
+'************** First Test with correct input **************'
+Student information of student number 1 has been found! His/Her information is: 
+Student Name: Sarah Miller
+Date of Birth: 14-07-1985
+Age: 38                                                           
+
+PL/SQL procedure successfully completed.
+
+'************** Second Test with incorrect input **************'
+The student number 1000 you input doesn't exist. Please enter another one.                                                                                                                              
+
+PL/SQL procedure successfully completed.
+
+'========================= Question 4 ========================='
+Connected.
+
+Procedure created.
+
+'************** First Test with correct input **************'
+Consultant has been found. His/Her information is: 
+Last Name: Myers
+First Name: Mark
+Skill Description: Java Programming                                                                               
+
+PL/SQL procedure successfully completed.
+
+'************** Second Test with incorrect input with wrong Consultant ID **************'
+The Consultant ID you input doesn't exist. Please try again!                                                                                                                                            
+
+PL/SQL procedure successfully completed.
+
+'************** Third Test with incorrect input with wrong Skill ID **************'
+The Skill ID you input doesn't exist. Please try again!                                                                                                                                                 
+
+PL/SQL procedure successfully completed.
+
+'************** Fourth Test with incorrect input with wrong Certification **************'
+The certification must be 'Y' or 'N'. Please try again!                                                                                                                                                 
+
+PL/SQL procedure successfully completed.
+
+'************** Fifth Test with insert a new record into Consultant_Skill table **************'
+Consultant who has consultant ID 100 and skill ID 9 has wrong certification.                                                                                                                            
+Consultant who has consultant ID 100 and skill ID 9 certification 'N' is Updated!                                                                                                                       
+
+PL/SQL procedure successfully completed.
+
+'************** Sixth Test with update the certification of Consultant_Skill table**************'
+Consultant who has consultant ID 100 and skill ID 9 has wrong certification.                                                                                                                            
+Consultant who has consultant ID 100 and skill ID 9 certification 'Y' is Updated!                                                                                                                       
+
+PL/SQL procedure successfully completed.
+

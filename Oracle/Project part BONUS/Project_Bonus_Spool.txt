@@ -1,0 +1,127 @@
+SQL> CONNECT sys/sys as sysdba;
+Connected.
+SQL> SELECT TO_DATE(SYSDATE,'DD/MM/YYYY Day HH:MI:SS') AS "TIMELINE" FROM Dual;
+SELECT TO_DATE(SYSDATE,'DD/MM/YYYY Day HH:MI:SS') AS "TIMELINE" FROM Dual
+               *
+ERROR at line 1:
+ORA-01840: input value not long enough for date format 
+
+
+SQL> PROMPT ************************ QUESTION 1 ************************;
+************************ QUESTION 1 ************************
+SQL> --Create a view containing item description, item_id, price, color, inventory_id, size
+SQL> --of all the inventory of clearwater database.
+SQL> --Can we UPDATE, INSERT directly TO the view? If NOT, can you provide a solution?
+SQL> 
+SQL> GRANT CREATE VIEW TO des02;
+
+Grant succeeded.
+
+SQL> CONNECT des02/des02;
+Connected.
+SQL> 
+SQL> CREATE OR REPLACE VIEW inventory_view AS
+  2  SELECT item.item_desc, inventory.item_id, inventory.inv_price, inventory.color, inventory.inv_id, inventory.inv_size
+  3  FROM item
+  4  JOIN inventory
+  5  ON item.item_id = inventory.item_id
+  6  JOIN color
+  7  ON inventory.color = color.color;
+
+View created.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> CREATE OR REPLACE TRIGGER inventory_view_trigger
+  2  INSTEAD OF UPDATE OR INSERT ON inventory_view
+  3  FOR EACH ROW
+  4  BEGIN
+  5  --IF INSERTING THEN
+  6  --	INSERT INTO item(item_desc, item_id) VALUES (:NEW.item_desc, :NEW.item_id);
+  7  --	INSERT INTO color VALUES (:NEW.color);
+  8  --	INSERT INTO inventory(inv_price, item_id, color, inv_id,inv_size) VALUES (:NEW.inv_price,:NEW.item_id, :NEW.color,:NEW.inv_id,:NEW.inv_size);
+  9  --ELSIF UPDATING THEN
+ 10  
+ 11  	--FOR	each_color in (SELECT * FROM color) LOOP
+ 12  	--	IF
+ 13  	--IF :NEW.color != (SELECT * FROM color) THEN
+ 14  	--	INSERT INTO color VALUES(:NEW.color);
+ 15  	--END IF;
+ 16  	UPDATE item SET item_desc = :NEW.item_desc, item_id = :NEW.item_id
+ 17  	WHERE item_id = :NEW.item_id;
+ 18  	UPDATE inventory SET inv_price = :NEW.inv_price, item_id = :NEW.item_id, color = :NEW.color, inv_id = :NEW.inv_id,inv_size = :NEW.inv_size
+ 19  	WHERE inv_id = :NEW.inv_id AND item_id = :NEW.item_id;
+ 20  --END IF;
+ 21  END;
+ 22  /
+
+Trigger created.
+
+SQL> 
+SQL> UPDATE inventory_view SET color = 'Blue' WHERE inv_id  = 2;
+
+1 row updated.
+
+SQL> UPDATE inventory_view SET item_desc = 'My Name' WHERE item_id = 2;
+
+2 rows updated.
+
+SQL> INSERT INTO inventory_view VALUES('Truong',3, 10, 'Navy', 3, 'M');
+
+1 row created.
+
+SQL> PROMPT ************************ QUESTION 2 ************************;
+************************ QUESTION 2 ************************
+SQL> --Create a view containing course name,
+SQL> --credit, student name, c_sec_id, SEC NUM, grade of all course section taken by a
+SQL> --student.
+SQL> --Can we UPDATE, INSERT directly TO the view?
+SQL> --If NOT, can you provide a solution?
+SQL> 
+SQL> CONNECT sys/sys as sysdba;
+Connected.
+SQL> GRANT CREATE VIEW TO des03;
+
+Grant succeeded.
+
+SQL> CONNECT des03/des03;
+Connected.
+SQL> 
+SQL> CREATE OR REPLACE VIEW course_view AS
+  2  SELECT COURSE.course_name, COURSE.credits, student.s_last, student.s_first, COURSE_SECTION.c_sec_id, COURSE_SECTION.sec_num, ENROLLMENT.grade
+  3  FROM COURSE
+  4  JOIN COURSE_SECTION
+  5  ON COURSE.course_id = COURSE_SECTION.course_id
+  6  JOIN ENROLLMENT
+  7  ON COURSE_SECTION.c_sec_id = ENROLLMENT.c_sec_id
+  8  JOIN student
+  9  ON ENROLLMENT.s_id = student.s_id;
+
+View created.
+
+SQL> 
+SQL> 
+SQL> CREATE OR REPLACE TRIGGER course_view_trigger
+  2  INSTEAD OF  UPDATE OR INSERT ON course_view
+  3  FOR EACH ROW
+  4  BEGIN
+  5  		UPDATE student SET s_last = :NEW.s_last WHERE s_id IN (SELECT s_id FROM enrollment WHERE c_sec_id = :NEW.c_sec_id);
+  6  		UPDATE course SET course_name = :NEW.course_name, credits = :NEW.credits WHERE course_id IN (SELECT course_id FROM COURSE_SECTION WHERE c_sec_id = :NEW.c_sec_id);
+  7  		UPDATE COURSE_SECTION SET c_sec_id = :NEW.c_sec_id, sec_num = :NEW.sec_num WHERE c_sec_id = :NEW.c_sec_id;
+  8  		UPDATE ENROLLMENT SET grade = :NEW.grade  WHERE c_sec_id = :NEW.c_sec_id;
+  9  
+ 10  END;
+ 11  /
+
+Trigger created.
+
+SQL> UPDATE course_view SET CREDITS = 10, SEC_NUM = 10, s_first = 'Truong' WHERE	c_sec_id = 12;
+
+3 rows updated.
+
+SQL> INSERT INTO course_view VALUES ('Programming', 5, 'Pham', 'Truong', 12, 5,'A');
+
+1 row created.
+
+SQL> SPOOL OFF

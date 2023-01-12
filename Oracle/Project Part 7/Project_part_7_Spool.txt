@@ -1,0 +1,833 @@
+Connected.
+
+TimeLine                                                                        
+--------------------------------------------------------                        
+10 11 2022 Thursday  12:05:03                                                   
+
+=============== Question 1 ===============
+
+Procedure created.
+
+=============== Executing Procedure P7Q1 ===============
+========================================                                                                                                                                                                
+Faculty Information: 
+	+ Faculty ID: 1
+	+ Last Name: Cox
+	+ First Name: Kim
+	+ Faculty Rank: ASSO                                                                                                       
+************************                                                                                                                                                                                
+Student Information: 
+	+ Student ID: 1
+	+ Last Name: Miller
+	+ First Name: Sarah
+	+ Date Of Birth: 85-07-14
+	+ Student Class: SR
+                                                                       
+************************                                                                                                                                                                                
+Student Information: 
+	+ Student ID: 2
+	+ Last Name: Umato
+	+ First Name: Brian
+	+ Date Of Birth: 85-08-19
+	+ Student Class: SR
+                                                                        
+************************                                                                                                                                                                                
+Student Information: 
+	+ Student ID: 3
+	+ Last Name: Black
+	+ First Name: Daniel
+	+ Date Of Birth: 82-10-10
+	+ Student Class: JR
+                                                                       
+========================================                                                                                                                                                                
+Faculty Information: 
+	+ Faculty ID: 2
+	+ Last Name: Blanchard
+	+ First Name: John
+	+ Faculty Rank: FULL                                                                                                
+************************                                                                                                                                                                                
+Student Information: 
+	+ Student ID: 4
+	+ Last Name: Mobley
+	+ First Name: Amanda
+	+ Date Of Birth: 86-09-24
+	+ Student Class: SO
+                                                                      
+========================================                                                                                                                                                                
+Faculty Information: 
+	+ Faculty ID: 3
+	+ Last Name: Williams
+	+ First Name: Jerry
+	+ Faculty Rank: ASST                                                                                                
+************************                                                                                                                                                                                
+Student Information: 
+	+ Student ID: 6
+	+ Last Name: Connoly
+	+ First Name: Michael
+	+ Date Of Birth: 86-12-04
+	+ Student Class: FR
+                                                                    
+========================================                                                                                                                                                                
+Faculty Information: 
+	+ Faculty ID: 4
+	+ Last Name: Sheng
+	+ First Name: Laura
+	+ Faculty Rank: INST                                                                                                   
+************************                                                                                                                                                                                
+Student Information: 
+	+ Student ID: 5
+	+ Last Name: Sanchez
+	+ First Name: Ruben
+	+ Date Of Birth: 86-11-20
+	+ Student Class: SO
+                                                                      
+========================================                                                                                                                                                                
+Faculty Information: 
+	+ Faculty ID: 5
+	+ Last Name: Brown
+	+ First Name: Philip
+	+ Faculty Rank: ASSO                                                                                                  
+
+PL/SQL procedure successfully completed.
+
+=============== Question 2 ===============
+Connected.
+
+Procedure created.
+
+=============== Executing Procedure P7Q2 ===============
+========================================                                                                                                                                                                
+Consultant Information: 
+	+ Consultant ID: 100
+	+ First Name: Mark
+	+ Last Name: Myers
+	+ Email: mmyers@swexpert.com                                                                                    
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 1
+	+ Skill Description: VB .NET Programming
+	+ Certification: Y
+                                                                                                       
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 3
+	+ Skill Description: Java Programming
+	+ Certification: Y
+                                                                                                          
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 6
+	+ Skill Description: Oracle Developer Programming
+	+ Certification: Y
+                                                                                              
+========================================                                                                                                                                                                
+Consultant Information: 
+	+ Consultant ID: 101
+	+ First Name: Sheila
+	+ Last Name: Hernandez
+	+ Email: shernandez@earthware.com                                                                         
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 4
+	+ Skill Description: Project Management
+	+ Certification: Y
+                                                                                                        
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 5
+	+ Skill Description: Web Application Programming
+	+ Certification: Y
+                                                                                               
+========================================                                                                                                                                                                
+Consultant Information: 
+	+ Consultant ID: 102
+	+ First Name: Brian
+	+ Last Name: Zhang
+	+ Email: zhang@swexpert.com                                                                                    
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 7
+	+ Skill Description: Oracle Database Administration
+	+ Certification: Y
+                                                                                            
+========================================                                                                                                                                                                
+Consultant Information: 
+	+ Consultant ID: 103
+	+ First Name: Sarah
+	+ Last Name: Carlson
+	+ Email: carlsons@swexpert.com                                                                               
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 1
+	+ Skill Description: VB .NET Programming
+	+ Certification: Y
+                                                                                                       
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 6
+	+ Skill Description: Oracle Developer Programming
+	+ Certification: Y
+                                                                                              
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 8
+	+ Skill Description: Windows NT/2000 Network Administration
+	+ Certification: Y
+                                                                                    
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 9
+	+ Skill Description: Windows XP Network Administration
+	+ Certification: Y
+                                                                                         
+========================================                                                                                                                                                                
+Consultant Information: 
+	+ Consultant ID: 104
+	+ First Name: Paul
+	+ Last Name: Courtlandt
+	+ Email: courtlpr@yamail.com                                                                               
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 8
+	+ Skill Description: Windows NT/2000 Network Administration
+	+ Certification: Y
+                                                                                    
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 9
+	+ Skill Description: Windows XP Network Administration
+	+ Certification: Y
+                                                                                         
+========================================                                                                                                                                                                
+Consultant Information: 
+	+ Consultant ID: 105
+	+ First Name: Janet
+	+ Last Name: Park
+	+ Email: jpark@swexpert.com                                                                                     
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 2
+	+ Skill Description: COBOL Programming
+	+ Certification: Y
+                                                                                                         
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 3
+	+ Skill Description: Java Programming
+	+ Certification: Y
+                                                                                                          
+************************                                                                                                                                                                                
+Skill Information: 
+	+ Skill ID: 4
+	+ Skill Description: Project Management
+	+ Certification: Y
+                                                                                                        
+
+PL/SQL procedure successfully completed.
+
+=============== Question 3 ===============
+Connected.
+
+Procedure created.
+
+=============== Executing Procedure P7Q3 ===============
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 1
+	+ Item Description: Men's Expedition Parka
+	+ Category ID: 3                                                                                                          
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 23
+	+ Color: Spruce
+	+ Size: S
+	+ Quantity on Hand: 114
+	+ Price: 199.95
+                                                                                      
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 24
+	+ Color: Spruce
+	+ Size: M
+	+ Quantity on Hand: 17
+	+ Price: 199.95
+                                                                                       
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 25
+	+ Color: Spruce
+	+ Size: L
+	+ Quantity on Hand: 0
+	+ Price: 209.95
+                                                                                        
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 26
+	+ Color: Spruce
+	+ Size: XL
+	+ Quantity on Hand: 12
+	+ Price: 209.95
+                                                                                      
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 2
+	+ Item Description: 3-Season Tent
+	+ Category ID: 4                                                                                                                   
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 1
+	+ Color: Sky Blue
+	+ Size: 
+	+ Quantity on Hand: 16
+	+ Price: 259.99
+                                                                                       
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 2
+	+ Color: Light Grey
+	+ Size: 
+	+ Quantity on Hand: 12
+	+ Price: 259.99
+                                                                                     
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 3
+	+ Item Description: Women's Hiking Shorts
+	+ Category ID: 1                                                                                                           
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 3
+	+ Color: Khaki
+	+ Size: S
+	+ Quantity on Hand: 150
+	+ Price: 29.95
+                                                                                         
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 4
+	+ Color: Khaki
+	+ Size: M
+	+ Quantity on Hand: 147
+	+ Price: 29.95
+                                                                                         
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 5
+	+ Color: Khaki
+	+ Size: L
+	+ Quantity on Hand: 0
+	+ Price: 29.95
+                                                                                           
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 6
+	+ Color: Navy
+	+ Size: S
+	+ Quantity on Hand: 139
+	+ Price: 29.95
+                                                                                          
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 7
+	+ Color: Navy
+	+ Size: M
+	+ Quantity on Hand: 137
+	+ Price: 29.95
+                                                                                          
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 8
+	+ Color: Navy
+	+ Size: L
+	+ Quantity on Hand: 115
+	+ Price: 29.95
+                                                                                          
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 4
+	+ Item Description: Women's Fleece Pullover
+	+ Category ID: 1                                                                                                         
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 9
+	+ Color: Eggplant
+	+ Size: S
+	+ Quantity on Hand: 135
+	+ Price: 59.95
+                                                                                      
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 10
+	+ Color: Eggplant
+	+ Size: M
+	+ Quantity on Hand: 168
+	+ Price: 59.95
+                                                                                     
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 11
+	+ Color: Eggplant
+	+ Size: L
+	+ Quantity on Hand: 187
+	+ Price: 59.95
+                                                                                     
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 12
+	+ Color: Royal
+	+ Size: S
+	+ Quantity on Hand: 0
+	+ Price: 59.95
+                                                                                          
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 13
+	+ Color: Royal
+	+ Size: M
+	+ Quantity on Hand: 124
+	+ Price: 59.95
+                                                                                        
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 14
+	+ Color: Royal
+	+ Size: L
+	+ Quantity on Hand: 112
+	+ Price: 59.95
+                                                                                        
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 5
+	+ Item Description: Children's Beachcomber Sandals
+	+ Category ID: 2                                                                                                  
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 15
+	+ Color: Turquoise
+	+ Size: 10
+	+ Quantity on Hand: 121
+	+ Price: 15.99
+                                                                                   
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 16
+	+ Color: Turquoise
+	+ Size: 11
+	+ Quantity on Hand: 111
+	+ Price: 15.99
+                                                                                   
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 17
+	+ Color: Turquoise
+	+ Size: 12
+	+ Quantity on Hand: 113
+	+ Price: 15.99
+                                                                                   
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 18
+	+ Color: Turquoise
+	+ Size: 1
+	+ Quantity on Hand: 121
+	+ Price: 15.99
+                                                                                    
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 19
+	+ Color: Bright Pink
+	+ Size: 10
+	+ Quantity on Hand: 148
+	+ Price: 15.99
+                                                                                 
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 20
+	+ Color: Bright Pink
+	+ Size: 11
+	+ Quantity on Hand: 137
+	+ Price: 15.99
+                                                                                 
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 21
+	+ Color: Bright Pink
+	+ Size: 12
+	+ Quantity on Hand: 134
+	+ Price: 15.99
+                                                                                 
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 22
+	+ Color: Bright Pink
+	+ Size: 1
+	+ Quantity on Hand: 123
+	+ Price: 15.99
+                                                                                  
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 6
+	+ Item Description: Boy's Surf Shorts
+	+ Category ID: 2                                                                                                               
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 27
+	+ Color: Blue
+	+ Size: S
+	+ Quantity on Hand: 50
+	+ Price: 15.95
+                                                                                          
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 28
+	+ Color: Blue
+	+ Size: M
+	+ Quantity on Hand: 100
+	+ Price: 15.95
+                                                                                         
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 29
+	+ Color: Blue
+	+ Size: L
+	+ Quantity on Hand: 100
+	+ Price: 15.95
+                                                                                         
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 7
+	+ Item Description: Girl's Soccer Tee
+	+ Category ID: 2                                                                                                               
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 30
+	+ Color: White
+	+ Size: S
+	+ Quantity on Hand: 100
+	+ Price: 19.99
+                                                                                        
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 31
+	+ Color: White
+	+ Size: M
+	+ Quantity on Hand: 100
+	+ Price: 19.99
+                                                                                        
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 32
+	+ Color: White
+	+ Size: L
+	+ Quantity on Hand: 100
+	+ Price: 19.99
+                                                                                        
+
+PL/SQL procedure successfully completed.
+
+=============== Question 4 ===============
+
+Procedure created.
+
+=============== Executing Procedure P7Q4 ===============
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 1
+	+ Item Description: Men's Expedition Parka
+	+ Item Value: 28712.85
+	+ Category ID: 3                                                                                  
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 23
+	+ Color: Spruce
+	+ Size: S
+	+ Quantity on Hand: 114
+	+ Price: 199.95
+                                                                                      
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 24
+	+ Color: Spruce
+	+ Size: M
+	+ Quantity on Hand: 17
+	+ Price: 199.95
+                                                                                       
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 25
+	+ Color: Spruce
+	+ Size: L
+	+ Quantity on Hand: 0
+	+ Price: 209.95
+                                                                                        
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 26
+	+ Color: Spruce
+	+ Size: XL
+	+ Quantity on Hand: 12
+	+ Price: 209.95
+                                                                                      
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 2
+	+ Item Description: 3-Season Tent
+	+ Item Value: 7279.72
+	+ Category ID: 4                                                                                            
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 1
+	+ Color: Sky Blue
+	+ Size: 
+	+ Quantity on Hand: 16
+	+ Price: 259.99
+                                                                                       
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 2
+	+ Color: Light Grey
+	+ Size: 
+	+ Quantity on Hand: 12
+	+ Price: 259.99
+                                                                                     
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 3
+	+ Item Description: Women's Hiking Shorts
+	+ Item Value: 20605.6
+	+ Category ID: 1                                                                                    
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 3
+	+ Color: Khaki
+	+ Size: S
+	+ Quantity on Hand: 150
+	+ Price: 29.95
+                                                                                         
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 4
+	+ Color: Khaki
+	+ Size: M
+	+ Quantity on Hand: 147
+	+ Price: 29.95
+                                                                                         
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 5
+	+ Color: Khaki
+	+ Size: L
+	+ Quantity on Hand: 0
+	+ Price: 29.95
+                                                                                           
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 6
+	+ Color: Navy
+	+ Size: S
+	+ Quantity on Hand: 139
+	+ Price: 29.95
+                                                                                          
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 7
+	+ Color: Navy
+	+ Size: M
+	+ Quantity on Hand: 137
+	+ Price: 29.95
+                                                                                          
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 8
+	+ Color: Navy
+	+ Size: L
+	+ Quantity on Hand: 115
+	+ Price: 29.95
+                                                                                          
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 4
+	+ Item Description: Women's Fleece Pullover
+	+ Item Value: 43523.7
+	+ Category ID: 1                                                                                  
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 9
+	+ Color: Eggplant
+	+ Size: S
+	+ Quantity on Hand: 135
+	+ Price: 59.95
+                                                                                      
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 10
+	+ Color: Eggplant
+	+ Size: M
+	+ Quantity on Hand: 168
+	+ Price: 59.95
+                                                                                     
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 11
+	+ Color: Eggplant
+	+ Size: L
+	+ Quantity on Hand: 187
+	+ Price: 59.95
+                                                                                     
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 12
+	+ Color: Royal
+	+ Size: S
+	+ Quantity on Hand: 0
+	+ Price: 59.95
+                                                                                          
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 13
+	+ Color: Royal
+	+ Size: M
+	+ Quantity on Hand: 124
+	+ Price: 59.95
+                                                                                        
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 14
+	+ Color: Royal
+	+ Size: L
+	+ Quantity on Hand: 112
+	+ Price: 59.95
+                                                                                        
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 5
+	+ Item Description: Children's Beachcomber Sandals
+	+ Item Value: 16117.92
+	+ Category ID: 2                                                                          
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 15
+	+ Color: Turquoise
+	+ Size: 10
+	+ Quantity on Hand: 121
+	+ Price: 15.99
+                                                                                   
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 16
+	+ Color: Turquoise
+	+ Size: 11
+	+ Quantity on Hand: 111
+	+ Price: 15.99
+                                                                                   
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 17
+	+ Color: Turquoise
+	+ Size: 12
+	+ Quantity on Hand: 113
+	+ Price: 15.99
+                                                                                   
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 18
+	+ Color: Turquoise
+	+ Size: 1
+	+ Quantity on Hand: 121
+	+ Price: 15.99
+                                                                                    
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 19
+	+ Color: Bright Pink
+	+ Size: 10
+	+ Quantity on Hand: 148
+	+ Price: 15.99
+                                                                                 
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 20
+	+ Color: Bright Pink
+	+ Size: 11
+	+ Quantity on Hand: 137
+	+ Price: 15.99
+                                                                                 
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 21
+	+ Color: Bright Pink
+	+ Size: 12
+	+ Quantity on Hand: 134
+	+ Price: 15.99
+                                                                                 
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 22
+	+ Color: Bright Pink
+	+ Size: 1
+	+ Quantity on Hand: 123
+	+ Price: 15.99
+                                                                                  
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 6
+	+ Item Description: Boy's Surf Shorts
+	+ Item Value: 3987.5
+	+ Category ID: 2                                                                                         
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 27
+	+ Color: Blue
+	+ Size: S
+	+ Quantity on Hand: 50
+	+ Price: 15.95
+                                                                                          
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 28
+	+ Color: Blue
+	+ Size: M
+	+ Quantity on Hand: 100
+	+ Price: 15.95
+                                                                                         
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 29
+	+ Color: Blue
+	+ Size: L
+	+ Quantity on Hand: 100
+	+ Price: 15.95
+                                                                                         
+========================================                                                                                                                                                                
+Item Information: 
+	+ Item ID: 7
+	+ Item Description: Girl's Soccer Tee
+	+ Item Value: 5997
+	+ Category ID: 2                                                                                           
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 30
+	+ Color: White
+	+ Size: S
+	+ Quantity on Hand: 100
+	+ Price: 19.99
+                                                                                        
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 31
+	+ Color: White
+	+ Size: M
+	+ Quantity on Hand: 100
+	+ Price: 19.99
+                                                                                        
+************************                                                                                                                                                                                
+Inventory Information: 
+	+ Inventory ID: 32
+	+ Color: White
+	+ Size: L
+	+ Quantity on Hand: 100
+	+ Price: 19.99
+                                                                                        
+
+PL/SQL procedure successfully completed.
+

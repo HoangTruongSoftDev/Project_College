@@ -1,0 +1,122 @@
+
+TIMELINE                                                                                                                          
+------------------------------------------------------------------------------------------                                        
+06 September 2022 Tuesday   08:35:19                                                                                              
+
+'****************** Question 01 ******************'
+
+Procedure created.
+
+'============== First time execute with parameter is 2 =============='
+The triple of 2 is 6.                                                                                                             
+
+PL/SQL procedure successfully completed.
+
+'============== Second time execute with parameter is 3 =============='
+The triple of 3 is 9.                                                                                                             
+
+PL/SQL procedure successfully completed.
+
+'****************** Question 02 ******************'
+
+Procedure created.
+
+'============== First time execute with parameter is 12 =============='
+12 degree in C is equivalent to 53.6 in F.                                                                                        
+
+PL/SQL procedure successfully completed.
+
+'============== Second time execute with parameter is 2.3 =============='
+2.3 degree in C is equivalent to 36.14 in F.                                                                                      
+
+PL/SQL procedure successfully completed.
+
+'============== Third time execute with parameter is 56.56 =============='
+56.56 degree in C is equivalent to 133.808 in F.                                                                                  
+
+PL/SQL procedure successfully completed.
+
+'****************** Question 03 ******************'
+
+Procedure created.
+
+'============== First time execute with parameter is 53.6 =============='
+53.6 degree in F is equivalent to 12 in C.                                                                                        
+
+PL/SQL procedure successfully completed.
+
+'============== Second time execute with parameter is 36.14 =============='
+36.14 degree in F is equivalent to 2.3 in C.                                                                                      
+
+PL/SQL procedure successfully completed.
+
+'============== Third time execute with parameter is 133.08 =============='
+133.808 degree in F is equivalent to 56.56 in C.                                                                                  
+
+PL/SQL procedure successfully completed.
+
+'****************** Question 04 ******************'
+
+Procedure created.
+
+'============== Execute with parameter is 100 =============='
+For the price of $ 100
+You will have to pay $5 GST
+$ 9.98 QST for a total of $14.98
+The GRAND TOTAL is $ $114.98                  
+
+PL/SQL procedure successfully completed.
+
+'****************** Question 05 ******************'
+
+Procedure created.
+
+'============== Execute with parameter is 2 and 3=============='
+The area of a 2 by 3 retangle is 6 It's parameter is 10.                                                                          
+
+PL/SQL procedure successfully completed.
+
+'****************** Question 06 ******************'
+
+Function created.
+
+'============== First time execute with parameter is 12 =============='
+
+Celcius to Fahrenheit                                                                                                             
+---------------------                                                                                                             
+                 53.6                                                                                                             
+
+'============== Second time execute with parameter is 2.3 =============='
+
+Celcius to Fahrenheit                                                                                                             
+---------------------                                                                                                             
+                36.14                                                                                                             
+
+'============== Third time execute with parameter is 56.56 =============='
+
+Celcius to Fahrenheit                                                                                                             
+---------------------                                                                                                             
+              133.808                                                                                                             
+
+'****************** Question 07 ******************'
+
+Function created.
+
+'============== First time execute with parameter is 53.6 =============='
+
+Fahrenheit to Celcius                                                                                                             
+---------------------                                                                                                             
+                   12                                                                                                             
+
+'============== Second time execute with parameter is 36.14 =============='
+
+Fahrenheit to Celcius                                                                                                             
+---------------------                                                                                                             
+                  2.3                                                                                                             
+
+'============== Third time execute with parameter is 133.808 =============='
+
+Fahrenheit to Celcius                                                                                                             
+---------------------                                                                                                             
+                56.56                                                                                                             
+

@@ -1,0 +1,719 @@
+Connected.
+
+Timeline                                                                        
+--------------------------------------------------------------------------------
+27 October   2022 Thursday  10:12:40                                            
+
+'============== Question 1 =============='
+Connected.
+
+Procedure created.
+
+'************** Testing **************'
+
+===================================================================================                                                                                                                    
+Faculty ID is: 1. Faculty Last name: Cox. Faculty First name: Kim. Faculty rank: ASSO                                                                                                                   
+
+Students are advised by faculty number 1:                                                                                                                                                              
+	Student ID: 1. Student last name: Miller. Student First name: Sarah. Date of Birth: 85-07-14. Student Class: SR                                                                                        
+	Student ID: 2. Student last name: Umato. Student First name: Brian. Date of Birth: 85-08-19. Student Class: SR                                                                                         
+	Student ID: 3. Student last name: Black. Student First name: Daniel. Date of Birth: 82-10-10. Student Class: JR                                                                                        
+
+===================================================================================                                                                                                                    
+Faculty ID is: 2. Faculty Last name: Blanchard. Faculty First name: John. Faculty rank: FULL                                                                                                            
+
+Students are advised by faculty number 2:                                                                                                                                                              
+	Student ID: 4. Student last name: Mobley. Student First name: Amanda. Date of Birth: 86-09-24. Student Class: SO                                                                                       
+
+===================================================================================                                                                                                                    
+Faculty ID is: 3. Faculty Last name: Williams. Faculty First name: Jerry. Faculty rank: ASST                                                                                                            
+
+Students are advised by faculty number 3:                                                                                                                                                              
+	Student ID: 6. Student last name: Connoly. Student First name: Michael. Date of Birth: 86-12-04. Student Class: FR                                                                                     
+
+===================================================================================                                                                                                                    
+Faculty ID is: 4. Faculty Last name: Sheng. Faculty First name: Laura. Faculty rank: INST                                                                                                               
+
+Students are advised by faculty number 4:                                                                                                                                                              
+	Student ID: 5. Student last name: Sanchez. Student First name: Ruben. Date of Birth: 86-11-20. Student Class: SO                                                                                       
+
+===================================================================================                                                                                                                    
+Faculty ID is: 5. Faculty Last name: Brown. Faculty First name: Philip. Faculty rank: ASSO                                                                                                              
+
+Students are advised by faculty number 5:                                                                                                                                                              
+
+PL/SQL procedure successfully completed.
+
+'============== Question 2 =============='
+Connected.
+
+Procedure created.
+
+'************** Testing **************'
+
+===================================================================================                                                                                                                    
+The information of consultant whose ID is 100 and full name is Mark Myers                                                                                                                               
+	- The skill description: VB .NET Programming                                                                                                                                                           
+	- The status of certification: Y
+                                                                                                                                                                      
+	- The skill description: Java Programming                                                                                                                                                              
+	- The status of certification: N
+                                                                                                                                                                      
+	- The skill description: Oracle Developer Programming                                                                                                                                                  
+	- The status of certification: Y
+                                                                                                                                                                      
+
+===================================================================================                                                                                                                    
+The information of consultant whose ID is 101 and full name is Sheila Hernandez                                                                                                                         
+	- The skill description: Project Management                                                                                                                                                            
+	- The status of certification: Y
+                                                                                                                                                                      
+	- The skill description: Web Application Programming                                                                                                                                                   
+	- The status of certification: Y
+                                                                                                                                                                      
+
+===================================================================================                                                                                                                    
+The information of consultant whose ID is 102 and full name is Brian Zhang                                                                                                                              
+	- The skill description: Oracle Database Administration                                                                                                                                                
+	- The status of certification: Y
+                                                                                                                                                                      
+
+===================================================================================                                                                                                                    
+The information of consultant whose ID is 103 and full name is Sarah Carlson                                                                                                                            
+	- The skill description: VB .NET Programming                                                                                                                                                           
+	- The status of certification: N
+                                                                                                                                                                      
+	- The skill description: Oracle Developer Programming                                                                                                                                                  
+	- The status of certification: N
+                                                                                                                                                                      
+	- The skill description: Windows NT/2000 Network Administration                                                                                                                                        
+	- The status of certification: N
+                                                                                                                                                                      
+	- The skill description: Windows XP Network Administration                                                                                                                                             
+	- The status of certification: N
+                                                                                                                                                                      
+
+===================================================================================                                                                                                                    
+The information of consultant whose ID is 104 and full name is Paul Courtlandt                                                                                                                          
+	- The skill description: Windows NT/2000 Network Administration                                                                                                                                        
+	- The status of certification: N
+                                                                                                                                                                      
+	- The skill description: Windows XP Network Administration                                                                                                                                             
+	- The status of certification: Y
+                                                                                                                                                                      
+
+===================================================================================                                                                                                                    
+The information of consultant whose ID is 105 and full name is Janet Park                                                                                                                               
+	- The skill description: COBOL Programming                                                                                                                                                             
+	- The status of certification: N
+                                                                                                                                                                      
+	- The skill description: Java Programming                                                                                                                                                              
+	- The status of certification: N
+                                                                                                                                                                      
+	- The skill description: Project Management                                                                                                                                                            
+	- The status of certification: Y
+                                                                                                                                                                      
+
+PL/SQL procedure successfully completed.
+
+'============== Question 3  =============='
+Connected.
+
+Procedure created.
+
+'************** Testing **************'
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 1:                                                                                                                                                             
+	+ Description of item: Men's Expedition Parka                                                                                                                                                          
+	+ Category ID: 3                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 23:                                                                                                                                                    
+	+ Color of invetory: Spruce                                                                                                                                                                            
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 199.95                                                                                                                                                                            
+	+ Quantity on hand of invetory: 114                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 24:                                                                                                                                                    
+	+ Color of invetory: Spruce                                                                                                                                                                            
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 199.95                                                                                                                                                                            
+	+ Quantity on hand of invetory: 17                                                                                                                                                                     
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 25:                                                                                                                                                    
+	+ Color of invetory: Spruce                                                                                                                                                                            
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 209.95                                                                                                                                                                            
+	+ Quantity on hand of invetory: 0                                                                                                                                                                      
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 26:                                                                                                                                                    
+	+ Color of invetory: Spruce                                                                                                                                                                            
+	+ Size of invetory: XL                                                                                                                                                                                 
+	+ Price of invetory: 209.95                                                                                                                                                                            
+	+ Quantity on hand of invetory: 12                                                                                                                                                                     
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 2:                                                                                                                                                             
+	+ Description of item: 3-Season Tent                                                                                                                                                                   
+	+ Category ID: 4                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 1:                                                                                                                                                     
+	+ Color of invetory: Sky Blue                                                                                                                                                                          
+	+ Size of invetory:                                                                                                                                                                                    
+	+ Price of invetory: 259.99                                                                                                                                                                            
+	+ Quantity on hand of invetory: 16                                                                                                                                                                     
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 2:                                                                                                                                                     
+	+ Color of invetory: Light Grey                                                                                                                                                                        
+	+ Size of invetory:                                                                                                                                                                                    
+	+ Price of invetory: 259.99                                                                                                                                                                            
+	+ Quantity on hand of invetory: 12                                                                                                                                                                     
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 3:                                                                                                                                                             
+	+ Description of item: Women's Hiking Shorts                                                                                                                                                           
+	+ Category ID: 1                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 3:                                                                                                                                                     
+	+ Color of invetory: Khaki                                                                                                                                                                             
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 29.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 150                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 4:                                                                                                                                                     
+	+ Color of invetory: Khaki                                                                                                                                                                             
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 29.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 147                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 5:                                                                                                                                                     
+	+ Color of invetory: Khaki                                                                                                                                                                             
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 29.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 0                                                                                                                                                                      
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 6:                                                                                                                                                     
+	+ Color of invetory: Navy                                                                                                                                                                              
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 29.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 139                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 7:                                                                                                                                                     
+	+ Color of invetory: Navy                                                                                                                                                                              
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 29.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 137                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 8:                                                                                                                                                     
+	+ Color of invetory: Navy                                                                                                                                                                              
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 29.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 115                                                                                                                                                                    
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 4:                                                                                                                                                             
+	+ Description of item: Women's Fleece Pullover                                                                                                                                                         
+	+ Category ID: 1                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 9:                                                                                                                                                     
+	+ Color of invetory: Eggplant                                                                                                                                                                          
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 59.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 135                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 10:                                                                                                                                                    
+	+ Color of invetory: Eggplant                                                                                                                                                                          
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 59.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 168                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 11:                                                                                                                                                    
+	+ Color of invetory: Eggplant                                                                                                                                                                          
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 59.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 187                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 12:                                                                                                                                                    
+	+ Color of invetory: Royal                                                                                                                                                                             
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 59.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 0                                                                                                                                                                      
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 13:                                                                                                                                                    
+	+ Color of invetory: Royal                                                                                                                                                                             
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 59.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 124                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 14:                                                                                                                                                    
+	+ Color of invetory: Royal                                                                                                                                                                             
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 59.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 112                                                                                                                                                                    
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 5:                                                                                                                                                             
+	+ Description of item: Children's Beachcomber Sandals                                                                                                                                                  
+	+ Category ID: 2                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 15:                                                                                                                                                    
+	+ Color of invetory: Turquoise                                                                                                                                                                         
+	+ Size of invetory: 10                                                                                                                                                                                 
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 121                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 16:                                                                                                                                                    
+	+ Color of invetory: Turquoise                                                                                                                                                                         
+	+ Size of invetory: 11                                                                                                                                                                                 
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 111                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 17:                                                                                                                                                    
+	+ Color of invetory: Turquoise                                                                                                                                                                         
+	+ Size of invetory: 12                                                                                                                                                                                 
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 113                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 18:                                                                                                                                                    
+	+ Color of invetory: Turquoise                                                                                                                                                                         
+	+ Size of invetory: 1                                                                                                                                                                                  
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 121                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 19:                                                                                                                                                    
+	+ Color of invetory: Bright Pink                                                                                                                                                                       
+	+ Size of invetory: 10                                                                                                                                                                                 
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 148                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 20:                                                                                                                                                    
+	+ Color of invetory: Bright Pink                                                                                                                                                                       
+	+ Size of invetory: 11                                                                                                                                                                                 
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 137                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 21:                                                                                                                                                    
+	+ Color of invetory: Bright Pink                                                                                                                                                                       
+	+ Size of invetory: 12                                                                                                                                                                                 
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 134                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 22:                                                                                                                                                    
+	+ Color of invetory: Bright Pink                                                                                                                                                                       
+	+ Size of invetory: 1                                                                                                                                                                                  
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 123                                                                                                                                                                    
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 6:                                                                                                                                                             
+	+ Description of item: Boy's Surf Shorts                                                                                                                                                               
+	+ Category ID: 2                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 27:                                                                                                                                                    
+	+ Color of invetory: Blue                                                                                                                                                                              
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 15.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 50                                                                                                                                                                     
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 28:                                                                                                                                                    
+	+ Color of invetory: Blue                                                                                                                                                                              
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 15.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 100                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 29:                                                                                                                                                    
+	+ Color of invetory: Blue                                                                                                                                                                              
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 15.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 100                                                                                                                                                                    
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 7:                                                                                                                                                             
+	+ Description of item: Girl's Soccer Tee                                                                                                                                                               
+	+ Category ID: 2                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 30:                                                                                                                                                    
+	+ Color of invetory: White                                                                                                                                                                             
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 19.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 100                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 31:                                                                                                                                                    
+	+ Color of invetory: White                                                                                                                                                                             
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 19.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 100                                                                                                                                                                    
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 32:                                                                                                                                                    
+	+ Color of invetory: White                                                                                                                                                                             
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 19.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 100                                                                                                                                                                    
+
+PL/SQL procedure successfully completed.
+
+'============== Question 4  =============='
+
+Procedure created.
+
+'************** Testing **************'
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 1:                                                                                                                                                             
+	+ Description of item: Men's Expedition Parka                                                                                                                                                          
+	+ Category ID: 3                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 23:                                                                                                                                                    
+	+ Color of invetory: Spruce                                                                                                                                                                            
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 199.95                                                                                                                                                                            
+	+ Quantity on hand of invetory: 114                                                                                                                                                                    
+	+ Value of invetory: 22794.3                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 24:                                                                                                                                                    
+	+ Color of invetory: Spruce                                                                                                                                                                            
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 199.95                                                                                                                                                                            
+	+ Quantity on hand of invetory: 17                                                                                                                                                                     
+	+ Value of invetory: 3399.15                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 25:                                                                                                                                                    
+	+ Color of invetory: Spruce                                                                                                                                                                            
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 209.95                                                                                                                                                                            
+	+ Quantity on hand of invetory: 0                                                                                                                                                                      
+	+ Value of invetory: 0                                                                                                                                                                                 
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 26:                                                                                                                                                    
+	+ Color of invetory: Spruce                                                                                                                                                                            
+	+ Size of invetory: XL                                                                                                                                                                                 
+	+ Price of invetory: 209.95                                                                                                                                                                            
+	+ Quantity on hand of invetory: 12                                                                                                                                                                     
+	+ Value of invetory: 2519.4                                                                                                                                                                            
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 2:                                                                                                                                                             
+	+ Description of item: 3-Season Tent                                                                                                                                                                   
+	+ Category ID: 4                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 1:                                                                                                                                                     
+	+ Color of invetory: Sky Blue                                                                                                                                                                          
+	+ Size of invetory:                                                                                                                                                                                    
+	+ Price of invetory: 259.99                                                                                                                                                                            
+	+ Quantity on hand of invetory: 16                                                                                                                                                                     
+	+ Value of invetory: 4159.84                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 2:                                                                                                                                                     
+	+ Color of invetory: Light Grey                                                                                                                                                                        
+	+ Size of invetory:                                                                                                                                                                                    
+	+ Price of invetory: 259.99                                                                                                                                                                            
+	+ Quantity on hand of invetory: 12                                                                                                                                                                     
+	+ Value of invetory: 3119.88                                                                                                                                                                           
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 3:                                                                                                                                                             
+	+ Description of item: Women's Hiking Shorts                                                                                                                                                           
+	+ Category ID: 1                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 3:                                                                                                                                                     
+	+ Color of invetory: Khaki                                                                                                                                                                             
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 29.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 150                                                                                                                                                                    
+	+ Value of invetory: 4492.5                                                                                                                                                                            
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 4:                                                                                                                                                     
+	+ Color of invetory: Khaki                                                                                                                                                                             
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 29.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 147                                                                                                                                                                    
+	+ Value of invetory: 4402.65                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 5:                                                                                                                                                     
+	+ Color of invetory: Khaki                                                                                                                                                                             
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 29.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 0                                                                                                                                                                      
+	+ Value of invetory: 0                                                                                                                                                                                 
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 6:                                                                                                                                                     
+	+ Color of invetory: Navy                                                                                                                                                                              
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 29.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 139                                                                                                                                                                    
+	+ Value of invetory: 4163.05                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 7:                                                                                                                                                     
+	+ Color of invetory: Navy                                                                                                                                                                              
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 29.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 137                                                                                                                                                                    
+	+ Value of invetory: 4103.15                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 8:                                                                                                                                                     
+	+ Color of invetory: Navy                                                                                                                                                                              
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 29.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 115                                                                                                                                                                    
+	+ Value of invetory: 3444.25                                                                                                                                                                           
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 4:                                                                                                                                                             
+	+ Description of item: Women's Fleece Pullover                                                                                                                                                         
+	+ Category ID: 1                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 9:                                                                                                                                                     
+	+ Color of invetory: Eggplant                                                                                                                                                                          
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 59.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 135                                                                                                                                                                    
+	+ Value of invetory: 8093.25                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 10:                                                                                                                                                    
+	+ Color of invetory: Eggplant                                                                                                                                                                          
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 59.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 168                                                                                                                                                                    
+	+ Value of invetory: 10071.6                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 11:                                                                                                                                                    
+	+ Color of invetory: Eggplant                                                                                                                                                                          
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 59.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 187                                                                                                                                                                    
+	+ Value of invetory: 11210.65                                                                                                                                                                          
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 12:                                                                                                                                                    
+	+ Color of invetory: Royal                                                                                                                                                                             
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 59.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 0                                                                                                                                                                      
+	+ Value of invetory: 0                                                                                                                                                                                 
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 13:                                                                                                                                                    
+	+ Color of invetory: Royal                                                                                                                                                                             
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 59.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 124                                                                                                                                                                    
+	+ Value of invetory: 7433.8                                                                                                                                                                            
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 14:                                                                                                                                                    
+	+ Color of invetory: Royal                                                                                                                                                                             
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 59.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 112                                                                                                                                                                    
+	+ Value of invetory: 6714.4                                                                                                                                                                            
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 5:                                                                                                                                                             
+	+ Description of item: Children's Beachcomber Sandals                                                                                                                                                  
+	+ Category ID: 2                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 15:                                                                                                                                                    
+	+ Color of invetory: Turquoise                                                                                                                                                                         
+	+ Size of invetory: 10                                                                                                                                                                                 
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 121                                                                                                                                                                    
+	+ Value of invetory: 1934.79                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 16:                                                                                                                                                    
+	+ Color of invetory: Turquoise                                                                                                                                                                         
+	+ Size of invetory: 11                                                                                                                                                                                 
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 111                                                                                                                                                                    
+	+ Value of invetory: 1774.89                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 17:                                                                                                                                                    
+	+ Color of invetory: Turquoise                                                                                                                                                                         
+	+ Size of invetory: 12                                                                                                                                                                                 
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 113                                                                                                                                                                    
+	+ Value of invetory: 1806.87                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 18:                                                                                                                                                    
+	+ Color of invetory: Turquoise                                                                                                                                                                         
+	+ Size of invetory: 1                                                                                                                                                                                  
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 121                                                                                                                                                                    
+	+ Value of invetory: 1934.79                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 19:                                                                                                                                                    
+	+ Color of invetory: Bright Pink                                                                                                                                                                       
+	+ Size of invetory: 10                                                                                                                                                                                 
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 148                                                                                                                                                                    
+	+ Value of invetory: 2366.52                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 20:                                                                                                                                                    
+	+ Color of invetory: Bright Pink                                                                                                                                                                       
+	+ Size of invetory: 11                                                                                                                                                                                 
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 137                                                                                                                                                                    
+	+ Value of invetory: 2190.63                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 21:                                                                                                                                                    
+	+ Color of invetory: Bright Pink                                                                                                                                                                       
+	+ Size of invetory: 12                                                                                                                                                                                 
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 134                                                                                                                                                                    
+	+ Value of invetory: 2142.66                                                                                                                                                                           
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 22:                                                                                                                                                    
+	+ Color of invetory: Bright Pink                                                                                                                                                                       
+	+ Size of invetory: 1                                                                                                                                                                                  
+	+ Price of invetory: 15.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 123                                                                                                                                                                    
+	+ Value of invetory: 1966.77                                                                                                                                                                           
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 6:                                                                                                                                                             
+	+ Description of item: Boy's Surf Shorts                                                                                                                                                               
+	+ Category ID: 2                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 27:                                                                                                                                                    
+	+ Color of invetory: Blue                                                                                                                                                                              
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 15.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 50                                                                                                                                                                     
+	+ Value of invetory: 797.5                                                                                                                                                                             
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 28:                                                                                                                                                    
+	+ Color of invetory: Blue                                                                                                                                                                              
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 15.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 100                                                                                                                                                                    
+	+ Value of invetory: 1595                                                                                                                                                                              
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 29:                                                                                                                                                    
+	+ Color of invetory: Blue                                                                                                                                                                              
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 15.95                                                                                                                                                                             
+	+ Quantity on hand of invetory: 100                                                                                                                                                                    
+	+ Value of invetory: 1595                                                                                                                                                                              
+
+===================================================================================                                                                                                                    
+The information of item which item_id is 7:                                                                                                                                                             
+	+ Description of item: Girl's Soccer Tee                                                                                                                                                               
+	+ Category ID: 2                                                                                                                                                                                       
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 30:                                                                                                                                                    
+	+ Color of invetory: White                                                                                                                                                                             
+	+ Size of invetory: S                                                                                                                                                                                  
+	+ Price of invetory: 19.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 100                                                                                                                                                                    
+	+ Value of invetory: 1999                                                                                                                                                                              
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 31:                                                                                                                                                    
+	+ Color of invetory: White                                                                                                                                                                             
+	+ Size of invetory: M                                                                                                                                                                                  
+	+ Price of invetory: 19.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 100                                                                                                                                                                    
+	+ Value of invetory: 1999                                                                                                                                                                              
+
+*****************                                                                                                                                                                                      
+The information of item'iventory which inv_id is 32:                                                                                                                                                    
+	+ Color of invetory: White                                                                                                                                                                             
+	+ Size of invetory: L                                                                                                                                                                                  
+	+ Price of invetory: 19.99                                                                                                                                                                             
+	+ Quantity on hand of invetory: 100                                                                                                                                                                    
+	+ Value of invetory: 1999                                                                                                                                                                              
+
+PL/SQL procedure successfully completed.
+
+'============== Question 5  =============='
+Connected.
+
+Procedure created.
+
+'************** Testing **************'
+The information of consultant is: 
+	+ Student ID: 103
+	+ Consultant last name: Carlson
+	+ Consultant first name: Sarah
+	+ Consultant email: carlsons@swexpert.com                                       
+*************************                                                                                                                                                                               
+Information of Skill ID 1                                                                                                                                                                               
+	+ Skill description: VB .NET Programming
+	+ Old certification: N
+	+ New certification: N                                                                                                               
+*************************                                                                                                                                                                               
+Information of Skill ID 6                                                                                                                                                                               
+	+ Skill description: Oracle Developer Programming
+	+ Old certification: N
+	+ New certification: N                                                                                                      
+*************************                                                                                                                                                                               
+Information of Skill ID 8                                                                                                                                                                               
+	+ Skill description: Windows NT/2000 Network Administration
+	+ Old certification: N
+	+ New certification: N                                                                                            
+*************************                                                                                                                                                                               
+Information of Skill ID 9                                                                                                                                                                               
+	+ Skill description: Windows XP Network Administration
+	+ Old certification: N
+	+ New certification: N                                                                                                 
+
+PL/SQL procedure successfully completed.
+

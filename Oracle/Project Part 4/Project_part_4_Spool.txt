@@ -1,0 +1,79 @@
+Connected.
+
+User dropped.
+
+
+User created.
+
+
+Grant succeeded.
+
+Connected.
+
+TimeLine                                                                        
+--------------------------------------------------------------------------------
+13 October   2022 Thursday  11:53:43                                            
+
+'============== Question 1 =============='
+
+Procedure created.
+
+
+Procedure created.
+
+'************** First Test with Square result **************'
+The area of a square size 2 by 2 is 4. It's perimeter is 8.                     
+
+PL/SQL procedure successfully completed.
+
+'************** Second Test with Rectangle result **************'
+The area of a rectangle size 2 by 3 is 6. It's perimeter is 10.                 
+
+PL/SQL procedure successfully completed.
+
+'============== Question 2 =============='
+
+Function created.
+
+
+Procedure created.
+
+'************** First Test with Square result **************'
+The area of a square size 2 by 2 is 4. It's perimeter is 8.                     
+
+PL/SQL procedure successfully completed.
+
+'************** Second Test with Rectangle result **************'
+The area of a rectangle size 2 by 3 is 6. It's perimeter is 10.                 
+
+PL/SQL procedure successfully completed.
+
+'============== Question 3 =============='
+Connected.
+
+Function created.
+
+
+Procedure created.
+
+'************** First Test *************'
+The new value of the inventory with inventory ID 1 is: 8917.216                 
+
+PL/SQL procedure successfully completed.
+
+'************** Second Test **************'
+The new value of the inventory with inventory ID 2 is: 13415.04                 
+
+PL/SQL procedure successfully completed.
+
+
+Procedure created.
+
+
+Procedure created.
+
+Inventory number 35 doesn't exist!                                              
+The new value of the inventory with inventory ID 35 is: 3500                    
+
+PL/SQL procedure successfully completed.
+
