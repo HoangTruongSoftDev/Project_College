@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author johnk
+ *
+ */
+module HelloWordJava {
+}
