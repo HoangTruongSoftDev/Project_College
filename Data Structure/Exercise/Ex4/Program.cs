@@ -12,7 +12,7 @@ namespace Ex4
     {
         //Define the function that find the factorial
         // The worst case is Big O(n) 
-        static int Fact(int n) // the method in Main must be static
+        static int Fact(int n) // the method in class contain Main entry point must be static
         {
             if (n == 0 || n == 1)
             {

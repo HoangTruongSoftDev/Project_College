@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ex1
 {
-    internal class Program
+    class Program
     {
         #region Accurate but not optimize
         //public static void FindValue(int[] arr, int num)
@@ -53,9 +53,25 @@ namespace Ex1
         //    }  
         #endregion
 
+        #region Binary Search Recurstion Function
+        static int RecursiveBinarySearch(int[] array, int left, int right, int num)
+        {
+            if (right >= left)
+            {
+                int mid = left + (right - 1) / 2;
+                if (array[mid] == num)
+                    return mid;
+                if (array[mid] > num)
+                    return RecursiveBinarySearch(array, left, mid - 1, num);
+                return RecursiveBinarySearch(array, mid + 1, right, num);
+            }
+            return -1;
+        }
+        #endregion
+
         static void BinarySearch(int[] array, int number)
         {
-            
+
             int left = 0;
             int right = array.Length - 1;
             int mid;
@@ -74,7 +90,7 @@ namespace Ex1
             if (array[left] == number)
             {
                 Console.WriteLine("Number Found at index " + left);
-            } 
+            }
             else if (array[right] == number)
             {
                 Console.WriteLine("Number Found at index " + right);
@@ -112,7 +128,20 @@ namespace Ex1
             //int number = 11;
             //BinarySearch(array1, number);
             #endregion
-            
+
+            #region Binary Search Recurstion
+            int[] array = { -4, 7, 9, 13, 25, 67, 99, 128 };
+            int num = -4;
+            int result = RecursiveBinarySearch(array, 0, (array.Length - 1), num);
+            if (result == -1)
+            {
+                Console.WriteLine("The number is not here");
+            }
+            else
+            {
+                Console.WriteLine($"The number is found at location {result}");
+            }
+            #endregion
 
             Console.ReadKey();
         }

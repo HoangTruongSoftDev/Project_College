@@ -7,6 +7,7 @@
 package HelloWorld;
 
 import java.text.MessageFormat;
+import java.util.Arrays;
 
 public class HelloWorld {
 
@@ -213,5 +214,21 @@ public class HelloWorld {
 		
 		// StringTokenizer?
 		// how does split() work in string class
+		boolean trs= true;
+		System.out.println(trs);
+		
+		SomeClass obj1 = new SomeClass();
+		obj1.displayAttributeValues(); //The attribute of class will have the default value even not initialized 
+		
+		int[] intArray = new int[]{ 1,2,3,4,5,6,7,8,9,10,22,23,24,25 };
+		System.out.println(Arrays.binarySearch(intArray, 5));
+		
+		int[] intArray1 = new int[]{ 1,2,3,4,5,6,7,8,9,10,22 };
+		System.out.println(Arrays.compare(intArray, intArray1));
+		
+		// Create a function to find a maximum score in a float[] array, return highest score with datatype float
+		// 
+		
+		
 	}
 }

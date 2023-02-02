@@ -1,0 +1,100 @@
+﻿
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="HomePage.css" rel="stylesheet" type="text/css" />
+
+    <!--add the link to generate icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    
+    <title>Personal Info</title>
+</head>
+<body>
+   
+
+    <nav class="Home">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="liDisplay"><a href="#body2">About</a></li>
+            <li class="liDisplay"><a href="#body3">Hobby</a></li>
+            <li><a href="Family.html" target="_self">Family</a></li>
+        </ul>
+    </nav>
+
+    <div class="body1" id="body1">
+        <div class="user-description">
+            <h2>Hello, I am</h2>
+            <h3>
+                Truong<br />
+
+            </h3>
+
+            <p>Hobby: <span id="sequenceText"></span></p>
+        </div>
+        <div class="user-image">
+            <img src="bida.jpg" />
+        </div>
+        
+        <div class="user-comment" id="user-commentId">
+
+            <p>
+                <span id="star">&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</span><br />
+                "Truong is a handsome <br />
+                funny Guy=))))))"
+            </p>
+            <h2>-Mr. Ramiro-</h2>
+        </div>
+    </div>
+
+    <div class="body2" id="body2">
+        <h1>About me</h1>
+        <div class="about-image">
+            <img src="selfieNobackground.png" />
+        </div>
+
+        <div class="about-description">
+            <h3>***My Intro***</h3>
+            <h2>I am <span class="about-name">Hoang Truong</span> <br /> </h2>
+            <h4>A Vietnamese Sociable Man	&#128513;</h4>
+            <p>
+
+                I am international student. I am studying Computer Science.<br>
+                I will become a Software Developer <br>
+                I love Montreal because this place is wonderful.<br>
+                Coding is my hobby &lt;3 <br>
+                Love Kids and Dogs  ? Why not? They're so cute and adorable.
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Birthday: <span class="about-emphasis">28th February 2003</span></td>
+                        <td>Phone: <span class="about-emphasis">(+1) 514 123 4567</span></td>
+                    </tr>
+                    <tr>
+                        <td>Age: <span class="about-emphasis">19 years old</span></td>
+                        <td>Email: <span class="about-emphasis">handsomeboy@gmail.com</span></td>
+                    </tr>
+                    <tr>
+                        <td>Address: <span class="about-emphasis"> Montreal</span></td>
+                        <td>Facebook: <span class="about-emphasis">JK_Truong</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="body3" id="body3">
+        <h1 id="HobbyH1">Hobby</h1>
+        <div class="hobby">
+
+        </div>
+        <a class="prev" onclick="switchSlide(-1)">&#10094;</a>
+        <a class="next" onclick="switchSlide(1)">&#10095;</a>
+    </div>
+
+   
+    <script src="HomePage.js"></script>
+</body>
+</html>
