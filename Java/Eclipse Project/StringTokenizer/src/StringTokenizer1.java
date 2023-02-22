@@ -95,11 +95,34 @@ public class StringTokenizer1 {
 			
 			System.out.println("Before:" + tokenizerE.countTokens()); 
 			int i = 0;
-			while(tokenizerE.hasMoreElements()) {
+			while(tokenizerE.hasMoreTokens()) {
 				
 				System.out.println("During " + i +": "+tokenizerE.countTokens()); 
+				System.out.println("During " + i +": "+tokenizerE.nextToken());
+				++i;
 			}
+			
+			
+			//System.out.println( tokenizerE.nextToken()); //runtime error: noSuchElementException
+			
 			System.out.println("After:" + tokenizerE.countTokens()); 
+			
+			
+			System.out.println("====================");
+			int int1 = 10000;
+			Integer int2 = 10000;
+			Integer int3 = 10000;
+			System.out.println();
+			System.out.println("int1 == int2: " + (int1 == int2));
+			System.out.println("int3 == int2: " + (int3 == int2));
+			
+			// string split method instead of the string format
+			String aString = "foo:and:boo";
+			String[] aStringArr = aString.split(":");
+			for (String elem  : aStringArr) {
+				System.out.println(elem);
+			}
+			
 			
 	}
 

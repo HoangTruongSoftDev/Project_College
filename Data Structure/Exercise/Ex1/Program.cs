@@ -124,23 +124,23 @@ namespace Ex1
             //}
             #endregion
             #region Binary Search
-            //int[] array1 = { 10, 11, 23, 39, 48, 95, 102, 206, 247, 312, 400, 401, 405 };
-            //int number = 11;
-            //BinarySearch(array1, number);
+            int[] array1 = { 10, 11, 23, 39, 48, 95, 102, 206, 247, 312, 400, 401, 405 };
+            int number = 206;
+            BinarySearch(array1, number);
             #endregion
 
             #region Binary Search Recurstion
-            int[] array = { -4, 7, 9, 13, 25, 67, 99, 128 };
-            int num = -4;
-            int result = RecursiveBinarySearch(array, 0, (array.Length - 1), num);
-            if (result == -1)
-            {
-                Console.WriteLine("The number is not here");
-            }
-            else
-            {
-                Console.WriteLine($"The number is found at location {result}");
-            }
+            //int[] array = { -4, 7, 9, 13, 25, 67, 99, 128 };
+            //int num = -4;
+            //int result = RecursiveBinarySearch(array, 0, (array.Length - 1), num);
+            //if (result == -1)
+            //{
+            //    Console.WriteLine("The number is not here");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"The number is found at location {result}");
+            //}
             #endregion
 
             Console.ReadKey();

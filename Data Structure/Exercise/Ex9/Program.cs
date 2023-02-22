@@ -7,6 +7,21 @@ using System.Threading.Tasks;
 
 namespace Ex9
 {
+    /*The top pattern:
+     
+     *****
+     ****
+     ***
+     **
+     *
+     
+    The down pattern
+    *
+    **
+    ***
+    ****
+    *****
+     */
     class Program
     {
         static void PrintPatternTop(int n)
