@@ -1,10 +1,13 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class TestArray {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
 		int[] array1 = {1,2,3};
 		ArrayList<Integer> arrayList1 = new ArrayList<Integer>(Arrays.asList(1,2,3));
@@ -183,6 +186,9 @@ public class TestArray {
 		Integer anInt = 5; //autoboxing
 		ArrayList<Integer> myArrayList = new ArrayList<Integer>(); //build an array of size 1p on the heap
 		myArrayList.add(5); //autoboxing
+		myArrayList.add(100);
+		myArrayList.add(1000);
+		System.out.println("myArrayList===============");
 		for (var elem:myArrayList) {
 			System.out.println(elem);
 		}
@@ -197,6 +203,94 @@ public class TestArray {
 		for (var elem:myArrayList) {
 			System.out.println(elem);
 		}
+		ArrayList<Integer> myArrayList2 = new ArrayList<Integer>();
+		myArrayList2.add(10);
+		myArrayList2.add(20);
+		myArrayList2.add(10);
+		//int[] addList = {30,40,50,60};
+		myArrayList2.addAll(1,myArrayList); //cannot add an array
+		System.out.println("myArrayList2===============");
+		for (var elem:myArrayList2) {
+			System.out.println(elem);
+		}
+		ArrayList<Integer> myArrayList3 = (ArrayList<Integer>)myArrayList2.clone(); 
+		System.out.println("myArrayList3===============");
+		for (var elem:myArrayList3) {
+			System.out.println(elem);
+		}
+		myArrayList3.clear();
+		System.out.println("myArrayList3 After clear===============");
+		for (var elem:myArrayList3) {
+			System.out.println(elem);
+		}
+		System.out.println("myArrayList2.contains(100) => " + myArrayList2.contains(100));
+		
+		System.out.println("myArrayList2.indexOf(100) => " + myArrayList2.indexOf(100));
+		System.out.println("myArrayList2.get(3) => " + myArrayList2.get(3));
+		System.out.println("myArrayList2.isEmpty() => " + myArrayList2.isEmpty());
+		System.out.println("myArrayList3.isEmpty() => " + myArrayList3.isEmpty());
+		System.out.println("myArrayList2.size() => " + myArrayList2.size());
+		System.out.println("myArrayList2.lastIndexOf(10) => " + myArrayList2.lastIndexOf(10));
+		System.out.println("myArrayList2.remove(3) => " +myArrayList2.remove(3));
+		
+		ArrayList<Integer> arrayListDelete = new ArrayList<Integer>(30);
+		arrayListDelete.add(255);
+		arrayListDelete.add(10);
+		System.out.println("myArrayList2.removeAll(arrayListDelete) => " +myArrayList2.removeAll(arrayListDelete));
+		for (var elem:myArrayList2) {
+			System.out.println(elem);
+		}
+		System.out.println("myArrayList2.size() => " +myArrayList2.size());
+		myArrayList2.set(1,2000);
+		for (var elem:myArrayList2) {
+			System.out.println(elem);
+		}
+		
+		ArrayList<Integer> testArrayList = new ArrayList<Integer>();
+		testArrayList.add(10);
+		//testArrayList.add(3,100); // you must add element in index 1 and 2 first before add index 3
+		
+		int[][] multiDimensionArray = new int[5][2]; //The first [] is rows, the second is column
+		
+		int[][] multiDimensionArray1 = new int[][] {
+				{1,2},
+				{3,4,5},
+				{6,7,8,9,0}
+				};
+		System.out.println();
+		int truong = 5<3?4:7; //ternary operator
+		System.out.println(truong);
+		
+		Scanner sc = new Scanner(System.in); // we need to import java.util.Scanner;
+		System.out.println("Please enter a num: ");
+		System.out.println("You entered: " + sc.nextInt()); // sc.nextInt() will scan the next integer. The function is used to input the data and convert to Int
+		
+		System.out.println("Please enter your name: ");
+		String name1 = sc.next();
+		System.out.println("You entered: " + name1);
+		
+		System.out.println("My name is: " + System.in);
+		
+		sc = new Scanner(new File("C:\\Truong\\Lasalle College\\Winter 2023\\Advanced OOP\\Document\\readFileJava.txt")); // we need to import java.util.File;
+		// also need throw FileNotFoundException for the case that if there is no file is scanned
+		while (sc.hasNextLine()) {
+			String line = sc.nextLine();
+			System.out.println();
+			String[] myProf = line.split(":");
+			String listOfDisciplines = myProf[myProf.length-1];
+			String firstName = myProf[1].split(" ")[myProf[1].split(" ").length-1];
+			System.out.println(firstName + " has the following disciplines: " + listOfDisciplines);
+			
+			for (var myProDisc : listOfDisciplines.split(",")) {
+				if (myProDisc.trim().equals("IN55")) {
+					System.out.println(firstName + " can teach the course");
+				}
+			}
+		}
+		sc.close(); //must close the scanner. If you don't close after using it, things aren't coming through
+		
+		
+		
 	}
 
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ex13
 {
-    class MergeSort
+    class MergeSort //nlogn
     {
         int[] array;
         public MergeSort(int[] array)

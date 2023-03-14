@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Practise
 {
+
     internal class Program
     {
         public static void PrintArray(int[] array)
@@ -15,42 +16,43 @@ namespace Practise
                 Console.Write(element + " ");
             }
         }
+         
+       
         static void Main(string[] args)
         {
-            #region Binary Search
+            #region Binary Search - Big O(logn)
             //int[] array = { 3, 4, 5, 7, 8, 9, 11, 22, 100, 99, 16, 28, 78, 54 };
             //BinarySearch br = new BinarySearch(array);
             //br.Search(78, 0, array.Length - 1);
             #endregion
-
-            #region Jump Search
+            #region Jump Search - Big O(logn)
             //int[] array = { 2,3,8,9,11,22,35,64,78,90 };
             //JumpSearch br = new JumpSearch(array);
             //br.jump_Search(11,0,Convert.ToInt32(Math.Sqrt(array.Length)));
             #endregion
 
-            #region Insertion Sort
+            #region Insertion Sort - Big O(n^2)
             //int[] array = { 2, 3, 11, 1, 5, 88, 75, 43, 100, 31, 24, 16 };
             //Insertion_sort insertion_Sort = new Insertion_sort(array);
             //insertion_Sort.insertionSort(0, 1);
             //PrintArray(array);
             #endregion
 
-            #region Selection Sort
+            #region Selection Sort - Big O(n^2)
             //int[] array = { 69, 7, 2, 4, 9, 8, 99, 73, 12, 64 };
             //SelectionSort selectionSort = new SelectionSort(array);
             //selectionSort.Selection_Sort(0);
             //PrintArray(array);
             #endregion
 
-            #region Quick Sort
+            #region Quick Sort - Big O (n*logn)
             //int[] array = { 69, 7, 2, 4, 9, 8, 99, 73, 12, 64 };
             //QuickSort quickSort = new QuickSort(array);
             //quickSort.Sort(0, array.Length - 1);
             //PrintArray(array);
             #endregion
 
-            #region Merge Sort
+            #region Merge Sort  - Big O (n*logn)
             //int[] array = { 69, 7, 2, 4, 9, 8, 99, 73, 12, 64,100,500,300,234,65,432 };
             //MergeSort mergeSort = new MergeSort(array);
             //mergeSort.Divide(0, array.Length - 1);
@@ -58,20 +60,41 @@ namespace Practise
 
             #endregion
 
-            #region Square Root
+            #region Square Root 
             //SquareRoot squareRoot = new SquareRoot();
             //double sqrt = squareRoot.Sqrt(5.0, 1.0);
             //Console.WriteLine("Square root is: " + sqrt);5
             #endregion
 
-            #region Complextity
-            Console.Write("Please enter n: ");
-            int n = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Please enter m: ");
-            int m = Convert.ToInt32(Console.ReadLine());
-            ComputationalComplexity computationalComplexity = new ComputationalComplexity(m, n);
-            computationalComplexity.NestedLoop(m, n);
+            #region Complextity - Big O (n*(n+1)/2 + (m-n)*n)
+            //Console.Write("Please enter n: ");
+            //int n = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Please enter m: ");
+            //int m = Convert.ToInt32(Console.ReadLine());
+            //ComputationalComplexity computationalComplexity = new ComputationalComplexity(m, n);
+            //computationalComplexity.NestedLoop(m, n);
             #endregion
+
+            #region Bubble Sort - Big O (n^2)
+            //int[] array = { 69, 7, 2, 4, 9, 8, 99, 73, 12, 64, 100, 500, 300, 234, 65, 432 };
+            //BubbleSort bubbleSort = new BubbleSort(array);
+            //bubbleSort.Sort();
+            //PrintArray(array);
+            #endregion
+
+            #region Tim Sort - Big O (n*logn)
+            #endregion
+
+            #region Write any function has the complexity is O(nlogn)
+            //Console.Write("Enter your n: ");
+            //int n = Convert.ToInt32(Console.ReadLine());
+            //FunctionBigO_nlogn_ bigO = new FunctionBigO_nlogn_(n);
+            //bigO.CalculteTheTimeOf_nlogn();
+            #endregion
+            int[] array = { 100, 55, 22, 10, 1, 8, 9, 23, 56, 78, 19, 15, 98, 50, 67, 42 };
+            TimSort timSort = new TimSort(array);
+            timSort.Sort();
+            PrintArray(array);
             Console.ReadKey();
         }
     }

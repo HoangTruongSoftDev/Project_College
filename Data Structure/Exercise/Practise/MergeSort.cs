@@ -20,7 +20,7 @@ namespace Practise
             int[] rightArray = new int[right - middle];
             int indexLeftArray = 0;
 
-            // Why miy code is wrong?
+            // Why my code is wrong?
             for (int i = left; i < middle + 1; i++)
             {
                 leftArray[indexLeftArray] = array[i];

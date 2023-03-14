@@ -48,6 +48,7 @@ public class HelloWorld {
 		System.out.println("aLongNum: " + aLongNum);  
 		System.out.println("bLongNum: " + bLongNum);
 		
+		
 		/*
 	 	// C code to demonstrate implicit casting 
 	 	 
@@ -130,6 +131,8 @@ public class HelloWorld {
 		// double => Double
 		// char => Character ?
 		// boolean => Boolean ?
+		
+		int truong1 =1;
 		
 		Integer wrapperInt = new Integer(5); // deprecated means that not use anymore
 		Integer aRefTypeInt = Integer.valueOf(5);
@@ -220,6 +223,7 @@ public class HelloWorld {
 		SomeClass obj1 = new SomeClass();
 		obj1.displayAttributeValues(); //The attribute of class will have the default value even not initialized 
 		
+		
 		int[] intArray = new int[]{ 1,2,3,4,5,6,7,8,9,10,22,23,24,25 };
 		System.out.println(Arrays.binarySearch(intArray, 5));
 		
@@ -228,7 +232,20 @@ public class HelloWorld {
 		
 		// Create a function to find a maximum score in a float[] array, return highest score with datatype float
 		// 
+		int[] arra1 = {1,2,3};
+		int[] arra2 = {1,2,3,4,5};
+		System.out.println(Arrays.compare(arra1,arra2));
 		
+		System.out.println("Byte Size: " + Byte.SIZE); // Byte Size: 8	
+		System.out.println("Min Size of Byte: " + Byte.MIN_VALUE); // Min Size of Byte: -128
+		System.out.println("Byte Size of Byte: " + Byte.MAX_VALUE); // Max Size of Byte: 127
 		
+		System.out.println("Integer Size: " + Integer.SIZE); // Integer Size: 32	
+		System.out.println("Min Size of Integer: " + Integer.MIN_VALUE); // Min Size of Integer: -2_147_483_648
+		System.out.println("Max Size of Integer: " + Integer.MAX_VALUE); // Max Size of Integer: 2_147_483_647
+		
+		System.out.println("Long Size: " + Long.SIZE); // Long Size: 32	
+		System.out.println("Min Size of Long: " + Long.MIN_VALUE); // Min Size of Long: -9_223_372_036_854_775_808
+		System.out.println("Max Size of Long: " + Long.MAX_VALUE); // Max Size of Long: 9_223_372_036_854_775_807
 	}
 }

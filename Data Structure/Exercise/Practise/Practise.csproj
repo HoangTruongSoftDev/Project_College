@@ -44,7 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinarySearch.cs" />
+    <Compile Include="BubbleSort.cs" />
     <Compile Include="ComputationalComplexity.cs" />
+    <Compile Include="FunctionBigO%28nlogn%29.cs" />
     <Compile Include="Insertion_sort.cs" />
     <Compile Include="JumpSearch.cs" />
     <Compile Include="MergeSort.cs" />
@@ -53,6 +55,7 @@
     <Compile Include="QuickSort.cs" />
     <Compile Include="SelectionSort.cs" />
     <Compile Include="SquareRoot.cs" />
+    <Compile Include="TimSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

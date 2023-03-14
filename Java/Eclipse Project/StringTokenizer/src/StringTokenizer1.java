@@ -97,8 +97,8 @@ public class StringTokenizer1 {
 			int i = 0;
 			while(tokenizerE.hasMoreTokens()) {
 				
-				System.out.println("During " + i +": "+tokenizerE.countTokens()); 
-				System.out.println("During " + i +": "+tokenizerE.nextToken());
+				System.out.println("During " + i +": " + tokenizerE.countTokens()); 
+				System.out.println("During " + i +": " + tokenizerE.nextToken());
 				++i;
 			}
 			
@@ -123,7 +123,5 @@ public class StringTokenizer1 {
 				System.out.println(elem);
 			}
 			
-			
 	}
-
 }

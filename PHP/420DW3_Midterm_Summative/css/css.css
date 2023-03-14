@@ -1,0 +1,32 @@
+.div-container {
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+}
+input[type="submit"] {
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+}
+h1 {
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    color: crimson;
+}
+
+label {
+    display: inline-block;
+    min-width: 100px;
+    text-align: end;
+}
+
+input[readonly] {
+    background-color: lightblue;
+}
+
+
+
