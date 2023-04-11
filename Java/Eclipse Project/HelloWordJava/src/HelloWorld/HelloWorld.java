@@ -7,6 +7,7 @@
 package HelloWorld;
 
 import java.text.MessageFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class HelloWorld {
@@ -247,5 +248,18 @@ public class HelloWorld {
 		System.out.println("Long Size: " + Long.SIZE); // Long Size: 32	
 		System.out.println("Min Size of Long: " + Long.MIN_VALUE); // Min Size of Long: -9_223_372_036_854_775_808
 		System.out.println("Max Size of Long: " + Long.MAX_VALUE); // Max Size of Long: 9_223_372_036_854_775_807
+		
+		System.out.println("=====================================================================");
+		ArrayList<Integer> truonglist = new ArrayList<>();
+		function(truonglist);
+		for (Integer i : truonglist) {
+			System.out.print(i + " ");
+		}
+		
+	}
+	public static void function(ArrayList<Integer> list) {
+		list.add(1);
+		list.add(2);
+		list.add(5);
 	}
 }

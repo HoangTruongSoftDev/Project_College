@@ -2,6 +2,10 @@ package classes2;
 
 public class Wearable {
 	protected String brand;
+	protected String model;
+	protected String colour;
+	protected short batteryPower;
+	
 	public String getBrand() {
 		return brand;
 	}
@@ -50,15 +54,13 @@ public class Wearable {
 
 
 
-	protected String model;
-	protected String colour;
-	protected short batteryPower;
+	
 	
 	
 	/*public Wearable() {
 		super();
-		this.brand = brand;
-		this.model = model;
+		this.brand = "Apple";
+		this.model = "";
 		this.colour = colour;
 		this.batteryPower = batteryPower;
 	}*/
@@ -71,7 +73,10 @@ public class Wearable {
 		this.batteryPower = batteryPower;
 	}
 
-
+	//@Override
+	/*public boolean equals(Object obj) {
+		
+	}*/
 
 	@Override
 	public String toString() {

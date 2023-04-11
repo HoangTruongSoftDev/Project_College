@@ -29,15 +29,27 @@ public class SmartWatch extends Wearable{
 	}
 	
 	
-	public boolean equals(Wearable obj) {
+	public boolean equals(Object obj) {
+		System.out.println("this.getClass(): " + this.getClass());
+		System.out.println("super.getClass(): " + super.getClass());
+		System.out.println("obj.getClass(): " + obj.getClass());
+		
+		
+		Wearable w1 = new Wearable("Apple","NewOne","Black",(short)100); 
+		System.out.println("w1.getClass(): " + w1.getClass());
+				
 		if (this == obj) {
-			return true;
+			System.out.println("situation one");
+			return true;			
 		}
-		else if (this.brand.equals(obj.brand) && this.model.equals(obj.model) && this instanceof SmartWatch){
-			return true;
+		
+		if (obj != null && (obj.getClass() == this.getClass()) || obj.getClass() == this.getClass().getSuperclass()) {
+		Wearable smartWatch = (Wearable)obj;
+		if (this.brand.equals(smartWatch.brand) && this.model.equals(smartWatch.model)) {
+			//if (this.brand.equals(((SmartWatch)obj).brand) && this.model.equals(((SmartWatch)obj).model)) {	
+				return true;
+			}
 		}
-		else {
-			return false;
-		}
+		return false; // she sells sea shells on the sea shore, the shells that she sells are sea shells
 	}
 }

@@ -1,0 +1,8 @@
+C:\Truong\Lasalle College\Summer 2022\OOP\Experiment\Experiment1\DragNDrop\bin\Debug\DragNDrop.exe.config
+C:\Truong\Lasalle College\Summer 2022\OOP\Experiment\Experiment1\DragNDrop\bin\Debug\DragNDrop.exe
+C:\Truong\Lasalle College\Summer 2022\OOP\Experiment\Experiment1\DragNDrop\bin\Debug\DragNDrop.pdb
+C:\Truong\Lasalle College\Summer 2022\OOP\Experiment\Experiment1\DragNDrop\obj\Debug\DragNDrop.csproj.AssemblyReference.cache
+C:\Truong\Lasalle College\Summer 2022\OOP\Experiment\Experiment1\DragNDrop\obj\Debug\DragNDrop.csproj.SuggestedBindingRedirects.cache
+C:\Truong\Lasalle College\Summer 2022\OOP\Experiment\Experiment1\DragNDrop\obj\Debug\DragNDrop.csproj.CoreCompileInputs.cache
+C:\Truong\Lasalle College\Summer 2022\OOP\Experiment\Experiment1\DragNDrop\obj\Debug\DragNDrop.exe
+C:\Truong\Lasalle College\Summer 2022\OOP\Experiment\Experiment1\DragNDrop\obj\Debug\DragNDrop.pdb

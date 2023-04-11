@@ -16,16 +16,17 @@ public class ClassApplication2 {
 		SmartWatch sw2 = sw1;
 		SmartWatch sw3 = new SmartWatch("Apple","iWatch", "Black", (byte)2500, "Circle");
 		
-		sw1.equals(sw2);
-		sw1.equals(sw3);
+		//sw1.equals(sw2);
+		//sw1.equals(sw3);
 		
-		if (sw1.equals(sw3)) {
+		if (sw1.equals(w1)) {
 			System.out.println("True");
 		}
 		else
 		{
 			System.out.println("False");
 		}
+
 		
 	}
 

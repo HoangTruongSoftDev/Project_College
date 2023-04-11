@@ -1,0 +1,15 @@
+C:\Users\mesmaeilpour\source\repos\SD4_Ballanced_Tree\SD4_Ballanced_Tree\bin\Debug\SD4_Ballanced_Tree.exe.config
+C:\Users\mesmaeilpour\source\repos\SD4_Ballanced_Tree\SD4_Ballanced_Tree\bin\Debug\SD4_Ballanced_Tree.exe
+C:\Users\mesmaeilpour\source\repos\SD4_Ballanced_Tree\SD4_Ballanced_Tree\bin\Debug\SD4_Ballanced_Tree.pdb
+C:\Users\mesmaeilpour\source\repos\SD4_Ballanced_Tree\SD4_Ballanced_Tree\obj\Debug\SD4_Ballanced_Tree.csprojAssemblyReference.cache
+C:\Users\mesmaeilpour\source\repos\SD4_Ballanced_Tree\SD4_Ballanced_Tree\obj\Debug\SD4_Ballanced_Tree.csproj.CoreCompileInputs.cache
+C:\Users\mesmaeilpour\source\repos\SD4_Ballanced_Tree\SD4_Ballanced_Tree\obj\Debug\SD4_Ballanced_Tree.exe
+C:\Users\mesmaeilpour\source\repos\SD4_Ballanced_Tree\SD4_Ballanced_Tree\obj\Debug\SD4_Ballanced_Tree.pdb
+C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\SD4_Ballanced_Tree\SD4_Ballanced_Tree\SD4_Ballanced_Tree\bin\Debug\SD4_Ballanced_Tree.exe.config
+C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\SD4_Ballanced_Tree\SD4_Ballanced_Tree\SD4_Ballanced_Tree\bin\Debug\SD4_Ballanced_Tree.exe
+C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\SD4_Ballanced_Tree\SD4_Ballanced_Tree\SD4_Ballanced_Tree\bin\Debug\SD4_Ballanced_Tree.pdb
+C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\SD4_Ballanced_Tree\SD4_Ballanced_Tree\SD4_Ballanced_Tree\obj\Debug\SD4_Ballanced_Tree.csproj.AssemblyReference.cache
+C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\SD4_Ballanced_Tree\SD4_Ballanced_Tree\SD4_Ballanced_Tree\obj\Debug\SD4_Ballanced_Tree.csproj.SuggestedBindingRedirects.cache
+C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\SD4_Ballanced_Tree\SD4_Ballanced_Tree\SD4_Ballanced_Tree\obj\Debug\SD4_Ballanced_Tree.csproj.CoreCompileInputs.cache
+C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\SD4_Ballanced_Tree\SD4_Ballanced_Tree\SD4_Ballanced_Tree\obj\Debug\SD4_Ballanced_Tree.exe
+C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\SD4_Ballanced_Tree\SD4_Ballanced_Tree\SD4_Ballanced_Tree\obj\Debug\SD4_Ballanced_Tree.pdb

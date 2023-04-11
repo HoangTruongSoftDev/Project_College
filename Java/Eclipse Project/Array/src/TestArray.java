@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class TestArray {
 	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
+		
+		
 		int[] array1 = {1,2,3};
 		ArrayList<Integer> arrayList1 = new ArrayList<Integer>(Arrays.asList(1,2,3));
 		System.out.println(arrayList1.get(2));
@@ -291,6 +293,22 @@ public class TestArray {
 		
 		
 		
+		
+		
+		System.out.println("======================= Queue ==========================");
+		Queue queue = new Queue();
+		queue.enqueue(20);
+		queue.enqueue(40);
+		queue.enqueue(60);
+
+		queue.enqueue(80);
+		queue.dequeue();
+		queue.dequeue();
+		queue.dequeue();
+
+		queue.displayAllElement();
+		
+		// write all methods for Queue, and draw the circular Queue
 	}
 
 }
