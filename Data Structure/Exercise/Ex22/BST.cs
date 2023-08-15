@@ -10,6 +10,7 @@ namespace Ex22
     {
         public Node root;
         public BST() { this.root = null; }
+        // Create binary search tree
         public Node insertRecord(Node root, int data)
         {
             if (root == null)
@@ -31,9 +32,11 @@ namespace Ex22
         {
             root = insertRecord(root, key);
         }
+
+        // Search to find the pair of node that add together to equal the target
         public bool isPairPresent(Node root, Node temp, int target)
         {
-            if (target == null)
+            if (temp == null)
             {
                 return false;
             }

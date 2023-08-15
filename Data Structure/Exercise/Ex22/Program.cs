@@ -10,7 +10,7 @@ namespace Ex22
     {
         static void Main(string[] args)
         {
-            /*BST tree = new BST();
+            BST tree = new BST();
             tree.insert(12);
             tree.insert(8);
             tree.insert(5);
@@ -18,23 +18,23 @@ namespace Ex22
             tree.insert(23);
             tree.insert(16);
             tree.insert(35);
-            bool test = tree.isPairPresent(tree.root, tree.root,11);
-            Console.ReadKey();*/
+            bool test = tree.isPairPresent(tree.root, tree.root, 17);
 
-            BST tree = new BST();
-            Console.Write("How many items would line to enter: ");
-            int n = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < n; i++)
-            {
-                Console.Write("Please enter item " + i + " : ");
-                int item = Convert.ToInt32(Console.ReadLine());
-                tree.insert(item);
-            }
-            Console.Write("What is your desired value: ");
-            int desired = Convert.ToInt32(Console.ReadLine());
 
-            bool run = tree.isPairPresent(tree.root, tree.root, desired);
-            if (!run)
+            //BST tree = new BST();
+            //Console.Write("How many items would line to enter: ");
+            //int n = Convert.ToInt32(Console.ReadLine());
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.Write("Please enter item " + i + " : ");
+            //    int item = Convert.ToInt32(Console.ReadLine());
+            //    tree.insert(item);
+            //}
+            //Console.Write("What is your desired value: ");
+            //int desired = Convert.ToInt32(Console.ReadLine());
+
+            //bool test = tree.isPairPresent(tree.root, tree.root, desired);
+            if (!test)
                 Console.WriteLine("OOps....No such vales are found!");
 
             Console.ReadKey();

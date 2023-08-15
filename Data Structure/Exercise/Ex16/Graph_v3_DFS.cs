@@ -8,6 +8,7 @@ namespace Ex16
 {
     class Graph_v3_DFS
     {
+        public int counter = 0;
         int V;
         List<int>[] adj;
         public Graph_v3_DFS(int V)
@@ -38,6 +39,7 @@ namespace Ex16
         }
         public void DFS(int v)
         {
+            counter++;
             bool[] visited = new bool[V];
             ControlOverVisitedVertices(v, visited);
         }

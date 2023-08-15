@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Passing C# to Python", "Passing C# to Python\Passing C# to Python.csproj", "{C37F363D-408D-4AE4-8AA0-8CF24C68B704}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PassedFromC#", "PassedFromC#\PassedFromC#.pyproj", "{E6991A7D-3EB6-47EA-B82C-BB81AF6AAAD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C37F363D-408D-4AE4-8AA0-8CF24C68B704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C37F363D-408D-4AE4-8AA0-8CF24C68B704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C37F363D-408D-4AE4-8AA0-8CF24C68B704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C37F363D-408D-4AE4-8AA0-8CF24C68B704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6991A7D-3EB6-47EA-B82C-BB81AF6AAAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6991A7D-3EB6-47EA-B82C-BB81AF6AAAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01E7B1F5-378C-4D41-AE37-2936AE70B688}
+	EndGlobalSection
+EndGlobal

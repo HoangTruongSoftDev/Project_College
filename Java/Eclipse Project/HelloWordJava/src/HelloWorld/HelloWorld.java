@@ -35,6 +35,8 @@ public class HelloWorld {
 		System.out.println("minShort: " + minShort);  
 		System.out.println("maxShort: " + maxShort);
 		
+		// 2147483648545
+		
 		int minInt = -2_147_483_648; // can't put underscore at the beginning or at the end of value of variable
 		int maxInt = +2__147__483__647; // double or more underscore is acceptable, but any underscore needs to be situated within two digits
 		
@@ -48,7 +50,7 @@ public class HelloWorld {
 		
 		System.out.println("aLongNum: " + aLongNum);  
 		System.out.println("bLongNum: " + bLongNum);
-		
+	
 		
 		/*
 	 	// C code to demonstrate implicit casting 

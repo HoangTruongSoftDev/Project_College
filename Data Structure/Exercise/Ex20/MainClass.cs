@@ -9,6 +9,7 @@ namespace Ex20
 {
     class MainClass
     {
+
         public void printList(LNode node)
         {
             while (node != null)
@@ -17,6 +18,7 @@ namespace Ex20
                 node = node.next;
             }
         }
+
         public void PreOrder(TNode root)
         {
             if (root == null)
@@ -27,6 +29,7 @@ namespace Ex20
             PreOrder(root.left);
             PreOrder(root.right);
         }
+
         public TNode sortedListToBST(List<int> vec, int start, int end)
         {
             if (start > end)

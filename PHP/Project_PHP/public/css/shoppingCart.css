@@ -1,0 +1,96 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td {
+    padding: 10px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    background-color: #FF9933;
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #FF9933;
+}
+
+input[type=number] {
+    width: 50px;
+}
+
+input[type=submit] {
+    background-color: #FF9933;
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type=submit]:hover {
+    background-color: #FF9933;
+}
+
+#shoppingCart {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#subTotalForm {
+    margin-top: 30px;
+}
+
+#subTotalForm td:first-child {
+    font-weight: bold;
+    text-align: right;
+}
+
+#subTotalForm td:last-child {
+    font-weight: bold;
+}
+
+#deleteProductId {
+    margin-left: 20px;
+}
+.center-div {
+    text-align: center;
+}
+.right-div {
+    text-align: right;
+}

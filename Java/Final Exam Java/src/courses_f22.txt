@@ -1,0 +1,10 @@
+420AS2AS: Information Systems: IN8: 90: 4
+420PA3AS: Advanced Object Oriented Programming: IN4: 75: 3
+420AP1AS: Algorithms & Programming: IN3: 90:  5
+420LS3AS: Scripting Languages: IN4: 60: 3
+420CT2AS: Data Structure: In5: 50: 4
+420P16AS: Web App: In5: 50: 4
+420A03AS: Intro Web: In5: 50: 4
+420JV7AS: Web App: In5: 50: 4
+420JV4AS: OOP: In5: 50: 4
+420DW1AS: Database: In5: 50: 4

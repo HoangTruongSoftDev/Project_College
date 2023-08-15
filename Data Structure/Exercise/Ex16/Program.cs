@@ -10,9 +10,9 @@ namespace Ex16
     {
         static void Main(string[] args)
         {
-            
-            
-            // **************************************** With List **********************
+
+
+            //****************************************With List**********************
             //Graph graph = new Graph(7);
             //graph.AddEdge(0, 1);
             //graph.AddEdge(0, 2);
@@ -38,7 +38,7 @@ namespace Ex16
             //int root = Convert.ToInt32(Console.ReadLine());
             //Console.WriteLine("Ok, run begin from root: " + root);
             //graph.BFS(root);
-            //Console.WriteLine("\n=========================================================================================\n");
+            // Console.WriteLine("\n=========================================================================================\n");
 
             //// **************************************** With Linked-List **********************
 
@@ -71,22 +71,37 @@ namespace Ex16
             //Console.WriteLine("Ok, run begin from root: " + root);
             //graph_v2.BFS(root);
 
-            Console.WriteLine("\n============================================== DFS Traverse ===========================================\n");
-            Graph_v3_DFS graph_V3_DFS = new Graph_v3_DFS(5);
-            graph_V3_DFS.AddEdge(11, 33);
-            graph_V3_DFS.AddEdge(11, 22);
-            graph_V3_DFS.AddEdge(22, 44);
-            graph_V3_DFS.AddEdge(22, 55);
-            graph_V3_DFS.AddEdge(33, 11);
-            graph_V3_DFS.AddEdge(44, 22);
-            graph_V3_DFS.AddEdge(55, 22);
+            //Console.WriteLine("\n============================================== DFS Traverse ===========================================\n");
+            Graph_v3_DFS graph_V3_DFS = new Graph_v3_DFS(7);
+            graph_V3_DFS.AddEdge(0, 1);
+            graph_V3_DFS.AddEdge(0, 2);
+            graph_V3_DFS.AddEdge(1, 0);
+            graph_V3_DFS.AddEdge(1, 2);
+            graph_V3_DFS.AddEdge(1, 3);
+            graph_V3_DFS.AddEdge(2, 0);
+            graph_V3_DFS.AddEdge(2, 1);
+            graph_V3_DFS.AddEdge(2, 4);
+            graph_V3_DFS.AddEdge(2, 5);
+            graph_V3_DFS.AddEdge(3, 1);
+            graph_V3_DFS.AddEdge(3, 4);
+            graph_V3_DFS.AddEdge(4, 2);
+            graph_V3_DFS.AddEdge(4, 3);
+            graph_V3_DFS.AddEdge(4, 5);
+            graph_V3_DFS.AddEdge(4, 6);
+            graph_V3_DFS.AddEdge(5, 2);
+            graph_V3_DFS.AddEdge(5, 4);
+            graph_V3_DFS.AddEdge(5, 6);
+            graph_V3_DFS.AddEdge(6, 4);
+            graph_V3_DFS.AddEdge(6, 5);
 
-            
+
 
             Console.WriteLine("You want to start from which vertex for DFS? ");
             int vertex = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Ok, run begin from root: " + vertex);
             graph_V3_DFS.DFS(vertex);
+
+            Console.WriteLine("The counter is: " + graph_V3_DFS.counter);
             Console.ReadKey();
             
         }

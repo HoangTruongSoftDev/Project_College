@@ -1,0 +1,134 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+}
+
+button {
+    font-size: 1em;
+    padding: 0.5em;
+    background-color: #FF9933;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#loginForm {
+    text-align: center;
+}
+
+#loginForm div {
+    margin: 1em 0;
+}
+
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    font-size: 1.2em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#loginForm input[type="submit"] {
+    background-color: #FF9933;
+    color: white;
+}
+
+#loginForm input[type="submit"]:hover {
+    background-color: #FF9933;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+}
+
+table th {
+    font-weight: bold;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+
+table img {
+    object-fit: contain;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+form label {
+    display: block;
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+
+form input[type="text"] {
+    font-size: 1.2em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#cancel {
+    margin: 1em 0;
+}
+
+#summaryOrder table {
+    margin: 1em auto;
+}
+
+#summaryOrder td {
+    padding: 0.5em 1em;
+    border: 1px solid #ddd;
+}
+
+#summaryOrder tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#summaryOrder tbody tr:first-child {
+    font-weight: bold;
+}
+#reviewShoppingCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+#reviewBillingAddress {
+    text-align: center;
+}
+#reviewShippingAddress {
+    text-align: center;
+}
+#button-order-summary {
+    text-align: center;
+}
+#loginForm div {
+    margin: 1em 0;
+}
+
+#loginForm label {
+    font-size: 1.2em;
+    margin-right: 1em;
+}
+.header-form {
+    text-align: center;
+}
+

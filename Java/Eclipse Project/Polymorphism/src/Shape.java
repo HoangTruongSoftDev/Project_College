@@ -5,12 +5,12 @@ public class Shape implements Comparable {
 	private boolean rightAngle;
 	private int[] lengthOfSides;
 	
-	public Shape(int sides, boolean rightAngle, int[] lengthOfSides) {
-		super();
-		this.sides = sides;
-		this.rightAngle = rightAngle;
-		this.lengthOfSides = lengthOfSides;
-	}
+	// public Shape(int sides, boolean rightAngle, int[] lengthOfSides) {
+	// 	super();
+	// 	this.sides = sides;
+	// 	this.rightAngle = rightAngle;
+	// 	this.lengthOfSides = lengthOfSides;
+	// }
 	@Override
 	public boolean equals(Object obj) {
 		if (obj == null || obj.getClass() == this.getClass()) return false;

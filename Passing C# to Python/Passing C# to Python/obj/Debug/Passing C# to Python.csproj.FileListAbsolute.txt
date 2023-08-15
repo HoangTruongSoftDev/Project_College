@@ -1,0 +1,8 @@
+C:\Truong\Lasalle College\Programming Feature\Project_College\Passing C# to Python\Passing C# to Python\bin\Debug\Passing C# to Python.exe.config
+C:\Truong\Lasalle College\Programming Feature\Project_College\Passing C# to Python\Passing C# to Python\bin\Debug\Passing C# to Python.exe
+C:\Truong\Lasalle College\Programming Feature\Project_College\Passing C# to Python\Passing C# to Python\bin\Debug\Passing C# to Python.pdb
+C:\Truong\Lasalle College\Programming Feature\Project_College\Passing C# to Python\Passing C# to Python\obj\Debug\Passing C# to Python.csproj.AssemblyReference.cache
+C:\Truong\Lasalle College\Programming Feature\Project_College\Passing C# to Python\Passing C# to Python\obj\Debug\Passing C# to Python.csproj.SuggestedBindingRedirects.cache
+C:\Truong\Lasalle College\Programming Feature\Project_College\Passing C# to Python\Passing C# to Python\obj\Debug\Passing C# to Python.csproj.CoreCompileInputs.cache
+C:\Truong\Lasalle College\Programming Feature\Project_College\Passing C# to Python\Passing C# to Python\obj\Debug\Passing C# to Python.exe
+C:\Truong\Lasalle College\Programming Feature\Project_College\Passing C# to Python\Passing C# to Python\obj\Debug\Passing C# to Python.pdb

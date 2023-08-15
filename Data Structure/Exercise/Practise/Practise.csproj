@@ -44,13 +44,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinarySearch.cs" />
+    <Compile Include="BinaryTree.cs" />
+    <Compile Include="BST.cs" />
     <Compile Include="BubbleSort.cs" />
     <Compile Include="ComputationalComplexity.cs" />
+    <Compile Include="Full Tree.cs" />
     <Compile Include="FunctionBigO%28nlogn%29.cs" />
+    <Compile Include="Graph_BFS.cs" />
+    <Compile Include="Graph_DFS.cs" />
+    <Compile Include="HeapSort.cs" />
     <Compile Include="Insertion_sort.cs" />
     <Compile Include="JumpSearch.cs" />
     <Compile Include="MergeSort.cs" />
     <Compile Include="Main\Program.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuickSort.cs" />
     <Compile Include="SelectionSort.cs" />

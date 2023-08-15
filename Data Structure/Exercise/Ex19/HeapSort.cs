@@ -14,8 +14,10 @@ namespace Ex19
         {
             this.array = array;
         }
-        public HeapSort(){
-            }
+        public HeapSort()
+        {
+            
+        }
         public void Sort(int[] array)
         {
             for (int i=array.Length/2 - 1; i >= 0; i--)
