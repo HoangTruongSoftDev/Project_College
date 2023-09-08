@@ -47,3 +47,12 @@ for (let i = 0; i < 5; i++) {
  var studentName = "TRUONG";
  var brands = "Apple Samsung Oppo Xiaomi Huawei Oppo Bphone";
  document.getElementById("objectPerson").innerHTML = brands.replace(/Oppo/g, "Google");
+
+ // ================================================================================================
+var number1 = 32e-3;
+var number2 = 0.2;
+var number3 = 0.1
+
+var infinityValue = -5/0;
+
+ document.getElementById("numberResult").innerHTML = infinityValue;
