@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Application De Calcul</string>
+    <string name="calculation">Calcul</string>
+    <string name="number_1">Numéro 1:</string>
+    <string name="number_2">Numéro 2:</string>
+    <string name="result">Résultat:</string>
+    <string name="add">Ajouter</string>
+    <string name="multiply">Multiplier</string>
+    <string name="subtract">Soustraire</string>
+    <string name="calculate">Calculer</string>
+    <string name="clear">Effacer</string>
+    <string name="quit">Quitter</string>
+    <string name="missing_number_1">Numéro 1 Manquant!</string>
+    <string name="missing_number_2">Numéro 2 Manquant!</string>
+    <string name="not_number_1">Le numéro 1 que vous entrez n’est pas un nombre!</string>
+    <string name="not_number_2">Le numéro 2 que vous entrez n’est pas un nombre!</string>
+    <string name="warning_selection">Veuillez sélectionner l’opérateur de calcul</string>
+
+</resources>

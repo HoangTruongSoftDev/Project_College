@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sport Preference"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="20sp"
+            android:layout_marginLeft="30dp"/>
+
+        <EditText
+            android:id="@+id/edName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="6"
+            android:inputType="text"
+            android:layout_marginLeft="30dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sport"
+            android:textSize="20sp"
+            android:layout_marginLeft="30dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgSport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             android:layout_marginLeft="30dp" >
+
+            <RadioButton
+                android:id="@+id/rbSoccer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Soccer"
+                android:textSize="20sp"/>
+
+            <RadioButton
+                android:id="@+id/rbHandball"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Handball"
+                android:textSize="20sp"/>
+
+            <RadioButton
+                android:id="@+id/rbHockey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hockey"
+                android:textSize="20sp"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:textAllCaps="false"
+            android:layout_marginLeft="30dp"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:layout_marginLeft="30dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"></LinearLayout>
+
+</LinearLayout>

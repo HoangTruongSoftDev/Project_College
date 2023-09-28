@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sport Result"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="................."
+        app:layout_constraintBaseline_toBaselineOf="@id/tvNameLabel"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintLeft_toRightOf="@id/tvNameLabel"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tvSportLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sport"
+        app:layout_constraintTop_toBottomOf="@id/tvNameLabel"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@id/tvNameLabel"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tvSport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="........."
+        app:layout_constraintBaseline_toBaselineOf="@id/tvSportLabel"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        />
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

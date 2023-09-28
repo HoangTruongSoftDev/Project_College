@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ứng Dụng Tính Toán</string>
+    <string name="calculation">Phép Tính</string>
+    <string name="number_1">Số Thứ Nhất:</string>
+    <string name="number_2">Số Thứ Hai</string>
+    <string name="result">Kết Quả:</string>
+    <string name="add">Cộng</string>
+    <string name="multiply">Nhân</string>
+    <string name="subtract">Trừ</string>
+    <string name="calculate">Tính Toán</string>
+    <string name="clear">Xóa</string>
+    <string name="quit">Thoát</string>
+    <string name="missing_number_1">Thiếu Số Thứ Nhất</string>
+    <string name="missing_number_2">Thiếu Số Thứ Hai</string>
+    <string name="not_number_1">Số thứ nhất không phải là chữ số</string>
+    <string name="not_number_2">SỐ thứ hai không phải là chữ số</string>
+    <string name="warning_selection">Hãy chọn phép toán</string>
+
+</resources>

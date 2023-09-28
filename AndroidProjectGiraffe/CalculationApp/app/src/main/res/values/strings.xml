@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Calculation App</string>
+    <string name="calculation">Calculation</string>
+    <string name="number_1">Number 1:</string>
+    <string name="number_2">Number 2:</string>
+    <string name="result">Result:</string>
+    <string name="add">Add</string>
+    <string name="multiply">Multiply</string>
+    <string name="subtract">Subtract</string>
+    <string name="calculate">Calculate</string>
+    <string name="clear">Clear</string>
+    <string name="quit">Quit</string>
+    <string name="missing_number_1">Missing Number 1!</string>
+    <string name="missing_number_2">Missing Number 2!</string>
+    <string name="not_number_1">Number 1 you input is not a number!</string>
+    <string name="not_number_2">Number 2 you input is not a number!</string>
+    <string name="warning_selection">Please select the calculation operator</string>
+</resources>

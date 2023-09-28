@@ -7,20 +7,85 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Student Information"
+        android:textSize="25sp"
+        android:textColor="#0E09DB"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/edName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="text"
+        android:text=""
+        app:layout_constraintLeft_toRightOf="@id/tvName"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvName"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        android:layout_marginTop="40dp"
+        />
+
+    <EditText
+        android:id="@+id/edAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="number"
+
+        app:layout_constraintBaseline_toBaselineOf="@id/tvAge"
+        app:layout_constraintStart_toStartOf="@id/edName"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnShow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="31dp" />
+        android:text="Show"
+        app:layout_constraintTop_toBottomOf="@id/tvAge"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:onClick="processButton"
+        />
 
+    <Button
+        android:id="@+id/btnQuit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quit"
+        app:layout_constraintBaseline_toBaselineOf="@id/btnShow"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:onClick="processButton"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
