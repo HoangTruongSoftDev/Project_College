@@ -25,10 +25,10 @@
 
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBoxPassword" runat="server" placeholder="enter password"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxPassword" type="password" runat="server" placeholder="enter password"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="ButtonShowPassword" runat="server" Text="Show Password" />
+                        <asp:ImageButton ID="ImageButtonPassword" runat="server" style="width: 15px; height: 15px" alt="Show-Hide Password" ImageUrl="../img/show-password.png" OnClick="ButtonImage_Click"/>                      
                     </td>
                 </tr>
                 <tr>
@@ -38,6 +38,7 @@
                 </tr>
             </table>
             <asp:Button ID="ButtonLogin" runat="server" Text="Login" OnClick="ButtonLogin_Click" />
+            
         </div>
     </form>
 </body>

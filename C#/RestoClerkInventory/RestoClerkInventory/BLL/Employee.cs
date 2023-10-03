@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestoClerkInventory.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,15 +8,15 @@ namespace RestoClerkInventory.BLL
 {
     public class Employee
     {
-        private int employeeId;
+        private User user;
         private string firstName;
         private string lastName;
         private string email;
 
-        public int EmployeeId
+        public User User
         {
-            get { return this.employeeId; }
-            set { this.employeeId = value; }
+            get { return this.user; }
+            set { this.user = value; }
         }
 
         public string FirstName
@@ -29,5 +30,16 @@ namespace RestoClerkInventory.BLL
             get => this.lastName;
         }
         public string Email { get => this.email; set => this.email = value; }
+
+        public void InsertEmployee(Employee employee) => EmployeeDB.InsertRecord(employee);
+
+        public void UpdateEmployee(Employee employee) => EmployeeDB.UpdateRecord(employee);
+        public void DeleteEmployee(Employee employee) => EmployeeDB.DeleteRecord(employee);
+
+        //public List<Employee> GetAllEmployees() => EmployeeDB.SelectAllRecords();
+
+        public Employee GetEmployeeById(int employeeId) => EmployeeDB.SelectById(employeeId);
+
+        public List<Employee> GetAllEmployeesJoinForeignTable() => EmployeeDB.SelectAllRecordsJoinForeignTable();
     }
 }

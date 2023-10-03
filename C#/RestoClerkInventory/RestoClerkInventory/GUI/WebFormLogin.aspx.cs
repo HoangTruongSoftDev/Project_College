@@ -23,10 +23,14 @@ namespace RestoClerkInventory.GUI
                 DropDownListPosition.Items.Add(Position.Manager.ToString());
                 DropDownListPosition.Items.Add(Position.Staff.ToString());
                 TextBoxUserId.Attributes.Add("placeholder", "4-digit number");
+
             }
-            
+
 
         }
+
+
+
 
         protected void ButtonLogin_Click(object sender, EventArgs e)
         {
@@ -61,8 +65,19 @@ namespace RestoClerkInventory.GUI
                 return;
             }
             string message = (user.Password == TextBoxPassword.Text) ? "Login Successfully" : "Your Password is incorrect";
-             MessageBox.Show(message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+            if (user.Password == TextBoxPassword.Text)
+            {               
+                if (user.Position.ToString() == Position.Admin.ToString())                
+                    Response.Redirect("WebFormAdmin.aspx");
+                //if (user.Position.ToString() == Position.Manager.ToString())
+                //    // Form Manager
+                //if (user.Position.ToString() == Position.Staff.ToString())
+                //    // Form Staff
+            }
+
         }
+       
 
         protected void DropDownListPosition_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -83,5 +98,17 @@ namespace RestoClerkInventory.GUI
             //        break;
             //}
         }
+
+        protected void ButtonImage_Click(object sender, EventArgs e)
+        {
+            string imagePassword = (TextBoxPassword.Attributes["type"] == "password") ? "../img/hide-password.png" : "../img/show-password.png";
+            string typePassword = (TextBoxPassword.Attributes["type"] == "password") ? "text" : "password";
+            ImageButtonPassword.ImageUrl = imagePassword;
+            TextBoxPassword.Attributes["type"] = typePassword;
+            
+
+
+        }
+
     }
 }

@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GUI\WebFormAdmin.aspx" />
     <Content Include="GUI\WebFormLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -77,6 +78,13 @@
     <Compile Include="DAL\EmployeeDB.cs" />
     <Compile Include="DAL\UserDB.cs" />
     <Compile Include="ENUM\Position.cs" />
+    <Compile Include="GUI\WebFormAdmin.aspx.cs">
+      <DependentUpon>WebFormAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\WebFormAdmin.aspx.designer.cs">
+      <DependentUpon>WebFormAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\WebFormLogin.aspx.cs">
       <DependentUpon>WebFormLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -97,7 +105,10 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Themes\" />
+    <Folder Include="img\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

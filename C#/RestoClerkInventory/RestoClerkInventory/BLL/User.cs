@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using RestoClerkInventory.ENUM;
 using RestoClerkInventory.DAL;
+using System.Windows.Forms;
+
 namespace RestoClerkInventory.BLL
 {
     public class User
@@ -33,5 +35,23 @@ namespace RestoClerkInventory.BLL
         public List<User> GetAllUsers() => UserDB.SelectAllRecords();
 
         public User GetUserById(int userId) => UserDB.SelectById(userId);
+        public List<User> GetUsersByPosition() => UserDB.SelectRecordsByPosition();
+        
+        public override bool Equals(object obj)
+        {
+            
+            if (!(obj.GetType() == typeof(User)))
+                return false;
+            User user = (User)obj;
+            if (this.UserId == user.UserId)
+                return true;
+            return false;
+            
+            
+        }
+        public override string ToString()
+        {
+            return $"User ID: {this.UserId}\nPassword: {this.Password}\nPosition: {this.Position.ToString()}";
+        }
     }
 }
