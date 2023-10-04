@@ -65,7 +65,7 @@ namespace RestoClerkInventory.DAL
         //    return null;
         //}
 
-        public static Employee SelectById(int employeeId)
+        public static Employee SelectRecordById(int employeeId)
         {
             SqlConnection conn = Service.GetDBConnection();
             SqlCommand cmdSelectById = new SqlCommand("SELECT Employees.EmployeeId, Employees.FirstName, Employees.LastName, Employees.Email, " +
@@ -93,6 +93,142 @@ namespace RestoClerkInventory.DAL
             return employee;
         }
 
+        public static List<Employee> SelectRecordsByPosition(string inputPosition)
+        {
+            List<Employee> listAllEmployees = new List<Employee>();
+            SqlConnection conn = Service.GetDBConnection();
+            SqlCommand cmdSelectByPosition = new SqlCommand();
+            cmdSelectByPosition.Connection = conn;
+            cmdSelectByPosition.CommandText = "SELECT Employees.EmployeeId, Employees.FirstName, Employees.LastName, Employees.Email, " +
+                                                     "Users.Position, Users.Password " +
+                                                     "FROM Employees JOIN Users ON Employees.EmployeeId = Users.UserId " +
+                                                     "WHERE Users.Position = @position;";
+            cmdSelectByPosition.Parameters.AddWithValue("@position", inputPosition);
+            SqlDataReader reader = cmdSelectByPosition.ExecuteReader();
+            Employee employee;
+            User user;
+            while (reader.Read())
+            {
+                employee = new Employee();
+                user = new User();
+                user.UserId = Convert.ToInt32(reader["EmployeeId"]);
+                user.Password = reader["Password"].ToString();
+                Position position = new Position();
+                if (Enum.TryParse(reader["Position"].ToString(), out position))
+                    user.Position = position;
+
+                employee.User = user;
+                employee.FirstName = reader["FirstName"].ToString();
+                employee.LastName = reader["LastName"].ToString();
+                employee.Email = reader["Email"].ToString();
+                listAllEmployees.Add(employee);
+            }
+            if (listAllEmployees.Any())
+                return listAllEmployees;
+            return null;
+        }
+        public static List<Employee> SelectRecordsByFirstName(string firstName)
+        {
+            List<Employee> listAllEmployees = new List<Employee>();
+            SqlConnection conn = Service.GetDBConnection();
+            SqlCommand cmdSelectByPosition = new SqlCommand();
+            cmdSelectByPosition.Connection = conn;
+            cmdSelectByPosition.CommandText = "SELECT Employees.EmployeeId, Employees.FirstName, Employees.LastName, Employees.Email, " +
+                                                     "Users.Position, Users.Password " +
+                                                     "FROM Employees JOIN Users ON Employees.EmployeeId = Users.UserId " +
+                                                     "WHERE Employees.FirstName = @firstName;";
+            cmdSelectByPosition.Parameters.AddWithValue("@firstName", firstName);
+            SqlDataReader reader = cmdSelectByPosition.ExecuteReader();
+            Employee employee;
+            User user;
+            while (reader.Read())
+            {
+                employee = new Employee();
+                user = new User();
+                user.UserId = Convert.ToInt32(reader["EmployeeId"]);
+                user.Password = reader["Password"].ToString();
+                Position position = new Position();
+                if (Enum.TryParse(reader["Position"].ToString(), out position))
+                    user.Position = position;
+
+                employee.User = user;
+                employee.FirstName = reader["FirstName"].ToString();
+                employee.LastName = reader["LastName"].ToString();
+                employee.Email = reader["Email"].ToString();
+                listAllEmployees.Add(employee);
+            }
+            if (listAllEmployees.Any())
+                return listAllEmployees;
+            return null;
+        }
+        public static List<Employee> SelectRecordsByLastName(string lastName)
+        {
+            List<Employee> listAllEmployees = new List<Employee>();
+            SqlConnection conn = Service.GetDBConnection();
+            SqlCommand cmdSelectByPosition = new SqlCommand();
+            cmdSelectByPosition.Connection = conn;
+            cmdSelectByPosition.CommandText = "SELECT Employees.EmployeeId, Employees.FirstName, Employees.LastName, Employees.Email, " +
+                                                     "Users.Position, Users.Password " +
+                                                     "FROM Employees JOIN Users ON Employees.EmployeeId = Users.UserId " +
+                                                     "WHERE Employees.LastName = @lastName;";
+            cmdSelectByPosition.Parameters.AddWithValue("@lastName", lastName);
+            SqlDataReader reader = cmdSelectByPosition.ExecuteReader();
+            Employee employee;
+            User user;
+            while (reader.Read())
+            {
+                employee = new Employee();
+                user = new User();
+                user.UserId = Convert.ToInt32(reader["EmployeeId"]);
+                user.Password = reader["Password"].ToString();
+                Position position = new Position();
+                if (Enum.TryParse(reader["Position"].ToString(), out position))
+                    user.Position = position;
+
+                employee.User = user;
+                employee.FirstName = reader["FirstName"].ToString();
+                employee.LastName = reader["LastName"].ToString();
+                employee.Email = reader["Email"].ToString();
+                listAllEmployees.Add(employee);
+            }
+            if (listAllEmployees.Any())
+                return listAllEmployees;
+            return null;
+        }
+        public static List<Employee> SelectRecordsByEmail(string email)
+        {
+            List<Employee> listAllEmployees = new List<Employee>();
+            SqlConnection conn = Service.GetDBConnection();
+            SqlCommand cmdSelectByPosition = new SqlCommand();
+            cmdSelectByPosition.Connection = conn;
+            cmdSelectByPosition.CommandText = "SELECT Employees.EmployeeId, Employees.FirstName, Employees.LastName, Employees.Email, " +
+                                                     "Users.Position, Users.Password " +
+                                                     "FROM Employees JOIN Users ON Employees.EmployeeId = Users.UserId " +
+                                                     "WHERE Employees.Email = @email;";
+            cmdSelectByPosition.Parameters.AddWithValue("@email", email);
+            SqlDataReader reader = cmdSelectByPosition.ExecuteReader();
+            Employee employee;
+            User user;
+            while (reader.Read())
+            {
+                employee = new Employee();
+                user = new User();
+                user.UserId = Convert.ToInt32(reader["EmployeeId"]);
+                user.Password = reader["Password"].ToString();
+                Position position = new Position();
+                if (Enum.TryParse(reader["Position"].ToString(), out position))
+                    user.Position = position;
+
+                employee.User = user;
+                employee.FirstName = reader["FirstName"].ToString();
+                employee.LastName = reader["LastName"].ToString();
+                employee.Email = reader["Email"].ToString();
+                listAllEmployees.Add(employee);
+            }
+            if (listAllEmployees.Any())
+                return listAllEmployees;
+            return null;
+        }
         public static List<Employee> SelectAllRecordsJoinForeignTable()
         {
             List<Employee> listAllEmployees = new List<Employee>();
@@ -112,6 +248,7 @@ namespace RestoClerkInventory.DAL
                 Position position = new Position();
                 if (Enum.TryParse(reader["Position"].ToString(),out position))
                     user.Position = position;
+                               
                 employee.User = user;
                 employee.FirstName = reader["FirstName"].ToString();
                 employee.LastName = reader["LastName"].ToString();

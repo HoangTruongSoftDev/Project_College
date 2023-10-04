@@ -28,7 +28,7 @@ namespace RestoClerkInventory.DAL
             cmdUpdate.Connection = conn;
             cmdUpdate.Parameters.AddWithValue("@userId", user.UserId);
             cmdUpdate.Parameters.AddWithValue("@password", user.Password);
-            cmdUpdate.Parameters.AddWithValue("@position", user.Position);
+            cmdUpdate.Parameters.AddWithValue("@position", user.Position.ToString());
             cmdUpdate.ExecuteNonQuery();
             conn.Close();
         }

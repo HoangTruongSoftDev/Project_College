@@ -26,9 +26,9 @@ namespace RestoClerkInventory.GUI
                 DropDownListSearch.Items.Add("Email");
                 DropDownListSearchPosition.Items.Add(Position.Manager.ToString());
                 DropDownListSearchPosition.Items.Add(Position.Staff.ToString());
-               
+
             }
-            
+
         }
 
         protected void ButtonSave_Click(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace RestoClerkInventory.GUI
             User user = new User();
             List<User> listAllUsers = user.GetAllUsers();
             user = user.GetUserById(Convert.ToInt32(TextBoxEmployeeId.Text.Trim()));
-            
+
             if (listAllUsers.Contains(user))
             {
                 MessageBox.Show("This user already exist!", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -106,14 +106,14 @@ namespace RestoClerkInventory.GUI
             employee.LastName = TextBoxLastName.Text.Trim();
             employee.Email = TextBoxEmail.Text.Trim();
 
-            
+
             user.InsertUser(user);
             employee.InsertEmployee(employee);
             MessageBox.Show("Save Employee Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-          
-            
+
+
         }
 
         protected void DropDownListSearch_SelectedIndexChanged(object sender, EventArgs e)
@@ -213,7 +213,7 @@ namespace RestoClerkInventory.GUI
                 TextBoxPassword.Focus();
                 return;
             }
-            
+
             User user = new User();
             user.UserId = Convert.ToInt32(TextBoxEmployeeId.Text.Trim());
             user.Password = TextBoxPassword.Text.Trim();
@@ -227,12 +227,17 @@ namespace RestoClerkInventory.GUI
             employee.FirstName = TextBoxFirstName.Text.Trim();
             employee.LastName = TextBoxLastName.Text.Trim();
             employee.Email = TextBoxEmail.Text.Trim();
-            
+
 
             user.UpdateUser(user);
             employee.UpdateEmployee(employee);
+            MessageBox.Show(employee.ToString());
             MessageBox.Show("Update Employee Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            Service.ClearAllTextBoxes(this);
+            GridViewEmployee.DataSource = null;
+            GridViewEmployee.DataBind();
+            ButtonUpdate.Enabled = false;
+            ButtonDelete.Enabled = false;
         }
 
         protected void ButtonListAll_Click(object sender, EventArgs e)
@@ -254,14 +259,23 @@ namespace RestoClerkInventory.GUI
         protected void ButtonDelete_Click(object sender, EventArgs e)
         {
             User user = new User();
-            user.GetUserById(Convert.ToInt32(TextBoxEmployeeId.Text));
+            user = user.GetUserById(Convert.ToInt32(TextBoxEmployeeId.Text));
+            Employee employee = new Employee();
+            employee = employee.GetEmployeeById(Convert.ToInt32(TextBoxEmployeeId.Text));
             if (user.GetAllUsers().Contains(user))
             {
+                employee.DeleteEmployee(employee);
                 user.DeleteUser(user);
                 MessageBox.Show("Delete Employee Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Service.ClearAllTextBoxes(this);
+                GridViewEmployee.DataSource = null;
+                GridViewEmployee.DataBind();
+                ButtonUpdate.Enabled = false;
+                ButtonDelete.Enabled = false;
             }
             else
                 MessageBox.Show("Fail Deleting Employee", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         protected void GridViewEmployee_SelectedIndexChanged(object sender, EventArgs e)
@@ -270,7 +284,7 @@ namespace RestoClerkInventory.GUI
             TextBoxFirstName.Text = GridViewEmployee.SelectedRow.Cells[1].Text.ToString();
             TextBoxLastName.Text = GridViewEmployee.SelectedRow.Cells[2].Text.ToString();
             TextBoxEmail.Text = GridViewEmployee.SelectedRow.Cells[3].Text.ToString();
-            DropDownListPosition.SelectedValue = (GridViewEmployee.SelectedRow.Cells[4].Text.ToString() == Position.Manager.ToString()) ? Position.Manager.ToString() : Position.Staff.ToString();           
+            DropDownListPosition.SelectedValue = (GridViewEmployee.SelectedRow.Cells[4].Text.ToString() == Position.Manager.ToString()) ? Position.Manager.ToString() : Position.Staff.ToString();
             TextBoxPassword.Text = GridViewEmployee.SelectedRow.Cells[5].Text.ToString();
             TextBoxEmployeeId.ReadOnly = true;
             ButtonDelete.Enabled = true;
@@ -279,19 +293,24 @@ namespace RestoClerkInventory.GUI
 
         protected void ImageButtonSearch_Click(object sender, ImageClickEventArgs e)
         {
-            switch(DropDownListSearch.SelectedValue)
+            Employee employee;
+            List<Employee> listEmployees;
+            switch (DropDownListSearch.SelectedValue)
             {
                 case "Employee ID":
-                    Employee employee = new Employee();
+                    employee = new Employee();
                     if (!Validator.IsValidUserId(TextBoxSearch.Text, DropDownListPosition.SelectedValue))
                     {
                         MessageBox.Show("Employee ID must be 6-digit", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                        
-                    employee =  employee.GetEmployeeById(Convert.ToInt32(TextBoxSearch.Text));
+
+                    employee = employee.GetEmployeeById(Convert.ToInt32(TextBoxSearch.Text));
                     if (employee == null)
+                    {
                         MessageBox.Show("There is no employee has been found", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                     else
                         MessageBox.Show("The Employee has been found", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     GridViewEmployee.DataSource = new List<Employee>() { employee }.Select(emp => new
@@ -304,16 +323,129 @@ namespace RestoClerkInventory.GUI
                         emp.User.Password
                     }).ToList();
                     GridViewEmployee.DataBind();
-                    GridViewEmployee.DataBind();
                     break;
                 case "Position":
-                    
+                    employee = new Employee();
+                    string userPosition = (DropDownListSearchPosition.SelectedValue == Position.Staff.ToString()) ? Position.Staff.ToString() : Position.Manager.ToString();
+                    listEmployees = employee.GetEmployeesByPosition(userPosition);
+                    if (listEmployees == null)
+                    {
+                        MessageBox.Show("There is no employee has been found", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("The Employee has been found", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GridViewEmployee.DataSource = listEmployees.Select(emp => new
+                        {
+                            emp.User.UserId,
+                            emp.FirstName,
+                            emp.LastName,
+                            emp.Email,
+                            emp.User.Position,
+                            emp.User.Password
+                        });
+                        GridViewEmployee.DataBind();
+                    }
                     break;
                 case "First Name":
+                    employee = new Employee();
+                    if (TextBoxSearch.Text.Trim() == string.Empty)
+                    {
+                        MessageBox.Show("Enter the Employee's First Name to search", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    if (!Validator.IsValidName(TextBoxSearch.Text.Trim()))
+                    {
+                        MessageBox.Show("Invalid Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    listEmployees = employee.GetEmployeesByFirstName(TextBoxSearch.Text.Trim());
+                    if (listEmployees == null)
+                    {
+                        MessageBox.Show("There is no employee has been found", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("The Employee has been found", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GridViewEmployee.DataSource = listEmployees.Select(emp => new
+                        {
+                            emp.User.UserId,
+                            emp.FirstName,
+                            emp.LastName,
+                            emp.Email,
+                            emp.User.Position,
+                            emp.User.Password
+                        });
+                        GridViewEmployee.DataBind();
+                    }
                     break;
                 case "Last Name":
+                    employee = new Employee();
+                    if (TextBoxSearch.Text.Trim() == string.Empty)
+                    {
+                        MessageBox.Show("Enter the Employee's Last Name to search", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    if (!Validator.IsValidName(TextBoxSearch.Text.Trim()))
+                    {
+                        MessageBox.Show("Invalid Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    listEmployees = employee.GetEmployeesByLastName(TextBoxSearch.Text.Trim());
+                    if (listEmployees == null)
+                    {
+                        MessageBox.Show("There is no employee has been found", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("The Employee has been found", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GridViewEmployee.DataSource = listEmployees.Select(emp => new
+                        {
+                            emp.User.UserId,
+                            emp.FirstName,
+                            emp.LastName,
+                            emp.Email,
+                            emp.User.Position,
+                            emp.User.Password
+                        });
+                        GridViewEmployee.DataBind();
+                    }
                     break;
                 case "Email":
+                    employee = new Employee();
+                    if (TextBoxSearch.Text.Trim() == string.Empty)
+                    {
+                        MessageBox.Show("Enter the Employee's Email to search", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    if (!Validator.IsValidEmail(TextBoxSearch.Text.Trim()))
+                    {
+                        MessageBox.Show("Invalid Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    listEmployees = employee.GetEmployeesByEmail(TextBoxSearch.Text.Trim());
+                    if (listEmployees == null)
+                    {
+                        MessageBox.Show("There is no employee has been found", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("The Employee has been found", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GridViewEmployee.DataSource = listEmployees.Select(emp => new
+                        {
+                            emp.User.UserId,
+                            emp.FirstName,
+                            emp.LastName,
+                            emp.Email,
+                            emp.User.Position,
+                            emp.User.Password
+                        });
+                        GridViewEmployee.DataBind();
+                    }
                     break;
                 default:
                     MessageBox.Show("There is something wrong", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
