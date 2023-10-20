@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Internet Provider"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/tvLabelClientNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Client Number :"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <EditText
+        android:id="@+id/edClientNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelClientNumber"
+        app:layout_constraintLeft_toRightOf="@id/tvLabelClientNumber"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/tvLabelProvider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Provider"
+        app:layout_constraintStart_toStartOf="@id/tvLabelClientNumber"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelClientNumber"
+        android:layout_marginTop="30dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgProvider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tvLabelProvider"
+        app:layout_constraintTop_toBottomOf="@id/edClientNumber"
+        app:layout_constraintStart_toStartOf="@id/edClientNumber"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/rbBell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bell" />
+
+        <RadioButton
+            android:id="@+id/rbVideotron"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Videotron" />
+
+        <RadioButton
+            android:id="@+id/rbAcanac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acanac" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvNumberOfMonths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nb of months :"
+        app:layout_constraintStart_toStartOf="@id/tvLabelProvider"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelProvider"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/edNumberOfMonths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvNumberOfMonths"
+        app:layout_constraintStart_toStartOf="@id/rgProvider"/>
+
+    <TextView
+        android:id="@+id/tvLabelSubtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtotal :"
+        app:layout_constraintStart_toStartOf="@id/tvNumberOfMonths"
+        app:layout_constraintTop_toBottomOf="@id/tvNumberOfMonths"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/tvSubTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelSubtotal"
+        app:layout_constraintStart_toStartOf="@id/edNumberOfMonths"/>
+
+    <TextView
+        android:id="@+id/tvLabelTps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tps :"
+        app:layout_constraintStart_toStartOf="@id/tvLabelSubtotal"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelSubtotal"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/tvTps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelTps"
+        app:layout_constraintStart_toStartOf="@id/tvSubTotal" />
+
+    <TextView
+        android:id="@+id/tvLabelTvq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tvq :"
+        app:layout_constraintStart_toStartOf="@id/tvLabelTps"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelTps"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/tvTvq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelTvq"
+        app:layout_constraintStart_toStartOf="@id/tvTps"  />
+
+    <TextView
+        android:id="@+id/tvLabelTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total :"
+        app:layout_constraintStart_toStartOf="@id/tvLabelTvq"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelTvq"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelTotal"
+        app:layout_constraintStart_toStartOf="@id/tvTvq"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintStart_toStartOf="@id/tvLabelTotal"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelTotal"
+        android:layout_marginTop="50dp"
+        />
+
+    <Button
+        android:id="@+id/btnShowAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show All"
+        app:layout_constraintBaseline_toBaselineOf="@id/btnSave"
+        app:layout_constraintLeft_toRightOf="@id/btnSave"
+        android:layout_marginLeft="40dp"/>
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        app:layout_constraintBaseline_toBaselineOf="@id/btnSave"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"/>
+
+    <TextView
+        android:id="@+id/tvTesting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Testing"
+        app:layout_constraintStart_toStartOf="@id/btnSave"
+        app:layout_constraintTop_toBottomOf="@id/btnSave"
+        android:layout_marginTop="30dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

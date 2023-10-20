@@ -220,7 +220,7 @@ namespace RestoClerkInventory.GUI
 
             Position position = new Position();
             if (Enum.TryParse(DropDownListPosition.SelectedValue, out position))
-                user.Position = position;
+                user.Position = position;dsds
 
             Employee employee = new Employee();
             employee.User = user;

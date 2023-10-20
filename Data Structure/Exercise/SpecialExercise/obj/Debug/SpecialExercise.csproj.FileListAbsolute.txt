@@ -1,0 +1,7 @@
+D:\Programming\Project_College\Data Structure\Exercise\SpecialExercise\bin\Debug\SpecialExercise.exe.config
+D:\Programming\Project_College\Data Structure\Exercise\SpecialExercise\bin\Debug\SpecialExercise.exe
+D:\Programming\Project_College\Data Structure\Exercise\SpecialExercise\bin\Debug\SpecialExercise.pdb
+D:\Programming\Project_College\Data Structure\Exercise\SpecialExercise\obj\Debug\SpecialExercise.csproj.AssemblyReference.cache
+D:\Programming\Project_College\Data Structure\Exercise\SpecialExercise\obj\Debug\SpecialExercise.csproj.CoreCompileInputs.cache
+D:\Programming\Project_College\Data Structure\Exercise\SpecialExercise\obj\Debug\SpecialExercise.exe
+D:\Programming\Project_College\Data Structure\Exercise\SpecialExercise\obj\Debug\SpecialExercise.pdb

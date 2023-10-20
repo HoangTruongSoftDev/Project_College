@@ -6,3 +6,10 @@ C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exe
 C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\Ex12\obj\Debug\Ex12.csproj.CoreCompileInputs.cache
 C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\Ex12\obj\Debug\Ex12.exe
 C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\Ex12\obj\Debug\Ex12.pdb
+D:\Programming\Project_College\Data Structure\Exercise\Ex12\bin\Debug\Ex12.exe.config
+D:\Programming\Project_College\Data Structure\Exercise\Ex12\bin\Debug\Ex12.exe
+D:\Programming\Project_College\Data Structure\Exercise\Ex12\bin\Debug\Ex12.pdb
+D:\Programming\Project_College\Data Structure\Exercise\Ex12\obj\Debug\Ex12.csproj.AssemblyReference.cache
+D:\Programming\Project_College\Data Structure\Exercise\Ex12\obj\Debug\Ex12.csproj.CoreCompileInputs.cache
+D:\Programming\Project_College\Data Structure\Exercise\Ex12\obj\Debug\Ex12.exe
+D:\Programming\Project_College\Data Structure\Exercise\Ex12\obj\Debug\Ex12.pdb

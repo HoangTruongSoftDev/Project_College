@@ -2,7 +2,9 @@ package model;
 
 import androidx.annotation.NonNull;
 
-public class Order {
+import java.io.Serializable;
+
+public class Order implements Serializable {
     private int clNum;
     private String pizzaType;
     private int nbSlices;
@@ -22,7 +24,7 @@ public class Order {
     @NonNull
     @Override
     public String toString() {
-        return "Client: " + clNum + "\tPizza: " + pizzaType + "\tNb Slices: " + nbSlices + "Amount: " + getAmount();
+        return "Client: " + clNum + "\tPizza: " + pizzaType + "\tNb Slices: " + nbSlices + "Amount: " + getAmount(pizzaType, nbSlices);
     }
 
     public int getClNum() {
@@ -48,17 +50,26 @@ public class Order {
     public void setNbSlices(int nbSlices) {
         this.nbSlices = nbSlices;
     }
-    private float getAmount() {
-        float amount = 0f;
-        if (pizzaType.equals("Vegetarian"))
-            amount = nbSlices * 2.5f;
-        else
-            if (pizzaType.equals("Cheese"))
-                amount = nbSlices * 2.0f;
-            else
-                if (pizzaType.equals("Mexican"))
-                    amount = nbSlices * 2.4f;
-                return amount;
+    public static float getAmount(String pizzaType, int nbSlices) {
+        try {
+            return getPrice(pizzaType)*nbSlices;
+        }
+        catch (Exception e) {
+            return -1;
+        }
 
+    }
+
+    private static float getPrice(String pizzaType) throws Exception {
+        float price = 0f;
+        if (pizzaType.equals("Vegetarian"))
+            price = 2.5f;
+        else if (pizzaType.equals("Mexican"))
+            price = 2.4f;
+        else if (pizzaType.equals("Cheese"))
+            price = 2.0f;
+        else
+            throw new Exception("Please select a pizza");
+        return price;
     }
 }

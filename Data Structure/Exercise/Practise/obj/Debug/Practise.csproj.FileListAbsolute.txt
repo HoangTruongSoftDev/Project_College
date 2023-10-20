@@ -6,3 +6,10 @@ C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exe
 C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\Practise\obj\Debug\Practise.csproj.CoreCompileInputs.cache
 C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\Practise\obj\Debug\Practise.exe
 C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\Practise\obj\Debug\Practise.pdb
+D:\Programming\Project_College\Data Structure\Exercise\Practise\bin\Debug\Practise.exe.config
+D:\Programming\Project_College\Data Structure\Exercise\Practise\bin\Debug\Practise.exe
+D:\Programming\Project_College\Data Structure\Exercise\Practise\bin\Debug\Practise.pdb
+D:\Programming\Project_College\Data Structure\Exercise\Practise\obj\Debug\Practise.csproj.AssemblyReference.cache
+D:\Programming\Project_College\Data Structure\Exercise\Practise\obj\Debug\Practise.csproj.CoreCompileInputs.cache
+D:\Programming\Project_College\Data Structure\Exercise\Practise\obj\Debug\Practise.exe
+D:\Programming\Project_College\Data Structure\Exercise\Practise\obj\Debug\Practise.pdb

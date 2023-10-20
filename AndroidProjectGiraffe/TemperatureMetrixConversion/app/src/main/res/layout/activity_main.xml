@@ -5,21 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.25"
-        android:orientation="horizontal">
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Temperature/Metrix conversion"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -28,14 +39,54 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
+            <TextView
+                android:layout_marginTop="8dp"
+                android:id="@+id/tvDeveloperName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Name"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/edDeveloperName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginRight="90dp"
+                android:ems="10"
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
+            <Button
+
+                android:id="@+id/btnTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:text="Temperature"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/btnMetrix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Metrix"
+                android:layout_marginLeft="200dp"/>
+
+            <Button
+                android:id="@+id/btnQuit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quit"
+                android:layout_marginLeft="200dp"/>
         </LinearLayout>
     </LinearLayout>
 

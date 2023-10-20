@@ -1,6 +1,8 @@
 package com.example.prjpizzaorder;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initialize();
     }
 
     private void initialize() {
@@ -70,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             System.exit(0);
         else if (id == R.id.btnShowAll)
             showAllOrders();
-        else if (id == R.id.rbCheese)
+        if (id == R.id.rbCheese)
         {
             pizzaType = rbCheese.getText().toString();
             showAmount();
@@ -90,9 +93,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void showAmount() {
 
     try {
-        float price = getPrice(pizzaType);
+
         int nbSlices = Integer.valueOf(edNbSlices.getText().toString());
-        float amount = nbSlices  * price;
+        float amount = order.getAmount(pizzaType, nbSlices);
         tvAmount.setText(String.valueOf(amount));
     }
 
@@ -101,17 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     }
 
-    private float getPrice(String pizzaType) throws Exception {
-        if (pizzaType.equals("Vegetarian"))
-            price = 2.5f;
-        else if (pizzaType.equals("Mexican"))
-            price = 2.4f;
-        else if (pizzaType.equals("Cheese"))
-            price = 2.0f;
-        else
-            throw new Exception("Please select a pizza");
-        return price;
-    }
+
 
     private void clearWidgets(ViewGroup parent) {
         for (int i = 0; i < parent.getChildCount(); i++) {
@@ -124,6 +117,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     private void showAllOrders() {
+            Intent intent = new Intent( this, SecondActivity.class);
+            intent.putExtra("orders", orderList);
+            startActivity(intent);
 
     }
 

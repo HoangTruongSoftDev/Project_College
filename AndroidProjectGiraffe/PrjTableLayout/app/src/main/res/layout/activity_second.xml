@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:background="#FFFFFF"
+
+    >
+    <TextView
+        android:id="@+id/tvChangeSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change schedule"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="30sp"
+        android:textColor="#062C53"
+
+        />
+
+    <TextView
+        android:id="@+id/tvSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Schedule"
+        app:layout_constraintTop_toBottomOf="@id/tvChangeSchedule"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="40dp"
+        android:textColor="#112233"
+        android:textSize="20sp"
+
+        />
+
+    <EditText
+        android:id="@+id/edNewSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvSchedule"
+        app:layout_constraintLeft_toRightOf="@id/tvSchedule"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:id="@+id/btnReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return"
+        app:layout_constraintTop_toBottomOf="@id/tvSchedule"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"
+        android:textAllCaps="false"
+        android:textColor="#112233"
+        android:textSize="20sp"
+        android:background="@drawable/button_selector"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

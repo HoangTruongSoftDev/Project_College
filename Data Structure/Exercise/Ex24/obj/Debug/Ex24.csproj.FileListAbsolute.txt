@@ -6,3 +6,10 @@ C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exe
 C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\Ex24\obj\Debug\Ex24.csproj.CoreCompileInputs.cache
 C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\Ex24\obj\Debug\Ex24.exe
 C:\Truong\Lasalle College\Programming Feature\Project_College\Data Structure\Exercise\Ex24\obj\Debug\Ex24.pdb
+D:\Programming\Project_College\Data Structure\Exercise\Ex24\bin\Debug\Ex24.exe.config
+D:\Programming\Project_College\Data Structure\Exercise\Ex24\bin\Debug\Ex24.exe
+D:\Programming\Project_College\Data Structure\Exercise\Ex24\bin\Debug\Ex24.pdb
+D:\Programming\Project_College\Data Structure\Exercise\Ex24\obj\Debug\Ex24.csproj.AssemblyReference.cache
+D:\Programming\Project_College\Data Structure\Exercise\Ex24\obj\Debug\Ex24.csproj.CoreCompileInputs.cache
+D:\Programming\Project_College\Data Structure\Exercise\Ex24\obj\Debug\Ex24.exe
+D:\Programming\Project_College\Data Structure\Exercise\Ex24\obj\Debug\Ex24.pdb
