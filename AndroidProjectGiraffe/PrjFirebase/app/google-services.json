@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "732704701926",
+    "firebase_url": "https://prjtruong-default-rtdb.firebaseio.com",
+    "project_id": "prjtruong",
+    "storage_bucket": "prjtruong.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732704701926:android:f90727c89e2316f337aa27",
+        "android_client_info": {
+          "package_name": "com.example.prjfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUPZurYSPpNHk2CVQf12T20WUeYn_dfmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

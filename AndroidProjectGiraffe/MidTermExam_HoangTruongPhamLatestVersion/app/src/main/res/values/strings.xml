@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Transport</string>
+    <string name="transport_survey">Transport survey</string>
+    <string name="client_number">Client number :</string>
+    <string name="type_of_transport">Type of transport :</string>
+    <string name="bus">Bus</string>
+    <string name="metro">Metro</string>
+    <string name="private_transport">Private Transport</string>
+    <string name="taxi">Taxi</string>
+    <string name="nombre_of_km_per_day">Nombre of km per day :</string>
+    <string name="save">Save</string>
+    <string name="quit">Quit</string>
+    <string name="show_all">Show All</string>
+    <string name="clear_all">Clear All</string>
+</resources>

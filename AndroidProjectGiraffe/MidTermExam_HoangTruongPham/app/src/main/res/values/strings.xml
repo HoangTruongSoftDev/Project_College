@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Transport</string>
+    <string name="transport_survey">Transport survey</string>
+    <string name="username">Username :</string>
+    <string name="private_transport">Private Transport</string>
+    <string name="bus">Bus</string>
+    <string name="metro">Metro</string>
+    <string name="car">Car</string>
+    <string name="bike">Bike</string>
+    <string name="save">Save</string>
+    <string name="clear_all">Clear All</string>
+    <string name="quit">Quit</string>
+    <string name="show_all">Show All</string>
+    <string name="common_transport">Common Transport</string>
+    <string name="transport_results">Transport results</string>
+    <string name="btnReturn">Return</string>
+</resources>
