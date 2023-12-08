@@ -1,0 +1,6 @@
+Wayne Gretzky,Canadian,1961,gretzky
+Mario Lemieux,Pittsburgh,1965,lemieux
+Bobby Orr,Boston Bruins,1948,orr
+Maurice Richard,Montreal,1921,richard
+Mark Messier,Edmonton,1961,messier
+Richard Dan,Toronto,#1948A,ff
