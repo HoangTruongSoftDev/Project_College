@@ -1,0 +1,6 @@
+SuGar sHack,Ottawa,e0,10,4
+SNow Festival,Montreal,e1,6,4
+botanical GarDen,Montreal,e2,19, 5
+LA Plaza,Montreal,e4,-1,-20
+Tour De l'Ile,Montreal,e5,3,AZ40
+Picking sTrawberries,Quebec,e3, 25,3

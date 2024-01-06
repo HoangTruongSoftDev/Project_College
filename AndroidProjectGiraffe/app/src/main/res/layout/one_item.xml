@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:id="@+id/imageViewPicture"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/e0"
+            android:contentDescription="TODO" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:id="@+id/imageViewLike"
+                android:src="@drawable/like"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/imageViewDislike"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/dislike"
+                app:layout_constraintStart_toStartOf="@id/imageViewLike"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+            <TextView
+                android:layout_marginTop="50dp"
+                android:id="@+id/tvNbLike"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:text="TextView"
+                android:layout_marginLeft="40dp"
+                app:layout_constraintLeft_toRightOf="@id/imageViewLike"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tvDisLike"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="@id/tvNbLike"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="50dp"
+                android:text="TextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Sugar Shack(Ottawa)"
+        android:textColor="@color/purple_500"
+        android:textStyle="bold"
+        android:textSize="60sp"
+        />
+</LinearLayout>
