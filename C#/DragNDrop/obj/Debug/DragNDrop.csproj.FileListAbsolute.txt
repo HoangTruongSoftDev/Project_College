@@ -6,3 +6,10 @@ C:\Truong\Lasalle College\Summer 2022\OOP\Experiment\Experiment1\DragNDrop\obj\D
 C:\Truong\Lasalle College\Summer 2022\OOP\Experiment\Experiment1\DragNDrop\obj\Debug\DragNDrop.csproj.CoreCompileInputs.cache
 C:\Truong\Lasalle College\Summer 2022\OOP\Experiment\Experiment1\DragNDrop\obj\Debug\DragNDrop.exe
 C:\Truong\Lasalle College\Summer 2022\OOP\Experiment\Experiment1\DragNDrop\obj\Debug\DragNDrop.pdb
+D:\Programming\Project_College\C#\DragNDrop\bin\Debug\DragNDrop.exe.config
+D:\Programming\Project_College\C#\DragNDrop\bin\Debug\DragNDrop.exe
+D:\Programming\Project_College\C#\DragNDrop\bin\Debug\DragNDrop.pdb
+D:\Programming\Project_College\C#\DragNDrop\obj\Debug\DragNDrop.csproj.AssemblyReference.cache
+D:\Programming\Project_College\C#\DragNDrop\obj\Debug\DragNDrop.csproj.CoreCompileInputs.cache
+D:\Programming\Project_College\C#\DragNDrop\obj\Debug\DragNDrop.exe
+D:\Programming\Project_College\C#\DragNDrop\obj\Debug\DragNDrop.pdb

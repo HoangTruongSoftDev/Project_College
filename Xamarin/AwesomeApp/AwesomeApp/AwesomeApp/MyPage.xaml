@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AwesomeApp.MyPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin class" TextColor="Green" FontSize="Title" TextDecorations="Underline"></Label>
+            <Label TextColor="Gray" FontSize="Medium">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="100" FontAttributes="Italic"></Span>
+                        <Span Text="$" FontAttributes="Bold" FontSize="Large"></Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Button Text="Click me" BackgroundColor="Beige" CornerRadius="5" Clicked="Button_Clicked"></Button>
+            <Entry Placeholder="EnterPassword" MaxLength="15" IsPassword="False"></Entry>
+            <StackLayout Orientation="Horizontal">
+                <Label>Monday</Label>
+                <Label>Friday</Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

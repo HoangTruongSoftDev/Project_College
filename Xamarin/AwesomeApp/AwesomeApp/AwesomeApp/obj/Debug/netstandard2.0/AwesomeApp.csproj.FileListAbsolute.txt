@@ -1,0 +1,17 @@
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\AwesomeApp.deps.json
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\AwesomeApp.dll
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\ref\AwesomeApp.dll
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\AwesomeApp.pdb
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.csproj.AssemblyReference.cache
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.AssemblyInfoInputs.cache
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.AssemblyInfo.cs
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.csproj.CoreCompileInputs.cache
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.sourcelink.json
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.dll
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\refint\AwesomeApp.dll
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.pdb
+D:\Programming\Project_College\Xamarin\AwesomeApp\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\MyPage.xaml.g.cs

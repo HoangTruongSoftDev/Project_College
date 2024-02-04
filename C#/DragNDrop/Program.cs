@@ -15,11 +15,15 @@ namespace DragNDrop
             {
                 foreach (var item in args)
                 {
+                    Console.WriteLine("===================================\n");
                     Console.WriteLine(item);
+                    Console.WriteLine("\n===================================");
                     string line;
                     StreamReader file = new StreamReader(item);
+                    Console.WriteLine("\n+++++++++++++++++++++++++++++++++++++++++\n");
                     while ((line = file.ReadLine()) != null)
-                     Console.WriteLine(line); 
+                     Console.WriteLine(line);
+                    Console.WriteLine("\n+++++++++++++++++++++++++++++++++++++++++\n");
                     file.Close();
                 }
             }

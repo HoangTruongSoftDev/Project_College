@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp());
+  runApp(const MaterialApp(home: Center(child: Text("Hello World!"))));
 }
