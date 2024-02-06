@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "vzeG/WEhfWN9YpNMjDODCRQcJUdIJhB5TlITczVKDf4/8iC2OV/n6/N+RcbqHqIStyp7vSgN9hgNjsXhupGQAQ==",
+  "success": true,
+  "projectFilePath": "D:\\Programming\\Project_College\\Xamarin\\PortfolioApp\\PortfolioApp\\PortfolioApp.iOS\\PortfolioApp.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\johnk\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\johnk\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\johnk\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

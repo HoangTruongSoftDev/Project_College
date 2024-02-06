@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PortfolioApp.ProfilePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label  Text="My Programming Portfolio" TextColor="Blue" FontSize="30" Margin="0,30,10,10"  HorizontalOptions="Center" FontAttributes="Bold"></Label>
+            <Label HorizontalOptions="Center" Text="Programming Skills" TextColor="Purple" FontSize="Medium" FontAttributes="Bold"></Label>
+            <Grid ColumnSpacing="5" RowSpacing="5" BackgroundColor="Black">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <BoxView BackgroundColor="White" Grid.Row="0" Grid.Column="0" ></BoxView>
+                <BoxView BackgroundColor="White"  Grid.Row="0" Grid.Column="1" ></BoxView>
+                <BoxView BackgroundColor="White"  Grid.Row="0" Grid.Column="2" ></BoxView>
+                <BoxView BackgroundColor="White"  Grid.Row="1" Grid.Column="0" ></BoxView>
+                <BoxView BackgroundColor="White"  Grid.Row="1" Grid.Column="1" ></BoxView>
+                <BoxView BackgroundColor="White"  Grid.Row="1" Grid.Column="2" ></BoxView>
+                <BoxView BackgroundColor="White"  Grid.Row="2" Grid.Column="0" ></BoxView>
+                <BoxView BackgroundColor="White"  Grid.Row="2" Grid.Column="1" ></BoxView>
+                <BoxView BackgroundColor="White"  Grid.Row="2" Grid.Column="2" ></BoxView>
+                <BoxView BackgroundColor="White"  Grid.Row="3" Grid.Column="0" ></BoxView>
+                <BoxView BackgroundColor="White"  Grid.Row="3" Grid.Column="1" ></BoxView>
+                <BoxView BackgroundColor="White"  Grid.Row="3" Grid.Column="2" ></BoxView>
+
+                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="Black" Text="Java" Grid.Row="0" Grid.Column="0" ></Label>
+                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="Black" Text="C#" Grid.Row="0" Grid.Column="1" ></Label>
+                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="Black" Text="Python" Grid.Row="0" Grid.Column="2" ></Label>
+                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="Black" Text="C++" Grid.Row="1" Grid.Column="0" ></Label>
+                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="Black" Text="HTML" Grid.Row="1" Grid.Column="1" ></Label>
+                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="Black" Text="CSS" Grid.Row="1" Grid.Column="2" ></Label>
+                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="Black" Text="JavaScript" Grid.Row="2" Grid.Column="0" ></Label>
+                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="Black" Text="Swift" Grid.Row="2" Grid.Column="1" ></Label>
+                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="Black" Text="Android" Grid.Row="2" Grid.Column="2" ></Label>
+                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="Black" Text="GitHub" Grid.Row="3" Grid.Column="0" ></Label>
+                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="Black" Text="Oracle" Grid.Row="3" Grid.Column="1" ></Label>
+                <Label HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="Black" Text="PHP" Grid.Row="3" Grid.Column="2" ></Label>
+
+            </Grid>
+            <Label HorizontalOptions="Center" Text="Personal Projects" TextColor="Purple" FontSize="Medium" FontAttributes="Bold"></Label>
+            <Label TextColor="Blue" HorizontalOptions="End" Margin="0,0,30,0" Text="Resto Inventory Clerk - Android" FontAttributes="Italic"></Label>
+            <Label TextColor="Black">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Programming Language: " FontAttributes="Bold"/>
+                        <Span Text="Java"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label TextColor="Black" FontAttributes="Bold" Text="Project Description: "></Label>
+            <Label TextColor="Red" HorizontalOptions="Center" FontSize="13" Text="github.com/HoangTruongSoftDev/Resto_Inventory_Clerk_Android"></Label>
+            <Label TextColor="Black" Text="Resto Inventory Clerk is a cutting-edge Android application designed to streamline and enhance the inventory management processes for restaurants. This robust management tool empowers restaurant staff to efficiently monitor and control the stock of various items such as raw food, vegetables, and beverages. The application follows the Model-View-Controller (MVC) model, ensuring a well-organized and scalable architecture for optimal performance"></Label>
+            <Label TextColor="Blue" HorizontalOptions="End" Margin="0,0,30,0" Text="Online Shopping Web Application" FontAttributes="Italic"></Label>
+            <Label TextColor="Black">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Programming Language: " FontAttributes="Bold"/>
+                        <Span Text="PHP/JavScript/jQuery/HTML/CSS"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label TextColor="Black" FontAttributes="Bold" Text="Project Description:"></Label>
+            <Label TextColor="Red" HorizontalOptions="Center" FontSize="13" Text="github.com/HoangTruongSoftDev/Project_PHP_E-commerce_App"></Label>
+            <Label TextColor="Black" Text="An e-commerce web application built with PHP, JavaScript, jQuery, HTML, CSS, and SQL offers a secure and user-friendly shopping experience. Users can register, log in, explore and view products, add to cart, and checkout with personal details. It features order history tracking, backed by a well-organized SQL Server Management database."></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

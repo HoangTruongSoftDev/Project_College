@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PortfolioApp.ContactPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Margin="0,50,0,0"  Text="Contact Me" FontSize="40" TextColor="Blue" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+            <Frame BorderColor="Black" CornerRadius="5" Padding="2" HorizontalOptions="CenterAndExpand" Margin="0,100,0,0">
+                <Grid ColumnSpacing="2" RowSpacing="1" BackgroundColor="Black">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <BoxView BackgroundColor="LightBlue" Grid.Column="0" Grid.Row="0"></BoxView>
+                    <BoxView BackgroundColor="White" Grid.Column="1" Grid.Row="0"></BoxView>
+                    <BoxView BackgroundColor="White" Grid.Column="0" Grid.Row="1"></BoxView>
+                    <BoxView BackgroundColor="LightBlue" Grid.Column="1" Grid.Row="1"></BoxView>
+                    <BoxView BackgroundColor="LightBlue" Grid.Column="0" Grid.Row="2"></BoxView>
+                    <BoxView BackgroundColor="White" Grid.Column="1" Grid.Row="2"></BoxView>
+                    <BoxView BackgroundColor="White" Grid.Column="0" Grid.Row="3"></BoxView>
+                    <BoxView BackgroundColor="LightBlue" Grid.Column="1" Grid.Row="3"></BoxView>
+                    <BoxView BackgroundColor="LightBlue" Grid.Column="0" Grid.Row="4"></BoxView>
+                    <BoxView BackgroundColor="White" Grid.Column="1" Grid.Row="4"></BoxView>
+
+                    <Label FontAttributes="Bold" TextColor="Blue" Padding="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Text="Address"  Grid.Column="0" Grid.Row="0"></Label>
+                    <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="Montreal, Canada" Grid.Column="1" Grid.Row="0"></Label>
+                    <Label FontAttributes="Bold" TextColor="Blue" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="Phone" Grid.Column="1" Grid.Row="1"></Label>
+                    <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="514 660 2820" Grid.Column="0" Grid.Row="1"></Label>
+                    <Label FontAttributes="Bold" TextColor="Blue" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="Email" Grid.Column="0" Grid.Row="2"></Label>
+                    <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="hoangtruongpham73@gmail.com" Grid.Column="1" Grid.Row="2"></Label>
+                    <Label FontAttributes="Bold" TextColor="Blue" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="GitHub" Grid.Column="1" Grid.Row="3"></Label>
+                    <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"   Text="github.com/HoangTruongSoftDev" Grid.Column="0" Grid.Row="3"></Label>
+                    <Label FontAttributes="Bold" TextColor="Blue" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="LinkedIn" Grid.Column="0" Grid.Row="4"></Label>
+                    <Label TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="linkedin.com/in/hoang-truong-pham/" Grid.Column="1" Grid.Row="4"></Label>
+                </Grid>
+            </Frame>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
