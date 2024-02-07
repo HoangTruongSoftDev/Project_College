@@ -13,7 +13,6 @@ namespace Ex6
         {
             if (n == 0)
             {
-                Console.Write("0");
                 return;
             }
             ConvertToBinary(n / 2);

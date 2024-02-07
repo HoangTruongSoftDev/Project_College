@@ -103,44 +103,44 @@ namespace Ex1
         static void Main(string[] args)
         {
             #region linear search 
-            //bool flag = false;
-            //int[] array = { 12, -43, 89, 114, 34, 11, 0, 67 };
-            //Console.WriteLine("You are looking for?");
-            //int num = Convert.ToInt32(Console.ReadLine());
-            //for (int i = 0; i < array.Length; ++i)
-            //{
-            //    if (array[i] == num)
-            //    {
-            //        flag = true;
-            //    }
-            //}
-            //if (flag)
-            //{
-            //    Console.WriteLine("Number Found");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Number Not Found");
-            //}
+            bool flag = false;
+            int[] array = { 12, -43, 89, 114, 34, 11, 0, 67 };
+            Console.WriteLine("You are looking for?");
+            int num = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < array.Length; ++i)
+            {
+                if (array[i] == num)
+                {
+                    flag = true;
+                }
+            }
+            if (flag)
+            {
+                Console.WriteLine("Number Found");
+            }
+            else
+            {
+                Console.WriteLine("Number Not Found");
+            }
             #endregion
             #region Binary Search
-            int[] array1 = { 10, 11, 23, 39, 48, 95, 102, 206, 247, 312, 400, 401, 405 };
+            int[] arrayBinarySearch = { 10, 11, 23, 39, 48, 95, 102, 206, 247, 312, 400, 401, 405 };
             int number = 206;
-            BinarySearch(array1, number);
+            BinarySearch(arrayBinarySearch, number);
             #endregion
 
             #region Binary Search Recurstion
-            //int[] array = { -4, 7, 9, 13, 25, 67, 99, 128 };
-            //int num = -4;
-            //int result = RecursiveBinarySearch(array, 0, (array.Length - 1), num);
-            //if (result == -1)
-            //{
-            //    Console.WriteLine("The number is not here");
-            //}
-            //else
-            //{
-            //    Console.WriteLine($"The number is found at location {result}");
-            //}
+            int[] arrayBinarySearchRecursion = { -4, 7, 9, 13, 25, 67, 99, 128 };
+            int num1 = -4;
+            int result = RecursiveBinarySearch(array, 0, (array.Length - 1), num1);
+            if (result == -1)
+            {
+                Console.WriteLine("The number is not here");
+            }
+            else
+            {
+                Console.WriteLine($"The number is found at location {result}");
+            }
             #endregion
 
             Console.ReadKey();
