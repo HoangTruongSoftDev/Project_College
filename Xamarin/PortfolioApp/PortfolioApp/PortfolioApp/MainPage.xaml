@@ -4,6 +4,6 @@
              x:Class="PortfolioApp.MainPage"
             xmlns:local="clr-namespace:PortfolioApp"
             >
-    <local:ProfilePage Title="Profile"></local:ProfilePage>
-    <local:ContactPage Title="Contact"></local:ContactPage>
+    <local:ProfilePage Title="Profile" IconImageSource="profileIcon"></local:ProfilePage>
+    <local:ContactPage Title="Contact" IconImageSource="contactIcon"></local:ContactPage>
 </TabbedPage>

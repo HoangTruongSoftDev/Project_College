@@ -8,8 +8,11 @@ namespace Ex24
 {
     internal class Program
     {
-        /*Implement a code which reads a tree (in an array or list format) and finds two elements which 
-         * their summation is closest to a goal number. This number should be read from the console.*/
+        /*
+         Implement a code which reads a tree (in an array or list format) and finds two elements which 
+         their summation is closest to a goal number. This number should be read from the console.
+        
+         */
         static void FindPairAddition(int[] array, int numberCloseTo)
         {
             int left, right, sum, minRight, minLeft, min_sum, change;

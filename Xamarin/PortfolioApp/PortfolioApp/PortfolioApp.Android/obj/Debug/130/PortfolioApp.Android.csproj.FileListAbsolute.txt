@@ -636,3 +636,5 @@ D:\Programming\Project_College\Xamarin\PortfolioApp\PortfolioApp\PortfolioApp.An
 D:\Programming\Project_College\Xamarin\PortfolioApp\PortfolioApp\PortfolioApp.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 D:\Programming\Project_College\Xamarin\PortfolioApp\PortfolioApp\PortfolioApp.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 D:\Programming\Project_College\Xamarin\PortfolioApp\PortfolioApp\PortfolioApp.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+D:\Programming\Project_College\Xamarin\PortfolioApp\PortfolioApp\PortfolioApp.Android\obj\Debug\130\res\drawable\contacticon.jpg
+D:\Programming\Project_College\Xamarin\PortfolioApp\PortfolioApp\PortfolioApp.Android\obj\Debug\130\res\drawable\profileicon.png
