@@ -26,7 +26,7 @@ login_form.configure(bg="white")
 
 # Frame Header of Login Form---
 frame_header = Frame(login_form, bg="#386ef5")
-frame_header.pack(fill=BOTH,ipady=50)
+frame_header.pack(fill=BOTH, ipady=50)
 
 # Title Login---
 label_title = Label(frame_header, text="Sign In", font=("Times New Roman", 40, "bold"), fg="white", bg="#386ef5", justify=CENTER)
