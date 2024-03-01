@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PortfolioApp.DetailPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="experienceEntry" />
+            <Button Text="Update" x:Name="updateButton" Clicked="updateButton_Clicked"></Button>
+            <Button Text="Delete" x:Name="deleteButton" Clicked="deleteButton_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.IO;
 using Foundation;
 using UIKit;
 
@@ -25,6 +25,11 @@ namespace PortfolioApp.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            // create a path for database
+            string dbName = "myDB.sqlite";
+            string folderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "..", "Library"); // .. is go back one folder
+            string databaseLocationPath = Path.Combine(folderPath, dbName);
+            LoadApplication(new App(databaseLocationPath));
             return base.FinishedLaunching(app, options);
         }
     }

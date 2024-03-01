@@ -17,3 +17,5 @@ D:\Programming\Project_College\Xamarin\PortfolioApp\PortfolioApp\PortfolioApp\ob
 D:\Programming\Project_College\Xamarin\PortfolioApp\PortfolioApp\PortfolioApp\obj\Debug\netstandard2.0\PortfolioApp.dll
 D:\Programming\Project_College\Xamarin\PortfolioApp\PortfolioApp\PortfolioApp\obj\Debug\netstandard2.0\refint\PortfolioApp.dll
 D:\Programming\Project_College\Xamarin\PortfolioApp\PortfolioApp\PortfolioApp\obj\Debug\netstandard2.0\PortfolioApp.pdb
+D:\Programming\Project_College\Xamarin\PortfolioApp\PortfolioApp\PortfolioApp\obj\Debug\netstandard2.0\DescriptionPage.xaml.g.cs
+D:\Programming\Project_College\Xamarin\PortfolioApp\PortfolioApp\PortfolioApp\obj\Debug\netstandard2.0\DetailPage.xaml.g.cs
