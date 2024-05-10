@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Transcript from Youtube</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f7;
+        }
+        .textbox {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .transcription {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <input type="text" id="youtubeUrl" class="textbox" placeholder="Enter YouTube URL">
+    <button onclick="getTranscription()" class="button">Get Transcription</button>
+    <div id="transcriptionResult" class="transcription"></div>
+</div>
+<script>
+    function getTranscription(){
+        var youtubeUrl = document.getElementById('youtubeUrl').value;
+        var videoId = getVideoId(youtubeUrl);
+        if(videoId){
+            var apiUrl = "https://video.google.com/timedtext?lang=en&v=" + videoId;
+            fetch(apiUrl).then(response => response.text()).then(data => {
+                var transcription = parseTranscription(data);
+                document.getElementById('transcriptionResult').textContent = transcription;
+            }).catch(error =>{
+                console.error("Error getting transcription:", error);
+                document.getElementById('transcriptionResult').textContent = 'Error! something went wrong!';
+            });
+        }else{
+            document.getElementById('transcriptionResult').textContent = "Invalid URL";
+        }
+    }
+    function getVideoId(url){
+        var regExpression = /^.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#\&\?]*).*/;
+        var match = url.match(regExpression);
+        if (match && match[1]) {
+            return match[1];
+        } else {
+            return null;
+        }
+    }
+    function parseTranscription(inputString){
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(inputString, 'text/xml');
+        var transcription = '';
+        var texts = doc.getElementsByTagName('text');
+        for(var i = 0; i < texts.length; i++){
+            transcription += texts[i].textContent;
+        }
+        return transcription;
+    }
+</script>
+</body>
+</html>

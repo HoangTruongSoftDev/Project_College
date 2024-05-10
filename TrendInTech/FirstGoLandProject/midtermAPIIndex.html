@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Console and Browser Text</title>
+</head>
+<body>
+<textarea id="consoleText" rows="10" cols="50"></textarea>
+<input type="text" id="textInput" placeholder="Append text here">
+<button onclick="submitText()">Submit</button>
+
+<script type="text/javascript">
+    var ws = new WebSocket("ws://localhost:8080/ws");
+    ws.onmessage = function(event) {
+        document.getElementById("consoleText").value = event.data;
+    };
+
+    function submitText() {
+        var appendedText = document.getElementById("textInput").value;
+        var fullText = document.getElementById("consoleText").value + appendedText;
+        // Here, you should implement the AJAX call to submit `fullText` to your Go server to save
+    }
+</script>
+</body>
+</html>

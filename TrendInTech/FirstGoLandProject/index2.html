@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Chat Only Over Browser</title>
+</head>
+<body>
+    <div>
+        <textarea id="chatArea" rows="10" cols="50" readonly></textarea>
+    </div>
+<div>
+    <input type="text" id="messageInput" placeholder="Type your message">
+    <button onclick="sendMessage()">Send</button>
+</div>
+<script>
+    const socket = new WebSocket("ws://localhost:8088/ws");
+    const chatArea = document.getElementById("chatArea")
+    const messageInput = document.getElementById("messageInput")
+    socket.onmessage = function (event) {
+        const message = event.data;
+        chatArea.value += "received: " + message + "\n";
+        chatArea.scrollTop = chatArea.scrollHeight;
+    };
+    function sendMessage() {
+        const message = messageInput.value;
+        chatArea.value += "Sent: " + message + "\n"
+        chatArea.scrollTop = chatArea.scrollHeight
+        socket.send(message);
+        messageInput.value = ""
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskManager.FirstPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="40" HorizontalOptions="Center">
+                <Label Text="Task: "  TextColor="Black" FontSize="Large" VerticalOptions="Center"/>
+                <Frame Margin="20,0,0,0" BorderColor="Black" WidthRequest="200">
+                    <Entry x:Name="descriptionEntry" ></Entry>
+                </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="40" HorizontalOptions="Center">
+                <Label Text="Priority: "  TextColor="Black" FontSize="Large" VerticalOptions="Center"/>
+                <Frame  BorderColor="Black" WidthRequest="200">
+                    <Entry x:Name="priorityEntry" ></Entry>
+                </Frame>
+            </StackLayout>
+            <Button x:Name="saveButton" Text="Save" Clicked="saveButton_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

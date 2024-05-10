@@ -1,0 +1,15 @@
+D:\Programming\Project_College\Xamarin\Async230\Async230\bin\Debug\net8.0\Async230.exe
+D:\Programming\Project_College\Xamarin\Async230\Async230\bin\Debug\net8.0\Async230.deps.json
+D:\Programming\Project_College\Xamarin\Async230\Async230\bin\Debug\net8.0\Async230.runtimeconfig.json
+D:\Programming\Project_College\Xamarin\Async230\Async230\bin\Debug\net8.0\Async230.dll
+D:\Programming\Project_College\Xamarin\Async230\Async230\bin\Debug\net8.0\Async230.pdb
+D:\Programming\Project_College\Xamarin\Async230\Async230\obj\Debug\net8.0\Async230.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Project_College\Xamarin\Async230\Async230\obj\Debug\net8.0\Async230.AssemblyInfoInputs.cache
+D:\Programming\Project_College\Xamarin\Async230\Async230\obj\Debug\net8.0\Async230.AssemblyInfo.cs
+D:\Programming\Project_College\Xamarin\Async230\Async230\obj\Debug\net8.0\Async230.csproj.CoreCompileInputs.cache
+D:\Programming\Project_College\Xamarin\Async230\Async230\obj\Debug\net8.0\Async230.sourcelink.json
+D:\Programming\Project_College\Xamarin\Async230\Async230\obj\Debug\net8.0\Async230.dll
+D:\Programming\Project_College\Xamarin\Async230\Async230\obj\Debug\net8.0\refint\Async230.dll
+D:\Programming\Project_College\Xamarin\Async230\Async230\obj\Debug\net8.0\Async230.pdb
+D:\Programming\Project_College\Xamarin\Async230\Async230\obj\Debug\net8.0\Async230.genruntimeconfig.cache
+D:\Programming\Project_College\Xamarin\Async230\Async230\obj\Debug\net8.0\ref\Async230.dll

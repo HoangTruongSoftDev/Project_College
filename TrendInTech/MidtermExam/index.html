@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Midterm Exam</title>
+</head>
+<body>
+<h1>Question 4</h1>
+<textarea id="textArea" rows="10" cols="100" readonly></textarea><br>
+<button onclick="saveText()">Save Text</button>
+
+<script type="text/javascript">
+    var webSocket = new WebSocket("ws://localhost:8080/ws");
+    webSocket.onmessage = function(event) {
+        document.getElementById("textArea").value = event.data;
+    };
+
+    function saveText() {
+        var textArea = document.getElementById("textArea").value
+        var xmlHttpRequest = new XMLHttpRequest();
+        xmlHttpRequest.open("POST", "/saveText", true);
+        xmlHttpRequest.setRequestHeader("Content-Type", "text/plain");
+
+        xmlHttpRequest.onload = function () {
+            if (xmlHttpRequest.status >= 200 && xmlHttpRequest.status < 300) {
+                console.log("Saving Text Successfully", xmlHttpRequest.responseText);
+            } else {
+                console.error("Saving Text Fail", xmlHttpRequest.statusText);
+            }
+        };
+
+        xmlHttpRequest.onerror = function () {
+            xmlHttpRequest.error("There is some error with Requesting");
+        };
+
+        xmlHttpRequest.send(textArea);
+    }
+</script>
+</body>
+</html>

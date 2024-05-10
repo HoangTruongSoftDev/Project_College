@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+<label>User 1</label><br>
+<input type="text" id="messageFromUser" placeholder="Enter your message">
+<button onclick="sendingMessage()">Send</button>
+<textarea id="textArea" rows="100" readonly></textarea>
+<script>
+    const socket = new WebSocket("ws://localhost:8080/ws");
+    const textArea = document.getElementById("textArea");
+    const messageFromUser = document.getElementById("messageFromUser");
+    socket.onmessage = function(event) {
+        textArea.value += "Receiving message: " + event.data; + "\n";
+        textArea.scrollTop = textArea.scrollHeight;
+    };
+    function sendingMessage() {
+        textArea.value += "Sending message: " + messageFromUser.value + "\n"
+        socket.send(messageFromUser.value)
+        messageFromUser.value = "";
+        textArea.scrollTop = resultTextArea.scrollHeight;
+    }
+</script>
+</body>
+</html>

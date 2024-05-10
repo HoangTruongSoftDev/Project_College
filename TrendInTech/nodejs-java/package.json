@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "franc": "^6.2.0",
+    "franc-min": "^6.2.0",
+    "fs": "^0.0.1-security",
+    "langdetect": "^0.2.1",
+    "mongodb": "^6.5.0",
+    "ytdl-core": "^4.11.5"
+  }
+}

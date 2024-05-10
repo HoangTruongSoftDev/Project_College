@@ -1,0 +1,127 @@
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="en">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta charset="UTF-8">&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta name="viewport" content="width=device-width,initial-scale=1.0">&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>Real -Time Chat with API</title>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+<!--&lt;!&ndash;    <input type="text" id="messageInput" placeholder="Type your message">&ndash;&gt;-->
+<!--&lt;!&ndash;    <button onclick="sendMessage()">Send</button>&ndash;&gt;-->
+<!--&lt;!&ndash;<br>&ndash;&gt;-->
+<!--&lt;!&ndash;<textarea id="result" rows="10" cols="50" readonly></textarea>&ndash;&gt;-->
+<!--&lt;!&ndash;<script>&ndash;&gt;-->
+<!--&lt;!&ndash;    const socket = new WebSocket("ws://localhost:8088/ws");&ndash;&gt;-->
+<!--&lt;!&ndash;    const resultTextArea = document.getElementById("result");&ndash;&gt;-->
+<!--&lt;!&ndash;    const messageInput = document.getElementById("messageInput");&ndash;&gt;-->
+<!--&lt;!&ndash;    // Handle incoming messages from the server&ndash;&gt;-->
+
+<!--&lt;!&ndash;    socket.onmessage = function(event) {&ndash;&gt;-->
+<!--&lt;!&ndash;        // Handle incoming messages from the server&ndash;&gt;-->
+<!--&lt;!&ndash;        const message = event.data;&ndash;&gt;-->
+
+<!--&lt;!&ndash;        resultTextArea.value += "Received: " + message + "\n";&ndash;&gt;-->
+<!--&lt;!&ndash;        // resultTextArea.value += "Received: " + message + "\n";&ndash;&gt;-->
+<!--&lt;!&ndash;        // Scroll to the bottom to show the latest message&ndash;&gt;-->
+<!--&lt;!&ndash;        resultTextArea.scrollTop = resultTextArea.scrollHeight;&ndash;&gt;-->
+<!--&lt;!&ndash;    };&ndash;&gt;-->
+<!--&lt;!&ndash;    function sendMessage() {&ndash;&gt;-->
+<!--&lt;!&ndash;        // send message to the server&ndash;&gt;-->
+<!--&lt;!&ndash;        const message = messageInput.value&ndash;&gt;-->
+<!--&lt;!&ndash;        //display the sent message in the result textarea&ndash;&gt;-->
+<!--&lt;!&ndash;        resultTextArea.value += "Sent: " + message + "\n"&ndash;&gt;-->
+<!--&lt;!&ndash;        // send the message to the server&ndash;&gt;-->
+<!--&lt;!&ndash;        socket.send(message)&ndash;&gt;-->
+<!--&lt;!&ndash;        //clear the input field&ndash;&gt;-->
+<!--&lt;!&ndash;        messageInput.value = "";&ndash;&gt;-->
+
+<!--&lt;!&ndash;        // Scroll to the bottom to show the latest messages&ndash;&gt;-->
+<!--&lt;!&ndash;        resultTextArea.scrollTop = resultTextArea.scrollHeight;&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width,initial-scale=1.0">-->
+<!--    <title>Real-Time Chat with API</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<input type="text" id="messageInput" placeholder="Type your message">-->
+<!--<button onclick="sendMessage()">Send</button>-->
+<!--<br>-->
+<!--<textarea id="result" rows="10" cols="50" readonly></textarea>-->
+<!--<script>-->
+<!--    const socket = new WebSocket("ws://localhost:8088/ws");-->
+<!--    const resultTextArea = document.getElementById("result");-->
+<!--    const messageInput = document.getElementById("messageInput");-->
+<!--    let lastSentMessage = ""; // Track the last sent message-->
+
+<!--    socket.onmessage = function(event) {-->
+<!--        const message = event.data;-->
+<!--        // Only append the message if it's not the last sent message-->
+<!--        if (message !== lastSentMessage) {-->
+<!--            resultTextArea.value += "Received: " + message + "\n";-->
+<!--        } else {-->
+<!--            // Reset lastSentMessage to prevent ignoring repeated legitimate receives-->
+<!--            lastSentMessage = "";-->
+<!--        }-->
+<!--        resultTextArea.scrollTop = resultTextArea.scrollHeight;-->
+<!--    };-->
+
+<!--    function sendMessage() {-->
+<!--        const message = messageInput.value.trim();-->
+<!--        if (message === "") return; // Prevent sending empty messages-->
+
+<!--        lastSentMessage = message; // Update lastSentMessage-->
+<!--        resultTextArea.value += "Sent: " + message + "\n";-->
+<!--        socket.send(message);-->
+<!--        messageInput.value = "";-->
+<!--        resultTextArea.scrollTop = resultTextArea.scrollHeight;-->
+<!--    }-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Console and Browser Text</title>
+</head>
+<body>
+<textarea id="consoleText" rows="10" cols="50"></textarea><br>
+<button onclick="submitText()">Submit</button>
+
+<script type="text/javascript">
+    var ws = new WebSocket("ws://localhost:8080/ws");
+    ws.onmessage = function(event) {
+        document.getElementById("consoleText").value = event.data;
+    };
+
+    function submitText() {
+        var fullText = document.getElementById("consoleText").value
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/save", true);
+        xhr.setRequestHeader("Content-Type", "text/plain");
+
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                console.log("Text saved successfully:", xhr.responseText);
+            } else {
+                console.error("Failed to save text:", xhr.statusText);
+            }
+        };
+
+        xhr.onerror = function () {
+            console.error("Request failed");
+        };
+
+        xhr.send(fullText);
+    }
+</script>
+</body>
+</html>
+
+
