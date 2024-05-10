@@ -256,13 +256,6 @@ body {
     color: var(--color-white);
     font-family: var(--font-actor);
   }
-  .frame-item {
-    align-self: stretch;
-    height: 902px;
-    position: relative;
-    box-shadow: 0 73px 32px rgba(1, 0, 138, 0.12);
-    background-color: var(--color-white);
-  }
   .category-icon {
     width: 21.7px;
     height: 17px;
@@ -307,8 +300,9 @@ body {
   }
   .menu-dash-board-wrapper {
     align-self: stretch;
-    padding: 0 0 var(--padding-897xl);
-    margin-top: -859px;
+    margin-top: 50px;
+    /* 916px */
+    
   }
   .admin1,
   .admin-icon {
@@ -321,22 +315,20 @@ body {
     flex-shrink: 0;
   }
   .admin1 {
-    align-self: stretch;
     font-size: var(--font-size-mid-5);
     line-height: 16px;
     font-family: var(--font-actor);
     color: var(--color-black);
     text-align: left;
+    min-width: 60px;
+    margin-right: 60px
   }
   .admin-wrapper {
-    width: 77.1px;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: var(--padding-11xs) var(--padding-xl) 0 0;
-    box-sizing: border-box;
+    padding: 3px 0 0;
   }
   .vector-icon {
     width: 20.9px;
@@ -366,8 +358,7 @@ body {
   .frame-container {
     align-self: stretch;
     justify-content: flex-start;
-    padding: 0 0 var(--padding-897xl);
-    margin-top: -859px;
+    margin-top: 60px;
   }
   .employer1,
   .employer-icon {
@@ -386,7 +377,8 @@ body {
     color: var(--color-black);
     text-align: left;
     display: inline-block;
-    min-width: 76px;
+    min-width: 60px;
+    margin-right: 50px
   }
   .employer-wrapper {
     display: flex;
@@ -430,8 +422,7 @@ body {
   .frame-wrapper1 {
     align-self: stretch;
     justify-content: flex-start;
-    padding: 0 0 var(--padding-897xl);
-    margin-top: -859px;
+    margin-top: 60px;
   }
   .frame-child1 {
     height: 44px;
@@ -455,19 +446,20 @@ body {
   }
   .worker1 {
     font-size: var(--font-size-mid-5);
-    line-height: 15px;
+    line-height: 14px;
     font-family: var(--font-actor);
     color: var(--color-black);
     text-align: left;
     display: inline-block;
     min-width: 60px;
+    margin-right: 60px
   }
   .worker-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: var(--padding-12xs) 17.1px 0 0;
+    padding: 3px 0 0;
   }
   .vector-icon2 {
     width: 20.9px;
@@ -504,8 +496,7 @@ body {
   .frame-wrapper2 {
     align-self: stretch;
     justify-content: flex-start;
-    padding: 0 0 var(--padding-897xl);
-    margin-top: -859px;
+    margin-top: 60px;
   }
   .logout-icon {
     width: 21.4px;
@@ -551,8 +542,7 @@ body {
   }
   .frame-wrapper3 {
     align-self: stretch;
-    padding: 0 0 var(--padding-897xl);
-    margin-top: -859px;
+    margin-top: 60px;
   }
   .frame-child3 {
     height: 100%;
@@ -609,20 +599,12 @@ body {
   .rectangle-parent {
     width: 273px;
     flex-direction: column;
-    padding: 0 0 57px;
     box-sizing: border-box;
+    background-color:#f9f7f7;
   }
-  .content-admin-child {
-    width: 303px;
-    height: 179.9px;
-    position: relative;
-    border-radius: 10.48px;
-    background-color: var(--color-lavender-100);
-    display: none;
-  }
-  .profile-icon3 {
-    height: 19px;
-    width: 15px;
+  .admin-icon1 {
+    height: 26px;
+    width: 22px;
     position: relative;
     z-index: 1;
   }
@@ -669,29 +651,23 @@ body {
     z-index: 1;
   }
   .content-admin {
-    flex: 1;
+    flex: 0.8465;
     border-radius: 10.48px;
     background-color: var(--color-lavender-100);
+    padding: var(--padding-6xl-1) var(--padding-48xl) var(--padding-22xl-9) 65px;
+    box-sizing: border-box;
+    gap: var(--gap-2xs-9);
+    min-width: 227px;
+    color: #1d68d8;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--padding-6xl-1) 45px 41.8px 56px;
-    box-sizing: border-box;
-    gap: 19px;
-    min-width: 227px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
-  .content-employer-child {
-    width: 303px;
-    height: 179.9px;
-    position: relative;
-    border-radius: 10.48px;
-    background-color: var(--color-lavenderblush);
-    display: none;
-  }
-  .profile-icon4 {
-    height: 19px;
-    width: 15px;
+  .employer-icon1 {
+    height: 26px;
+    width: 22px;
     position: relative;
     z-index: 1;
   }
@@ -715,6 +691,7 @@ body {
     line-height: 48px;
     font-weight: 400;
     font-family: inherit;
+    
   }
   .employers-management {
     line-height: 17px;
@@ -728,39 +705,34 @@ body {
     font-size: var(--font-size-base);
     color: var(--color-black);
   }
-  .content-employer,
-  .employer-parent {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
+
+
   .employer-parent {
     align-self: stretch;
     align-items: flex-start;
     gap: var(--gap-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   .content-employer {
     flex: 0.8465;
     border-radius: 10.48px;
-    background-color: var(--color-lavenderblush);
-    align-items: flex-end;
+    background-color: #FFEBEB;
     padding: var(--padding-6xl-1) var(--padding-48xl) var(--padding-22xl-9) 65px;
     box-sizing: border-box;
     gap: var(--gap-2xs-9);
     min-width: 227px;
     color: #e41e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
-  .content-worker-child {
-    width: 303px;
-    height: 179.9px;
-    position: relative;
-    border-radius: 10.48px;
-    background-color: var(--color-aliceblue);
-    display: none;
-  }
-  .profile-icon5 {
-    height: 19px;
-    width: 15px;
+  .worker-icon1 {
+    height: 26px;
+    width: 22px;
     position: relative;
     z-index: 1;
   }
@@ -806,18 +778,19 @@ body {
     z-index: 1;
   }
   .content-worker {
-    flex: 0.7624;
+    flex: 0.8465;
     border-radius: 10.48px;
     background-color: var(--color-aliceblue);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--padding-6xl-1) 74px var(--padding-22xl-9) var(--padding-56xl);
+    padding: var(--padding-6xl-1) var(--padding-48xl) var(--padding-22xl-9) 65px;
     box-sizing: border-box;
-    gap: var(--gap-lg);
+    gap: var(--gap-2xs-9);
     min-width: 227px;
     color: #1d68d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
   .img-person-1-icon {
     align-self: stretch;
@@ -857,6 +830,7 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     max-width: 100%;
+    
   }
   .img-person-2-icon {
     align-self: stretch;
@@ -886,10 +860,10 @@ body {
     max-width: 100%;
   }
   .frame-parent2 {
-    margin: 0 !important;
+    margin: 0;
     position: absolute;
     top: -144px;
-    right: 51.2px;
+    left: 140px;
     border-radius: 16px;
     background-color: #bcf1f9;
     overflow: hidden;
@@ -903,7 +877,8 @@ body {
   }
   .div-content {
     align-self: stretch;
-    padding: 142px 25px 142.1px;
+    margin-left: 10px;
+    padding: 100px 25px 142.1px;
     position: relative;
     gap: 51px;
     z-index: 1;
@@ -940,6 +915,8 @@ body {
     line-height: normal;
     letter-spacing: normal;
   }
+
+
   @media screen and (max-width: 1050px) {
     .canada-horizon-label {
       flex-wrap: wrap;
@@ -951,7 +928,7 @@ body {
     .frame-wrapper2,
     .frame-wrapper3,
     .menu-dash-board-wrapper {
-      padding-bottom: var(--padding-576xl);
+      padding-bottom: 0;
       box-sizing: border-box;
     }
     .rectangle-parent {
@@ -962,7 +939,9 @@ body {
     .worker2 {
       font-size: var(--font-size-13xl);
       line-height: 38px;
+      
     }
+    
     .truong1,
     .welcome-back {
       font-size: var(--font-size-16xl);
@@ -1046,14 +1025,11 @@ body {
       font-size: var(--font-size-5xl);
       line-height: 28px;
     }
-    .content-admin {
-      padding-left: var(--padding-xl);
-      padding-right: var(--padding-xl);
-      box-sizing: border-box;
-    }
+
     .employer2 {
       font-size: var(--font-size-5xl);
       line-height: 28px;
+     
     }
     .content-employer {
       padding-left: var(--padding-xl);

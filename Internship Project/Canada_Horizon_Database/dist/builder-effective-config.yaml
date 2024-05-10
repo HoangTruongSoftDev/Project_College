@@ -4,5 +4,5 @@ directories:
 appId: com.Truong.CanadaHorizonDatabase
 files:
   - filter:
-      - '!build-assets${/*}'
+      - '!build-assets{/*}'
 electronVersion: 30.0.2

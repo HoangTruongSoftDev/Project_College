@@ -1,0 +1,5 @@
+C:\Truong\Internship Project\DatabaseManagementApp\obj\Host\bin\appsettings.Development.json
+C:\Truong\Internship Project\DatabaseManagementApp\obj\Host\bin\appsettings.json
+C:\Truong\Internship Project\DatabaseManagementApp\obj\Host\bin\electron.manifest.json
+C:\Truong\Internship Project\DatabaseManagementApp\obj\Host\bin\DatabaseManagementApp.pdb
+C:\Truong\Internship Project\DatabaseManagementApp\obj\Host\bin\DatabaseManagementApp.exe

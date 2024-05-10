@@ -2,7 +2,7 @@
   "name": "package-complete",
   "productName": "Canada Horizon Database",
   "version": "1.0.0",
-  "description": "Hello World!",
+  "description": "Canada Horizon Database Management",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
@@ -16,6 +16,6 @@
   },
   "build": {
     "appId": "com.Truong.CanadaHorizonDatabase",
-    "files": "!build-assets${/*}"
+    "files": "!build-assets{/*}"
   }
 }
