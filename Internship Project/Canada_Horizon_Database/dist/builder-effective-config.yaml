@@ -1,0 +1,8 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.Truong.CanadaHorizonDatabase
+files:
+  - filter:
+      - '!build-assets${/*}'
+electronVersion: 30.0.2
