@@ -1,0 +1,7 @@
+C:\Truong\Internship Project\LauncherApp\LauncherApp\bin\Debug\LauncherApp.exe.config
+C:\Truong\Internship Project\LauncherApp\LauncherApp\bin\Debug\LauncherApp.exe
+C:\Truong\Internship Project\LauncherApp\LauncherApp\bin\Debug\LauncherApp.pdb
+C:\Truong\Internship Project\LauncherApp\LauncherApp\obj\Debug\LauncherApp.csproj.AssemblyReference.cache
+C:\Truong\Internship Project\LauncherApp\LauncherApp\obj\Debug\LauncherApp.csproj.CoreCompileInputs.cache
+C:\Truong\Internship Project\LauncherApp\LauncherApp\obj\Debug\LauncherApp.exe
+C:\Truong\Internship Project\LauncherApp\LauncherApp\obj\Debug\LauncherApp.pdb
