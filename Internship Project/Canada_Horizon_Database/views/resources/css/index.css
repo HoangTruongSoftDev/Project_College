@@ -100,14 +100,6 @@ body {
 .dropdown:hover .employer1 {color: white; font-weight: bold;}
 .dropdown:hover .worker1 {color: white; font-weight: bold;}
 
-.canada-horizon-label-child {
-    height: 82px;
-    width: 1334px;
-    position: relative;
-    background-color: var(--color-royalblue-100);
-    display: none;
-    max-width: 100%;
-  }
   .canada-horizon {
     width: 116px;
     position: relative;
@@ -128,16 +120,20 @@ body {
     line-height: 18px;
     display: inline-block;
     z-index: 2;
+    text-decoration: none;
   }
   .dashboard {
     color: var(--color-white);
     min-width: 70px;
+    font-size: 20px;
   }
   .admin,
   .employer,
   .logout,
   .worker {
+    color: black;
     min-width: 42px;
+    font-size: 20px;
   }
   .employer,
   .logout,
@@ -165,11 +161,12 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: var(--padding-3xl) 21px 0 0;
+    padding: 0;
     box-sizing: border-box;
     max-width: 100%;
     font-size: var(--font-size-mini);
     color: var(--color-gray);
+    margin: 40px 0 0 120px;
   }
   .user-icon {
     position: relative;
@@ -211,7 +208,7 @@ body {
   .user-name {
     margin: 0;
     position: relative;
-    font-size: inherit;
+    font-size: 24px;
     letter-spacing: -0.01em;
     line-height: 29px;
     font-weight: 400;
@@ -220,6 +217,7 @@ body {
     min-width: 76px;
     z-index: 2;
     padding-top: 20px;
+    
   }
   .frame-parent {
     align-self: stretch;
@@ -801,8 +799,8 @@ body {
     max-height: 100%;
   }
   .img-person-1-wrapper {
+    width:130px;
     height: 127px;
-    width: 86px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -850,7 +848,7 @@ body {
   }
   .img-person-2-wrapper {
     height: 138px;
-    width: 79.8px;
+    width:130px;
     flex-direction: column;
     padding: 5.9px 0 0;
   }
@@ -862,12 +860,13 @@ body {
   .frame-parent2 {
     margin: 0;
     position: absolute;
-    top: -144px;
-    left: 140px;
+    top: -135px;
+    left: 49px;
+    right: 25px;
     border-radius: 16px;
     background-color: #bcf1f9;
     overflow: hidden;
-    padding: 6px var(--padding-56xl);
+    padding: 3px var(--padding-56xl);
     gap: 61px;
     z-index: 2;
     text-align: center;

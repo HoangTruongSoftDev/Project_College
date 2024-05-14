@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title> Canada Horizon Database </title>
+  <title> Canada Horizon Database Management</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1, width=device-width" />
 
@@ -15,20 +15,18 @@
 <body>
   <div class="dashboard-page">
     <section class="canada-horizon-label">
-      <div class="canada-horizon-label-child"></div>
       <h3 class="canada-horizon">Canada Horizon</h3>
       <div class="canada-horizon-label-inner">
         <div class="dashboard-parent">
-          <h3 class="dashboard">Dashboard</h3>
-          <h3 class="admin">Admin</h3>
-          <h3 class="employer">Employer</h3>
-          <h3 class="worker">Worker</h3>
-          <h3 class="logout">Logout</h3>
+          <a class="dashboard" href="index.html">Dashboard</a>
+          <a class="admin" href="admin-page.html">Admin</a>
+          <a class="employer" href="employer-page.html">Employer</a>
+          <a class="worker" href="worker-page.html">Worker</a>
+          <a class="logout" href="#">Logout</a>
         </div>
       </div>
       <div class="frame-div">
         <div class="frame-parent">
-
           <div class="setting-wrapper">
             <img class="setting-icon" loading="lazy" alt="Setting Icon" src="../build-assets/setting-icon.png" />
           </div>
@@ -110,7 +108,7 @@
         <div class="div-content">
 
           <!-- ============================================== -->
-          <div class="content-admin">
+          <div class="content-admin" id="content-admin">
             <img class="admin-icon1" loading="lazy" alt="" src="../build-assets/admin-icon.png" />
             <h1 class="admin2">Admin</h1>
             <div class="administrators-management">
@@ -119,36 +117,36 @@
           </div>
 
           <!-- ============================================== -->
-          <div class="content-employer">
+          <div class="content-employer" id="content-employer">
             <img class="employer-icon1" loading="lazy" alt="" src="../build-assets/employer-icon.png" />
             <h1 class="employer2">Employer</h1>
-            <div class="workers-management">Employers Management</div>    
+            <div class="workers-management">Employers Management</div>
           </div>
           <!-- ============================================== -->
-          <div class="content-worker">
+          <div class="content-worker" id="content-worker">
             <img class="worker-icon1" loading="lazy" alt="" src="../build-assets/worker-icon.png" />
             <h1 class="worker2">Worker</h1>
-            <div class="workers-management">Workers Management</div>            
+            <div class="workers-management">Workers Management</div>
           </div>
 
-
-       <!-- ============================================== -->   
+          <!-- ============================================== -->
           <div class="frame-parent2">
             <div class="img-person-1-wrapper">
-              <img class="img-person-1-icon" loading="lazy" alt="" src="." />
+              <img class="img-person-1-icon" loading="lazy" alt="" src="../build-assets/person1-illustration.png" />
             </div>
             <div class="welcome-back-parent">
               <h1 class="welcome-back">Welcome back 👋</h1>
               <h1 class="truong1">Truong</h1>
             </div>
             <div class="img-person-2-wrapper">
-              <img class="img-person-2-icon" loading="lazy" alt="" src="" />
+              <img class="img-person-2-icon" loading="lazy" alt="" src="../build-assets/person2-illustration.png" />
             </div>
           </div>
         </div>
       </div>
     </section>
   </div>
+  <script src="resources/javascript/index.js" type="text/javascript"></script>
 </body>
 
 </html>
