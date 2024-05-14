@@ -696,7 +696,7 @@ body {
   min-width: 75px;
   z-index: 1;
 }
-.profile-display-label-name-ema,
+.div-operation,
 .rectangle-parent7 {
   display: flex;
   flex-direction: row;
@@ -716,7 +716,7 @@ body {
 .rectangle-parent7:hover {
   background-color: var(--color-cornflowerblue);
 }
-.profile-display-label-name-ema {
+.div-operation {
   align-self: stretch;
   justify-content: center;
   padding: 0 0 0 var(--padding-11xs);
@@ -726,13 +726,14 @@ body {
 .name {
   position: relative;
   flex-shrink: 0;
-  debug_commit: 1de1738;
+
   z-index: 3;
 }
 .name {
-  width: 55px;
+  width: auto;
   line-height: 23.3px;
   display: inline-block;
+  margin-right: 200px; margin-left: 150px;
 }
 .mike {
   flex: 1;
@@ -763,10 +764,12 @@ body {
   position: relative;
   line-height: 23.3px;
   flex-shrink: 0;
-  debug_commit: 1de1738;
   z-index: 3;
 }
-.mike1 {
+#adminList {
+  list-style-type: none;
+}
+.div-table-title, .div-table-content {
   width: 108.5px;
   display: flex;
   flex-direction: row;
@@ -775,35 +778,23 @@ body {
   padding: 0 29px 0 28.6px;
   box-sizing: border-box;
 }
-.mikegmailcom {
-  align-self: stretch;
-  position: relative;
-  font-size: var(--font-size-base-4);
-  line-height: 20.4px;
-  color: var(--color-black);
-  flex-shrink: 0;
-  debug_commit: 1de1738;
-  white-space: nowrap;
-  z-index: 3;
+.div-table-title {
+  margin-left: 27px;
 }
-.mike-parent {
-  width: 151px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-21xl-7);
+.div-table-content {
+  margin-top: 20px;
 }
-.user-type {
+
+.lastName {
   width: 96px;
   line-height: 23.3px;
   flex-shrink: 0;
-  debug_commit: 1de1738;
+  margin-right: 200px;
   z-index: 3;
 }
 .admin2,
 .pending,
-.user-type {
+.lastName {
   position: relative;
   display: inline-block;
 }
@@ -879,7 +870,7 @@ body {
   font-size: var(--font-size-lgi-2);
   color: var(--color-white);
 }
-.comprehensive-profile-full-nam-child {
+.div-content-all-child {
   width: 100%;
   height: 66.1px;
   position: absolute;
@@ -889,7 +880,7 @@ body {
   left: 0;
   background-color: var(--color-whitesmoke);
 }
-.comprehensive-profile-full-nam-item {
+.div-table-title-color {
   width: 100%;
   height: 63px;
   position: absolute;
@@ -899,7 +890,7 @@ body {
   left: 0;
   background-color: var(--color-royalblue);
 }
-.comprehensive-profile-full-nam-inner {
+.div-content-all-inner {
   align-self: stretch;
   height: 513px;
   position: relative;
@@ -1183,7 +1174,7 @@ body {
   gap: 24.8px;
   max-width: 100%;
 }
-.comprehensive-profile-full-nam-inner1 {
+.div-content-all-inner1 {
   align-self: stretch;
   display: flex;
   flex-direction: row;
@@ -1334,20 +1325,20 @@ body {
   max-width: 100%;
   gap: var(--gap-xl);
 }
-.comprehensive-profile-full-nam,
-.comprehensive-profile-full-nam-inner2 {
+.div-content-all,
+.div-content-all-inner2 {
   box-sizing: border-box;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   max-width: 100%;
 }
-.comprehensive-profile-full-nam-inner2 {
+.div-content-all-inner2 {
   width: 850.9px;
   flex-direction: row;
   padding: 0 var(--padding-11xl) 0 var(--padding-10xl-8);
 }
-.comprehensive-profile-full-nam {
+.div-content-all {
   align-self: stretch;
   border: 1px solid var(--color-lavender-100);
   flex-direction: column;
@@ -1386,7 +1377,7 @@ body {
   background-color: var(--color-lavender-100);
   flex-shrink: 0;
 }
-.comprehensive-profile-full-nam-parent {
+.div-all {
   align-self: stretch;
   height: 549.8px;
   align-items: flex-end;
@@ -1395,15 +1386,15 @@ body {
   gap: 24.4px;
   font-size: var(--font-size-base-4);
 }
-.comprehensive-profile-full-nam-parent,
+.div-all,
 .display-title-box,
-.manager-status-btns-approved-r {
+.div-main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   max-width: 100%;
 }
-.manager-status-btns-approved-r {
+.div-main {
   width: 973px;
   align-items: flex-end;
   gap: 40.9px;
@@ -1884,6 +1875,48 @@ body {
 #startDate, #endDate {
   border: none; text-align: center;
 }
+/*Customize the select option*/
+select {
+  appearance: none;
+  border: 1px solid #ccc;
+  padding: 5px 10px 5px 5px;
+  background-color: #0377ff;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #006bcc;
+}
+
+/* Hide the default dropdown arrow */
+select::-ms-expand { display: none; } /* For IE and Edge */
+select::-webkit-appearance { display: none; } /* For Chrome, Safari, and others */
+
+/* Create a custom down arrow using pseudo-element */
+select::after {
+  content: "\25BC"; /* Down arrow character (adjust as needed) */
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%); /* Center the arrow vertically */
+}
+
+/* Style the options (unselected) */
+option {
+  color: white;
+  background-color: #0377ff;
+}
+
+/* Style the selected option */
+option:checked {
+  background-color: #2980b9; /* Adjust this for a slightly darker shade */
+}
+
 @media screen and (max-width: 900px) {
   .ratings-inner,
   .rectangle-parent {
@@ -1893,7 +1926,7 @@ body {
     font-size: 49px;
     line-height: 58px;
   }
-  .profile-display-label-name-ema {
+  .div-operation {
     flex-wrap: wrap;
   }
   .admin-profile-parent {
@@ -1912,7 +1945,7 @@ body {
     padding-right: var(--padding-12xl);
     box-sizing: border-box;
   }
-  .comprehensive-profile-full-nam-parent {
+  .div-all {
     height: auto;
   }
   .contact-info-detail-label {
@@ -1940,12 +1973,12 @@ body {
   .frame-parent6 {
     flex-wrap: wrap;
   }
-  .comprehensive-profile-full-nam {
+  .div-content-all {
     padding-top: var(--padding-xl);
     padding-bottom: var(--padding-xl);
     box-sizing: border-box;
   }
-  .manager-status-btns-approved-r {
+  .div-main {
     gap: var(--gap-xl);
   }
   .display-title-box {

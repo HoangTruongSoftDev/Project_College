@@ -18,3 +18,6 @@ divElement = document.getElementById("content-worker");
 divElement.addEventListener("click", function () {
     window.location = "worker-page.html"
 });
+
+
+

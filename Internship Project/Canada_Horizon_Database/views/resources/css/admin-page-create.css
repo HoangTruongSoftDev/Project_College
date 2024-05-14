@@ -977,6 +977,8 @@ body {
     line-height: normal;
     letter-spacing: normal;
   }
+  
+  
   @media screen and (max-width: 1025px) {
     .frame-wrapper {
       display: none;
