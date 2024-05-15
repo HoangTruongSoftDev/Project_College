@@ -1,10 +1,13 @@
 x64:
   firstOrDefaultFilePatterns:
-    - '**/*'
     - '!**/node_modules'
     - '!build{,/**/*}'
     - '!dist{,/**/*}'
-    - '!build-assets{/*}'
+    - public/**/*
+    - '!public/**/*.js'
+    - node_modules/**/*
+    - package.json
+    - main.js
     - '!**/*.{iml,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,suo,xproj,cc,d.ts,mk,a,o,forge-meta,pdb}'
     - '!**/._*'
     - '!**/electron-builder.{yaml,yml,json,json5,toml,ts}'
@@ -14,7 +17,11 @@ x64:
     - '!.yarnrc.yml'
   nodeModuleFilePatterns:
     - '**/*'
-    - '!build-assets{/*}'
+    - public/**/*
+    - '!public/**/*.js'
+    - node_modules/**/*
+    - package.json
+    - main.js
 nsis:
   script: |-
     !include "C:\Truong\Internship Project\Canada_Horizon_Database\node_modules\app-builder-lib\templates\nsis\include\StdUtils.nsh"
@@ -90,8 +97,8 @@ nsis:
       !insertmacro MUI_LANGUAGE "Vietnamese"
     !macroend
 
-    !include "C:\Users\johnk\AppData\Local\Temp\t-DRZyJN\0-messages.nsh"
     !addplugindir /x86-unicode "C:\Users\johnk\AppData\Local\electron-builder\Cache\nsis\nsis-resources-3.4.1\plugins\x86-unicode"
+    !include "C:\Users\johnk\AppData\Local\Temp\t-ZKQLEi\0-messages.nsh"
 
     Var newStartMenuLink
     Var oldStartMenuLink

@@ -4,5 +4,12 @@ directories:
 appId: com.Truong.CanadaHorizonDatabase
 files:
   - filter:
-      - '!build-assets{/*}'
+      - public/**/*
+      - '!public/**/*.js'
+      - node_modules/**/*
+      - ./package.json
+      - main.js
+extraFiles:
+  - filter:
+      - credentials
 electronVersion: 30.0.2
