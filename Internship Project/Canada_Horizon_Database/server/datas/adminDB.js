@@ -26,31 +26,14 @@ class AdminDB {
             }
         }
     }
-
-    static async find(type, keywordOrStartDate, endDate) {
-        switch (type) {
-            case "FirstName":
-                this.findByFName(keywordOrStartDate);
-                break;
-            case "LastName":
-                this.findByLName(keywordOrStartDate);
-                break;
-            case "Email":
-                this.findByEmail(keywordOrStartDate);
-                break;
-            case "CreatedDate":
-                this.findByCreatedDate(keywordOrStartDate, endDate);
-                break;
-        }
-    }
     static async findByFName(keyword) {
         let client;
         try {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.adminCollection);
-            const result = collection.find( 
-                { firstName: keyword }
+            const result = await collection.find( 
+                {firstName: keyword}
             ).toArray();
             return result;
         }
@@ -69,7 +52,7 @@ class AdminDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.adminCollection);
-            const result = collection.find( 
+            const result = await collection.find( 
                 { lastName : keyword }
             ).toArray();
             return result;
@@ -89,7 +72,7 @@ class AdminDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.adminCollection);
-            const result = collection.find({email : keyword}).toArray();
+            const result =  await collection.find({email : keyword}).toArray();
             return result;
         }
         catch (err) {
@@ -106,16 +89,17 @@ class AdminDB {
         try {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
-            const collection = db.collection(ConfigDB.adminCollection);
+            const collection = await db.collection(ConfigDB.adminCollection);
+            const start = new Date(startDate);
+            const end = new Date(endDate);
             const query = {
                 createdDate : {
-                    $gte: new Date(startDate), // $gte stands for greater or equal than
-                    $lte: new Date(endDate), // $lte stands for smaller or equal than
+                    $gte: start, // $gte stands for greater or equal than
+                    $lte: end, // $lte stands for smaller or equal than
                 }
             }
-            const result = collection.find( 
-                { createdDate : query }
-            ).toArray();
+            // const result = await collection.find(query).toArray();
+            const result = await collection.find(query).toArray();
             return result;
         }
         catch (err) {
@@ -130,11 +114,10 @@ class AdminDB {
     static async findAll() {
         let client;
         try {
-            
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.adminCollection);
-            const result = await collection.find({}).toArray();
+            const result = await collection.find().toArray();
             return result;
         }
         catch (err) {

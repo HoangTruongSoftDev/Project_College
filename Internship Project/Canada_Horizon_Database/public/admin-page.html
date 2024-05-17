@@ -115,43 +115,38 @@
           <div class="div-main">
 
             <div class="div-operation">
-              <select>
+              <select id="searchOptions">
                 <option value="CreatedDate">Date Created</option>
                 <option value="FirstName">First Name</option>
                 <option value="LastName">Last Name</option>
                 <option value="Email">Email</option>
               </select>
-
-              <div class="group-div">
-                <div>
-                  <div class="start-date">Start Date</div> <br />
-                  <div class="start-date">
-                    <input placeholder="Start Date" id="startDate" type="date" />
+                  <input placeholder="Name" id="searchByWords" type="text" >
+                  <div class="group-div searchByDate">
+                    <div>
+                      <div class="start-date">Start Date</div> <br />
+                      <div class="start-date">
+                        <input placeholder="Start Date" id="startDate" type="date" />
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-
-              <div class="rectangle-parent3">
-                <div>
-                  <div class="end-date">End Date</div>
-                  <br />
-                  <div class="end-date">
-                    <input placeholder="End Date" id="endDate" type="date" />
-                  </div>
-                </div>
-              </div>
-
-
-              <button class="rectangle-parent5">
-                <div class="frame-child8"></div>
+                    
+                  <div class="rectangle-parent3 searchByDate">
+                    <div>
+                      <div class="end-date">End Date</div>
+                      <br />
+                      <div class="end-date">
+                        <input placeholder="End Date" id="endDate" type="date" />
+                      </div>
+                    </div>
+                  </div>    
+              <button id="searchButton" class="rectangle-parent5">
                 <div class="search">Search</div>
               </button>
-              <button class="rectangle-parent6">
-                <div class="frame-child9"></div>
+              <button id="resetButton" class="rectangle-parent6">
                 <div class="reset">Reset</div>
               </button>
-              <button class="rectangle-parent7">
-                <div class="frame-child10"></div>
+              <button id="createButton" class="rectangle-parent7">
                 <div class="create-new">Create New</div>
               </button>
             </div>
@@ -175,8 +170,7 @@
       </section>
     </main>
   </div>
-  <script src="resources/javascript/admin-page.js" type="text/javascript"></script>
-  <!-- <script src="resources/javascript/admin-page.js" type="module"></script> -->
+  <script src="resources/javascript/admin-page.js" type="module"></script>
   
 </body>
 

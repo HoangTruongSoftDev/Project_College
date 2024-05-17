@@ -1,10 +1,55 @@
-const { contextBridge, ipcMain } = require('electron');
-const  AdminController  = require('./controllers/adminController.js');
+const AdminController = require('./controllers/adminController');
+const { ipcMain } = require('electron');
 
-async function getAdminListFromDB() {
-    AdminController.getAdminList()
-};  
-
-contextBridge.exposeInMainWorld("api", {
-    getAdminListFromDB
+ipcMain.handle('get-admins-by-fname', async (event,  keyword) => {
+    try {
+        const admins = await AdminController.findAdminByFName(keyword);
+        return admins;
+    }
+    catch (error) {
+        console.error('Error fetching admins:', error);
+        return [];
+    }
 });
+
+ipcMain.handle('get-admins-by-lname', async (event,  keyword) => {
+    try {
+        const admins = await AdminController.findAdminByLName(keyword);
+        return admins;
+    }
+    catch (error) {
+        console.error('Error fetching admins:', error);
+        return [];
+    }
+});
+ipcMain.handle('get-admins-by-email', async (event,  email) => {
+    try {
+        const admins = await AdminController.findAdminByEmail(email);
+        return admins;
+    }
+    catch (error) {
+        console.error('Error fetching admins:', error);
+        return [];
+    }
+});
+
+ipcMain.handle('get-admin-by-created-date', async (event, startDate, endDate) => {
+    try {
+        const admins = await AdminController.findAdminByCreatedDate(startDate, endDate);
+        return admins;
+    } catch (error) {
+        console.error('Error fetching admins:', error);
+        return [];
+    }
+});
+
+ipcMain.handle('get-admin-list', async () => {
+    try {
+        const admins = await AdminController.getAdminList();
+        return admins;
+    } catch (error) {
+        console.error('Error fetching admins:', error);
+        return [];
+    }
+});
+

@@ -804,6 +804,10 @@ body {
   flex-shrink: 0;
   z-index: 3;
 }
+#searchByWords {
+  width: 500px;
+  height: 30px;
+}
 .pending {
   font-size: var(--font-size-mini);
   line-height: 18px;
@@ -817,7 +821,6 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   flex-shrink: 0;
-  debug_commit: 1de1738;
   gap: var(--gap-xl);
 }
 .frame-container,

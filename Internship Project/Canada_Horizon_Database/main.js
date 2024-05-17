@@ -1,40 +1,37 @@
-const { app, BrowserWindow } = require('electron')
 const path = require("path");
-const { contextBridge, ipcMain } = require('electron');
-const { AdminController } = require('./server/controllers/adminController');
-
-
-async function getAdminListFromDB() {
-  try {
-    // Assuming getAdminList returns a Promise resolving to the admin list
-    const adminList = await AdminController.getAdminList();
-    return adminList;
-  } catch (error) {
-    console.error("Error fetching admin list:", error);
-    return []; // Return empty array or handle error accordingly
-  }
-}
-
+const { app, BrowserWindow } = require('electron');
+require('./server/server.js');
 
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    // removeMenu: true,
+    // autoHideMenuBar: true,
     webPreferences: {
-      nodeIntegration: true, // You may need to set this to true if it's not already set
-      enableRemoteModule: true,
+      nodeIntegration: false, 
+      enableRemoteModule: false,
       contextIsolation: true,
+      preload: path.join(__dirname, 'server', 'preload.js')
     }
   })
-  win.loadFile('public/index.html')
+  win.loadFile(path.join(__dirname, 'public', 'index.html'));
 }
-contextBridge.exposeInMainWorld("api", {
-  getAdminListFromDB
+
+app.whenReady().then(createWindow);
+
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') {
+        app.quit();
+    }
 });
-app.whenReady().then(() => {
- 
-  createWindow();
-})
-// app.whenReady().then(() => {
-//   createWindow()
-// })
+
+app.on('activate', () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+        createWindow();
+    }
+});
+
+
+
+
