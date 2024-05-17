@@ -5,10 +5,10 @@ appId: com.Truong.CanadaHorizonDatabase
 files:
   - filter:
       - public/**/*
-      - '!public/**/*.js'
       - node_modules/**/*
       - ./package.json
       - main.js
+      - server/**/*
 extraFiles:
   - filter:
       - credentials

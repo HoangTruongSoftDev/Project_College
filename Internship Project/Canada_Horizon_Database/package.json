@@ -19,10 +19,10 @@
     "appId": "com.Truong.CanadaHorizonDatabase",
     "files": [
       "public/**/*",
-      "!public/**/*.js",
       "node_modules/**/*",
       "./package.json",
-      "main.js"
+      "main.js",
+      "server/**/*"
     ],
     "extraFiles": [
       "credentials"
@@ -33,6 +33,7 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "mongodb": "^6.6.1",
-    "mongoose": "^8.3.4"
+    "mongoose": "^8.3.4",
+    "webpack": "^5.91.0"
   }
 }

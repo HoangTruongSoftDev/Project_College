@@ -1,9 +1,10 @@
+
 // import { AdminDB } from "../datas/adminDB.js";
-// import { Admin } from "../models/Admin.js";
+// import { Admin } from "../models/admin.js";
 
 
 const  AdminDB  = require("../datas/adminDB.js");
-const  Admin  = require("../models/Admin.js");
+const   Admin   = require("../models/admin.js");
 
 class AdminController {
     static createAdmin(firstName, lastName, email, password) {
@@ -18,5 +19,4 @@ class AdminController {
         return AdminDB.find(type, keywordOrStartDate, endDate);
     }
 }
-
 module.exports = AdminController;

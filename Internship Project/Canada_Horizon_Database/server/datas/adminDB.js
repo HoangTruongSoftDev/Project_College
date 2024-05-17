@@ -2,10 +2,11 @@
 // import { ConfigDB } from './configDB.js';
 
 const { MongoClient } = require('mongodb');
-const  ConfigDB  = require('./configDB.js');
+const ConfigDB  = require('./configDB.js');
 
 class AdminDB {
     static async create(admin) {
+        
         let client;
         try {
             client = await MongoClient.connect(ConfigDB.url);
@@ -133,7 +134,7 @@ class AdminDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.adminCollection);
-            const result = await collection.find().toArray();
+            const result = await collection.find({}).toArray();
             return result;
         }
         catch (err) {
