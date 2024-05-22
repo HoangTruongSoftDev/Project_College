@@ -3,5 +3,6 @@ class ConfigDB {
     static url = 'mongodb://localhost:27017';
     static dbName = 'db_CanadaHorizon';
     static adminCollection = "admins";
+    static employerCollection = "employers"
 }
 module.exports = ConfigDB;

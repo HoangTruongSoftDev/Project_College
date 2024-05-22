@@ -6,6 +6,8 @@ contextBridge.exposeInMainWorld('api', {
     getAdminListByLNameAPI: (keyword) => ipcRenderer.invoke('get-admins-by-lname', keyword),
     getAdminListByEmailAPI: (keyword) => ipcRenderer.invoke('get-admins-by-email', keyword),
     getAdminListByCreatedDateAPI: (startDate, endDate) => ipcRenderer.invoke('get-admin-by-created-date', startDate, endDate),
-    
-    
+    createAdminAPI: (firstName, lastName, email, password) =>  ipcRenderer.invoke('create-admin',firstName, lastName, email, password),
+    updateAdminAPI: (adminId, firstName, lastName, email, password) => ipcRenderer.invoke('update-admin', adminId, firstName, lastName, email, password),
+    getAdminByIdAPI: (adminId) => ipcRenderer.invoke('get-admin-by-id', adminId),
+    deleteAdminAPI: (adminId) => ipcRenderer.invoke('delete-admin', adminId),
 });

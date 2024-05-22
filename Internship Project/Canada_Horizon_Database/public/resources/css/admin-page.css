@@ -282,8 +282,30 @@ body {
   position: relative;
   z-index: 2;
 }
-
-
+/* ================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures the table obeys column widths */
+}
+th, td {
+  width: 25%; /* Ensures equal width for three columns */
+  height: 100px; /* Sets a consistent height */
+  text-align: center; /* Centers the text */
+}
+button {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-5xs-2) 27.8px 7.9px;
+  background-color: var(--color-royalblue);
+  width: 140px;
+  border-radius: var(--br-9xs);
+  justify-content: flex-start;
+  box-sizing: border-box;
+  white-space: nowrap;
+  color: white;
+}
+/* ================================= */
 .vector-icon {
   width: 20.9px;
   height: 5.6px;
@@ -713,6 +735,7 @@ body {
   box-sizing: border-box;
   white-space: nowrap;
 }
+
 .rectangle-parent7:hover {
   background-color: var(--color-cornflowerblue);
 }
@@ -734,6 +757,7 @@ body {
   line-height: 23.3px;
   display: inline-block;
   margin-right: 200px; margin-left: 150px;
+  color: white;
 }
 .mike {
   flex: 1;
@@ -765,6 +789,7 @@ body {
   line-height: 23.3px;
   flex-shrink: 0;
   z-index: 3;
+  color: white;
 }
 #adminList {
   list-style-type: none;
@@ -791,6 +816,7 @@ body {
   flex-shrink: 0;
   margin-right: 200px;
   z-index: 3;
+  color: white;
 }
 .admin2,
 .pending,
@@ -1280,7 +1306,6 @@ body {
 .rejected1 {
   position: relative;
   flex-shrink: 0;
-  debug_commit: 1de1738;
   z-index: 3;
 }
 .admin5 {

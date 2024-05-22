@@ -140,7 +140,7 @@ body {
   gap: var(--gap-xl);
   text-align: left;
   font-size: var(--font-size-mini);
-  color: var(--color-gray-200);
+  color: black;
   font-family: var(--font-actor);
 }
 .frame-wrapper {
@@ -599,7 +599,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(232, 232, 255, 0.75);
+  background-color: black;
 }
 .collape,
 .group-icon {
@@ -770,7 +770,7 @@ body {
   font-size: var(--font-size-2xl-7);
   background-color: transparent;
   height: 23.2px;
-  color: var(--color-lightslategray);
+  color: black;
   text-align: left;
   padding: 0;
 }
@@ -823,7 +823,7 @@ body {
   font-size: var(--font-size-2xl-7);
   background-color: transparent;
   height: 23.2px;
-  color: var(--color-lightslategray);
+  color: black;
   text-align: left;
   padding: 0;
 }
@@ -1025,7 +1025,7 @@ body {
   height: 23.2px;
   position: relative;
   line-height: 110%;
-  color: var(--color-lightslategray);
+  color: black;
   text-align: left;
   display: inline-block;
   padding: 0;
@@ -1141,7 +1141,7 @@ body {
   gap: var(--gap-xl);
   z-index: 1;
   font-size: var(--font-size-2xl-7);
-  color: var(--color-gray-100);
+  color: black;
 }
 .checkbox,
 .frame-parent2,

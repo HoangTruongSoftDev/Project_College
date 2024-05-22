@@ -1,18 +1,33 @@
+
 function displayAdminList(admins) {
   console.log(admins);
-  const adminListElement = document.getElementById('adminList');
-  
-  adminListElement.innerHTML = '';
+
+  const tableBody = document.querySelector("#adminList tbody");
+  tableBody.innerHTML = ''
   admins.forEach(admin => {
-    const listItem = document.createElement('li');
-    listItem.innerHTML = `
-                    <div class="div-table-content">
-                        <div class="name">${admin.firstName}</div>
-                        <div class="lastName">${admin.lastName}</div>
-                        <div class="email">${admin.email}</div>
-                    </div>
-                    `;
-    adminListElement.appendChild(listItem);
+    const row = document.createElement("tr");
+    const fNameCell = document.createElement("td");
+    fNameCell.textContent = admin.firstName;
+    row.appendChild(fNameCell);
+
+    const lNameCell = document.createElement("td");
+    lNameCell.textContent = admin.lastName;
+    row.appendChild(lNameCell);
+
+    const emailCell = document.createElement("td");
+    emailCell.textContent = admin.email;
+    row.appendChild(emailCell);
+
+    const actionCell = document.createElement("td");
+    const selectButton = document.createElement("button");
+    selectButton.textContent = "Select";
+    selectButton.onclick = () => {
+
+      window.location.href = `admin-page-modify.html?id=${admin._id}`;
+    };
+    actionCell.appendChild(selectButton);
+    row.appendChild(actionCell);
+    tableBody.appendChild(row);
   });
 }
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,11 +46,11 @@ const resetButton = document.getElementById('resetButton');
 const createButton = document.getElementById('createButton');
 
 createButton.addEventListener('click', () => {
-    window.location = "admin-page-create.html"
+  window.location = "admin-page-create.html"
 });
 
 resetButton.addEventListener('click', () => {
-    getAllAdmins();
+  getAllAdmins();
 });
 
 let typeOfSearch = 'CreatedDate';
