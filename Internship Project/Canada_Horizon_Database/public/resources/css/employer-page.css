@@ -1421,6 +1421,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     max-width: 100%;
+    height: auto;
   }
   .div-main {
     width: 973px;
@@ -1532,13 +1533,13 @@ body {
       z-index: 2;
       text-decoration: none;
     }
-    .admin{
+    .employer{
       color: var(--color-white);
       min-width: 70px;
       font-size: 20px;
     }
     .dashboard,
-    .employer,
+    .admin,
     .logout,
     .worker {
       color: black;
@@ -1718,13 +1719,14 @@ body {
     border: 1px solid var(--color-mediumpurple);
     padding: var(--padding-6xs) var(--padding-14xl) var(--padding-6xs)
       var(--padding-47xl);
-    background-color: transparent;
+    background-color: var(--color-royalblue);
     flex: 1;
     border-radius: var(--br-3xs);
     overflow-x: auto;
     justify-content: space-between;
     gap: var(--gap-xl);
     z-index: 2;
+    font-weight: bold;
   }
   .employer-icon {
     position: relative;
@@ -1744,11 +1746,11 @@ body {
     font-size: var(--font-size-mid-5);
     line-height: 14px;
     font-family: var(--font-actor);
-    color: var(--color-black);
+    color: white;
     text-align: left;
     display: inline-block;
     min-width: 60px;
-    margin-right: 50px
+    margin-right: 50px;
   }
   .frame-wrapper2-1 {
       display: flex;

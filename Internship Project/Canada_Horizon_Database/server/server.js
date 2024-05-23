@@ -1,5 +1,6 @@
 const AdminController = require('./controllers/adminController');
 const { ipcMain } = require('electron');
+const BillController = require('./controllers/billController');
 
 ipcMain.handle('get-admins-by-fname', async (event,  keyword) => {
     try {
@@ -92,4 +93,15 @@ ipcMain.handle('delete-admin', async(event, adminId) => {
         return null;
     }
 })
+
+ipcMain.handle('create-bill', async(event, service, price, payment) => {
+    try {
+        const bill = BillController.createBill(service,price,payment);
+        return bill;
+    } catch (error) {
+        console.error('Error fetching bills:', error);
+        return null;
+    }
+})
+
 

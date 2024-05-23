@@ -7,5 +7,8 @@ class Employer {
         this.EIMT = EIMT;
         this.createdDate = createdDate;
     }
+    getCompanyName() {
+        return this.companyName;
+    }
 }
 module.exports = Employer

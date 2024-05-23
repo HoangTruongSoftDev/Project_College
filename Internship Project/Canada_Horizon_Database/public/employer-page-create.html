@@ -1,348 +1,170 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+<html lang="fr">
 
-    <link rel="stylesheet" href="resources/css/employer-page-create.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Actor:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap"
-    />
-  </head>
-  <body>
-    <div class="employer-create">
-      <header class="rectangle-parent">
-        <div class="frame-child"></div>
-        <div class="employer-create-button">
-          <div class="canada-horizon">Canada Horizon</div>
+<head>
+  <title> Canada Horizon Database Management</title>
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="resources/css/employer-page-create.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Actor:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
+</head>
+
+<body>
+  <div class="admin-page">
+    <section class="canada-horizon-label">
+      <h3 class="canada-horizon">Canada Horizon</h3>
+      <div class="canada-horizon-label-inner">
+        <div class="dashboard-parent">
+          <a class="dashboard" href="index.html">Dashboard</a>
+          <a class="admin" href="admin-page.html">Admin</a>
+          <a class="employer" href="employer-page.html">Employer</a>
+          <a class="worker" href="worker-page.html">Worker</a>
+          <a class="logout" href="#">Logout</a>
         </div>
-        <nav class="frame-wrapper">
-          <nav class="dashboard-parent">
-            <div class="dashboard">Dashboard</div>
-            <div class="admin">Admin</div>
-            <div class="employer">Employer</div>
-            <div class="worker">Worker</div>
-            <div class="logout">Logout</div>
-          </nav>
-        </nav>
+      </div>
+      <div class="frame-div1">
         <div class="frame-parent">
-          <div class="frame-group">
-            <div class="notification-parent">
-              <img
-                class="notification-icon"
-                loading="lazy"
-                alt=""
-                src="./public/notification.svg"
-              />
 
-              <div class="frame-item"></div>
-            </div>
-            <img
-              class="setting-icon"
-              loading="lazy"
-              alt=""
-              src="./public/setting.svg"
-            />
+          <div class="setting-wrapper">
+            <img class="setting-icon" loading="lazy" alt="Setting Icon" src="build-assets/setting-icon.png" />
           </div>
-          <div class="frame-container">
-            <div class="frame-div">
-              <img
-                class="frame-inner"
-                loading="lazy"
-                alt=""
-                src="./public/group-22@2x.png"
-              />
-
-              <h2 class="truong">Truong</h2>
-            </div>
+          <div class="frame-wrapper">
+            <img class="user-icon" loading="lazy" alt="User Icon" src="build-assets/user-icon.png" />
           </div>
+          <h2 class="user-name">Truong</h2>
         </div>
-      </header>
-      <main class="frame-main">
-        <div class="rectangle-group">
-          <div class="rectangle-div"></div>
-          <button class="menu-dash-board">
-            <div class="menu-dash-board-child"></div>
-            <div class="category-wrapper">
-              <img class="category-icon" alt="" src="./public/category.svg" />
+      </div>
+    </section>
+
+    <!-- ================================================================================ -->
+    <main class="truong-email-label">
+      <div class="rectangle-parent">
+        <div class="menu-dash-board-wrapper">
+          <a class="menu-dash-board" href="index.html">
+            <div class="dashboard-menu">
+              <img class="category-icon" alt="" src="build-assets/dashboard-icon.jpg" />
             </div>
             <div class="dashboard1">Dashboard</div>
-          </button>
-          <button class="menu-admin">
-            <div class="menu-admin-child"></div>
-            <img class="profile-icon" alt="" src="./public/profile.svg" />
-
-            <div class="admin-wrapper">
-              <div class="admin1">Admin</div>
-            </div>
-            <div class="property-default-component-set-wrapper">
-              <img
-                class="property-default-component-set"
-                alt=""
-                src="./public/property-default-component-set.svg"
-              />
-            </div>
-          </button>
-          <div class="menu-employer">
-            <div class="menu-employer-child"></div>
-            <div class="menu-employer-inner">
-              <div class="profile-parent">
-                <img
-                  class="profile-icon1"
-                  alt=""
-                  src="./public/profile-1.svg"
-                />
-
-                <div class="employer-wrapper">
-                  <div class="employer1">Employer</div>
-                </div>
-                <div class="vector-wrapper">
-                  <img class="vector-icon" alt="" src="./public/vector-1.svg" />
-                </div>
+          </a>
+        </div>
+        <div class="frame-container-1">
+          <div class="dropdown">
+            <a class="dropbtn group-admin" href="admin-page.html">
+              <img class="admin-icon" alt="Admin Icon" src="build-assets/admin-icon.png" />
+              <div class="admin-wrapper">
+                <div class="admin1">Admin</div>
               </div>
-            </div>
-            <div class="admin-drop-down">
-              <div class="admin-drop-down-child"></div>
-              <div class="create-new">Create New</div>
+            </a>
+            <div class="dropdown-content">
+              <a href="admin-page-create.html">Create New</a>
             </div>
           </div>
-          <button class="menu-worker">
-            <div class="menu-worker-child"></div>
-            <img class="profile-icon2" alt="" src="./public/profile-2.svg" />
+        </div>
+        <div class="frame-wrapper1">
+          <div class="dropdown">
+            <a class="dropbtn group-employer" href="employer-page.html">
+              <img class="employer-icon" alt="Employer Icon" src="build-assets/employer-icon.png" />
+              <div class="employer-wrapper">
+                <div class="employer1">Employer</div>
+              </div>
+            </a>
+            <div class="dropdown-content">
+              <a href="employer-page-create.html">Create New</a>
+            </div>
+          </div>
+        </div>
 
-            <div class="worker-wrapper">
-              <div class="worker1">Worker</div>
+
+        <div class="frame-wrapper2-1">
+          <div class="dropdown">
+            <a class="dropbtn group-worker" href="worker-page.html">
+              <img class="worker-icon" alt="Worker Icon" src="build-assets/worker-icon.png" />
+              <div class="worker-wrapper">
+                <div class="worker1">Worker</div>
+              </div>
+            </a>
+            <div class="dropdown-content">
+              <a href="worker-page-create.html">Create New</a>
             </div>
-            <div class="vector-container">
-              <img class="vector-icon1" alt="" src="./public/vector-2.svg" />
-            </div>
-          </button>
-          <button class="menu-log-out">
-            <div class="menu-log-out-child"></div>
-            <div class="vector-frame">
-              <img class="vector-icon2" alt="" src="./public/vector-3.svg" />
+          </div>
+        </div>
+
+
+        <div class="frame-wrapper3-1">
+          <a class="rectangle-parent1" href="#">
+            <div class="group-logout">
+              <img class="logout-icon" alt="" src="build-assets/logout-icon.png" />
             </div>
             <div class="logout1">Logout</div>
-          </button>
-          <button class="rectangle-container">
-            <div class="frame-child1"></div>
-            <div class="collape">Collape</div>
-            <div class="frame-wrapper1">
-              <img class="group-icon" alt="" src="./public/group-210.svg" />
-            </div>
-          </button>
+          </a>
         </div>
-        <section class="not-assigned">
-          <div class="not-assigned1">
-            <div class="not-assigned2">
-              <div class="not-assigned3">
-                <div class="not-assigned4">
-                  <div class="div-title"></div>
-                  <h1 class="employer-creation">Employer Creation</h1>
-                </div>
-              </div>
-              <div class="not-assigned5">
-                <div class="company-profile">
-                  <div class="company-name">Company Name</div>
-                  <div class="round-action-done-parent">
-                    <img
-                      class="round-action-done"
-                      alt=""
-                      src="./public/-round--action--done.svg"
-                    />
-
-                    <input class="amazon" placeholder="Amazon" type="text" />
-
-                    <div class="frame-child2"></div>
-                  </div>
-                </div>
-                <div class="not-assigned6">
-                  <div class="address">Address</div>
-                  <div class="not-assigned7">
-                    <input
-                      class="placeholder"
-                      placeholder="placeholder"
-                      type="text"
-                    />
-
-                    <div class="not-assigned-child"></div>
-                  </div>
-                </div>
-                <div class="not-assigned8">
-                  <div class="phone-number">Phone Number</div>
-                  <div class="placeholder-parent">
-                    <input
-                      class="placeholder1"
-                      placeholder="placeholder"
-                      type="text"
-                    />
-
-                    <div class="frame-child3"></div>
-                  </div>
-                </div>
-                <div class="frame-parent1">
-                  <div class="frame-parent2">
-                    <div class="frame-parent3">
-                      <div class="professional-activities-wrapper">
-                        <div class="professional-activities">
-                          Professional Activities
-                        </div>
-                      </div>
-                      <div class="activities-list">
-                        <div class="agriculture-segment">
-                          <div class="agriculture-parent">
-                            <div class="agriculture">Agriculture</div>
-                            <img
-                              class="frame-child4"
-                              loading="lazy"
-                              alt=""
-                              src="./public/group-401.svg"
-                            />
-                          </div>
-                        </div>
-                        <div class="activities-list-inner">
-                          <div class="health-care-parent">
-                            <div class="health-care">Health Care</div>
-                            <div class="frame-wrapper2">
-                              <img
-                                class="frame-child5"
-                                loading="lazy"
-                                alt=""
-                                src="./public/group-401.svg"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="factory-parent">
-                          <div class="factory">Factory</div>
-                          <div class="frame-wrapper3">
-                            <img
-                              class="frame-child6"
-                              loading="lazy"
-                              alt=""
-                              src="./public/group-401.svg"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="frame-parent4">
-                      <div class="frame-parent5">
-                        <div class="frame-wrapper4">
-                          <div class="group-div">
-                            <div class="frame-child7"></div>
-                            <div class="sale">Sale</div>
-                            <div class="add-more-button">
-                              <img
-                                class="vector-icon3"
-                                alt=""
-                                src="./public/vector-4.svg"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div class="placeholder-group">
-                          <input
-                            class="placeholder2"
-                            placeholder="placeholder"
-                            type="text"
-                          />
-
-                          <div class="frame-child8"></div>
-                        </div>
-                      </div>
-                      <div class="frame-parent6">
-                        <div class="eimt-wrapper">
-                          <div class="eimt">EIMT</div>
-                        </div>
-                        <div class="checkbox">
-                          <div class="property-1default">
-                            <input
-                              class="property-1default-child"
-                              checked="{true}"
-                              type="radio"
-                              name="radioGroup-1"
-                            />
-
-                            <div class="yes-wrapper">
-                              <div class="yes">Yes</div>
-                            </div>
-                          </div>
-                          <div class="property-1default1">
-                            <input
-                              class="property-1default-item"
-                              type="radio"
-                              name="radioGroup-1"
-                            />
-
-                            <div class="no-wrapper">
-                              <div class="no">No</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="icon-plus-wrapper">
-                    <div class="icon-plus">
-                      <div class="icon-plus-child"></div>
-                      <div class="icon-plus-item"></div>
-                      <div class="icon-plus-inner"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="not-assigned-inner">
-              <div class="frame-parent7">
-                <div class="frame-parent8">
-                  <div class="bill-wrapper">
-                    <div class="bill">Bill</div>
-                  </div>
-                  <div class="icon-plus1">
-                    <div class="ellipse-div"></div>
-                    <div class="plus-icon"></div>
-                    <div class="icon-plus-child1"></div>
-                  </div>
-                </div>
-                <div class="bill-a-parent">
-                  <div class="bill-a">Bill A</div>
-                  <img
-                    class="frame-child9"
-                    loading="lazy"
-                    alt=""
-                    src="./public/group-406.svg"
-                  />
-                </div>
-                <div class="bill-b-parent">
-                  <div class="bill-b">Bill B</div>
-                  <img
-                    class="frame-child10"
-                    loading="lazy"
-                    alt=""
-                    src="./public/group-406.svg"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="sign-in-wrapper">
-              <button class="sign-in">
-                <div class="sign-in-child"></div>
-                <div class="save">Save</div>
-              </button>
+      </div>
+      <!-- =========================================================================================================== -->
+      <section class="contact-info-detail-label">
+        <div class="display-title-box">
+          <div class="title-box-wrapper">
+            <div class="title-box">
+              <h1 class="administrator-management">
+                Employer Creation
+              </h1>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
-  </body>
+          <div class="div-main">
+            <div class="div-all">
+              <div class="div-content-all">
+
+                <label for="companyName">Company Name</label>
+                <input class="input-style" type="text" id="companyNameInput" name="companyName" required />
+
+                <label for="address">Address</label>
+                <input class="input-style" type="text" id="addressInput" name="address" required />
+
+                <label for="phoneNumber">Phone Number</label>
+                <input class="input-style" type="text" id="phoneNumberInput" name="phoneNumber" required />
+
+                <label for="professionalActivities">Professional Activities</label>
+                <input class="input-style" type="text" id="professionalActivitiesInput" name="professionalActivities"
+                  required />
+
+                <div class="label-radio-group">
+                  <label class="main-label">EIMT</label>
+                  <div class="radio-group">
+                    <label class="custom-radio">
+                      <input checked type="radio" name="EIMTInput" value="Yes">
+                      <span class="custom-radio-mark"></span>
+                      Yes
+                    </label>
+                    <label class="custom-radio">
+                      <input type="radio" name="EIMTInput" value="No">
+                      <span class="custom-radio-mark"></span>
+                      No
+                    </label>
+                  </div>
+                </div>
+
+                <div class="centered-div">
+                  <label for="bill">Bill</label>
+                  <input type="image" src="build-assets/plus-icon.png" id="createBill" alt="create bill" width="30" height="30">
+                  <input type="image" src="build-assets/list-icon.png" id="listBill" alt="list bill" width="30" height="30">
+                </div>
+                
+                <div class="button-div">
+                  <button id="saveButton">Save</button>
+                  <button id="refreshButton">Refresh</button>
+                </div>
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="resources/javascript/employer-page-create.js" type="module"></script>
+
+</body>
+
 </html>

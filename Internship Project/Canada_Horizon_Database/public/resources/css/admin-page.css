@@ -1421,6 +1421,7 @@ button {
   flex-direction: column;
   justify-content: flex-start;
   max-width: 100%;
+  height: auto;
 }
 .div-main {
   width: 973px;
