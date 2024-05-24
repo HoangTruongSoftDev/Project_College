@@ -1533,13 +1533,13 @@ body {
       z-index: 2;
       text-decoration: none;
     }
-    .admin{
+    .employer{
       color: var(--color-white);
       min-width: 70px;
       font-size: 20px;
     }
     .dashboard,
-    .employer,
+    .admin,
     .logout,
     .worker {
       color: black;
@@ -1719,7 +1719,7 @@ body {
     border: 1px solid var(--color-mediumpurple);
     padding: var(--padding-6xs) var(--padding-14xl) var(--padding-6xs)
       var(--padding-47xl);
-    background-color: transparent;
+    background-color: var(--color-royalblue);
     flex: 1;
     border-radius: var(--br-3xs);
     overflow-x: auto;
@@ -1745,7 +1745,8 @@ body {
     font-size: var(--font-size-mid-5);
     line-height: 14px;
     font-family: var(--font-actor);
-    color: var(--color-black);
+    color: white;
+    font-weight: bold;
     text-align: left;
     display: inline-block;
     min-width: 60px;
@@ -1823,7 +1824,7 @@ body {
       justify-content: space-between;
       gap: var(--gap-xl);
       z-index: 2;
-      background-color:  var(--color-royalblue);
+      /* background-color:  var(--color-royalblue); */
     }
     .admin-icon {
       position: relative;
@@ -1846,11 +1847,10 @@ body {
       font-size: var(--font-size-mid-5);
       line-height: 16px;
       font-family: var(--font-actor);
-      color: var(--color-white);
+      color: black;
       text-align: left;
       min-width: 60px;
       margin-right: 60px;
-      font-weight: bold;
     }
     .frame-wrapper3-1{
       display: flex;
@@ -1899,6 +1899,13 @@ body {
       display: inline-block;
       min-width: 60px;
       z-index: 3;
+    }
+    .rectangle-parent1:hover .logout1 {
+      color: white; 
+      font-weight: bold
+    }
+    .rectangle-parent1:hover{
+      background-color: var(--color-royalblue);
     }
   /* ******************************************************************************** */
   #startDate, #endDate {

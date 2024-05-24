@@ -1891,7 +1891,13 @@ button {
     z-index: 3;
   }
 /* ******************************************************************************** */
-  
+.rectangle-parent1:hover .logout1 {
+  color: white; 
+  font-weight: bold
+}
+.rectangle-parent1:hover{
+  background-color: var(--color-royalblue);
+}
 .div-main {
   display: flex; /* Make "div-main" a flex container */
   flex-direction: column; /* Arrange content vertically */

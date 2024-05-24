@@ -1,4 +1,13 @@
 let divElement = document.getElementById("content-admin");
+// =================================================
+
+function clearSession() {
+    sessionStorage.removeItem('billList');
+    sessionStorage.removeItem('employerProfessionalActivties');
+} 
+clearSession();
+
+// =================================================
 
 // Add event listener for click event
 divElement.addEventListener("click", function () {

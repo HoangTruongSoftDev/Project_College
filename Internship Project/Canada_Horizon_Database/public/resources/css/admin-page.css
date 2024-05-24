@@ -1405,6 +1405,13 @@ button {
   background-color: var(--color-lavender-100);
   flex-shrink: 0;
 }
+.rectangle-parent1:hover .logout1 {
+  color: white; 
+  font-weight: bold
+}
+.rectangle-parent1:hover{
+  background-color: var(--color-royalblue);
+}
 .div-all {
   align-self: stretch;
   height: 549.8px;

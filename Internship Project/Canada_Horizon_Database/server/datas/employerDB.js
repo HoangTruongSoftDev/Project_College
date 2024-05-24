@@ -56,7 +56,8 @@ class EmployerDB {
                     address: employer.address,
                     phoneNumber: employer.phoneNumber,
                     professionalActivities: employer.password,
-                    EIMT: employer.EIMT, 
+                    EIMT: employer.EIMT,
+                    bills: employer.bills
                 }
             };
             

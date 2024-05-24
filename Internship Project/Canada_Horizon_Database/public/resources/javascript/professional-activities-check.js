@@ -1,0 +1,74 @@
+let professionalActivitiesList = []
+function displayActivitiesList(professionalActivitiesList) {
+    console.log(professionalActivitiesList);
+
+    const tableBody = document.querySelector("#professionalActivitiesList tbody");
+    tableBody.innerHTML = ''
+    professionalActivitiesList.forEach((professionalActivity, index) => {
+        const row = document.createElement("tr");
+        const activityCell = document.createElement("td");
+        const inputActivity = document.createElement("input");
+        inputActivity.value = professionalActivity;
+        inputActivity.classList.add("input-style");
+        inputActivity.id = `professionalActivityId-${index}`;
+        activityCell.appendChild(inputActivity);
+        row.appendChild(activityCell);
+
+        const actionCell = document.createElement("td");
+        const selectButton = document.createElement("button");
+        selectButton.textContent = "Delete";
+        selectButton.onclick = () => {
+            professionalActivitiesList.forEach((_, index) => {
+                const inputActivity = document.getElementById(`professionalActivityId-${index}`);
+                professionalActivitiesList[index] = inputActivity.value;
+            });
+            professionalActivitiesList.splice(index, 1);
+            sendData();
+            window.location.reload();
+        };
+        actionCell.appendChild(selectButton);
+        row.appendChild(actionCell);
+
+        tableBody.appendChild(row);
+    });
+}
+function sendData() {
+    const dataToSend = JSON.stringify(professionalActivitiesList);
+    sessionStorage.setItem('employerProfessionalActivties', dataToSend);// Store the data in session storage
+}
+function receiveData() {
+    const dataReceived = sessionStorage.getItem('employerProfessionalActivties');
+    console.log(dataReceived);
+    if (dataReceived !== null) {
+        professionalActivitiesList = JSON.parse(dataReceived);
+        console.log(professionalActivitiesList);
+    }
+}
+document.addEventListener('DOMContentLoaded', () => {
+    receiveData();
+    displayActivitiesList(professionalActivitiesList);
+});
+const returnButton = document.getElementById("returnButton");
+returnButton.addEventListener('click', returnPreviousPage);
+
+function returnPreviousPage() {
+    sendData();
+    window.history.back();
+}
+
+const updateButton = document.getElementById("updateButton");
+updateButton.addEventListener('click', updateProfessionalActivities);
+
+function updateProfessionalActivities() {
+    professionalActivitiesList.forEach((_, index) => {
+        const inputActivity = document.getElementById(`professionalActivityId-${index}`);
+        professionalActivitiesList[index] = inputActivity.value;
+    });
+    sendData();
+    alert("Updated Successfully");
+}
+
+const resetButton = document.getElementById("resetButton");
+resetButton.addEventListener('click', () => {
+    window.location.reload();
+});

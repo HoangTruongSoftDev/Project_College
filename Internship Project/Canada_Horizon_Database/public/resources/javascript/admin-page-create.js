@@ -5,7 +5,16 @@ let emailInput = document.getElementById("emailInput");
 let passwordInput = document.getElementById("passwordInput");
 
 saveButton.addEventListener('click', createAdmin)
+sessionStorage.removeItem('billList');
+// =================================================
 
+function clearSession() {
+    sessionStorage.removeItem('billList');
+    sessionStorage.removeItem('employerProfessionalActivties');
+} 
+clearSession();
+
+// =================================================
 async function createAdmin() {
     if (firstNameInput.value.trim() === '') {
         alert('Missing First Name');

@@ -1,3 +1,12 @@
+// =================================================
+
+function clearSession() {
+  sessionStorage.removeItem('billList');
+  sessionStorage.removeItem('employerProfessionalActivties');
+} 
+clearSession();
+
+// =================================================
 
 function displayEmployerList(employers) {
   console.log(employers);

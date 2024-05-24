@@ -7,6 +7,16 @@ let deleteButton = document.getElementById("deleteButton");
 let idInput = document.getElementById("idInput");
 updateButton.addEventListener('click', updateAdmin)
 deleteButton.addEventListener('click', deleteAdmin)
+// =================================================
+
+function clearSession() {
+    sessionStorage.removeItem('billList');
+    sessionStorage.removeItem('employerProfessionalActivties');
+} 
+clearSession();
+
+// =================================================
+
 async function updateAdmin() {
     if (firstNameInput.value.trim() === '') {
         alert('Missing First Name');

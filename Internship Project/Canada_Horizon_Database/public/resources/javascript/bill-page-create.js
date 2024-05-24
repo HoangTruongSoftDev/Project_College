@@ -1,4 +1,3 @@
-
 const serviceInput = document.getElementById("serviceInput");
 const priceInput = document.getElementById("priceInput");
 let billList = []
@@ -28,7 +27,6 @@ const saveButton = document.getElementById("saveButton");
 saveButton.addEventListener('click', createBill)
 async function createBill() {
     const paymentInput = document.querySelector('input[name="paymentInput"]:checked');
-    alert(`service: ${serviceInput.value}\n priceInput: ${priceInput.value}\n paymentInput: ${paymentInput.value}\n`)
     if (serviceInput.value.trim() === '') {
         alert('Missing Service');
     }

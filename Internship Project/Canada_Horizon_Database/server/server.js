@@ -1,6 +1,7 @@
 const AdminController = require('./controllers/adminController');
 const { ipcMain } = require('electron');
 const BillController = require('./controllers/billController');
+const EmployerController = require('./controllers/employerController');
 
 ipcMain.handle('get-admins-by-fname', async (event,  keyword) => {
     try {
@@ -100,6 +101,16 @@ ipcMain.handle('create-bill', async(event, service, price, payment) => {
         return bill;
     } catch (error) {
         console.error('Error fetching bills:', error);
+        return null;
+    }
+})
+
+ipcMain.handle('create-employer', async(event, companyName, address, phoneNumber, professionalActivities, EIMT, bills) => {
+    try {
+        const employer = await EmployerController.createEmployer(companyName,address, phoneNumber, professionalActivities, EIMT, bills)
+        return employer;
+    } catch (error) {
+        console.error('Error fetching employers:', error);
         return null;
     }
 })

@@ -1710,6 +1710,13 @@ body {
   .dropdown:hover .worker1 {color: white; font-weight: bold;}
   .menu-dash-board-wrapper:hover .dashboard1 {color: white; font-weight: bold}
   .menu-dash-board-wrapper:hover .menu-dash-board {background-color: var(--color-royalblue);}
+  .rectangle-parent1:hover .logout1 {
+    color: white; 
+    font-weight: bold
+  }
+  .rectangle-parent1:hover{
+    background-color: var(--color-royalblue);
+  }
   
   .group-employer {
     display: flex;
@@ -1824,7 +1831,6 @@ body {
       justify-content: space-between;
       gap: var(--gap-xl);
       z-index: 2;
-      background-color:  var(--color-royalblue);
     }
     .admin-icon {
       position: relative;
@@ -1847,11 +1853,10 @@ body {
       font-size: var(--font-size-mid-5);
       line-height: 16px;
       font-family: var(--font-actor);
-      color: var(--color-white);
+      color: black;
       text-align: left;
       min-width: 60px;
       margin-right: 60px;
-      font-weight: bold;
     }
     .frame-wrapper3-1{
       display: flex;

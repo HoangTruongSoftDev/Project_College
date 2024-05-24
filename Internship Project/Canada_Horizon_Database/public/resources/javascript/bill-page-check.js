@@ -22,7 +22,7 @@ function displayBillList(billList) {
         const selectButton = document.createElement("button");
         selectButton.textContent = "Select";
         selectButton.onclick = () => {
-            window.location.href = `bill-page-check-modify.html?id=${index}`;
+            window.location.href = `bill-page-modify.html?id=${index}`;
         };
         actionCell.appendChild(selectButton);
         row.appendChild(actionCell);

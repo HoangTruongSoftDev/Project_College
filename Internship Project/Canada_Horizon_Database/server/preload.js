@@ -11,4 +11,5 @@ contextBridge.exposeInMainWorld('api', {
     getAdminByIdAPI: (adminId) => ipcRenderer.invoke('get-admin-by-id', adminId),
     deleteAdminAPI: (adminId) => ipcRenderer.invoke('delete-admin', adminId),
     createBillAPI: (service, price, payment) => ipcRenderer.invoke('create-bill', service, price, payment),
+    createEmployerAPI: (companyName, address, phoneNumber, professionalActivities, EIMT, bills) => ipcRenderer.invoke('create-employer', companyName, address, phoneNumber, professionalActivities, EIMT, bills),
 });

@@ -93,6 +93,7 @@ body {
   text-align: center;
   
 }
+
 .dropdown-content a:hover {background-color:  var(--color-light-blue);  border-radius: var(--br-5xs);}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: var(--color-royalblue-100);}
@@ -914,7 +915,13 @@ body {
     line-height: normal;
     letter-spacing: normal;
   }
-
+  .rectangle-parent1:hover .logout1 {
+    color: white; 
+    font-weight: bold
+  }
+  .rectangle-parent1:hover{
+    background-color: #0377ff;
+  }
 
   @media screen and (max-width: 1050px) {
     .canada-horizon-label {
