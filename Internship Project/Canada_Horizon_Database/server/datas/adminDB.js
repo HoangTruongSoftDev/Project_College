@@ -16,7 +16,7 @@ class AdminDB {
            return admin;
         }
         catch (err) {
-            // alert(`Error: ${err}`);
+             
             console.log(`Error: ${err}`);
         }
         finally {
@@ -35,7 +35,7 @@ class AdminDB {
             return admin;
         }
         catch (err) {
-            // alert(`Error: ${err}`);
+             
             console.log(`Error: ${err}`);
         }
         finally {
@@ -64,7 +64,6 @@ class AdminDB {
             return admin;
         }
         catch (err) {
-            // alert(`Error: ${err}`);
             console.log(`Error: ${err}`);
         }
         finally {
@@ -94,7 +93,7 @@ class AdminDB {
               return modifiedResult;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {
@@ -114,7 +113,7 @@ class AdminDB {
             return result;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {
@@ -143,7 +142,7 @@ class AdminDB {
               return modifiedResult;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {
@@ -170,7 +169,7 @@ class AdminDB {
               return modifiedResult;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {
@@ -205,7 +204,7 @@ class AdminDB {
               return modifiedResult;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {
@@ -232,7 +231,7 @@ class AdminDB {
               return modifiedResult;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {

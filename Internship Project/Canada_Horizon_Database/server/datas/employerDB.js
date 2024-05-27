@@ -15,7 +15,7 @@ class EmployerDB {
            return employer;
         }
         catch (err) {
-            // alert(`Error: ${err}`);
+             
             console.log(`Error: ${err}`);
         }
         finally {
@@ -34,7 +34,7 @@ class EmployerDB {
             return employer;
         }
         catch (err) {
-            // alert(`Error: ${err}`);
+             
             console.log(`Error: ${err}`);
         }
         finally {
@@ -49,13 +49,12 @@ class EmployerDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.employerCollection);
-           
             const updateFields = {
                 $set: {
-                    companyName: employer.comapnyName,
+                    companyName: employer.companyName,
                     address: employer.address,
                     phoneNumber: employer.phoneNumber,
-                    professionalActivities: employer.password,
+                    professionalActivities: employer.professionalActivities,
                     EIMT: employer.EIMT,
                     bills: employer.bills
                 }
@@ -65,7 +64,7 @@ class EmployerDB {
             return employer;
         }
         catch (err) {
-            // alert(`Error: ${err}`);
+             
             console.log(`Error: ${err}`);
         }
         finally {
@@ -95,7 +94,7 @@ class EmployerDB {
               return modifiedResult;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {
@@ -115,7 +114,7 @@ class EmployerDB {
             return result;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {
@@ -144,7 +143,7 @@ class EmployerDB {
               return modifiedResult;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {
@@ -171,7 +170,7 @@ class EmployerDB {
               return modifiedResult;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {
@@ -198,7 +197,7 @@ class EmployerDB {
               return modifiedResult;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {
@@ -225,7 +224,7 @@ class EmployerDB {
               return modifiedResult;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {
@@ -260,7 +259,7 @@ class EmployerDB {
               return modifiedResult;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {
@@ -287,7 +286,7 @@ class EmployerDB {
               return modifiedResult;
         }
         catch (err) {
-            // alert("Error: ", err)
+             
         }
         finally {
             if (client) {

@@ -117,14 +117,14 @@ searchButton.addEventListener('click', () => {
         let billListSearch = [];
         if (searchOptions.value === 'Price') {
             billList.forEach(bill => {
-                if (bill.price.toLowerCase().includes(searchValue)) {
+                if (bill.price.toLowerCase().includes(searchValue.toLowerCase())) {
                     billListSearch.push(bill);
                 }
             });
         }
         else if (searchOptions.value === 'Service') {
             billList.forEach(bill => {
-                if (bill.service.toLowerCase().includes(searchValue)) {
+                if (bill.service.toLowerCase().includes(searchValue.toLowerCase())) {
                     billListSearch.push(bill);
                 }
             });

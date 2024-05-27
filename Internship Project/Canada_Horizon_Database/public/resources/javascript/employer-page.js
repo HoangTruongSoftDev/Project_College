@@ -3,6 +3,7 @@
 function clearSession() {
   sessionStorage.removeItem('billList');
   sessionStorage.removeItem('employerProfessionalActivties');
+  sessionStorage.removeItem('modifiedEmployer');
 } 
 clearSession();
 
@@ -97,7 +98,7 @@ searchOptions.addEventListener('change', (event) => {
 async function getAllEmployers() {
   try {
     searchByWords.value = '';
-    const employers = await window.api.getAdminListAPI();
+    const employers = await window.api.getEmployerListAPI();
     displayEmployerList(employers);
   } catch (error) {
     console.error('Error fetching employers:', error);
@@ -106,14 +107,20 @@ async function getAllEmployers() {
 async function searchEmployerListByFilter(type, keyword) {
   try {
     let employers = [];
-    if (type === 'FirstName') {
-      employers = await window.api.getAdminListByFNameAPI(keyword);
+    if (type === 'CompanyName') {
+      employers = await window.api.getEmployerListByCompanyNameAPI(keyword);
     }
-    else if (type === 'LastName') {
-      employers = await window.api.getAdminListByLNameAPI(keyword);
+    else if (type === 'Address') {
+      employers = await window.api.getEmployerListByAddressAPI(keyword);
     }
-    else if (type === 'Email') {
-      employers = await window.api.getAdminListByEmailAPI(keyword);
+    else if (type === 'PhoneNumber') {
+      employers = await window.api.getEmployerListByPhoneNumberAPI(keyword);
+    }
+    else if (type === 'ProfessionalActivities') {
+      employers = await window.api.getEmployerListByProfessionalActivitiesAPI(keyword);
+    }
+    else if (type === 'EIMT') {
+      employers = await window.api.getEmployerListByEIMTAPI(keyword);
     }
     console.log("Truong: " + employers);
     displayEmployerList(employers);
@@ -123,14 +130,14 @@ async function searchEmployerListByFilter(type, keyword) {
   }
 }
 
-async function searchAdminListByCreatedDate(startDate, endDate) {
+async function searchEmployerListByCreatedDate(startDate, endDate) {
   try {
-    let admins = await window.api.getAdminListByCreatedDateAPI(startDate, endDate);
-    console.log("Truong: " + admins);
-    displayAdminList(admins);
+    let employers = await window.api.getEmployerListByCreatedDateAPI(startDate, endDate);
+    console.log("Truong: " + employers);
+    displayEmployerList(employers);
   }
   catch (error) {
-    console.error('Error fetching admins:', error);
+    console.error('Error fetching employers:', error);
   }
 }
 
@@ -138,10 +145,14 @@ searchButton.addEventListener('click', () => {
   if (searchOptions.value === 'CreatedDate') {
     const startDate = startDateElement.value;
     const endDate = endDateElement.value;
-    searchAdminListByCreatedDate(startDate, endDate);
+    searchEmployerListByCreatedDate(startDate, endDate);
+  }
+  else if (searchOptions.value === 'EIMT') {
+    const searchValue = searchByEIMT.value;
+    searchEmployerListByFilter(typeOfSearch, searchValue)
   }
   else {
     const searchValue = searchByWords.value;
-    searchAdminListByFilter(typeOfSearch, searchValue)
+    searchEmployerListByFilter(typeOfSearch, searchValue);
   }
 });

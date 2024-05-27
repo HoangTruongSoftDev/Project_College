@@ -28,19 +28,19 @@ saveButton.addEventListener('click', createBill)
 async function createBill() {
     const paymentInput = document.querySelector('input[name="paymentInput"]:checked');
     if (serviceInput.value.trim() === '') {
-        alert('Missing Service');
+        const result = await window.api.showMessageBoxAPI('Warrning', "Missing Service", 'Message');
     }
     else if (priceInput.value.trim() === '') {
-        alert('Missing Price');
+        const result = await window.api.showMessageBoxAPI('Warrning', "Missing Price", 'Message');
     }
     else if (paymentInput.value.trim() === '') {
-        alert('Missing Payment');
+        const result = await window.api.showMessageBoxAPI('Warrning', "Missing Payment", 'Message');
     }
     else {
         const bill = await window.api.createBillAPI(serviceInput.value.trim(), priceInput.value.trim(), paymentInput.value.trim());
         billList.push(bill);
         console.log(bill);
-        alert(`Bill is created successfully !!!`);
+        const result = await window.api.showMessageBoxAPI('Successfully', "Creating Bill Successfully !!!", 'Message');
         serviceInput.value = '';
         serviceInput.focus();
         priceInput.value = '';

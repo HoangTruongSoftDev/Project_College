@@ -4,6 +4,7 @@ let divElement = document.getElementById("content-admin");
 function clearSession() {
     sessionStorage.removeItem('billList');
     sessionStorage.removeItem('employerProfessionalActivties');
+    sessionStorage.removeItem('modifiedEmployer');
 } 
 clearSession();
 

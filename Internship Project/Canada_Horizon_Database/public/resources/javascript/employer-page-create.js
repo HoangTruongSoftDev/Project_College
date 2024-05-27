@@ -5,6 +5,8 @@ const addressInput = document.getElementById('addressInput');
 const phoneNumberInput = document.getElementById('phoneNumberInput');
 const professionalActivitiesInput = document.getElementById('professionalActivitiesInput');
 
+// clear session
+sessionStorage.removeItem('modifiedEmployer');
 
 const createBill = document.getElementById("createBill");
 createBill.addEventListener('click', () => {
@@ -61,13 +63,13 @@ saveButton.addEventListener('click', () => {
     createEmployer();
 });
 const createProfessionalActivities = document.getElementById('createProfessionalActivities');
-createProfessionalActivities.addEventListener('click', () => {
+createProfessionalActivities.addEventListener('click', async () => {
     if ( professionalActivitiesInput.value.trim() === '') {
-        alert('Missing Professional Activitiy');
+        const result = await window.api.showMessageBoxAPI('Warning', "Missing Professional Activitiy", 'Message');
     }
     else {
         professionalActivitiesList.push(professionalActivitiesInput.value.trim());
-        alert(`Adding Professional Activitiy ${professionalActivitiesInput.value} successfully!!!`);
+        const result = await window.api.showMessageBoxAPI('Successfully', `Adding "${professionalActivitiesInput.value}" Successfully!!!`, 'Message');
         professionalActivitiesInput.value = '';
     }
 });
@@ -80,7 +82,8 @@ async function createEmployer() {
     }
     
     const employer = await window.api.createEmployerAPI(companyNameInput.value.trim(), addressInput.value.trim(), phoneNumberInput.value.trim(), professionalActivitiesList, EIMTInput.value.trim(), billList);
-    alert(`Employer is created successfully !!!`);
+    const result = await window.api.showMessageBoxAPI('Successfully', `Creating Employer Successfully!!!`, 'Message');
+
     companyNameInput.value = '';
     addressInput.value = '';
     phoneNumberInput.value = '';

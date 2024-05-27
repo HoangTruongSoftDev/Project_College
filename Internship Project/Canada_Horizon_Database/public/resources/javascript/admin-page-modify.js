@@ -7,11 +7,16 @@ let deleteButton = document.getElementById("deleteButton");
 let idInput = document.getElementById("idInput");
 updateButton.addEventListener('click', updateAdmin)
 deleteButton.addEventListener('click', deleteAdmin)
+let returnButton = document.getElementById('returnButton');
+returnButton.addEventListener('click', () => {
+    window.history.back();
+});
 // =================================================
 
 function clearSession() {
     sessionStorage.removeItem('billList');
     sessionStorage.removeItem('employerProfessionalActivties');
+    sessionStorage.removeItem('modifiedEmployer');
 } 
 clearSession();
 
@@ -19,16 +24,16 @@ clearSession();
 
 async function updateAdmin() {
     if (firstNameInput.value.trim() === '') {
-        alert('Missing First Name');
+        const result = await window.api.showMessageBoxAPI('Warning', "Missing First Name", 'Message');
     }
     else if (lastNameInput.value.trim() === '') {
-        alert('Missing Last Name');
+        const result = await window.api.showMessageBoxAPI('Warning', "Missing Last Name", 'Message');
     }
     else if (emailInput.value.trim() === '') {
-        alert('Missing Email');
+        const result = await window.api.showMessageBoxAPI('Warning', "Missing Email", 'Message');
     }
     else if (passwordInput.value.trim() === '') {
-        alert('Missing Password');
+        const result = await window.api.showMessageBoxAPI('Warning', "Missing Password", 'Message');
     }
     else {
         console.log('idInput ' + idInput.value);
@@ -38,7 +43,7 @@ async function updateAdmin() {
         console.log('password ' + passwordInput.value.trim());
         const updatedAdmin = await window.api.updateAdminAPI(idInput.value, firstNameInput.value.trim(), lastNameInput.value.trim(), emailInput.value.trim(), passwordInput.value.trim());
         console.log('update checking' + updatedAdmin)
-        alert(`Update successfully !!!`);
+        const result = await window.api.showMessageBoxAPI('Successfully', "Updating Admin Successfully !!!", 'Message');
     }
 }
 
@@ -62,13 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 async function deleteAdmin() {
-    if (confirm('Are you sure to delete this user?')) {
-        // User clicked OK
+    const result = await window.api.showMessageBoxAPI('Confirmation', "Are you sure to delete this user?", 'Confirmation');
+    if (result === 'Yes') {
         const admin = await window.api.deleteAdminAPI(idInput.value);
-        alert('Delete successfully !!!');
+        const result = await window.api.showMessageBoxAPI('Successfully', "Deleting Admin Successfully !!!", 'Message');
         window.location.href = 'admin-page.html';
     }
-    
 }
 
 

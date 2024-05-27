@@ -2,42 +2,60 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <style>
-       /* Custom styles for the container */
-       .frame {
-    display: inline-block;
-    border: 1px solid blue; /* Set border color */
-    padding: 10px; /* Add some padding */
-    border-radius: 5px; /* Add rounded corners */
-  }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <style>
+    /* Custom styles for the container */
+    .frame {
+      display: inline-block;
+      border: 1px solid blue;
+      /* Set border color */
+      padding: 10px;
+      /* Add some padding */
+      border-radius: 5px;
+      /* Add rounded corners */
+    }
 
-  /* Custom styles for the label */
-  .date-label {
-    color: white;
-    margin-right: 10px; /* Add some space between label and input */
-  }
+    /* Custom styles for the label */
+    .date-label {
+      color: white;
+      margin-right: 10px;
+      /* Add some space between label and input */
+    }
 
-  /* Custom styles for the input */
-  .date-container input[type="date"] {
-    background-color: blue;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    width: 180px; /* Adjust as needed */
-  }
-    </style>
+    /* Custom styles for the input */
+    .date-container input[type="date"] {
+      background-color: blue;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      width: 180px;
+      /* Adjust as needed */
+    }
+  </style>
 </head>
 
 <body>
-    <div class="frame">
-        <label class="date-label" for="custom-date">Start Date:</label>
-        <div class="date-container">
-          <input type="date" id="custom-date" name="custom-date" min="2020-01-01" max="2025-12-31" required>
-        </div>
-      </div>
+  <input type="text" id="testingInput">
+  <button id="testingButton">Click Me</button>
+  <script>
+
+    const inputElement = document.querySelector('input');
+
+    // Initial focus on input element
+    inputElement.focus();
+
+    async function showAlert() {
+      // Show a custom alert dialog
+      
+      const result = await window.api.showMessageBoxAPI('Testing', "Are you sure", 'Confirmation');
+      inputElement.value = result;
+    }
+
+    // Add a button click event to trigger the alert
+    document.querySelector('button').addEventListener('click', showAlert);
+  </script>
 </body>
 
 </html>

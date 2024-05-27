@@ -26,8 +26,14 @@ class EmployerController {
     static findEmployerByAddress(keyword) {
         return EmployerDB.findByAddress(keyword);
     }
-    static findEmployerByPhoneNumbner(keyword) {
+    static findEmployerByPhoneNumber(keyword) {
         return EmployerDB.findByPhoneNumber(keyword);
+    }
+    static findEmployerByProfessionalActivities(keyword) {
+        return EmployerDB.findByProfessionalActivities(keyword);
+    }
+    static findEmployerByEIMT(keyword) {
+        return EmployerDB.findByEIMT(keyword);
     }
     static findEmployerByCreatedDate(startDate, endDate) {
         return EmployerDB.findByCreatedDate(startDate, endDate);

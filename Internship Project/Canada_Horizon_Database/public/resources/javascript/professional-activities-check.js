@@ -33,6 +33,7 @@ function displayActivitiesList(professionalActivitiesList) {
     });
 }
 function sendData() {
+    
     const dataToSend = JSON.stringify(professionalActivitiesList);
     sessionStorage.setItem('employerProfessionalActivties', dataToSend);// Store the data in session storage
 }
@@ -59,13 +60,13 @@ function returnPreviousPage() {
 const updateButton = document.getElementById("updateButton");
 updateButton.addEventListener('click', updateProfessionalActivities);
 
-function updateProfessionalActivities() {
+async function updateProfessionalActivities() {
     professionalActivitiesList.forEach((_, index) => {
         const inputActivity = document.getElementById(`professionalActivityId-${index}`);
         professionalActivitiesList[index] = inputActivity.value;
     });
     sendData();
-    alert("Updated Successfully");
+    const result = await window.api.showMessageBoxAPI('Successfully', `Updating Professional Activities Successfully!!!`, 'Message');
 }
 
 const resetButton = document.getElementById("resetButton");

@@ -11,19 +11,19 @@ deleteButton.addEventListener('click', deleteBill)
 returnButton.addEventListener('click', returnPreviousPage);
 let billListSession = [];
 
-function updateBill() {
+async function updateBill() {
         if (serviceInput.value.trim() === '') {
-            alert('Missing Service');
+            const result = await window.api.showMessageBoxAPI('Warning', "Missing Service", 'Message');
         }
         else if (priceInput.value.trim() === '') {
-            alert('Missing Price');
+            const result = await window.api.showMessageBoxAPI('Warning', "Missing Price", 'Message');
         }
         else {
             billListSession[idInput.value].service = serviceInput.value.trim();
             billListSession[idInput.value].price = priceInput.value.trim();
             const paymentInput = document.querySelector('input[name="paymentInput"]:checked');
             billListSession[idInput.value].payment = paymentInput.value;
-            alert(`Update successfully !!!`);
+            const result = await window.api.showMessageBoxAPI('Successfully', "Updating Bill Successfully !!!", 'Message');
         }    
 }
 
@@ -54,12 +54,12 @@ function findBillById() {
 document.addEventListener('DOMContentLoaded', () => {
     findBillById();
 });
-function deleteBill() {
-    if (confirm('Are you sure to delete this bill?')) {
-        // User clicked OK
+async function deleteBill() {
+
+    const result = await window.api.showMessageBoxAPI('Confirmation', "Are you sure to delete this bill?", 'Confirmation');
+    if (result === 'Yes') {
         billListSession.splice(idInput.value, 1);
-        alert('Delete successfully !!!');
+        const result = await window.api.showMessageBoxAPI('Successfully', "Deleting Bill Successfully !!!", 'Message');
         returnPreviousPage();
     }
-    
 }
