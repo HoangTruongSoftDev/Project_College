@@ -43,6 +43,32 @@ function displayEmployerList(employers) {
 document.addEventListener('DOMContentLoaded', () => {
   searchByWords.style.display = 'none';
   searchByEIMT.style.display = 'none';
+  // =================================================================
+  const tableHead = document.querySelector("#employerList thead");
+
+    const row = document.createElement("tr");
+    const companyNameCell = document.createElement("th");
+    companyNameCell.textContent = 'Company Name';
+    companyNameCell.classList.add('div-table-title-color');
+    row.appendChild(companyNameCell);
+
+    const professionalActivitiesCell = document.createElement("th");
+    professionalActivitiesCell.textContent = 'Professional Activitie';
+    professionalActivitiesCell.classList.add('div-table-title-color');
+    row.appendChild(professionalActivitiesCell);
+
+    const eimtCell = document.createElement("th");
+    eimtCell.textContent = 'EIMT';
+    eimtCell.classList.add('div-table-title-color');
+    row.appendChild(eimtCell);
+
+    const selectCell = document.createElement("th");
+    selectCell.textContent = '';
+    selectCell.classList.add('div-table-title-color');
+    row.appendChild(selectCell);
+
+    tableHead.appendChild(row);
+// =================================================================
   getAllEmployers();
 });
 

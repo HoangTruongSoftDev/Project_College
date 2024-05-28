@@ -42,6 +42,31 @@ function displayAdminList(admins) {
 }
 document.addEventListener('DOMContentLoaded', () => {
   searchByWords.style.display = 'none';
+    // =================================================================
+    const tableHead = document.querySelector("#adminList thead");
+    const row = document.createElement("tr");
+    const fNameCell = document.createElement("th");
+    fNameCell.textContent = 'First Name';
+    fNameCell.classList.add('div-table-title-color');
+    row.appendChild(fNameCell);
+
+    const lNameCell = document.createElement("th");
+    lNameCell.textContent = 'Last Name';
+    lNameCell.classList.add('div-table-title-color');
+    row.appendChild(lNameCell);
+
+    const emailCell = document.createElement("th");
+    emailCell.textContent = 'Email';
+    emailCell.classList.add('div-table-title-color');
+    row.appendChild(emailCell);
+
+    const selectCell = document.createElement("th");
+    selectCell.textContent = '';
+    selectCell.classList.add('div-table-title-color');
+    row.appendChild(selectCell);
+
+    tableHead.appendChild(row);
+// =================================================================
   getAllAdmins();
 });
 

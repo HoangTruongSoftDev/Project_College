@@ -37,24 +37,71 @@
 </head>
 
 <body>
-  <input type="text" id="testingInput">
-  <button id="testingButton">Click Me</button>
-  <script>
+  <input type="file" id="fileInput" />
+    <button id="uploadButton">Upload</button>
+    <button id="downloadButton">Download Last Uploaded File</button>
+    <div id="fileDisplay"></div>
 
-    const inputElement = document.querySelector('input');
+    <script>
+      let lastUploadedFileId = null;
 
-    // Initial focus on input element
-    inputElement.focus();
+      document.getElementById('uploadButton').addEventListener('click', async () => {
+          const fileInput = document.getElementById('fileInput');
+          if (fileInput.files.length > 0) {
+              const file = fileInput.files[0];
+              const filePath = file.path; // This is the path of the file on the user's system
 
-    async function showAlert() {
-      // Show a custom alert dialog
-      
-      const result = await window.api.showMessageBoxAPI('Testing', "Are you sure", 'Confirmation');
-      inputElement.value = result;
-    }
+              try {
+                  const response = await window.api.uploadFile(filePath);
+                  console.log('File uploaded successfully:', response);
+                  lastUploadedFileId = response.fileId; // Store the file ID for later use
+              } catch (error) {
+                  console.error('Error uploading file:', error);
+              }
+          } else {
+              console.log('No file selected');
+          }
+      });
 
-    // Add a button click event to trigger the alert
-    document.querySelector('button').addEventListener('click', showAlert);
+      document.getElementById('downloadButton').addEventListener('click', async () => {
+          if (lastUploadedFileId) {
+              try {
+                  const response = await window.api.downloadFile(lastUploadedFileId);
+                  console.log('File downloaded successfully:', response);
+                  displayFile(response.downloadPath);
+              } catch (error) {
+                  console.error('Error downloading file:', error);
+              }
+          } else {
+              console.log('No file has been uploaded yet');
+          }
+      });
+
+      function displayFile(filePath) {
+          const fileDisplay = document.getElementById('fileDisplay');
+          const fileExtension = filePath.split('.').pop().toLowerCase();
+
+          if (['png', 'jpg', 'jpeg', 'gif'].includes(fileExtension)) {
+              // Display image
+              const img = document.createElement('img');
+              img.src = `file://${filePath}`;
+              fileDisplay.innerHTML = '';
+              fileDisplay.appendChild(img);
+          } else if (['txt', 'html', 'json'].includes(fileExtension)) {
+              // Display text
+              fetch(`file://${filePath}`)
+                  .then(response => response.text())
+                  .then(text => {
+                      const pre = document.createElement('pre');
+                      pre.textContent = text;
+                      fileDisplay.innerHTML = '';
+                      fileDisplay.appendChild(pre);
+                  })
+                  .catch(error => console.error('Error displaying text file:', error));
+          } else {
+              console.log('Unsupported file type');
+          }
+      }
   </script>
 </body>
 

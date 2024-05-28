@@ -25,4 +25,11 @@ contextBridge.exposeInMainWorld('api', {
     
     updateEmployerAPI: (employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills) => ipcRenderer.invoke('update-employer', employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills),
     deleteEmployerAPI: (employerId) => ipcRenderer.invoke('delete-employer', employerId),
+
+    uploadFile: async (filePath) => {
+        return await ipcRenderer.invoke('upload-file', filePath);
+    },
+    downloadFile: async (fileId) => {
+        return await ipcRenderer.invoke('download-file', fileId);
+    },
 });

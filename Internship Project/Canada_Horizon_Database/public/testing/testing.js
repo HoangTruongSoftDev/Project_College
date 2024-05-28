@@ -1,12 +1,12 @@
-const { ObjectId } = require("mongodb");
-const AdminDB = require("../../server/datas/adminDB");
-async function findAllAdmins() {
-    let admins = await AdminDB.findAll();
-    let truong = await AdminDB.findById(admins[0]._id);
-    console.log('Truong: ' + truong._id);
+const fileUpload = document.getElementById('fileUpload');
+fileUpload.addEventListener('change', handleFileUpload);
+
+function handleFileUpload(event) {
+    const selectedFile = event.target.files[0];
+    const filePath = selectedFile.path; // Access file path
+    const filename = selectedFile.name;
+    const fileType = selectedFile.type;
+    const fileSize = selectedFile.size; // Optional: Capture file size
+
+    // Extract other metadata as needed
 }
-async function truong1() {
-    let truong = await AdminDB.findById('6647ba4128e74e5b0fd9807e');
-    console.log('Truong ' + truong._id);
-}
-findAllAdmins();

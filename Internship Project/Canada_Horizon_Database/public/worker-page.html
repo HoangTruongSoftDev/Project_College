@@ -1,395 +1,189 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+<html lang="fr">
 
-    <link rel="stylesheet" href="resources/css/worker-page.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Actor:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap"
-    />
-  </head>
-  <body>
-    <div class="worker-page">
-      <header class="rectangle-parent">
-        <div class="frame-child"></div>
-        <div class="canada-horizon-wrapper">
-          <div class="canada-horizon">Canada Horizon</div>
+<head>
+  <title> Canada Horizon Database Management</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="resources/css/worker-page.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Actor:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
+</head>
+
+<body>
+  <div class="admin-page">
+    <section class="canada-horizon-label">
+      <h3 class="canada-horizon">Canada Horizon</h3>
+      <div class="canada-horizon-label-inner">
+        <div class="dashboard-parent">
+          <a class="dashboard" href="index.html">Dashboard</a>
+          <a class="admin" href="admin-page.html">Admin</a>
+          <a class="employer" href="employer-page.html">Employer</a>
+          <a class="worker" href="worker-page.html">Worker</a>
+          <a class="logout" href="#">Logout</a>
         </div>
-        <nav class="frame-wrapper">
-          <nav class="dashboard-parent">
-            <div class="dashboard">Dashboard</div>
-            <div class="admin">Admin</div>
-            <div class="employer">Employer</div>
-            <div class="worker">Worker</div>
-            <div class="logout">Logout</div>
-          </nav>
-        </nav>
+      </div>
+      <div class="frame-div1">
         <div class="frame-parent">
-          <div class="notification-parent">
-            <img
-              class="notification-icon"
-              loading="lazy"
-              alt=""
-              src="./public/notification.svg"
-            />
 
-            <div class="frame-item"></div>
-          </div>
           <div class="setting-wrapper">
-            <img
-              class="setting-icon"
-              loading="lazy"
-              alt=""
-              src="./public/setting.svg"
-            />
+            <img class="setting-icon" loading="lazy" alt="Setting Icon" src="build-assets/setting-icon.png" />
           </div>
-          <div class="frame-container">
-            <img
-              class="frame-inner"
-              loading="lazy"
-              alt=""
-              src="./public/group-22@2x.png"
-            />
+          <div class="frame-wrapper">
+            <img class="user-icon" loading="lazy" alt="User Icon" src="build-assets/user-icon.png" />
           </div>
+          <h2 class="user-name">Truong</h2>
         </div>
-      </header>
-      <div class="worker-page-child"></div>
-      <div class="worker-page-item"></div>
-      <div class="worker-page-inner"></div>
-      <div class="approved">Approved</div>
-      <div class="best-buy">Best Buy</div>
-      <div class="sale-stock">Sale, Stock</div>
-      <div class="yes">Yes</div>
-      <div class="pharmaprix">Pharmaprix</div>
-      <div class="health-care">Health Care</div>
-      <div class="no">No</div>
-      <div class="company-name">Company Name</div>
-      <div class="professional-activities">Professional Activities</div>
-      <div class="eimt">EIMT</div>
-      <div class="rejected">Rejected</div>
-      <img
-        class="group-icon"
-        loading="lazy"
-        alt=""
-        src="./public/group-381.svg"
-      />
+      </div>
+    </section>
 
-      <img class="worker-page-child1" alt="" src="./public/group-382.svg" />
-
-      <main class="frame-group">
-        <div class="rectangle-group">
-          <div class="rectangle-div"></div>
-          <button class="menu-dash-board">
-            <div class="menu-dash-board-child"></div>
-            <div class="category-wrapper">
-              <img class="category-icon" alt="" src="./public/category.svg" />
+    <!-- ================================================================================ -->
+    <main class="truong-email-label">
+      <div class="rectangle-parent">
+        <div class="menu-dash-board-wrapper">
+          <a class="menu-dash-board" href="index.html">
+            <div class="dashboard-menu">
+              <img class="category-icon" alt="" src="build-assets/dashboard-icon.jpg" />
             </div>
             <div class="dashboard1">Dashboard</div>
-          </button>
-          <button class="rectangle-container">
-            <div class="frame-child1"></div>
-            <img class="profile-icon" alt="" src="./public/profile.svg" />
-
-            <div class="admin-wrapper">
-              <div class="admin1">Admin</div>
-            </div>
-            <div class="vector-wrapper">
-              <img class="vector-icon" alt="" src="./public/vector.svg" />
-            </div>
-          </button>
-          <button class="group-button">
-            <div class="frame-child2"></div>
-            <img class="profile-icon1" alt="" src="./public/profile.svg" />
-
-            <div class="employer-wrapper">
-              <div class="employer1">Employer</div>
-            </div>
-            <div class="vector-container">
-              <img class="vector-icon1" alt="" src="./public/vector.svg" />
-            </div>
-          </button>
-          <button class="rectangle-parent1">
-            <div class="frame-child3"></div>
-            <img class="profile-icon2" alt="" src="./public/profile-2.svg" />
-
-            <div class="worker-wrapper">
-              <div class="worker1">Worker</div>
-            </div>
-            <div class="vector-frame">
-              <img class="vector-icon2" alt="" src="./public/vector-2.svg" />
-            </div>
-          </button>
-          <button class="rectangle-parent2">
-            <div class="frame-child4"></div>
-            <div class="frame-div">
-              <img class="vector-icon3" alt="" src="./public/vector-3.svg" />
-            </div>
-            <div class="logout1">Logout</div>
-          </button>
-          <button class="rectangle-parent3">
-            <div class="frame-child5"></div>
-            <div class="collape">Collape</div>
-            <div class="frame-wrapper1">
-              <img class="frame-child6" alt="" src="./public/group-210.svg" />
-            </div>
-          </button>
+          </a>
         </div>
-        <section class="frame-section">
-          <div class="frame-parent1">
-            <div class="frame-wrapper2">
-              <div class="frame-parent2">
-                <div class="frame-wrapper3">
-                  <div class="div-title-parent">
-                    <div class="div-title"></div>
-                    <h1 class="worker-management">Worker Management</h1>
-                  </div>
-                </div>
-                <div class="frame-parent3">
-                  <div class="group-div">
-                    <div class="frame-child7"></div>
-                    <div class="start-date-wrapper">
-                      <div class="start-date">Start Date</div>
-                    </div>
-                    <img
-                      class="calendar-icon"
-                      alt=""
-                      src="./public/calendar@2x.png"
-                    />
-                  </div>
-                  <div class="rectangle-parent4">
-                    <div class="frame-child8"></div>
-                    <div class="end-date-wrapper">
-                      <div class="end-date">End Date</div>
-                    </div>
-                    <img
-                      class="calendar-icon1"
-                      alt=""
-                      src="./public/calendar-1@2x.png"
-                    />
-                  </div>
-                  <div class="rectangle-parent5">
-                    <div class="frame-child9"></div>
-                    <div class="select">Select</div>
-                    <div class="vector-wrapper1">
-                      <img
-                        class="vector-icon4"
-                        alt=""
-                        src="./public/vector-4.svg"
-                      />
-                    </div>
-                  </div>
-                  <button class="rectangle-parent6">
-                    <div class="frame-child10"></div>
-                    <div class="search">Search</div>
-                  </button>
-                  <button class="rectangle-parent7">
-                    <div class="frame-child11"></div>
-                    <div class="reset">Reset</div>
-                  </button>
-                  <button class="rectangle-parent8">
-                    <div class="frame-child12"></div>
-                    <div class="create-new">Create New</div>
-                  </button>
-                </div>
+        <div class="frame-container-1">
+          <div class="dropdown">
+            <a class="dropbtn group-admin" href="admin-page.html">
+              <img class="admin-icon" alt="Admin Icon" src="build-assets/admin-icon.png" />
+              <div class="admin-wrapper">
+                <div class="admin1">Admin</div>
               </div>
-            </div>
-            <div class="rectangle-parent9">
-              <div class="frame-child13"></div>
-              <div class="rectangle-parent10">
-                <input class="rectangle-input" type="text" />
-
-                <input class="frame-child14" type="text" />
-
-                <div class="frame-child15"></div>
-                <div class="approved1">Approved</div>
-                <div class="frame-child16"></div>
-                <div class="appr-user-data">
-                  <div class="appr-user-data-inner">
-                    <div class="full-name-parent">
-                      <div class="full-name">Full Name</div>
-                      <div class="profession-wrapper">
-                        <div class="profession">Profession</div>
-                      </div>
-                      <div class="phone-number">Phone Number</div>
-                    </div>
-                  </div>
-                  <div class="frame-parent4">
-                    <div class="frame-wrapper4">
-                      <div class="frame-parent5">
-                        <img
-                          class="frame-child17"
-                          alt=""
-                          src="./public/group-380.svg"
-                        />
-
-                        <img
-                          class="frame-child18"
-                          loading="lazy"
-                          alt=""
-                          src="./public/group-380.svg"
-                        />
-                      </div>
-                    </div>
-                    <div class="frame-parent6">
-                      <div class="frame-wrapper5">
-                        <div class="select-box-parent">
-                          <div class="select-box">
-                            <div class="phuc-thien-nguyen">
-                              Phuc Thien Nguyen
-                            </div>
-                          </div>
-                          <div class="emp-name-birth-add">
-                            <div class="sale">Sale</div>
-                          </div>
-                          <div class="hoang-truong-pham">
-                            <div class="tuan-hung-bui-parent">
-                              <div class="tuan-hung-bui">
-                                <div class="anh-khoa-nguyen">514 444 4444</div>
-                              </div>
-                              <div class="pending">Pending</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="emp-name-birth-addr-parent">
-                        <div class="emp-name-birth-addr">
-                          <div class="hoang-truong-pham-parent">
-                            <div class="hoang-truong-pham1">
-                              Hoang Truong Pham
-                            </div>
-                            <div class="contact-field">
-                              <div class="sale-stock1">Sale, Stock</div>
-                            </div>
-                            <div class="address-field">514 999 9999</div>
-                          </div>
-                        </div>
-                        <div class="frame-parent7">
-                          <div class="frame-wrapper6">
-                            <div class="full-name-group">
-                              <div class="full-name1">Full Name</div>
-                              <div class="birth-date">Birth date</div>
-                              <div class="address">Address:</div>
-                            </div>
-                          </div>
-                          <div class="frame-parent8">
-                            <div class="frame-parent9">
-                              <div class="hoang-truong-pham-group">
-                                <div class="hoang-truong-pham2">
-                                  Hoang Truong Pham
-                                </div>
-                                <div class="div">28/02/2003</div>
-                                <a
-                                  class="rue-sainte-catherine-o"
-                                  href="https://www.bing.com/ck/a?!&&p=a4a8f39f79eeb9f4JmltdHM9MTcxNDY5NDQwMCZpZ3VpZD0xZWE0MTgxOC0xYzE2LTZhNTItMWQ0MS0wYjg2MWRiYzZiNzcmaW5zaWQ9NTU0Mw&ptn=3&ver=2&hsh=3&fclid=1ea41818-1c16-6a52-1d41-0b861dbc6b77&u=a1L21hcHM_Jm1lcGk9MTA5fn5Ub3BPZlBhZ2V-QWRkcmVzc19MaW5rJnR5PTE4JnE9QW1hem9uJTIwQ2FwaXRhbGUlMjBJbmMuJnNzPXlwaWQuWU4xMjI2eDcyODk0NzQ5NjA3MTIxODI4ODkmcHBvaXM9NDUuNDk5NDUwNjgzNTkzNzVfLTczLjU3MzQxNzY2MzU3NDIyX0FtYXpvbiUyMENhcGl0YWxlJTIwSW5jLl9ZTjEyMjZ4NzI4OTQ3NDk2MDcxMjE4Mjg4OX4mY3A9NDUuNDk5NDUxfi03My41NzM0MTgmdj0yJnNWPTEmRk9STT1NUFNSUEw&ntb=1"
-                                  target="_blank"
-                                  >1134 rue Sainte-Catherine O, Montréal QUEBEC
-                                  H3B 1H4</a
-                                >
-                              </div>
-                              <div
-                                class="rue-sainte-catherine-o-montrea-wrapper"
-                              >
-                                <div class="rue-sainte-catherine-o-montrea">
-                                  <div
-                                    class="rue-sainte-catherine-o-montrea-child"
-                                  ></div>
-                                  <div
-                                    class="rue-sainte-catherine-o-montrea-item"
-                                  ></div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="frame-parent10">
-                              <div class="phone-number-parent">
-                                <div class="phone-number1">Phone Number</div>
-                                <div class="truonggmailcom">514 999 9999</div>
-                              </div>
-                              <div class="professional-activity-parent">
-                                <div class="professional-activity">
-                                  Professional Activity
-                                </div>
-                                <div class="sale-stock2">Sale, Stock</div>
-                              </div>
-                              <div class="professional-diploma-parent">
-                                <div class="professional-diploma">
-                                  Professional Diploma
-                                </div>
-                                <div class="truonggmailcom1">
-                                  Bachelor Computer Science
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="frame-parent11">
-                  <div class="frame-parent12">
-                    <div class="frame-wrapper7">
-                      <div class="frame-parent13">
-                        <img
-                          class="frame-child19"
-                          alt=""
-                          src="./public/group-383.svg"
-                        />
-
-                        <img
-                          class="frame-child20"
-                          loading="lazy"
-                          alt=""
-                          src="./public/group-383.svg"
-                        />
-                      </div>
-                    </div>
-                    <div class="frame-parent14">
-                      <div class="tuan-hung-bui-wrapper">
-                        <div class="tuan-hung-bui1">Tuan Hung Bui</div>
-                      </div>
-                      <div class="anh-khoa-nguyen1">Anh Khoa Nguyen</div>
-                    </div>
-                  </div>
-                  <div class="healthcare-label">
-                    <div class="health-care1">Health Care</div>
-                    <div class="contact-details">
-                      <div class="stock">Stock</div>
-                    </div>
-                  </div>
-                  <div class="frame-parent15">
-                    <div class="wrapper">
-                      <div class="div1">514 333 3333</div>
-                    </div>
-                    <div class="empty-label">514 888 8888</div>
-                  </div>
-                </div>
-              </div>
-              <img
-                class="frame-child21"
-                loading="lazy"
-                alt=""
-                src="./public/group-382.svg"
-              />
+            </a>
+            <div class="dropdown-content">
+              <a href="admin-page-create.html">Create New</a>
             </div>
           </div>
-        </section>
-      </main>
-      <img
-        class="worker-page-child2"
-        loading="lazy"
-        alt=""
-        src="./public/group-381.svg"
-      />
-    </div>
-  </body>
+        </div>
+        <div class="frame-wrapper1">
+          <div class="dropdown">
+            <a class="dropbtn group-employer" href="employer-page.html">
+              <img class="employer-icon" alt="Employer Icon" src="build-assets/employer-icon.png" />
+              <div class="employer-wrapper">
+                <div class="employer1">Employer</div>
+              </div>
+            </a>
+            <div class="dropdown-content">
+              <a href="employer-page-create.html">Create New</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="frame-wrapper2-1">
+          <div class="dropdown">
+            <a class="dropbtn group-worker" href="worker-page.html">
+              <img class="worker-icon" alt="Worker Icon" src="build-assets/worker-icon.png" />
+              <div class="worker-wrapper">
+                <div class="worker1">Worker</div>
+              </div>
+            </a>
+            <div class="dropdown-content">
+              <a href="worker-page-create.html">Create New</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="frame-wrapper3-1">
+          <a class="rectangle-parent1" href="#">
+            <div class="group-logout">
+              <img class="logout-icon" alt="" src="build-assets/logout-icon.png" />
+            </div>
+            <div class="logout1">Logout</div>
+          </a>
+        </div>
+      </div>
+      <!-- =========================================================================================================== -->
+      <section class="contact-info-detail-label">
+        <div class="display-title-box">
+          <div class="title-box-wrapper">
+            <div class="title-box">
+              <h1 class="administrator-management">
+                Worker Management
+              </h1>
+            </div>
+          </div>
+          <div class="div-main">
+
+            <div class="div-operation">
+              <select id="searchOptions">
+                <option value="CreatedDate">Date Created</option>
+                <option value="FirstName">First Name</option>
+                <option value="LastName">Last Name</option>
+                <option value="BirthDate">Birth Date</option>
+                <option value="Address">Address</option>
+                <option value="PhoneNumber">Phone Number</option>
+                <option value="ProfessionalDiploma">Professional Diploma</option>
+                <option value="Profession">Profession</option>
+              </select>
+              <select id="searchByProfession">
+                <option value="Agriculture">Agriculture</option>
+                <option value="Factory">Factory</option>
+                <option value="Health Care">Health Care</option>
+                <option value="Logistic">Logistic</option>
+                <option value="Construction">Construction</option>
+                <option value="Sale">Sale</option>
+                <option value="Stock">Stock</option>
+                <option value="Other">Other</option>
+              </select>
+                  <input id="searchByWords" type="text" >
+                  <div class="group-div searchByDate">
+                    <div>
+                      <div class="start-date">Start Date</div> <br />
+                      <div class="start-date">
+                        <input placeholder="Start Date" id="startDate" type="date" />
+                      </div>
+                    </div>
+                  </div>
+                    
+                  <div class="rectangle-parent3 searchByDate">
+                    <div>
+                      <div class="end-date">End Date</div>
+                      <br />
+                      <div class="end-date">
+                        <input placeholder="End Date" id="endDate" type="date" />
+                      </div>
+                    </div>
+                  </div>    
+              <button id="searchButton" class="rectangle-parent5">
+                <div class="search">Search</div>
+              </button>
+              <button id="resetButton" class="rectangle-parent6">
+                <div class="reset">Reset</div>
+              </button>
+              <button id="createButton" class="rectangle-parent7">
+                <div class="create-new">Create New</div>
+              </button>
+            </div>
+            <div class="div-all">
+              <div class="div-content-all">
+                <table id="workerList">
+                  <thead>
+                    
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+                </table> 
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="resources/javascript/worker-page.js" type="module"></script>
+  
+</body>
+
 </html>

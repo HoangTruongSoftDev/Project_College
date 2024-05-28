@@ -41,6 +41,32 @@ document.addEventListener('DOMContentLoaded', () => {
     receiveData();
     searchByWords.style.display = 'none';
     searchByPayment.style.display = 'none';
+    // =================================================================
+  const tableHead = document.querySelector("#billList thead");
+
+  const row = document.createElement("tr");
+  const serviceCell = document.createElement("th");
+  serviceCell.textContent = 'Service';
+  serviceCell.classList.add('div-table-title-color');
+  row.appendChild(serviceCell);
+
+  const priceCell = document.createElement("th");
+  priceCell.textContent = 'Price';
+  priceCell.classList.add('div-table-title-color');
+  row.appendChild(priceCell);
+
+  const paymentCell = document.createElement("th");
+  paymentCell.textContent = 'Payment';
+  paymentCell.classList.add('div-table-title-color');
+  row.appendChild(paymentCell);
+
+  const selectCell = document.createElement("th");
+  selectCell.textContent = '';
+  selectCell.classList.add('div-table-title-color');
+  row.appendChild(selectCell);
+
+  tableHead.appendChild(row);
+// =================================================================
     displayBillList(billList);
 });
 

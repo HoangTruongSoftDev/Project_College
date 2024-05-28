@@ -739,12 +739,6 @@ body {
   .rectangle-parent7:hover {
     background-color: var(--color-cornflowerblue);
   }
-  .div-operation {
-    align-self: stretch;
-    justify-content: center;
-    padding: 0 0 0 var(--padding-11xs);
-    gap: 14px;
-  }
   .mike,
   .name {
     position: relative;
@@ -909,16 +903,7 @@ body {
     left: 0;
     background-color: var(--color-whitesmoke);
   }
-  .div-table-title-color {
-    width: 100%;
-    height: 63px;
-    position: absolute;
-    margin: 0 !important;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: var(--color-royalblue);
-  }
+
   .div-content-all-inner {
     align-self: stretch;
     height: 513px;
@@ -1366,16 +1351,7 @@ body {
     flex-direction: row;
     padding: 0 var(--padding-11xl) 0 var(--padding-10xl-8);
   }
-  .div-content-all {
-    align-self: stretch;
-    border: 1px solid var(--color-lavender-100);
-    flex-direction: column;
-    padding: var(--padding-2xl) 0 var(--padding-4xl);
-    position: relative;
-    gap: 19.7px;
-    flex-shrink: 0;
-    z-index: 2;
-  }
+
   .truong-email-child,
   .truong-email-item {
     position: absolute;
@@ -1404,38 +1380,6 @@ body {
     border-radius: var(--br-20xl);
     background-color: var(--color-lavender-100);
     flex-shrink: 0;
-  }
-  .div-all {
-    align-self: stretch;
-    height: 549.8px;
-    align-items: flex-end;
-    padding: 0 0 36.8px;
-    box-sizing: border-box;
-    gap: 24.4px;
-    font-size: var(--font-size-base-4);
-  }
-  .div-all,
-  .display-title-box,
-  .div-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    max-width: 100%;
-    height: auto;
-  }
-  .div-main {
-    width: 973px;
-    align-items: flex-end;
-    gap: 40.9px;
-    text-align: left;
-    font-size: var(--font-size-xs);
-    color: var(--color-black);
-    font-family: var(--font-actor);
-  }
-  .display-title-box {
-    align-self: stretch;
-    align-items: flex-start;
-    gap: 54px;
   }
   .contact-info-detail-label {
     flex: 1;
@@ -1631,7 +1575,6 @@ body {
       cursor: pointer;
       padding: var(--padding-2xs) var(--padding-48xl) var(--padding-3xs);
       border: 1px solid var(--color-mediumpurple);
-      border-radius: var(--br-3xs);
       flex: 1;
       border-radius: var(--br-5xs);
       gap: 27.3px;
@@ -1824,7 +1767,6 @@ body {
       justify-content: space-between;
       gap: var(--gap-xl);
       z-index: 2;
-      /* background-color:  var(--color-royalblue); */
     }
     .admin-icon {
       position: relative;
@@ -1952,7 +1894,75 @@ body {
   option:checked {
     background-color: #2980b9; /* Adjust this for a slightly darker shade */
   }
-  
+  /* ================================== Modifying Table ========================================== */
+  .display-title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    align-self: stretch;
+    align-items: flex-start;
+    gap: 54px;
+  }
+  .div-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    align-items: flex-end;
+    gap: 40.9px;
+    text-align: left;
+    font-size: var(--font-size-xs);
+    color: var(--color-black);
+    font-family: var(--font-actor);
+    margin-bottom: 50px;
+  }
+  .div-all {
+    align-self: stretch;
+    align-items: flex-end;
+    box-sizing: border-box;
+    gap: 24.4px;
+    font-size: var(--font-size-base-4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+  }
+  .div-content-all {
+    align-self: stretch;
+    border: 1px solid var(--color-lavender-100);
+    flex-direction: column;
+    position: relative;
+    gap: 19.7px;
+    flex-shrink: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .div-operation {
+    align-self: stretch;
+    justify-content: center;
+    gap: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .div-table-title-color {
+    width: 100%;
+    height: 63px;
+    color: white;
+    margin: 0 !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--color-royalblue);
+  }
   @media screen and (max-width: 900px) {
     .ratings-inner,
     .rectangle-parent {
