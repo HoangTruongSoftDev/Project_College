@@ -37,72 +37,62 @@
 </head>
 
 <body>
-  <input type="file" id="fileInput" />
-    <button id="uploadButton">Upload</button>
-    <button id="downloadButton">Download Last Uploaded File</button>
-    <div id="fileDisplay"></div>
-
+    <input type="file" id="fileInput">
+    <button id="downloadButton">Download</button>
+    <div id="result"></div>
+    <div id="uploadedFile"></div>
+    <img id="imageView" src="" alt="Image Viewer"><br>
     <script>
-      let lastUploadedFileId = null;
 
-      document.getElementById('uploadButton').addEventListener('click', async () => {
-          const fileInput = document.getElementById('fileInput');
-          if (fileInput.files.length > 0) {
-              const file = fileInput.files[0];
-              const filePath = file.path; // This is the path of the file on the user's system
+        document.getElementById('downloadButton').addEventListener('click', async () => {
+            // const fileInput = document.getElementById('fileInput');
+            // if (fileInput.files.length > 0) {
+            //     const filePath = fileInput.files[0].path;
+            //     const result = await window.api.uploadFileAPI(filePath);
+            //     const resultDiv = document.getElementById('result');
+            //     console.log(result)
 
-              try {
-                  const response = await window.api.uploadFile(filePath);
-                  console.log('File uploaded successfully:', response);
-                  lastUploadedFileId = response.fileId; // Store the file ID for later use
-              } catch (error) {
-                  console.error('Error uploading file:', error);
-              }
-          } else {
-              console.log('No file selected');
-          }
-      });
-
-      document.getElementById('downloadButton').addEventListener('click', async () => {
-          if (lastUploadedFileId) {
-              try {
-                  const response = await window.api.downloadFile(lastUploadedFileId);
-                  console.log('File downloaded successfully:', response);
-                  displayFile(response.downloadPath);
-              } catch (error) {
-                  console.error('Error downloading file:', error);
-              }
-          } else {
-              console.log('No file has been uploaded yet');
-          }
-      });
-
-      function displayFile(filePath) {
-          const fileDisplay = document.getElementById('fileDisplay');
-          const fileExtension = filePath.split('.').pop().toLowerCase();
-
-          if (['png', 'jpg', 'jpeg', 'gif'].includes(fileExtension)) {
-              // Display image
-              const img = document.createElement('img');
-              img.src = `file://${filePath}`;
-              fileDisplay.innerHTML = '';
-              fileDisplay.appendChild(img);
-          } else if (['txt', 'html', 'json'].includes(fileExtension)) {
-              // Display text
-              fetch(`file://${filePath}`)
-                  .then(response => response.text())
-                  .then(text => {
-                      const pre = document.createElement('pre');
-                      pre.textContent = text;
-                      fileDisplay.innerHTML = '';
-                      fileDisplay.appendChild(pre);
-                  })
-                  .catch(error => console.error('Error displaying text file:', error));
-          } else {
-              console.log('Unsupported file type');
-          }
-      }
-  </script>
+            //     if (result.success == true) {
+            //         resultDiv.innerText = 'File uploaded successfully! File ID: ' + result.fileId;
+            //         console.log(result.fileId)
+            //         const fileResult = await window.api.getFile(result.fileId);
+                    
+            //         if (fileResult.success == true) {
+            //             const uploadedFileDiv = document.getElementById('uploadedFile');
+            //             const blob = new Blob([fileResult.fileBuffer], { type: 'application/octet-stream' });
+            //             const url = URL.createObjectURL(blob);
+            //             const a = document.createElement('a');
+            //             a.href = url;
+            //             a.download = 'downloadedFile';
+            //             a.innerText = 'Download File';
+            //             uploadedFileDiv.appendChild(a);
+            //         } else {
+            //             resultDiv.innerText = 'Error: ' + fileResult.error;
+            //         }
+            //     } else {
+            //         resultDiv.innerText = 'Error: ' + result.error;
+            //     }
+            // } else {
+            //     document.getElementById('result').innerText = 'No file selected.';
+            // }
+            try {
+              const filePath = await window.api.downloadFileAPI("6656ac1da76dcc6b1a4f966b");
+              console.log(filePath)
+              imageView.src = filePath;
+              await openFileWindow(filePath)
+            }
+            catch (err) {
+              console.log("error: ")
+              console.log(err)
+            }
+        });
+        async function openFileWindow(filePath) {
+            // Invoke the 'open-file-window' IPC handler in the main process
+            await window.api.displayFileAPI(filePath);
+        }
+        const imageView = document.getElementById('imageView');
+        
+    </script>
 </body>
 
 </html>

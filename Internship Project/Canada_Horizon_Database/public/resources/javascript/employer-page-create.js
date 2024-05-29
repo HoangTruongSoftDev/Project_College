@@ -31,7 +31,7 @@ refreshButton.addEventListener('click', () => {
 });
 function sendData() {
     const dataToSend = JSON.stringify(professionalActivitiesList);
-    sessionStorage.setItem('employerProfessionalActivties', dataToSend);
+    sessionStorage.setItem('employerProfessionalActivities', dataToSend);
 }
 function receiveData() {
     const dataReceived = sessionStorage.getItem('billList');
@@ -41,7 +41,7 @@ function receiveData() {
         console.log(billList); 
     }
 
-    const professionalActivitiesDataReceived = sessionStorage.getItem('employerProfessionalActivties');
+    const professionalActivitiesDataReceived = sessionStorage.getItem('employerProfessionalActivities');
     console.log(professionalActivitiesDataReceived);
     if (professionalActivitiesDataReceived !== null) {
         professionalActivitiesList = JSON.parse(professionalActivitiesDataReceived);
@@ -51,7 +51,7 @@ function receiveData() {
 
 function clearSession() {
     sessionStorage.removeItem('billList');
-    sessionStorage.removeItem('employerProfessionalActivties');
+    sessionStorage.removeItem('employerProfessionalActivities');
 } 
 
 // =================================================

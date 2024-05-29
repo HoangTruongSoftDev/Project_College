@@ -2,7 +2,7 @@
 
 function clearSession() {
   sessionStorage.removeItem('billList');
-  sessionStorage.removeItem('employerProfessionalActivties');
+  sessionStorage.removeItem('employerProfessionalActivities');
   sessionStorage.removeItem('modifiedEmployer');
 }
 clearSession();

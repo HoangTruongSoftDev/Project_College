@@ -17,8 +17,8 @@ const createWindow = () => {
     }
   })
   win.maximize();
-  // win.loadFile(path.join(__dirname, 'public', 'index.html'));
-  win.loadFile(path.join(__dirname, 'public', 'testing', 'testingPage.html'));
+  win.loadFile(path.join(__dirname, 'public', 'index.html'));
+  // win.loadFile(path.join(__dirname, 'public', 'testing', 'testingPage.html'));
 
 }
 

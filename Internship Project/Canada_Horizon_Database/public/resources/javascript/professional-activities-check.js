@@ -35,10 +35,10 @@ function displayActivitiesList(professionalActivitiesList) {
 function sendData() {
     
     const dataToSend = JSON.stringify(professionalActivitiesList);
-    sessionStorage.setItem('employerProfessionalActivties', dataToSend);// Store the data in session storage
+    sessionStorage.setItem('employerProfessionalActivities', dataToSend);// Store the data in session storage
 }
 function receiveData() {
-    const dataReceived = sessionStorage.getItem('employerProfessionalActivties');
+    const dataReceived = sessionStorage.getItem('employerProfessionalActivities');
     console.log(dataReceived);
     if (dataReceived !== null) {
         professionalActivitiesList = JSON.parse(dataReceived);

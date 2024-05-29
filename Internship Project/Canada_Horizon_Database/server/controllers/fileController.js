@@ -1,23 +1,12 @@
-const randomString = require('randomstring')
+const FileDB = require("../datas/fileDB");
 
-function fileUpload(fileUploaded) {
-    let name  = randomString.generate({
-        length: 12,
-        charset: 'alphabetic',
-    })
-
-    let fileExtension = fileUploaded.name;
-}
-
-const fileController = async(req, res) => {
-    try {
-        const {file} = req.file;
-        fileUpload(file);
+class FileController {
+    static uploadFile(filePath) {
+        return FileDB.uploadFile(filePath);
     }
-    catch (err) {
-        console.log(err);
-        return res.status(500).send({message: "Internal Server Error"})
+    static downloadFile(fileId) {
+        return FileDB.downloadFile(fileId);
     }
 }
 
-module.exports = {fileController};
+module.exports = FileController;

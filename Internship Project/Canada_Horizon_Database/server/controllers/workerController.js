@@ -3,8 +3,8 @@ const WorkerDB = require("../datas/workerDB.js");
 const Worker = require("../models/worker.js");
 
 class WorkerController {
-    static createWorker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomass, professions, bills, resume, motivationLetter) {
-        const worker = new Worker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomass, professions, bills, resume, motivationLetter, new Date())
+    static createWorker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) {
+        const worker = new Worker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, new Date())
         return WorkerDB.create(worker);
     }
     static updateEmployer(employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills) {

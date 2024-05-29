@@ -1,9 +1,11 @@
 const AdminController = require('./controllers/adminController');
-const { ipcMain } = require('electron');
+const { ipcMain, BrowserWindow } = require('electron');
 const BillController = require('./controllers/billController');
 const EmployerController = require('./controllers/employerController');
 const { dialog } = require('electron');
-const ConfigDB = require('./datas/configDB');
+const path = require('path');
+const FileController = require('./controllers/fileController');
+const WorkerController = require('./controllers/workerController');
 
 ipcMain.handle('get-admins-by-fname', async (event, keyword) => {
     try {
@@ -252,71 +254,52 @@ ipcMain.handle('delete-employer', async (event, employerId) => {
 })
 
 
-const path = require('path');
-const { MongoClient, GridFSBucket } = require('mongodb');
-const fs = require('fs');
+
 ipcMain.handle('upload-file', async (event, filePath) => {
     try {
-        const url = ConfigDB.url;
-        const dbName = ConfigDB.dbName;
-        const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
-
-        await client.connect();
-        const db = client.db(dbName);
-        const bucket = new GridFSBucket(db);
-
-        return new Promise((resolve, reject) => {
-            const uploadStream = bucket.openUploadStream(path.basename(filePath));
-            const fileStream = fs.createReadStream(filePath);
-
-            fileStream.pipe(uploadStream)
-                .on('error', (error) => {
-                    console.error('Error uploading file:', error);
-                    reject(error);
-                })
-                .on('finish', () => {
-                    console.log('File uploaded successfully');
-                    resolve({ fileId: uploadStream.id.toHexString() });
-                    
-                });
-        });
+        const fileId = await FileController.uploadFile(filePath);
+        return fileId;
     } catch (error) {
-        console.error('Error in file upload process:', error);
-        throw error;
+        console.error('File upload failed:', error);
+        return error;
     }
 });
-const os = require('os');
+
 ipcMain.handle('download-file', async (event, fileId) => {
     try {
-        const url = ConfigDB.url;
-        const dbName = ConfigDB.dbName;
-        const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
-
-        await client.connect();
-        const db = client.db(dbName);
-        const bucket = new GridFSBucket(db);
-
-        const downloadPath = path.join(os.tmpdir(), `downloaded_${fileId}`); // Save the file to a temporary directory
-
-        return new Promise((resolve, reject) => {
-            const downloadStream = bucket.openDownloadStream(fileId);
-            const fileWriteStream = fs.createWriteStream(downloadPath);
-
-            downloadStream.pipe(fileWriteStream)
-                .on('error', (error) => {
-                    console.error('Error downloading file:', error);
-                    reject(error);
-                })
-                .on('finish', () => {
-                    console.log('File downloaded successfully');
-                    resolve({ downloadPath });
-                });
-        });
-    } catch (error) {
-        console.error('Error in file download process:', error);
-        throw error;
+        const result = await FileController.downloadFile(fileId);
+       return result;
+    } catch (err) {
+       return err
     }
 });
+
+
+ipcMain.handle('open-file-window', async (event, filePath) => {
+    const fileWindow = new BrowserWindow({
+        width: 600,
+        height: 400,
+        webPreferences: {
+            preload: path.join(__dirname, 'preload.js')
+        }
+    });
+
+    await fileWindow.loadFile(path.join(__dirname,'..', 'public', 'testing', 'viewFile.html'));
+    fileWindow.webContents.send('display-file', filePath);
+});
+
+ipcMain.handle('create-worker', async (event, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => {
+    try {
+        const worker = await WorkerController.createWorker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter)
+        return worker;
+    } catch (error) {
+        console.error('Error fetching worker:', error);
+        return null;
+    }
+})
+
+
+
 
 
 
