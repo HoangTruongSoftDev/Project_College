@@ -1981,6 +1981,10 @@ button,
 #addressInput {
   z-index: 3; /* Ensure focused elements are always on top */
 }
+
+.hidden-input {
+  display: none;
+}
 @media screen and (max-width: 900px) {
   .ratings-inner,
   .rectangle-parent {

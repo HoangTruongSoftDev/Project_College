@@ -13,7 +13,7 @@ const createWindow = () => {
       nodeIntegration: false, 
       enableRemoteModule: false,
       contextIsolation: true,
-      preload: path.join(__dirname, 'server', 'preload.js')
+      preload: path.join(__dirname,'..','..','..','..', 'server', 'preload.js')
     }
   })
   win.maximize();

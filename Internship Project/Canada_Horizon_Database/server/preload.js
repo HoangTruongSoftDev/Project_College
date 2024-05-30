@@ -1,5 +1,6 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
+
 contextBridge.exposeInMainWorld('api', {
     getAdminListAPI: () => ipcRenderer.invoke('get-admin-list'),
     getAdminListByFNameAPI: (keyword) => ipcRenderer.invoke('get-admins-by-fname', keyword),
@@ -34,4 +35,5 @@ contextBridge.exposeInMainWorld('api', {
     onDisplayFile: (callback) => ipcRenderer.on('display-file', (event, filePath) => callback(filePath)),
 
     createWorkerAPI: (firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => ipcRenderer.invoke('create-worker', firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter),
+
 });

@@ -279,18 +279,21 @@ ipcMain.handle('open-file-window', async (event, filePath) => {
     const fileWindow = new BrowserWindow({
         width: 600,
         height: 400,
+        minimizable: false,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js')
         }
     });
-
-    await fileWindow.loadFile(path.join(__dirname,'..', 'public', 'testing', 'viewFile.html'));
+    fileWindow.maximize();
+    await fileWindow.loadFile(path.join(__dirname,'..', 'public', 'view-file-page.html'));
     fileWindow.webContents.send('display-file', filePath);
 });
 
 ipcMain.handle('create-worker', async (event, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => {
     try {
-        const worker = await WorkerController.createWorker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter)
+        const resumeId = await FileController.uploadFile(resume); 
+        const motivationLetterId = await FileController.uploadFile(motivationLetter); 
+        const worker = await WorkerController.createWorker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resumeId, motivationLetterId)
         return worker;
     } catch (error) {
         console.error('Error fetching worker:', error);

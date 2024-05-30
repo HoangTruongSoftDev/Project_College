@@ -12,4 +12,4 @@ files:
 extraFiles:
   - filter:
       - credentials
-electronVersion: 30.0.2
+electronVersion: 30.0.9

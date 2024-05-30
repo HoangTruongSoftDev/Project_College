@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Viewer Window</title>
+
+</head>
+
+<body>
+    <div id="fileDisplay" style="width: 100%; height: 100%;">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.25.4/docxtemplater.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script>
+
+        window.api.onDisplayFile((filePath) => {
+            const fileDisplay = document.getElementById('fileDisplay');
+            fileDisplay.innerHTML = ''; // Clear previous content
+
+            const fileExtension = filePath.split('.').pop().toLowerCase();
+
+            switch (fileExtension) {
+                case 'jpg':
+                case 'jpeg':
+                case 'png':
+                case 'gif':
+                    displayImage(filePath, fileDisplay);
+                    break;
+                default:
+                    if (canDisplayInIframe(fileExtension)) {
+                        displayFile(filePath, fileDisplay);
+                    } else {
+                        fileDisplay.innerHTML = 'Unsupported file type';
+                    }
+                    break;
+            }
+        });
+        function canDisplayInIframe(fileExtension) {
+            const supportedExtensions = ['pdf', 'html', 'css','json','js'];
+
+            return supportedExtensions.includes(fileExtension);
+        }
+        function displayImage(filePath, fileDisplay) {
+            const img = document.createElement('img');
+            img.src = filePath;
+            img.style.width = '100%';
+            img.style.height = '100vh';
+            fileDisplay.appendChild(img);
+        }
+        function displayFile(filePath, fileDisplay) {
+            const fileContainer = document.createElement('iframe');
+            fileContainer.id = 'fileContainer';
+
+            fileContainer.src = filePath;
+            fileContainer.frameBorder = '0';
+            fileContainer.style.width = '100%';
+            fileContainer.style.height = '100vh';
+            fileDisplay.appendChild(fileContainer);
+        }
+    </script>
+</body>
+
+</html>
