@@ -10,36 +10,49 @@ const phoneNumberInput = document.getElementById('phoneNumberInput');
 const professionalDiplomasInput = document.getElementById('professionalDiplomasInput');
 const professionsInput = document.getElementById('professionsInput');
 
-let resumePath = '';
-let motivationLetterPath = '';
+let resumeId = '';
+let motivationLetterId = '';
 const idInput = document.getElementById('idInput');
+
+
+// =================================================
+
+
+function clearSessionEmployer() {
+    sessionStorage.removeItem('billList');
+    sessionStorage.removeItem('employerProfessionalActivities');
+    sessionStorage.removeItem('modifiedEmployer');
+  } 
+  clearSessionEmployer();
+  
+  // =================================================
+
 document.addEventListener('DOMContentLoaded', () => {
-    const checkingUpdate = sessionStorage.getItem('modifiedEmployer');
+    const checkingUpdate = sessionStorage.getItem('modifiedWorker');
     if (checkingUpdate === null) {
-        findEmployerById();
+        findWorkerById();
     }
 });
 
-async function findEmployerById() {
+async function findWorkerById() {
     const urlParams = new URLSearchParams(window.location.search);
-    let employerId = urlParams.get('id');
-    console.log('Checking: ' + employerId)
-    const employer = await window.api.getEmployerByIdAPI(employerId);
-    console.log(employer);
+    let workerId = urlParams.get('id');
+    console.log('Checking: ' + workerId)
+    const worker = await window.api.getWorkerByIdAPI(workerId);
+    console.log(worker);
 
-    companyNameInput.value = employer.companyName;
-    addressInput.value = employer.address;
-    phoneNumberInput.value = employer.phoneNumber;
-    professionalActivitiesList = employer.professionalActivities;
-    billList = employer.bills;
-    idInput.value = employerId;
-    sessionStorage.setItem('modifiedEmployer', employerId);
-    if (employer.EIMT === 'Yes') {
-        document.querySelector('input[name="EIMTInput"][value="Yes"]').checked = true;
-    }
-    else {
-        document.querySelector('input[name="EIMTInput"][value="No"]').checked = true;
-    }
+    firstNameInput.value = worker.firstName;
+    lastNameInput.value = worker.lastName;
+    birthDateInput.value = worker.birthDate;
+    addressInput.value = worker.address;
+    phoneNumberInput.value = worker.phoneNumber;
+    professionalDiplomasList = worker.professionalDiplomas
+    professionsList = worker.professions;
+    billList = worker.bills;
+    resumeId = worker.resume.fileId
+    idInput.value = workerId;
+    sessionStorage.setItem('modifiedWorker', workerId);
+    
     sendData();
 }
 

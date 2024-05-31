@@ -76,7 +76,7 @@
             //     document.getElementById('result').innerText = 'No file selected.';
             // }
             try {
-              const filePath = await window.api.downloadFileAPI("6656ac1da76dcc6b1a4f966b");
+              const filePath = await window.api.viewFileAPI("6659f3515ea6d79ed182d883");
               console.log(filePath)
               imageView.src = filePath;
               await openFileWindow(filePath)

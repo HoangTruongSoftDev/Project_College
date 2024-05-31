@@ -1,11 +1,18 @@
 // =================================================
 
-function clearSession() {
+
+function clearSessionEmployer() {
   sessionStorage.removeItem('billList');
   sessionStorage.removeItem('employerProfessionalActivities');
   sessionStorage.removeItem('modifiedEmployer');
-}
-clearSession();
+} 
+function clearSessionWorker() {
+  sessionStorage.removeItem('workerBillList');
+  sessionStorage.removeItem('professionsList');
+  sessionStorage.removeItem('professionalDiplomasList');
+  sessionStorage.removeItem('modifiedWorker');
+} 
+clearSessionEmployer();
 
 // =================================================
 
@@ -26,7 +33,7 @@ function displayWorkerList(workers) {
     row.appendChild(professionsCelll);
 
     const diplomaCell = document.createElement("td");
-    diplomaCell.textContent = worker.diploma;
+    diplomaCell.textContent = worker.professionalDiplomas;
     row.appendChild(diplomaCell);
 
     const actionCell = document.createElement("td");
@@ -43,6 +50,7 @@ function displayWorkerList(workers) {
 document.addEventListener('DOMContentLoaded', () => {
   searchByWords.style.display = 'none';
   searchByProfession.style.display = 'none';
+
   const tableHead = document.querySelector("#workerList thead");
 
 
@@ -61,6 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
   diplomaCell.textContent = 'Diploma';
   diplomaCell.classList.add('div-table-title-color');
   row.appendChild(diplomaCell);
+
+  const selectCell = document.createElement("th");
+  selectCell.textContent = '';
+  selectCell.classList.add('div-table-title-color');
+  row.appendChild(selectCell);
 
   tableHead.appendChild(row);
   getAllWorkers();
@@ -91,7 +104,7 @@ resetButton.addEventListener('click', () => {
 searchOptions.addEventListener('change', (event) => {
   typeOfSearch = event.target.value;
   searchByWords.value = '';
-  if (event.target.value === 'CreatedDate') {
+  if (event.target.value === 'CreatedDate' || event.target.value === 'BirthDate') {
     searchByWords.style.display = 'none';
     // Loop through each element with the class 'searchField'
     for (const element of searchByDate) {
@@ -130,25 +143,40 @@ searchByProfession.addEventListener('change', (event) => {
 async function getAllWorkers() {
   try {
     searchByWords.value = '';
-    const workers = await window.api.getEmployerListAPI();
+    const workers = await window.api.getWorkerListAPI();
     displayWorkerList(workers);
   } catch (error) {
     console.error('Error fetching workers:', error);
   }
 }
+
 async function searchWorkerListByFilter(type, keyword) {
   try {
     let workers = [];
-    if (type === 'CompanyName') {
-      workers = await window.api.getEmployerListByCompanyNameAPI(keyword);
+    switch (type) {
+      case 'FirstName':
+        workers = await window.api.getWorkerListByFirstNameAPI(keyword);
+        break;
+      case 'LastName':
+        workers = await window.api.getWorkerListByLastNameAPI(keyword);
+        break;
+      case 'Address':
+        workers = await window.api.getWorkerListByAddressAPI(keyword);
+        break;
+      case 'PhoneNumber':
+        workers = await window.api.getWorkerListByPhoneNumberAPI(keyword);
+        break;
+      case 'ProfessionalDiploma':
+        workers = await window.api.getWorkerListByProfessionalDiplomasAPI(keyword);
+        break;
+      case 'Profession':
+        workers = await window.api.getWorkerListByProfessionsAPI(keyword);
+        break;
+      default:
+        break;
+
     }
-    else if (type === 'Address') {
-      workers = await window.api.getEmployerListByAddressAPI(keyword);
-    }
-    else if (type === 'PhoneNumber') {
-      workers = await window.api.getEmployerListByPhoneNumberAPI(keyword);
-    }
-    else if (type === 'ProfessionalActivities') {
+   if (type === 'ProfessionalActivities') {
       workers = await window.api.getEmployerListByProfessionalActivitiesAPI(keyword);
     }
     else if (type === 'EIMT') {
@@ -164,7 +192,18 @@ async function searchWorkerListByFilter(type, keyword) {
 
 async function searchWorkerListByCreatedDate(startDate, endDate) {
   try {
-    let workers = await window.api.getEmployerListByCreatedDateAPI(startDate, endDate);
+    let workers = await window.api.getWorkerListByCreatedDateAPI(startDate, endDate);
+    console.log("Truong: " + workers);
+    displayWorkerList(workers);
+  }
+  catch (error) {
+    console.error('Error fetching workers:', error);
+  }
+}
+
+async function searchWorkerListByBirthDate(startDate, endDate) {
+  try {
+    let workers = await window.api.getWorkerListByBirthDateAPI(startDate, endDate);
     console.log("Truong: " + workers);
     displayWorkerList(workers);
   }
@@ -179,6 +218,11 @@ searchButton.addEventListener('click', () => {
     const endDate = endDateElement.value;
     searchWorkerListByCreatedDate(startDate, endDate);
   }
+  else if (searchOptions.value === 'BirthDate') {
+    const startDate = startDateElement.value;
+    const endDate = endDateElement.value;
+    searchWorkerListByBirthDate(startDate, endDate);
+  }
   else if (searchOptions.value === 'Profession') {
     let searchValue = '';
     if (typeOfProfessionSearch === 'Other') {
@@ -186,7 +230,7 @@ searchButton.addEventListener('click', () => {
     }
     else {
       searchValue = searchByProfession.value;
-      
+
     }
     searchWorkerListByFilter(typeOfSearch, searchValue)
   }

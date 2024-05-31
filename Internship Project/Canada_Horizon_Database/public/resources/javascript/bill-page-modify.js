@@ -1,3 +1,15 @@
+// =================================================
+
+  function clearSessionWorker() {
+    sessionStorage.removeItem('workerBillList');
+    sessionStorage.removeItem('professionsList');
+    sessionStorage.removeItem('professionalDiplomasList');
+    sessionStorage.removeItem('modifiedWorker');
+  } 
+  clearSessionWorker();
+  
+  // =================================================
+
 let updateButton = document.getElementById("updateButton");
 let deleteButton = document.getElementById("deleteButton");
 let returnButton = document.getElementById("returnButton");

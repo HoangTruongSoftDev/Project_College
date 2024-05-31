@@ -5,16 +5,22 @@ let emailInput = document.getElementById("emailInput");
 let passwordInput = document.getElementById("passwordInput");
 
 saveButton.addEventListener('click', createAdmin)
-sessionStorage.removeItem('billList');
 // =================================================
 
-function clearSession() {
+
+function clearSessionEmployer() {
     sessionStorage.removeItem('billList');
     sessionStorage.removeItem('employerProfessionalActivities');
     sessionStorage.removeItem('modifiedEmployer');
-    
 } 
-clearSession();
+function clearSessionWorker() {
+    sessionStorage.removeItem('workerBillList');
+    sessionStorage.removeItem('professionsList');
+    sessionStorage.removeItem('professionalDiplomasList');
+    sessionStorage.removeItem('modifiedWorker');
+} 
+clearSessionEmployer();
+clearSessionWorker();
 
 // =================================================
 async function createAdmin() {

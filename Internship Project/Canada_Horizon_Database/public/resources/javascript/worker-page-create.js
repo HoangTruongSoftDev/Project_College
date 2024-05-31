@@ -13,24 +13,24 @@ const professionsInput = document.getElementById('professionsInput');
 let resumePath = '';
 let motivationLetterPath = '';
 
-// clear session
 // =================================================
+
 
 function clearSessionEmployer() {
     sessionStorage.removeItem('billList');
     sessionStorage.removeItem('employerProfessionalActivities');
     sessionStorage.removeItem('modifiedEmployer');
-}
-clearSessionEmployer();
-
-// =================================================
-
-function clearSessionWorker() {
+    sessionStorage.removeItem('modifiedWorker');
+  } 
+  function clearSessionWorker() {
     sessionStorage.removeItem('workerBillList');
-    sessionStorage.removeItem('listProfessions');
-    sessionStorage.removeItem('listProfessionalDiplomas');
-}
-
+    sessionStorage.removeItem('professionsList');
+    sessionStorage.removeItem('professionalDiplomasList');
+    sessionStorage.removeItem('modifiedWorker');
+  } 
+  clearSessionEmployer();
+  
+  // =================================================
 const createBill = document.getElementById("createBill");
 createBill.addEventListener('click', () => {
     window.location.href = 'bill-page-create-worker.html';

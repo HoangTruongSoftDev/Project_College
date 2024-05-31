@@ -212,8 +212,8 @@ ipcMain.handle('get-employers-by-EIMT', async (event, keyword) => {
 });
 ipcMain.handle('get-employers-by-created-date', async (event, startDate, endDate) => {
     try {
-        const admins = await EmployerController.findEmployerByCreatedDate(startDate, endDate);
-        return admins;
+        const employers = await EmployerController.findEmployerByCreatedDate(startDate, endDate);
+        return employers;
     } catch (error) {
         console.error('Error fetching employers:', error);
         return [];
@@ -274,6 +274,15 @@ ipcMain.handle('download-file', async (event, fileId) => {
     }
 });
 
+ipcMain.handle('view-file', async (event, fileId) => {
+    try {
+        const result = await FileController.viewFile(fileId);
+       return result;
+    } catch (err) {
+       return err
+    }
+});
+
 
 ipcMain.handle('open-file-window', async (event, filePath) => {
     const fileWindow = new BrowserWindow({
@@ -291,8 +300,10 @@ ipcMain.handle('open-file-window', async (event, filePath) => {
 
 ipcMain.handle('create-worker', async (event, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => {
     try {
-        const resumeId = await FileController.uploadFile(resume); 
-        const motivationLetterId = await FileController.uploadFile(motivationLetter); 
+        const resumeObject = await FileController.uploadFile(resume); 
+        const motivationLetterObject= await FileController.uploadFile(motivationLetter);
+        const resumeId = resumeObject.fileId;
+        const motivationLetterId = motivationLetterObject.fileId;
         const worker = await WorkerController.createWorker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resumeId, motivationLetterId)
         return worker;
     } catch (error) {
@@ -300,6 +311,110 @@ ipcMain.handle('create-worker', async (event, firstName, lastName, birthDate, ad
         return null;
     }
 })
+
+ipcMain.handle('get-worker-list', async () => {
+    try {
+        const workers = await WorkerController.getWorkerList();
+        return workers;
+    } catch (error) {
+        console.error('Error fetching workers:', error);
+        return [];
+    }
+});
+
+ipcMain.handle('get-workers-by-created-date', async (event, startDate, endDate) => {
+    try {
+        const workers = await WorkerController.findWorkerByCreatedDate(startDate, endDate);
+        return workers;
+    } catch (error) {
+        console.error('Error fetching workers:', error);
+        return [];
+    }
+});
+
+
+ipcMain.handle('get-workers-by-birth-date', async (event, startDate, endDate) => {
+    try {
+        const workers = await WorkerController.findWorkerByBirthDate(startDate, endDate);
+        return workers;
+    } catch (error) {
+        console.error('Error fetching workers:', error);
+        return [];
+    }
+});
+
+ipcMain.handle('get-workers-by-first-name', async (event, keyword) => {
+    try {
+        const workers = await WorkerController.findWorkerByFirstName(keyword);
+        return workers;
+    } catch (error) {
+        console.error('Error fetching workers:', error);
+        return [];
+    }
+});
+
+ipcMain.handle('get-workers-by-last-name', async (event, keyword) => {
+    try {
+        const workers = await WorkerController.findWorkerByLastName(keyword);
+        return workers;
+    } catch (error) {
+        console.error('Error fetching workers:', error);
+        return [];
+    }
+});
+
+ipcMain.handle('get-workers-by-address', async (event, keyword) => {
+    try {
+        const workers = await WorkerController.findWorkerByAddress(keyword);
+        return workers;
+    } catch (error) {
+        console.error('Error fetching workers:', error);
+        return [];
+    }
+});
+
+ipcMain.handle('get-workers-by-phone-number', async (event, keyword) => {
+    try {
+        const workers = await WorkerController.findWorkerByPhoneNumber(keyword);
+        return workers;
+    } catch (error) {
+        console.error('Error fetching workers:', error);
+        return [];
+    }
+});
+
+ipcMain.handle('get-workers-by-professional-diplomas', async (event, keyword) => {
+    try {
+        const workers = await WorkerController.findWorkerByProfessionalDiplomas(keyword);
+        return workers;
+    }
+    catch (error) {
+        console.error('Error fetching workers:', error);
+        return [];
+    }
+});
+ipcMain.handle('get-workers-by-professions', async (event, keyword) => {
+    try {
+        const workers = await WorkerController.findWorkerByProfessions(keyword);
+        return workers;
+    }
+    catch (error) {
+        console.error('Error fetching workers:', error);
+        return [];
+    }
+});
+
+ipcMain.handle('get-worker-by-id', async (event, workerId) => {
+    try {
+        const worker = await WorkerController.findWorkerById(workerId);
+        return worker;
+    } catch (error) {
+        console.error('Error fetching workers:', error);
+        return null;
+    }
+})
+
+
 
 
 

@@ -1,3 +1,20 @@
+// =================================================
+
+
+function clearSessionEmployer() {
+    sessionStorage.removeItem('billList');
+    sessionStorage.removeItem('employerProfessionalActivities');
+    sessionStorage.removeItem('modifiedEmployer');
+  } 
+  function clearSessionWorker() {
+    sessionStorage.removeItem('workerBillList');
+    sessionStorage.removeItem('professionsList');
+    sessionStorage.removeItem('professionalDiplomasList');
+    sessionStorage.removeItem('modifiedWorker');
+  } 
+  clearSessionWorker();
+  
+  // =================================================
 let professionalActivitiesList = []
 function displayActivitiesList(professionalActivitiesList) {
     console.log(professionalActivitiesList);

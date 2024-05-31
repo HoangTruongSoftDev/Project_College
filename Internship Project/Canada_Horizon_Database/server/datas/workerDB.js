@@ -23,5 +23,294 @@ class WorkerDB {
             }
         }
     }
+
+    static async findAll() {
+        let client;
+        try {
+            client = await MongoClient.connect(ConfigDB.url);
+            const db = client.db(ConfigDB.dbName);
+            const collection = db.collection(ConfigDB.workerCollection);
+            const result = await collection.find().toArray();
+            const modifiedResult = result.map(doc => {
+                if (doc._id instanceof ObjectId) {
+                  doc._id = doc._id.toString();
+                } else {
+                  doc._id = String(doc._id);
+                }
+                return doc;
+              });
+        
+              return modifiedResult;
+        }
+        catch (err) {   
+        }
+        finally {
+            if (client) {
+                await client.close();
+            }
+        }
+    }
+
+    static async findByCreatedDate(startDate, endDate) {
+        let client;
+        try {
+            client = await MongoClient.connect(ConfigDB.url);
+            const db = client.db(ConfigDB.dbName);
+            const collection = db.collection(ConfigDB.workerCollection);
+            const start = new Date(startDate);
+            const end = new Date(endDate);
+            const query = {
+                createdDate : {
+                    $gte: start, // $gte stands for greater or equal than
+                    $lte: end, // $lte stands for smaller or equal than
+                }
+            }
+            const result = await collection.find(query).toArray();
+            const modifiedResult = result.map(doc => {
+                if (doc._id instanceof ObjectId) {
+                  doc._id = doc._id.toString();
+                } else {
+                  doc._id = String(doc._id);
+                }
+                return doc;
+              });
+        
+              return modifiedResult;
+        }
+        catch (err) {
+             
+        }
+        finally {
+            if (client) {
+                await client.close();
+            }
+        }
+    }
+    static async findByBirthDate(startDate, endDate) {
+        let client;
+        try {
+            client = await MongoClient.connect(ConfigDB.url);
+            const db = client.db(ConfigDB.dbName);
+            const collection = db.collection(ConfigDB.workerCollection);
+            const start = new Date(startDate);
+            const end = new Date(endDate);
+            const query = {
+                birthDate : {
+                    $gte: start, // $gte stands for greater or equal than
+                    $lte: end, // $lte stands for smaller or equal than
+                }
+            }
+            const result = await collection.find(query).toArray();
+            const modifiedResult = result.map(doc => {
+                if (doc._id instanceof ObjectId) {
+                  doc._id = doc._id.toString();
+                } else {
+                  doc._id = String(doc._id);
+                }
+                return doc;
+              });
+        
+              return modifiedResult;
+        }
+        catch (err) {
+             
+        }
+        finally {
+            if (client) {
+                await client.close();
+            }
+        }
+    }
+    static async findByFirstName(keyword) {
+        let client;
+        try {
+            client = await MongoClient.connect(ConfigDB.url);
+            const db = client.db(ConfigDB.dbName);
+            const collection = db.collection(ConfigDB.workerCollection);
+            const result = await collection.find( 
+                {firstName: { $regex: keyword, $options: 'i' }}
+            ).toArray();
+            const modifiedResult = result.map(doc => {
+                if (doc._id instanceof ObjectId) {
+                  doc._id = doc._id.toString();
+                } else {
+                  doc._id = String(doc._id);
+                }
+                return doc;
+              });
+        
+              return modifiedResult;
+        }
+        catch (err) {
+             
+        }
+        finally {
+            if (client) {
+                await client.close();
+            }
+        }
+    }
+    
+    static async findByLastName(keyword) {
+        let client;
+        try {
+            client = await MongoClient.connect(ConfigDB.url);
+            const db = client.db(ConfigDB.dbName);
+            const collection = db.collection(ConfigDB.workerCollection);
+            const result = await collection.find( 
+                {lastName: { $regex: keyword, $options: 'i' }}
+            ).toArray();
+            const modifiedResult = result.map(doc => {
+                if (doc._id instanceof ObjectId) {
+                  doc._id = doc._id.toString();
+                } else {
+                  doc._id = String(doc._id);
+                }
+                return doc;
+              });
+        
+              return modifiedResult;
+        }
+        catch (err) {
+             
+        }
+        finally {
+            if (client) {
+                await client.close();
+            }
+        }
+    }
+    static async findByAddress(keyword) {
+        let client;
+        try {
+            client = await MongoClient.connect(ConfigDB.url);
+            const db = client.db(ConfigDB.dbName);
+            const collection = db.collection(ConfigDB.workerCollection);
+            const result = await collection.find( 
+                {address: { $regex: keyword, $options: 'i' }}
+            ).toArray();
+            const modifiedResult = result.map(doc => {
+                if (doc._id instanceof ObjectId) {
+                  doc._id = doc._id.toString();
+                } else {
+                  doc._id = String(doc._id);
+                }
+                return doc;
+              });
+        
+              return modifiedResult;
+        }
+        catch (err) {
+             
+        }
+        finally {
+            if (client) {
+                await client.close();
+            }
+        }
+    }
+    static async findByPhoneNumber(keyword) {
+        let client;
+        try {
+            client = await MongoClient.connect(ConfigDB.url);
+            const db = client.db(ConfigDB.dbName);
+            const collection = db.collection(ConfigDB.workerCollection);
+            const result = await collection.find( 
+                {phoneNumber: { $regex: keyword, $options: 'i' }}
+            ).toArray();
+            const modifiedResult = result.map(doc => {
+                if (doc._id instanceof ObjectId) {
+                  doc._id = doc._id.toString();
+                } else {
+                  doc._id = String(doc._id);
+                }
+                return doc;
+              });
+        
+              return modifiedResult;
+        }
+        catch (err) {
+             
+        }
+        finally {
+            if (client) {
+                await client.close();
+            }
+        }
+    }
+    static async findByProfessionalDiplomas(keyword) {
+        let client;
+        try {
+            client = await MongoClient.connect(ConfigDB.url);
+            const db = client.db(ConfigDB.dbName);
+            const collection = db.collection(ConfigDB.workerCollection);
+            const result =  await collection.find({professionalDiplomas : { $regex: keyword, $options: 'i' }}).toArray();
+            const modifiedResult = result.map(doc => {
+                if (doc._id instanceof ObjectId) {
+                  doc._id = doc._id.toString();
+                } else {
+                  doc._id = String(doc._id);
+                }
+                return doc;
+              });
+        
+              return modifiedResult;
+        }
+        catch (err) {
+             
+        }
+        finally {
+            if (client) {
+                await client.close();
+            }
+        }
+    }
+    static async findByProfessions(keyword) {
+        let client;
+        try {
+            client = await MongoClient.connect(ConfigDB.url);
+            const db = client.db(ConfigDB.dbName);
+            const collection = db.collection(ConfigDB.workerCollection);
+            const result =  await collection.find({professions : { $regex: keyword, $options: 'i' }}).toArray();
+            const modifiedResult = result.map(doc => {
+                if (doc._id instanceof ObjectId) {
+                  doc._id = doc._id.toString();
+                } else {
+                  doc._id = String(doc._id);
+                }
+                return doc;
+              });
+        
+              return modifiedResult;
+        }
+        catch (err) {
+             
+        }
+        finally {
+            if (client) {
+                await client.close();
+            }
+        }
+    }
+    static async findById(id) {
+        let client;
+        try {
+            client = await MongoClient.connect(ConfigDB.url);
+            const db = client.db(ConfigDB.dbName);
+            const collection = db.collection(ConfigDB.workerCollection);
+            const result = await collection.findOne( 
+                {_id: new ObjectId(id)}
+            );
+            return result;
+        }
+        catch (err) {
+             
+        }
+        finally {
+            if (client) {
+                await client.close();
+            }
+        }
+    }
 }
 module.exports = WorkerDB

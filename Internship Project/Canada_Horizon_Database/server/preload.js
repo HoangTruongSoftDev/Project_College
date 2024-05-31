@@ -30,10 +30,22 @@ contextBridge.exposeInMainWorld('api', {
 
     uploadFileAPI: (filePath) => ipcRenderer.invoke('upload-file', filePath),
     downloadFileAPI: (fileId) => ipcRenderer.invoke('download-file', fileId),
+    viewFileAPI: (fileId) => ipcRenderer.invoke('view-file', fileId),
 
     displayFileAPI: (filePath) => ipcRenderer.invoke('open-file-window', filePath),
     onDisplayFile: (callback) => ipcRenderer.on('display-file', (event, filePath) => callback(filePath)),
 
     createWorkerAPI: (firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => ipcRenderer.invoke('create-worker', firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter),
 
+    getWorkerListAPI: () => ipcRenderer.invoke('get-worker-list'),
+    getWorkerListByCreatedDateAPI: (startDate, endDate) => ipcRenderer.invoke('get-workers-by-created-date', startDate, endDate),
+    getWorkerListByBirthDateAPI: (startDate, endDate) => ipcRenderer.invoke('get-workers-by-birth-date', startDate, endDate),
+    getWorkerListByFirstNameAPI: (keyword) => ipcRenderer.invoke('get-workers-by-first-name', keyword),
+    getWorkerListByLastNameAPI: (keyword) => ipcRenderer.invoke('get-workers-by-last-name', keyword),
+    getWorkerListByAddressAPI: (keyword) => ipcRenderer.invoke('get-workers-by-address', keyword),
+    getWorkerListByPhoneNumberAPI: (keyword) => ipcRenderer.invoke('get-workers-by-phone-number', keyword),
+    getWorkerListByProfessionalDiplomasAPI: (keyword) => ipcRenderer.invoke('get-workers-by-professional-diplomas', keyword),
+    getWorkerListByProfessionsAPI: (keyword) => ipcRenderer.invoke('get-workers-by-professions', keyword),
+    getWorkerByIdAPI: (workerId) => ipcRenderer.invoke('get-worker-by-id', workerId),
+    
 });

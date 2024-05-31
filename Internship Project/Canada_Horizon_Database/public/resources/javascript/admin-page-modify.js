@@ -13,12 +13,20 @@ returnButton.addEventListener('click', () => {
 });
 // =================================================
 
-function clearSession() {
+
+function clearSessionEmployer() {
     sessionStorage.removeItem('billList');
     sessionStorage.removeItem('employerProfessionalActivities');
     sessionStorage.removeItem('modifiedEmployer');
 } 
-clearSession();
+function clearSessionWorker() {
+    sessionStorage.removeItem('workerBillList');
+    sessionStorage.removeItem('professionsList');
+    sessionStorage.removeItem('professionalDiplomasList');
+    sessionStorage.removeItem('modifiedWorker');
+} 
+clearSessionEmployer();
+clearSessionWorker();
 
 // =================================================
 

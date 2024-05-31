@@ -1,3 +1,15 @@
+// =================================================
+
+  function clearSessionWorker() {
+    sessionStorage.removeItem('workerBillList');
+    sessionStorage.removeItem('professionsList');
+    sessionStorage.removeItem('professionalDiplomasList');
+    sessionStorage.removeItem('modifiedWorker');
+  } 
+  clearSessionWorker();
+  
+  // =================================================
+
 const serviceInput = document.getElementById("serviceInput");
 const priceInput = document.getElementById("priceInput");
 let billList = []

@@ -5,8 +5,26 @@ const addressInput = document.getElementById('addressInput');
 const phoneNumberInput = document.getElementById('phoneNumberInput');
 const professionalActivitiesInput = document.getElementById('professionalActivitiesInput');
 
-// clear session
-sessionStorage.removeItem('modifiedEmployer');
+
+// =================================================
+
+
+function clearSessionEmployer() {
+    sessionStorage.removeItem('billList');
+    sessionStorage.removeItem('employerProfessionalActivities');
+    sessionStorage.removeItem('modifiedEmployer');
+    
+  } 
+  function clearSessionWorker() {
+    sessionStorage.removeItem('workerBillList');
+    sessionStorage.removeItem('professionsList');
+    sessionStorage.removeItem('professionalDiplomasList');
+    sessionStorage.removeItem('modifiedWorker');
+    sessionStorage.removeItem('modifiedEmployer');
+  } 
+  clearSessionWorker();
+  
+  // =================================================
 
 const createBill = document.getElementById("createBill");
 createBill.addEventListener('click', () => {
@@ -25,7 +43,7 @@ refreshButton.addEventListener('click', () => {
     console.log('refreshButton Click')
     if (confirm('Refreshing will clear all current information of Employer. Are you sure to refresh?')) {
         // User clicked OK
-        clearSession();
+        clearSessionEmployer();
         location.reload();
     }
 });
@@ -47,14 +65,7 @@ function receiveData() {
         professionalActivitiesList = JSON.parse(professionalActivitiesDataReceived);
     }
 }
-// =================================================
 
-function clearSession() {
-    sessionStorage.removeItem('billList');
-    sessionStorage.removeItem('employerProfessionalActivities');
-} 
-
-// =================================================
 window.onload = receiveData;
 
 const saveButton = document.getElementById('saveButton');
@@ -88,7 +99,7 @@ async function createEmployer() {
     addressInput.value = '';
     phoneNumberInput.value = '';
     professionalActivitiesInput.value = '';
-    clearSession();
+    clearSessionEmployer();
     billList = [];
     professionalActivitiesList = [];
 }

@@ -285,8 +285,7 @@ class EmployerDB {
         
               return modifiedResult;
         }
-        catch (err) {
-             
+        catch (err) {   
         }
         finally {
             if (client) {

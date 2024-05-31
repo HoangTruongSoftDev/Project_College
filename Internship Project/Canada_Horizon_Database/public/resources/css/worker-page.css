@@ -1852,7 +1852,7 @@ button {
     z-index: 3;
   }
 /* ******************************************************************************** */
-#startDate, #endDate {
+#startDate, #endDate, #birthDate {
   border: none; text-align: center;
 }
 /*Customize the select option*/

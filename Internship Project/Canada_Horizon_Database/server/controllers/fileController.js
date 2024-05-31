@@ -7,6 +7,9 @@ class FileController {
     static downloadFile(fileId) {
         return FileDB.downloadFile(fileId);
     }
+    static viewFile(fileId) {
+        return FileDB.viewFile(fileId);
+    }
 }
 
 module.exports = FileController;
