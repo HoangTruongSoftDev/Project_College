@@ -75,16 +75,17 @@
             // } else {
             //     document.getElementById('result').innerText = 'No file selected.';
             // }
-            try {
-              const filePath = await window.api.viewFileAPI("6659f3515ea6d79ed182d883");
-              console.log(filePath)
-              imageView.src = filePath;
-              await openFileWindow(filePath)
-            }
-            catch (err) {
-              console.log("error: ")
-              console.log(err)
-            }
+            // try {
+            //   const filePath = await window.api.viewFileAPI("6659f3515ea6d79ed182d883");
+            //   console.log(filePath)
+            //   imageView.src = filePath;
+            //   await openFileWindow(filePath)
+            // }
+            // catch (err) {
+            //   console.log("error: ")
+            //   console.log(err)
+            // }
+            window.location.href = "../worker-page-modify.html?id=6659f3515ea6d79ed182d888";
         });
         async function openFileWindow(filePath) {
             // Invoke the 'open-file-window' IPC handler in the main process

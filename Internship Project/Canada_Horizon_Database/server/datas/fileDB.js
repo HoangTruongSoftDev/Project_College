@@ -84,7 +84,7 @@ class FileDB {
         }
     }
 
-    static async viewFile(fileId) {
+    static async saveTempFile(fileId) {
  
         const uri = ConfigDB.url; // replace with your MongoDB URI
         const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });

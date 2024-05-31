@@ -30,7 +30,7 @@ contextBridge.exposeInMainWorld('api', {
 
     uploadFileAPI: (filePath) => ipcRenderer.invoke('upload-file', filePath),
     downloadFileAPI: (fileId) => ipcRenderer.invoke('download-file', fileId),
-    viewFileAPI: (fileId) => ipcRenderer.invoke('view-file', fileId),
+    saveTempFileAPI: (fileId) => ipcRenderer.invoke('save-temp-file', fileId),
 
     displayFileAPI: (filePath) => ipcRenderer.invoke('open-file-window', filePath),
     onDisplayFile: (callback) => ipcRenderer.on('display-file', (event, filePath) => callback(filePath)),

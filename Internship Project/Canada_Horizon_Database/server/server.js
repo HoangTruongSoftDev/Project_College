@@ -274,9 +274,9 @@ ipcMain.handle('download-file', async (event, fileId) => {
     }
 });
 
-ipcMain.handle('view-file', async (event, fileId) => {
+ipcMain.handle('save-temp-file', async (event, fileId) => {
     try {
-        const result = await FileController.viewFile(fileId);
+        const result = await FileController.saveTempFile(fileId);
        return result;
     } catch (err) {
        return err

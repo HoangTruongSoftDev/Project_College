@@ -49,12 +49,42 @@ async function findWorkerById() {
     professionalDiplomasList = worker.professionalDiplomas
     professionsList = worker.professions;
     billList = worker.bills;
-    resumeId = worker.resume.fileId
+    resumeId = worker.resume;
+    motivationLetterId = worker.motivationLetter;
     idInput.value = workerId;
     sessionStorage.setItem('modifiedWorker', workerId);
     
     sendData();
 }
+async function openFileWindow(filePath) {
+    // Invoke the 'open-file-window' IPC handler in the main process
+    await window.api.displayFileAPI(filePath);
+}
+const readResume = document.getElementById("readResume");
+readResume.addEventListener('click', async () => {
+    try {
+        const filePath = await window.api.saveTempFileAPI(resumeId);
+        console.log(filePath)
+        await openFileWindow(filePath)
+      }
+      catch (err) {
+        console.log("error: ")
+        console.log(err)
+      }
+})
+
+const readMotivationLetter = document.getElementById("readMotivationLetter");
+readMotivationLetter.addEventListener('click', async () => {
+    try {
+        const filePath = await window.api.saveTempFileAPI(motivationLetterId);
+        console.log(filePath)
+        await openFileWindow(filePath)
+      }
+      catch (err) {
+        console.log("error: ")
+        console.log(err)
+      }
+})
 
 const createBill = document.getElementById("createBill");
 createBill.addEventListener('click', () => {
