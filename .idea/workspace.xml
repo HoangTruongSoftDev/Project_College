@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e943100b-118e-4870-8b12-10b3ddee9cbb" name="Changes" comment="" />
+    <list default="true" id="e943100b-118e-4870-8b12-10b3ddee9cbb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Internship Project/Canada_Horizon_Database/dist/Canada Horizon Database Setup 1.0.0.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Internship Project/Canada_Horizon_Database/dist/Canada Horizon Database Setup 1.0.0.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Internship Project/Canada_Horizon_Database/dist/Canada Horizon Database Setup 1.0.0.exe.blockmap" beforeDir="false" afterPath="$PROJECT_DIR$/Internship Project/Canada_Horizon_Database/dist/Canada Horizon Database Setup 1.0.0.exe.blockmap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Internship Project/Canada_Horizon_Database/dist/builder-debug.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Internship Project/Canada_Horizon_Database/dist/builder-debug.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Internship Project/Canada_Horizon_Database/dist/builder-effective-config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Internship Project/Canada_Horizon_Database/dist/builder-effective-config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Internship Project/Canada_Horizon_Database/dist/win-unpacked/resources/app.asar" beforeDir="false" afterPath="$PROJECT_DIR$/Internship Project/Canada_Horizon_Database/dist/win-unpacked/resources/app.asar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +26,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2OoWQDHrkxbfzK4qSWNqT8XB5y3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,7 +39,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Truong/Lasalle College/Programming Feature/Project_College",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "web.server",
     "vue.rearranger.settings.migration": "true"
   }
@@ -44,6 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682227396293</updated>
       <workItem from="1682227397492" duration="14000" />
+      <workItem from="1717138174967" duration="9000" />
     </task>
     <servers />
   </component>
