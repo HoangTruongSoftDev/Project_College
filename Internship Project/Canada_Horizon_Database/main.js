@@ -15,6 +15,7 @@ const createWindow = () => {
       nodeIntegration: false,
       enableRemoteModule: false,
       contextIsolation: true,
+      webSecurity: false,
       preload: path.join(__dirname, '..', '..', '..', '..', 'server', 'preload.js')
     }
   })
