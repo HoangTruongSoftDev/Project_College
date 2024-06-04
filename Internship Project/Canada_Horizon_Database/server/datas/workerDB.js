@@ -4,6 +4,59 @@ const { MongoClient, ObjectId } = require('mongodb');
 const ConfigDB  = require('./configDB.js');
 
 class WorkerDB {
+    static async delete(workerId) {
+        let client;
+        try {
+            client = await MongoClient.connect(ConfigDB.url);
+            const db = client.db(ConfigDB.dbName);
+            const collection = db.collection(ConfigDB.workerCollection);  
+            const worker = await collection.deleteOne({ _id: new ObjectId(workerId) });
+            return worker;
+        }
+        catch (err) {
+             
+            console.log(`Error: ${err}`);
+        }
+        finally {
+            if (client) {
+                await client.close();
+            }
+        }
+    }
+    static async update(workerId, worker) {
+        let client;
+        try {
+            client = await MongoClient.connect(ConfigDB.url);
+            const db = client.db(ConfigDB.dbName);
+            const collection = db.collection(ConfigDB.workerCollection);
+            const updateFields = {
+                $set: {
+                    firstName: worker.firstName,
+                    lastName: worker.lastName,
+                    birthDate: worker.birthDate,
+                    address: worker.address,
+                    phoneNumber: worker.phoneNumber,
+                    professionalDiplomas: worker.professionalDiplomas,
+                    professions: worker.professions,
+                    bills: worker.bills,
+                    resume: worker.resume,
+                    motivationLetter: worker.motivationLetter,
+                }
+            };
+            
+            await collection.updateOne({ _id: new ObjectId(workerId) }, updateFields);
+            return worker;
+        }
+        catch (err) {
+             
+            console.log(`Error: ${err}`);
+        }
+        finally {
+            if (client) {
+                await client.close();
+            }
+        }
+    }
     static async create(worker) {
         let client;
         try {

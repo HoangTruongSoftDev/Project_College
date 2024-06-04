@@ -13,10 +13,11 @@ const professionsInput = document.getElementById('professionsInput');
 const addResume = document.getElementById('addResume');
 const resumeCreateButton = document.getElementById('resumeCreateButton');
 
+const addMotivationLetter = document.getElementById('addMotivationLetter');
+const motivationLetterCreateButton = document.getElementById('motivationLetterCreateButton');
+
 let resumeId = '';
 let motivationLetterId = '';
-let resumeInitialPath = '';
-let resumePath = '';
 const idInput = document.getElementById('idInput');
 
 
@@ -66,17 +67,35 @@ async function findWorkerById() {
     resumeId = worker.resume;
     motivationLetterId = worker.motivationLetter;
 
-    if (resumeId != null) {
+    if (resumeId !== '') {
         try {
-            resumeInitialPath = await window.api.saveTempFileAPI(resumeId);
-            resumePath = resumeInitialPath
+            console.log("Testing resumeId: " + resumeId);
+            let resumePath = await window.api.saveTempFileAPI(resumeId);
+            sessionStorage.setItem('resumePath', resumePath);
         }
         catch (err) {
             console.log("error: ")
             console.log(err)
         }
     }
+    else {
+        sessionStorage.setItem('resumePath', '');
+    }
 
+
+    if (motivationLetterId !== '') {
+        try {
+            let motivationLetterPath = await window.api.saveTempFileAPI(motivationLetterId);
+            sessionStorage.setItem('motivationLetterPath', motivationLetterPath);
+        }
+        catch (err) {
+            console.log("error: ")
+            console.log(err)
+        }
+    }
+    else {
+        sessionStorage.setItem('motivationLetterPath', '');
+    }
     idInput.value = workerId;
     sessionStorage.setItem('modifiedWorker', workerId);
 
@@ -88,15 +107,9 @@ async function openFileWindow(filePath) {
 }
 const readResume = document.getElementById("readResume");
 readResume.addEventListener('click', async () => {
-    
-    if (addResume.files.length > 0) {
-        resumePath = addResume.files[0].path;
+    const resumePath = sessionStorage.getItem('resumePath');
+    if (resumePath !== '') {
         openFileWindow(resumePath);
-        console.log('case 1: ' + resumePath);
-    }
-    else if (resumeInitialPath !== '') {
-        openFileWindow(resumeInitialPath);
-        console.log('case 2: ' + resumeInitialPath);
     }
     else {
         const result = await window.api.showMessageBoxAPI('Warning', `Missing Resume`, 'Message');
@@ -105,14 +118,12 @@ readResume.addEventListener('click', async () => {
 
 const readMotivationLetter = document.getElementById("readMotivationLetter");
 readMotivationLetter.addEventListener('click', async () => {
-    try {
-        const filePath = await window.api.saveTempFileAPI(motivationLetterId);
-        console.log(filePath)
-        await openFileWindow(filePath)
+    const motivationLetterPath = sessionStorage.getItem('motivationLetterPath');
+    if (motivationLetterPath !== '') {
+        openFileWindow(motivationLetterPath);
     }
-    catch (err) {
-        console.log("error: ")
-        console.log(err)
+    else {
+        const result = await window.api.showMessageBoxAPI('Warning', `Missing Motivation Letter`, 'Message');
     }
 })
 
@@ -213,9 +224,24 @@ async function updateWorker() {
     // \n Phone Number ${phoneNumberInput.value.trim()} \n professionalActivitiesList: ${professionalActivitiesList} 
     // \n EIMT: ${EIMTInput.value.trim()} \n Bills: ${strBill}
     // `, 'Message');
+    
+    const resumePath = sessionStorage.getItem('resumePath');
+    const motivationLetterPath = sessionStorage.getItem('motivationLetterPath')
+    let dateOfBirth = new Date(birthDateInput.value);
     const modifiedWorker = sessionStorage.getItem('modifiedWorker');
-    const worker = await window.api.updateEmployerAPI(modifiedWorker, companyNameInput.value.trim(), addressInput.value.trim(), phoneNumberInput.value.trim(), professionalActivitiesList, EIMTInput.value.trim(), billList);
-    const result = await window.api.showMessageBoxAPI('Successfully', `Updating Employer Successfully!!!`, 'Message');
+    const worker = await window.api.updateWorkerAPI(modifiedWorker,
+                                                    firstNameInput.value.trim(),
+                                                    lastNameInput.value.trim(),
+                                                    dateOfBirth,
+                                                    addressInput.value.trim(),
+                                                    phoneNumberInput.value.trim(),
+                                                    professionalDiplomasList,
+                                                    professionsList,
+                                                    billList,
+                                                    resumePath,
+                                                    motivationLetterPath,
+    );
+    const result = await window.api.showMessageBoxAPI('Successfully', `Updating Worker Successfully!!!`, 'Message');
 }
 
 const listProfessionalDiplomas = document.getElementById('listProfessionalDiplomas');
@@ -238,26 +264,39 @@ returnButton.addEventListener('click', () => {
 });
 
 const deleteButton = document.getElementById('deleteButton');
-deleteButton.addEventListener('click', deleteEmployer);
+deleteButton.addEventListener('click', deleteWorker);
 
-async function deleteEmployer() {
+async function deleteWorker() {
 
-    const modifiedEmployer = sessionStorage.getItem('modifiedEmployer');
-    const result = await window.api.showMessageBoxAPI('Confirmation', "Are you sure to delete this employer", 'Confirmation');
+    const modifiedWorker = sessionStorage.getItem('modifiedWorker');
+    const result = await window.api.showMessageBoxAPI('Confirmation', "Are you sure to delete this worker?", 'Confirmation');
     if (result === 'Yes') {
-        const employer = await window.api.deleteEmployerAPI(modifiedEmployer);
-        const result = await window.api.showMessageBoxAPI('Successfully', "Deleting Employer Successfully !!!", 'Message');
-        window.location.href = 'employer-page.html';
+        const worker = await window.api.deleteWorkerAPI(modifiedWorker);
+        const result = await window.api.showMessageBoxAPI('Successfully', "Deleting Worker Successfully !!!", 'Message');
+        window.location.href = 'worker-page.html';
     }
 }
+
+
+
+addResume.addEventListener('change', () => {
+    if (addResume.files.length > 0) {
+        sessionStorage.setItem('resumePath', addResume.files[0].path);
+    }
+
+})
+
+addMotivationLetter.addEventListener('change', () => {
+    if (addResume.files.length > 0) {
+        sessionStorage.setItem('motivationLetterPath', addMotivationLetter.files[0].path);
+    }
+
+})
 
 
 resumeCreateButton.addEventListener('click', function () {
     addResume.click();
 });
-
-const addMotivationLetter = document.getElementById('addMotivationLetter');
-const motivationLetterCreateButton = document.getElementById('motivationLetterCreateButton');
 
 motivationLetterCreateButton.addEventListener('click', function () {
     addMotivationLetter.click();
