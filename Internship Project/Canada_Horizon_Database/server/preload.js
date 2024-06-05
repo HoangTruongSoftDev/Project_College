@@ -31,11 +31,15 @@ contextBridge.exposeInMainWorld('api', {
     uploadFileAPI: (filePath) => ipcRenderer.invoke('upload-file', filePath),
     downloadFileAPI: (fileId) => ipcRenderer.invoke('download-file', fileId),
     saveTempFileAPI: (fileId) => ipcRenderer.invoke('save-temp-file', fileId),
+    encodeFileAPI: (filePath) => ipcRenderer.invoke('encode-file', filePath),
 
     displayFileAPI: (filePath) => ipcRenderer.invoke('open-file-window', filePath),
     onDisplayFile: (callback) => ipcRenderer.on('display-file', (event, filePath) => callback(filePath)),
 
     createWorkerAPI: (firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => ipcRenderer.invoke('create-worker', firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter),
+    updateWorkerAPI: (workerId,  firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => ipcRenderer.invoke('update-worker', workerId,  firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter),
+    deleteWorkerAPI: (workerId) => ipcRenderer.invoke('delete-worker', workerId),
+    
 
     getWorkerListAPI: () => ipcRenderer.invoke('get-worker-list'),
     getWorkerListByCreatedDateAPI: (startDate, endDate) => ipcRenderer.invoke('get-workers-by-created-date', startDate, endDate),
@@ -48,4 +52,5 @@ contextBridge.exposeInMainWorld('api', {
     getWorkerListByProfessionsAPI: (keyword) => ipcRenderer.invoke('get-workers-by-professions', keyword),
     getWorkerByIdAPI: (workerId) => ipcRenderer.invoke('get-worker-by-id', workerId),
     
+
 });

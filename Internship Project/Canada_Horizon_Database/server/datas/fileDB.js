@@ -134,6 +134,23 @@ class FileDB {
             client.close();
         }
     }
+    static async deleteFile(fileId) {
+        const uri = ConfigDB.url; // replace with your MongoDB URI
+        const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+    
+        try {
+            await client.connect();
+            const database = client.db(ConfigDB.dbName); // replace with your database name
+            const bucket = new GridFSBucket(database, { bucketName: 'fs' }); // use 'fs' as the bucket name for default GridFS
+    
+            const objectFileId = new ObjectId(fileId); // replace with the ObjectId of the file you want to retrieve
+    
+            await bucket.delete(objectFileId);
+        } catch (error) {
+            console.error('Error:', error);
+            client.close();
+        }
+    }
 }
 
 module.exports = FileDB

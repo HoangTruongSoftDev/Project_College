@@ -13,6 +13,7 @@ function clearSessionWorker() {
   sessionStorage.removeItem('modifiedWorker');
 } 
 clearSessionEmployer();
+clearSessionWorker();
 
 // =================================================
 

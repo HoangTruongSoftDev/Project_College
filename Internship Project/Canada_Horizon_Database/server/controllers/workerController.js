@@ -38,14 +38,15 @@ class WorkerController {
     static findWorkerById(workerId) {
         return WorkerDB.findById(workerId);
     }
+    static updateWorker(workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) {
+        const worker = new Worker(firstName,lastName,birthDate,address,phoneNumber,professionalDiplomas,professions,bills,resume,motivationLetter, new Date());
+        return WorkerDB.update(workerId, worker);
+    }
+    static deleteWorker(workerId) {
+        return WorkerDB.delete(workerId);
+    }
     // ===========================================================
-    static updateEmployer(employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills) {
-        const employer = new Employer(companyName, address, phoneNumber, professionalActivities, EIMT, new Date(), bills);
-        return EmployerDB.update(employerId, employer);
-    }
-    static deleteEmployer(employerId) {
-        return EmployerDB.delete(employerId);
-    }
+ 
     
 
 }

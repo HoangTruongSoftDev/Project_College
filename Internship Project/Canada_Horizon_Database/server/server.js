@@ -300,10 +300,16 @@ ipcMain.handle('open-file-window', async (event, filePath) => {
 
 ipcMain.handle('create-worker', async (event, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => {
     try {
-        const resumeObject = await FileController.uploadFile(resume); 
-        const motivationLetterObject= await FileController.uploadFile(motivationLetter);
-        const resumeId = resumeObject.fileId;
-        const motivationLetterId = motivationLetterObject.fileId;
+        let resumeId = '';
+        if (resume !== '') {
+            const resumeObject = await FileController.uploadFile(resume); 
+            resumeId = resumeObject.fileId;
+        }
+        let motivationLetterId = ''
+        if (motivationLetter !== '') {
+            const motivationLetterObject= await FileController.uploadFile(motivationLetter);
+            motivationLetterId = motivationLetterObject.fileId;
+        }
         const worker = await WorkerController.createWorker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resumeId, motivationLetterId)
         return worker;
     } catch (error) {
@@ -311,6 +317,52 @@ ipcMain.handle('create-worker', async (event, firstName, lastName, birthDate, ad
         return null;
     }
 })
+
+
+ipcMain.handle('update-worker', async (event, workerId,  firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => {
+    try {
+        const exsitingWorker = await WorkerController.findWorkerById(workerId);
+        if (exsitingWorker.resume !== '') {
+            FileController.deleteFile(exsitingWorker.resume);
+        }
+        if (exsitingWorker.motivationLetter !== '') {
+            FileController.deleteFile(exsitingWorker.motivationLetter);
+        }
+        let resumeId = '';
+        if (resume !== '') {
+            const resumeObject = await FileController.uploadFile(resume); 
+            resumeId = resumeObject.fileId;
+        }
+        let motivationLetterId = ''
+        if (motivationLetter !== '') {
+            const motivationLetterObject= await FileController.uploadFile(motivationLetter);
+            motivationLetterId = motivationLetterObject.fileId;
+        }
+        const worker = await WorkerController.updateWorker(workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resumeId, motivationLetterId)
+        return worker;
+    } catch (error) {
+        console.error('Error fetching worker:', error);
+        return null;
+    }
+})
+ipcMain.handle('delete-worker', async (event, workerId) => {
+    try {
+        const exsitingWorker = await WorkerController.findWorkerById(workerId);
+        if (exsitingWorker.resume !== '') {
+            FileController.deleteFile(exsitingWorker.resume);
+        }
+        if (exsitingWorker.motivationLetter !== '') {
+            FileController.deleteFile(exsitingWorker.motivationLetter);
+        }
+        const worker = await WorkerController.deleteWorker(workerId);
+        return worker;
+    } catch (error) {
+        console.error('Error fetching worker:', error);
+        return null;
+    }
+})
+
+
 
 ipcMain.handle('get-worker-list', async () => {
     try {
@@ -414,7 +466,16 @@ ipcMain.handle('get-worker-by-id', async (event, workerId) => {
     }
 })
 
-
+const url = require('url');
+ipcMain.handle('encode-file', async (event, filePath) => {
+    try {
+            let encodedPath = url.pathToFileURL(filePath).href;
+            return encodedPath;
+    } catch (error) {
+        console.error('Error fetching workers:', error);
+        return null;
+    }
+})
 
 
 

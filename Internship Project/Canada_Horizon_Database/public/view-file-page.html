@@ -50,11 +50,12 @@
             img.style.height = '100vh';
             fileDisplay.appendChild(img);
         }
-        function displayFile(filePath, fileDisplay) {
+        async function displayFile(filePath, fileDisplay) {
+            
             const fileContainer = document.createElement('iframe');
             fileContainer.id = 'fileContainer';
-
-            fileContainer.src = filePath;
+            const encodeFilePath = await window.api.encodeFileAPI(filePath);
+            fileContainer.src = encodeFilePath;
             fileContainer.frameBorder = '0';
             fileContainer.style.width = '100%';
             fileContainer.style.height = '100vh';

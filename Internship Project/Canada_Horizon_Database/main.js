@@ -15,12 +15,13 @@ const createWindow = () => {
       nodeIntegration: false,
       enableRemoteModule: false,
       contextIsolation: true,
+      webSecurity: false,
       preload: path.join(__dirname, '..', '..', '..', '..', 'server', 'preload.js')
     }
   })
   win.maximize();
-  // win.loadFile(path.join(__dirname, 'public', 'index.html'));
-  win.loadFile(path.join(__dirname, 'public', 'testing', 'testingPage.html'));
+  win.loadFile(path.join(__dirname, 'public', 'index.html'));
+  // win.loadFile(path.join(__dirname, 'public', 'testing', 'testingPage.html'));
 }
 
 app.whenReady().then(createWindow);
