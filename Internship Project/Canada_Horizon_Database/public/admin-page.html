@@ -22,19 +22,14 @@
           <a class="admin" href="admin-page.html">Admin</a>
           <a class="employer" href="employer-page.html">Employer</a>
           <a class="worker" href="worker-page.html">Worker</a>
-          <a class="logout" href="#">Logout</a>
+          <a class="report" href="report-page.html">Report</a>
         </div>
       </div>
       <div class="frame-div1">
         <div class="frame-parent">
-
-          <div class="setting-wrapper">
-            <img class="setting-icon" loading="lazy" alt="Setting Icon" src="build-assets/setting-icon.png" />
-          </div>
-          <div class="frame-wrapper">
-            <img class="user-icon" loading="lazy" alt="User Icon" src="build-assets/user-icon.png" />
-          </div>
-          <h2 class="user-name">Truong</h2>
+          <img class="user-icon" loading="lazy" alt="User Icon" src="build-assets/user-icon.png" />
+          <h2 class="user-name" id="loginUser">Truong</h2>
+          <input type="image" class="setting-icon logoutButton" loading="lazy" alt="Setting Icon" src="build-assets/logout-icon.png">
         </div>
       </div>
     </section>
@@ -98,7 +93,7 @@
             <div class="group-logout">
               <img class="logout-icon" alt="" src="build-assets/logout-icon.png" />
             </div>
-            <div class="logout1">Logout</div>
+            <div class="logout1 logoutButton">Logout</div>
           </a>
         </div>
       </div>
@@ -152,13 +147,6 @@
             </div>
             <div class="div-all">
               <div class="div-content-all">
-                <!-- <div class="div-table-title-color"></div>
-                <div class="div-table-title">
-                  <div class="name">First Name</div>
-                  <div class="lastName">Last Name</div>
-                  <div class="email">Email</div>
-                </div> -->
-                
                 <table id="adminList">
                   <thead></thead>
                   <tbody>

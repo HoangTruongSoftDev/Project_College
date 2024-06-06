@@ -15,6 +15,22 @@ function clearSessionWorker() {
 clearSessionEmployer();
 clearSessionWorker();
 
+
+
+let loginUser = document.getElementById("loginUser");
+let loginUserSession = sessionStorage.getItem('loginUser');
+loginUser.textContent = loginUserSession
+
+let loginUser1 = document.getElementById("loginUser1");
+loginUser1.textContent = loginUserSession
+
+// Add event listeners to all elements with the class 'logoutButton'
+document.querySelectorAll('.logoutButton').forEach(button => {
+    button.addEventListener('click',  () => {
+        window.location.href = 'login-page.html'
+    })
+});
+
 // =================================================
 
 // Add event listener for click event

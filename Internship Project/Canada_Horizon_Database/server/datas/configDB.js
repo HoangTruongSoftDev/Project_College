@@ -5,5 +5,6 @@ class ConfigDB {
     static adminCollection = "admins";
     static employerCollection = "employers";
     static workerCollection = "workers"
+
 }
 module.exports = ConfigDB;

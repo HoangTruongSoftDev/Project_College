@@ -116,7 +116,8 @@ body {
   .dashboard,
   .employer,
   .logout,
-  .worker {
+  .worker,
+  .report {
     position: relative;
     line-height: 18px;
     display: inline-block;
@@ -131,7 +132,8 @@ body {
   .admin,
   .employer,
   .logout,
-  .worker {
+  .worker,
+  .report {
     color: black;
     min-width: 42px;
     font-size: 20px;
@@ -184,12 +186,6 @@ body {
     justify-content: flex-start;
     padding: 0 var(--padding-4xs) 0 0;
   }
-  .setting-icon {
-    position: relative;
-    z-index: 2;
-    width: 30px; height: 30px; padding-top: 20px;
-    margin-left: 100px;
-  }
   .setting-wrapper {
     display: flex;
     flex-direction: column;
@@ -219,14 +215,6 @@ body {
     z-index: 2;
     padding-top: 20px;
     
-  }
-  .frame-parent {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: var(--gap-xl);
   }
   .canada-horizon-label,
   .frame-div {
@@ -922,7 +910,33 @@ body {
   .rectangle-parent1:hover{
     background-color: #0377ff;
   }
-
+  .frame-div1 {
+    width: 305px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: var(--padding-6xs) 0 0;
+    font-size: var(--font-size-5xl);
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+  }
+                /* ========================================= */
+                .frame-parent {
+                  align-self: stretch;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-end;
+                  gap: var(--gap-xl);
+                  margin-left: auto;
+                }
+                .setting-icon {
+                  position: relative;
+                  z-index: 2;
+                  width: 30px; height: 30px; 
+                  padding-top: 20px;
+                  margin-left: 30px;
+                }
+                /* ========================================= */
   @media screen and (max-width: 1050px) {
     .canada-horizon-label {
       flex-wrap: wrap;

@@ -9,7 +9,16 @@
   clearSessionWorker();
   
   // =================================================
-
+  let loginUser = document.getElementById("loginUser");
+  let loginUserSession = sessionStorage.getItem('loginUser');
+  loginUser.textContent = loginUserSession
+  
+  // Add event listeners to all elements with the class 'logoutButton'
+  document.querySelectorAll('.logoutButton').forEach(button => {
+      button.addEventListener('click',  () => {
+          window.location.href = 'login-page.html'
+      })
+  });
 let billList = [];
 function displayBillList(billList) {
     console.log(billList);

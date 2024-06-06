@@ -467,12 +467,23 @@ ipcMain.handle('get-worker-by-id', async (event, workerId) => {
 })
 
 const url = require('url');
+const CollectionController = require('./controllers/collectionController');
 ipcMain.handle('encode-file', async (event, filePath) => {
     try {
             let encodedPath = url.pathToFileURL(filePath).href;
             return encodedPath;
     } catch (error) {
         console.error('Error fetching workers:', error);
+        return null;
+    }
+})
+
+ipcMain.handle('get-profession-collection', async () => {
+    try {
+            const professionCollection = CollectionController.getProfessionList();
+            return professionCollection;
+    } catch (error) {
+        console.error('Error fetching professionCollection:', error);
         return null;
     }
 })

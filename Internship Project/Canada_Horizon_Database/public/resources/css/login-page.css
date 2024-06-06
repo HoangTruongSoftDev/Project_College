@@ -70,7 +70,9 @@ body {
     --br-3xs: 10px;
     --br-5xs: 8px;
   }
-  
+  h1 {
+    font-size: 50px;
+  }
   .ratings-child {
     height: 74px;
     width: 1334px;
@@ -1516,7 +1518,8 @@ body {
     .dashboard,
     .employer,
     .logout,
-    .worker {
+    .worker,
+    .report {
       position: relative;
       line-height: 18px;
       display: inline-block;
@@ -1531,7 +1534,8 @@ body {
     .dashboard,
     .employer,
     .logout,
-    .worker {
+    .worker,
+    .report {
       color: black;
       min-width: 42px;
       font-size: 20px;
@@ -1905,7 +1909,7 @@ body {
     display: flex; /* Make "div-main" a flex container */
     flex-direction: column; /* Arrange content vertically */
     padding: 0 var(--padding-48xl); /* Add padding for top and right sides */
-    width: 973px;
+    width: 400px;
     align-items: flex-end;
     gap: 40.9px;
     text-align: left;

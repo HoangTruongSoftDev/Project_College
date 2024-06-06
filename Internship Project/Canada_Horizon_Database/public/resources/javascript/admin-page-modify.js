@@ -7,6 +7,18 @@ let deleteButton = document.getElementById("deleteButton");
 let idInput = document.getElementById("idInput");
 updateButton.addEventListener('click', updateAdmin)
 deleteButton.addEventListener('click', deleteAdmin)
+
+let loginUser = document.getElementById("loginUser");
+let loginUserSession = sessionStorage.getItem('loginUser');
+loginUser.textContent = loginUserSession
+
+// Add event listeners to all elements with the class 'logoutButton'
+document.querySelectorAll('.logoutButton').forEach(button => {
+    button.addEventListener('click',  () => {
+        window.location.href = 'login-page.html'
+    })
+});
+
 let returnButton = document.getElementById('returnButton');
 returnButton.addEventListener('click', () => {
     window.history.back();
@@ -68,6 +80,7 @@ async function findAdminById() {
     passwordInput.value = admin.password;
     idInput.value = adminId;
 }
+
 document.addEventListener('DOMContentLoaded', () => {
     findAdminById();
 });

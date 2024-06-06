@@ -14,7 +14,16 @@ function clearSessionWorker() {
 } 
 clearSessionEmployer();
 clearSessionWorker();
+let loginUser = document.getElementById("loginUser");
+let loginUserSession = sessionStorage.getItem('loginUser');
+loginUser.textContent = loginUserSession
 
+// Add event listeners to all elements with the class 'logoutButton'
+document.querySelectorAll('.logoutButton').forEach(button => {
+    button.addEventListener('click',  () => {
+        window.location.href = 'login-page.html'
+    })
+});
 // =================================================
 
 function displayEmployerList(employers) {
@@ -61,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     row.appendChild(companyNameCell);
 
     const professionalActivitiesCell = document.createElement("th");
-    professionalActivitiesCell.textContent = 'Professional Activitie';
+    professionalActivitiesCell.textContent = 'Professional Activities';
     professionalActivitiesCell.classList.add('div-table-title-color');
     row.appendChild(professionalActivitiesCell);
 

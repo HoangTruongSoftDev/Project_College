@@ -23,6 +23,7 @@ const addressInput = document.getElementById('addressInput');
 const phoneNumberInput = document.getElementById('phoneNumberInput');
 const professionalActivitiesInput = document.getElementById('professionalActivitiesInput');
 const idInput = document.getElementById('idInput');
+
 document.addEventListener('DOMContentLoaded', () => {
     const checkingUpdate = sessionStorage.getItem('modifiedEmployer');
     if (checkingUpdate === null) {
@@ -31,6 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+let loginUser = document.getElementById("loginUser");
+let loginUserSession = sessionStorage.getItem('loginUser');
+loginUser.textContent = loginUserSession
+
+// Add event listeners to all elements with the class 'logoutButton'
+document.querySelectorAll('.logoutButton').forEach(button => {
+    button.addEventListener('click',  () => {
+        window.location.href = 'login-page.html'
+    })
+});
 async function findEmployerById() {
     const urlParams = new URLSearchParams(window.location.search);
     let employerId = urlParams.get('id');
@@ -163,7 +175,7 @@ async function deleteEmployer() {
     if (result === 'Yes') {
         const employer = await window.api.deleteEmployerAPI(modifiedEmployer);
         const result = await window.api.showMessageBoxAPI('Successfully', "Deleting Employer Successfully !!!", 'Message');
-        window.location.href = 'employer-page.html';
+        window.history.back();
     }
 
 }

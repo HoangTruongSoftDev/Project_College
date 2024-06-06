@@ -1497,7 +1497,8 @@ button {
   .dashboard,
   .employer,
   .logout,
-  .worker {
+  .worker,
+  .report {
     position: relative;
     line-height: 18px;
     display: inline-block;
@@ -1512,7 +1513,8 @@ button {
   .dashboard,
   .admin,
   .logout,
-  .employer {
+  .employer,
+  .report {
     color: black;
     min-width: 42px;
     font-size: 20px;
@@ -1527,14 +1529,7 @@ button {
     align-items: flex-start;
     box-sizing: border-box;
   }
-  .frame-parent {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: var(--gap-xl);
-  }
+
   .setting-wrapper {
     display: flex;
     flex-direction: column;
@@ -1542,12 +1537,7 @@ button {
     justify-content: flex-start;
     padding: 4px 28px 0 0;
   }
-  .setting-icon {
-    position: relative;
-    z-index: 2;
-    width: 30px; height: 30px; padding-top: 20px;
-    margin-left: 100px;
-  }
+
   .frame-wrapper {
     display: flex;
     flex-direction: column;
@@ -1985,6 +1975,23 @@ button,
 .hidden-input {
   display: none;
 }
+                          /* ========================================= */
+                          .frame-parent {
+                            align-self: stretch;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: flex-end;
+                            gap: var(--gap-xl);
+                            margin-left: auto;
+                          }
+                          .setting-icon {
+                            position: relative;
+                            z-index: 2;
+                            width: 30px; height: 30px; 
+                            padding-top: 20px;
+                            margin-left: 30px;
+                          }
+                          /* ========================================= */
 @media screen and (max-width: 900px) {
   .ratings-inner,
   .rectangle-parent {

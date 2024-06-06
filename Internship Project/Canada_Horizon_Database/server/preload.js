@@ -52,5 +52,5 @@ contextBridge.exposeInMainWorld('api', {
     getWorkerListByProfessionsAPI: (keyword) => ipcRenderer.invoke('get-workers-by-professions', keyword),
     getWorkerByIdAPI: (workerId) => ipcRenderer.invoke('get-worker-by-id', workerId),
     
-
+    getProfessionCollectionAPI: () =>  ipcRenderer.invoke('get-profession-collection'),
 });
