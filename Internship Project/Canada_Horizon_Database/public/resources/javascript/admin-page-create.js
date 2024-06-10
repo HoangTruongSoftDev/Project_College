@@ -48,13 +48,19 @@ async function createAdmin() {
         const result = await window.api.showMessageBoxAPI('Warning', "Missing Password", 'Message');
     }
     else {
-        const admin = await window.api.createAdminAPI(firstNameInput.value.trim(), lastNameInput.value.trim(), emailInput.value.trim(), passwordInput.value.trim());
-        const fullName = `${admin.firstName} ${admin.lastName}`;
-        const result = await window.api.showMessageBoxAPI('Successfully', `Creating Admin "${fullName}" Successfully !!!`, 'Message');
-        firstNameInput.value = '';
-        lastNameInput.value = '';
-        emailInput.value = '';
-        passwordInput.value = '';
+        const existingAdmins = await window.api.getAdminListByEmailAPI(emailInput.value.trim());
+        if (existingAdmins.length > 0) {
+            const result = await window.api.showMessageBoxAPI('Warning', `This email account already exists !!!`, 'Message');
+        }
+        else {
+            const admin = await window.api.createAdminAPI(firstNameInput.value.trim(), lastNameInput.value.trim(), emailInput.value.trim(), passwordInput.value.trim());
+            const fullName = `${admin.firstName} ${admin.lastName}`;
+            const result = await window.api.showMessageBoxAPI('Successfully', `Creating Admin "${fullName}" Successfully !!!`, 'Message');
+            firstNameInput.value = '';
+            lastNameInput.value = '';
+            emailInput.value = '';
+            passwordInput.value = '';
+        }
     }
 }
 

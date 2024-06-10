@@ -486,7 +486,6 @@ body {
   }
   .title-box-wrapper {
     align-self: stretch;
-    padding: 0 0 0 var(--padding-4xs);
   }
   .frame-child5 {
     height: 33.1px;
@@ -1394,73 +1393,7 @@ body {
   .rectangle-parent1:hover{
     background-color: var(--color-royalblue);
   }
-  /* .div-all {
-    align-self: stretch;
-    height: 549.8px;
-    align-items: flex-end;
-    padding: 0 0 36.8px;
-    box-sizing: border-box;
-    gap: 24.4px;
-    font-size: var(--font-size-base-4);
-  } */
-  /* .div-all,
-  .display-title-box,
-  .div-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    max-width: 100%;
-    height: auto;
-  } */
-  /* .div-main {
-    width: 973px;
-    align-items: flex-end;
-    gap: 40.9px;
-    text-align: left;
-    font-size: var(--font-size-xs);
-    color: var(--color-black);
-    font-family: var(--font-actor);
-  } */
-  /* .display-title-box {
-    align-self: stretch;
-    align-items: flex-start;
-    gap: 54px;
-  } */
-  .contact-info-detail-label {
-    flex: 1;
-    flex-direction: column;
-    padding: 49px 0 0;
-    box-sizing: border-box;
-    max-width: calc(100% - 323px);
-    text-align: center;
-    font-size: 61px;
-    color: var(--color-darkblue);
-    font-family: var(--font-abril-fatface);
-  }
-  .admin-page,
-  .contact-info-detail-label,
-  .truong-email-label {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .truong-email-label {
-    align-self: stretch;
-    flex-direction: row;
-    padding: 0 var(--padding-6xl) 0 0;
-    box-sizing: border-box;
-    gap: 50px;
-    max-width: 100%;
-  }
-  .admin-page {
-    width: 100%;
-    position: relative;
-    background-color: var(--color-white);
-    overflow: hidden;
-    flex-direction: column;
-    line-height: normal;
-    letter-spacing: normal;
-  }
+
   /* ========================================================================= */
   .canada-horizon-label {
       display: flex;
@@ -2010,7 +1943,41 @@ body {
         margin-left: 30px;
       }
       /* ========================================= */
-  
+      /* ========================================= */
+      .truong-email-label {
+        display: flex;
+        align-items: flex-start;
+        align-self: stretch;
+        flex-direction: row;
+        box-sizing: border-box;
+        width: 100%;
+      }
+      .contact-info-detail-label {
+        flex-direction: column;
+        margin-top: 49px;
+        box-sizing: border-box;
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 30px;
+        text-align: center;
+        font-size: 61px;
+        color: var(--color-darkblue);
+        font-family: var(--font-abril-fatface);
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .admin-page {
+        width: 100%;
+        position: relative;
+        background-color: var(--color-white);
+        overflow: hidden;
+        flex-direction: column;
+        line-height: normal;
+        letter-spacing: normal;
+        display: flex;
+        align-items: flex-start;
+      }
   @media screen and (max-width: 900px) {
     .ratings-inner,
     .rectangle-parent {

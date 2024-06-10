@@ -788,6 +788,7 @@ body {
     max-height: 100%;
   }
   .img-person-1-wrapper {
+    margin-left: auto;
     width:130px;
     height: 127px;
     display: flex;
@@ -840,6 +841,7 @@ body {
     width:130px;
     flex-direction: column;
     padding: 5.9px 0 0;
+    margin-right: auto;
   }
   .div-content,
   .frame-parent2 {
@@ -847,16 +849,18 @@ body {
     max-width: 100%;
   }
   .frame-parent2 {
-    margin: 0;
-    position: absolute;
-    top: -135px;
-    left: 49px;
-    right: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 149px;
+    align-self: stretch;
+    align-items: flex-start;
+    gap: 54px;
+
     border-radius: 16px;
     background-color: #bcf1f9;
-    overflow: hidden;
-    padding: 3px var(--padding-56xl);
-    gap: 61px;
     z-index: 2;
     text-align: center;
     font-size: var(--font-size-25xl);
@@ -874,9 +878,11 @@ body {
   .div-content-wrapper {
     flex: 1;
     flex-direction: column;
-    padding: 185px 0 0;
+    margin-top: 49px;
+    margin-left: 30px;
+    margin-right: 30px;
     box-sizing: border-box;
-    max-width: calc(100% - 273px);
+    width: 100%;
   }
   .dashboard-page,
   .div-content-wrapper,

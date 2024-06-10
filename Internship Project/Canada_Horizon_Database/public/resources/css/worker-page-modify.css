@@ -486,7 +486,6 @@ body {
   }
   .title-box-wrapper {
     align-self: stretch;
-    padding: 0 0 0 var(--padding-4xs);
   }
   .frame-child5 {
     height: 33.1px;
@@ -1863,6 +1862,8 @@ body {
   /* ******************************************************************************** */
     
   .div-main {
+    margin-left: auto;
+    margin-right: auto;
     display: flex; /* Make "div-main" a flex container */
     flex-direction: column; /* Arrange content vertically */
     padding: 0 var(--padding-48xl); /* Add padding for top and right sides */
@@ -1992,6 +1993,41 @@ body {
                               margin-left: 30px;
                             }
                             /* ========================================= */
+                                /* ========================================= */
+    .truong-email-label {
+      display: flex;
+      align-items: flex-start;
+      align-self: stretch;
+      flex-direction: row;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .contact-info-detail-label {
+      flex-direction: column;
+      margin-top: 49px;
+      box-sizing: border-box;
+      width: 100%;
+      margin-left: 30px;
+      margin-right: 30px;
+      text-align: center;
+      font-size: 61px;
+      color: var(--color-darkblue);
+      font-family: var(--font-abril-fatface);
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .admin-page {
+      width: 100%;
+      position: relative;
+      background-color: var(--color-white);
+      overflow: hidden;
+      flex-direction: column;
+      line-height: normal;
+      letter-spacing: normal;
+      display: flex;
+      align-items: flex-start;
+    }
   @media screen and (max-width: 900px) {
     .ratings-inner,
     .rectangle-parent {

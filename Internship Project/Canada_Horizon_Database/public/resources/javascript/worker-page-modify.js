@@ -224,7 +224,7 @@ createProfessions.addEventListener('click', async () => {
 
 
 async function updateWorker() {
-    receiveData();
+    // receiveData();
     for (let i = 0; i < billList.length; i++) {
         billList[i].createdDate = new Date(billList[i].createdDate);
     }

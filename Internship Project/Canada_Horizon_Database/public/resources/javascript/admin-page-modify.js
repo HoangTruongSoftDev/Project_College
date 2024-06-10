@@ -5,6 +5,7 @@ let emailInput = document.getElementById("emailInput");
 let passwordInput = document.getElementById("passwordInput");
 let deleteButton = document.getElementById("deleteButton");
 let idInput = document.getElementById("idInput");
+let originalEmail = ''
 updateButton.addEventListener('click', updateAdmin)
 deleteButton.addEventListener('click', deleteAdmin)
 
@@ -56,14 +57,17 @@ async function updateAdmin() {
         const result = await window.api.showMessageBoxAPI('Warning', "Missing Password", 'Message');
     }
     else {
-        console.log('idInput ' + idInput.value);
-        console.log('fName ' + firstNameInput.value.trim());
-        console.log('lName ' + lastNameInput.value.trim());
-        console.log('email ' + emailInput.value.trim());
-        console.log('password ' + passwordInput.value.trim());
-        const updatedAdmin = await window.api.updateAdminAPI(idInput.value, firstNameInput.value.trim(), lastNameInput.value.trim(), emailInput.value.trim(), passwordInput.value.trim());
-        console.log('update checking' + updatedAdmin)
-        const result = await window.api.showMessageBoxAPI('Successfully', "Updating Admin Successfully !!!", 'Message');
+        
+        const existingAdmins = await window.api.getAdminListByEmailAPI(emailInput.value.trim());
+        if (existingAdmins.length > 0 && originalEmail !== existingAdmins[0].email) {
+            const result = await window.api.showMessageBoxAPI('Warning', `This email account already exists !!!`, 'Message');
+        }
+        else {
+            const updatedAdmin = await window.api.updateAdminAPI(idInput.value, firstNameInput.value.trim(), lastNameInput.value.trim(), emailInput.value.trim(), passwordInput.value.trim());
+            console.log('update checking' + updatedAdmin)
+            const result = await window.api.showMessageBoxAPI('Successfully', "Updating Admin Successfully !!!", 'Message');
+        }
+
     }
 }
 
@@ -79,6 +83,7 @@ async function findAdminById() {
     emailInput.value = admin.email;
     passwordInput.value = admin.password;
     idInput.value = adminId;
+    originalEmail = admin.email;
 }
 
 document.addEventListener('DOMContentLoaded', () => {

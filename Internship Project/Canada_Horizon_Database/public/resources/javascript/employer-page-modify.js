@@ -10,7 +10,6 @@ function clearSessionEmployer() {
     sessionStorage.removeItem('workerBillList');
     sessionStorage.removeItem('professionsList');
     sessionStorage.removeItem('professionalDiplomasList');
-    sessionStorage.removeItem('modifiedWorker');
   } 
   clearSessionWorker();
   
@@ -132,7 +131,7 @@ createProfessionalActivities.addEventListener('click', async () => {
 
 
 async function updateEmployer() {
-    receiveData();
+    // receiveData();
     const EIMTInput = document.querySelector('input[name="EIMTInput"]:checked');
     for (let i = 0; i < billList.length; i++) {
         billList[i].createdDate = new Date(billList[i].createdDate);
