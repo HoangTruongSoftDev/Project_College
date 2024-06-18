@@ -1,0 +1,21 @@
+ 
+
+ Thank you for purchasing from HTML Codex
+
+
+ ** LICENSE ACTIVATION **
+
+ => Open the "LICENSE.txt" file with a text editor
+
+ => Change the above number (#12345678) with Order/Receipt number (receipt has been sent to your mail)
+
+ => Save the "LICENSE.txt" file and keep it in your template/website root folder
+
+ => If a "LICENSE.txt" file already exists in your template/website root folder, replace that with the new file.
+
+ => The URL will be "www.yoursite.com/LICENSE.txt"
+
+ => You're done!
+
+ ** ENJOY!!! **
+
