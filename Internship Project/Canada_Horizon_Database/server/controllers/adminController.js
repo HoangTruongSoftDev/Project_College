@@ -1,5 +1,5 @@
-const  AdminDB  = require("../datas/adminDB.js");
-const   Admin  = require("../models/admin.js");
+const AdminDB = require("../datas/adminDB.js");
+const Admin = require("../models/admin.js");
 
 class AdminController {
     static createAdmin(firstName, lastName, email, password) {

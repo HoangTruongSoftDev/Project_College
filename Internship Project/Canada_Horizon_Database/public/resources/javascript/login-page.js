@@ -48,6 +48,3 @@ async function login() {
         }
     }
 }
-
-emailInput.value = "truong@gmail.com";
-passwordInput.value = "truong123";

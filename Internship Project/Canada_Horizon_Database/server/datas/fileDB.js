@@ -33,30 +33,30 @@ class FileDB {
         }
     }
     static async downloadFile(fileId) {
- 
+
         const uri = ConfigDB.url; // replace with your MongoDB URI
         const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-    
+
         try {
             await client.connect();
             const database = client.db(ConfigDB.dbName); // replace with your database name
             const bucket = new GridFSBucket(database, { bucketName: 'fs' }); // use 'fs' as the bucket name for default GridFS
-    
+
             const objectFileId = new ObjectId(fileId); // replace with the ObjectId of the file you want to retrieve
-    
+
             // Retrieve the file metadata
             const filesCollection = database.collection('fs.files');
             const fileDocument = await filesCollection.findOne({ _id: objectFileId });
-    
+
             if (!fileDocument) {
                 throw new Error('File not found');
             }
-    
+
             const filename = fileDocument.filename; // Assuming the filename has the correct extension
-    
+
             // const destinationDir = path.join(__dirname, '..', 'server', 'downloads');
             const appPath = app.getAppPath();
-            const destinationDir = path.join(appPath, '..','..','..','..','downloads');
+            const destinationDir = path.join(appPath, '..', '..', '..', '..', 'downloads');
             const destinationPath = path.join(destinationDir, `${filename}`);
 
             // Check if the destination directory exists, create it if it doesn't
@@ -66,7 +66,7 @@ class FileDB {
 
             const downloadStream = bucket.openDownloadStream(objectFileId);
             const writeStream = fs.createWriteStream(destinationPath);
-    
+
             return new Promise((resolve, reject) => {
                 downloadStream.pipe(writeStream)
                     .on('error', (error) => {
@@ -85,29 +85,29 @@ class FileDB {
     }
 
     static async saveTempFile(fileId) {
- 
+
         const uri = ConfigDB.url; // replace with your MongoDB URI
         const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-    
+
         try {
             await client.connect();
             const database = client.db(ConfigDB.dbName); // replace with your database name
             const bucket = new GridFSBucket(database, { bucketName: 'fs' }); // use 'fs' as the bucket name for default GridFS
-    
+
             const objectFileId = new ObjectId(fileId); // replace with the ObjectId of the file you want to retrieve
-    
+
             // Retrieve the file metadata
             const filesCollection = database.collection('fs.files');
             const fileDocument = await filesCollection.findOne({ _id: objectFileId });
-    
+
             if (!fileDocument) {
                 throw new Error('File not found');
             }
-    
+
             const filename = fileDocument.filename; // Assuming the filename has the correct extension
-    
+
             const appPath = app.getAppPath();
-            const destinationDir = path.join(appPath, '..','..','..','..','observation');
+            const destinationDir = path.join(appPath, '..', '..', '..', '..', 'observation');
             const destinationPath = path.join(destinationDir, `${filename}`);
 
             // Check if the destination directory exists, create it if it doesn't
@@ -117,7 +117,7 @@ class FileDB {
 
             const downloadStream = bucket.openDownloadStream(objectFileId);
             const writeStream = fs.createWriteStream(destinationPath);
-    
+
             return new Promise((resolve, reject) => {
                 downloadStream.pipe(writeStream)
                     .on('error', (error) => {
@@ -137,14 +137,14 @@ class FileDB {
     static async deleteFile(fileId) {
         const uri = ConfigDB.url; // replace with your MongoDB URI
         const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-    
+
         try {
             await client.connect();
             const database = client.db(ConfigDB.dbName); // replace with your database name
             const bucket = new GridFSBucket(database, { bucketName: 'fs' }); // use 'fs' as the bucket name for default GridFS
-    
+
             const objectFileId = new ObjectId(fileId); // replace with the ObjectId of the file you want to retrieve
-    
+
             await bucket.delete(objectFileId);
         } catch (error) {
             console.error('Error:', error);

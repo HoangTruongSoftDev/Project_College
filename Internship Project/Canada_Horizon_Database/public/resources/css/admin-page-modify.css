@@ -5,7 +5,7 @@ body {
 
 :root {
   /* fonts */
-  --font-actor: Actor;
+  --font-actor: Arial;
   --font-abril-fatface: "Abril Fatface";
   --font-michroma: Michroma;
 
@@ -1606,7 +1606,7 @@ button {
 
 
 /* ========================================================================= */
-.canada-horizon-label {
+/* .canada-horizon-label {
   display: flex;
   align-items: flex-start;
   box-sizing: border-box;
@@ -1622,9 +1622,9 @@ button {
   font-size: 20px;
   color: var(--color-white);
   font-family: var(--font-actor);
-}
+} */
 
-.canada-horizon-label-inner {
+/* .canada-horizon-label-inner {
   width: 504px;
   display: flex;
   flex-direction: column;
@@ -1636,7 +1636,7 @@ button {
   font-size: var(--font-size-mini);
   color: var(--color-gray);
   margin: 40px 0 0 120px;
-}
+} */
 
 .canada-horizon {
   width: 116px;
@@ -1688,7 +1688,7 @@ button {
   font-size: 20px;
 }
 
-.frame-div1 {
+/* .frame-div1 {
   width: 305px;
   flex-direction: column;
   justify-content: flex-start;
@@ -1697,10 +1697,10 @@ button {
   display: flex;
   align-items: flex-start;
   box-sizing: border-box;
-}
+} */
 
 /* ========================================= */
-.frame-parent {
+/* .frame-parent {
   align-self: stretch;
   display: flex;
   flex-direction: row;
@@ -1716,7 +1716,7 @@ button {
   height: 30px;
   padding-top: 20px;
   margin-left: 30px;
-}
+} */
 
 /* ========================================= */
 .setting-wrapper {
@@ -1735,15 +1735,15 @@ button {
   padding: 0 var(--padding-4xs) 0 0;
 }
 
-.user-icon {
+/* .user-icon {
   position: relative;
   z-index: 2;
   width: 30px;
   height: 30px;
   padding-top: 20px;
-}
+} */
 
-.user-name {
+/* .user-name {
   margin: 0;
   position: relative;
   font-size: 24px;
@@ -1755,7 +1755,7 @@ button {
   min-width: 76px;
   z-index: 2;
   padding-top: 20px;
-}
+} */
 
 /* ******************************************************************************** */
 .rectangle-parent {
@@ -2015,7 +2015,6 @@ button {
   border: 1px solid var(--color-mediumpurple);
   border-radius: var(--br-3xs);
   padding: var(--padding-6xs) var(--padding-14xl) var(--padding-6xs) var(--padding-47xl);
-  background-color: transparent;
   flex: 1;
   overflow-x: auto;
   justify-content: space-between;
@@ -2144,41 +2143,129 @@ button {
 .button-div {
   margin: auto;
 }
-    /* ========================================= */
-    .truong-email-label {
-      display: flex;
-      align-items: flex-start;
-      align-self: stretch;
-      flex-direction: row;
-      box-sizing: border-box;
-      width: 100%;
-    }
-    .contact-info-detail-label {
-      flex-direction: column;
-      margin-top: 49px;
-      box-sizing: border-box;
-      width: 100%;
-      margin-left: 30px;
-      margin-right: 30px;
-      text-align: center;
-      font-size: 61px;
-      color: var(--color-darkblue);
-      font-family: var(--font-abril-fatface);
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-    }
-    .admin-page {
-      width: 100%;
-      position: relative;
-      background-color: var(--color-white);
-      overflow: hidden;
-      flex-direction: column;
-      line-height: normal;
-      letter-spacing: normal;
-      display: flex;
-      align-items: flex-start;
-    }
+
+/* ========================================= */
+.truong-email-label {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.contact-info-detail-label {
+  flex-direction: column;
+  margin-top: 49px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+  font-size: 61px;
+  color: var(--color-darkblue);
+  font-family: var(--font-abril-fatface);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.admin-page {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-direction: column;
+  line-height: normal;
+  letter-spacing: normal;
+  display: flex;
+  align-items: flex-start;
+}
+/* ################################### */
+.canada-horizon-label {
+  display: flex;
+  box-sizing: border-box;
+  align-self: stretch;
+  background-color: var(--color-royalblue);
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 14px 44px 16px var(--padding-48xl);
+  max-width: 100%;
+  gap: var(--gap-xl);
+  z-index: 1;
+  text-align: left;
+  font-size: 20px;
+  color: var(--color-white);
+  font-family: var(--font-actor);
+
+  align-items: center;
+  position: relative;
+}
+
+.canada-horizon-label-inner {
+  width: 504px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: var(--font-size-mini);
+  color: var(--color-gray);
+  gap: 20px;
+  align-self: stretch;
+  justify-content: space-between;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.frame-div1 {
+  flex-direction: column;
+  justify-content: center;
+  font-size: var(--font-size-5xl);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-right: 0;
+}
+
+.frame-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: var(--gap-xl);
+  margin-left: auto;
+
+}
+.user-icon {
+  position: relative;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+}
+.setting-icon {
+  position: relative;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
+}
+.user-name {
+  margin: 0;
+  position: relative;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  line-height: 29px;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  min-width: 76px;
+  z-index: 2;
+}
+/* ################################### */
 @media screen and (max-width: 900px) {
 
   .ratings-inner,

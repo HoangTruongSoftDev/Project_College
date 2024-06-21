@@ -2,7 +2,7 @@
 // import { ConfigDB } from './configDB.js';
 
 const { MongoClient, ObjectId } = require('mongodb');
-const ConfigDB  = require('./configDB.js');
+const ConfigDB = require('./configDB.js');
 
 class AdminDB {
     static async create(admin) {
@@ -12,11 +12,11 @@ class AdminDB {
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.adminCollection);
             await collection.insertOne(admin);
-            
-           return admin;
+
+            return admin;
         }
         catch (err) {
-             
+
             console.log(`Error: ${err}`);
         }
         finally {
@@ -30,12 +30,12 @@ class AdminDB {
         try {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
-            const collection = db.collection(ConfigDB.adminCollection);  
+            const collection = db.collection(ConfigDB.adminCollection);
             const admin = await collection.deleteOne({ _id: new ObjectId(adminId) });
             return admin;
         }
         catch (err) {
-             
+
             console.log(`Error: ${err}`);
         }
         finally {
@@ -50,7 +50,7 @@ class AdminDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.adminCollection);
-           
+
             const updateFields = {
                 $set: {
                     firstName: admin.firstName,
@@ -59,7 +59,7 @@ class AdminDB {
                     password: admin.password
                 }
             };
-            
+
             await collection.updateOne({ _id: new ObjectId(adminId) }, updateFields);
             return admin;
         }
@@ -78,22 +78,22 @@ class AdminDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.adminCollection);
-            const result = await collection.find( 
-                {firstName: { $regex: keyword, $options: 'i' }}
+            const result = await collection.find(
+                { firstName: { $regex: keyword, $options: 'i' } }
             ).toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {
@@ -107,13 +107,13 @@ class AdminDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.adminCollection);
-            const result = await collection.findOne( 
-                {_id: new ObjectId(id)}
+            const result = await collection.findOne(
+                { _id: new ObjectId(id) }
             );
             return result;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {
@@ -127,22 +127,22 @@ class AdminDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.adminCollection);
-            const result = await collection.find( 
-                { lastName : { $regex: keyword, $options: 'i' } }
+            const result = await collection.find(
+                { lastName: { $regex: keyword, $options: 'i' } }
             ).toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {
@@ -156,20 +156,20 @@ class AdminDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.adminCollection);
-            const result =  await collection.find({email : { $regex: keyword, $options: 'i' }}).toArray();
+            const result = await collection.find({ email: { $regex: keyword, $options: 'i' } }).toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {
@@ -186,7 +186,7 @@ class AdminDB {
             const start = new Date(startDate);
             const end = new Date(endDate);
             const query = {
-                createdDate : {
+                createdDate: {
                     $gte: start, // $gte stands for greater or equal than
                     $lte: end, // $lte stands for smaller or equal than
                 }
@@ -194,17 +194,17 @@ class AdminDB {
             const result = await collection.find(query).toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {
@@ -221,17 +221,17 @@ class AdminDB {
             const result = await collection.find().toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {

@@ -31,6 +31,7 @@ document.querySelectorAll('.logoutButton').forEach(button => {
     })
 });
 
+
 // =================================================
 
 // Add event listener for click event

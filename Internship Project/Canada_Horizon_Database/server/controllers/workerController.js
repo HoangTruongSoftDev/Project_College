@@ -16,7 +16,7 @@ class WorkerController {
     static findWorkerByBirthDate(startDate, endDate) {
         return WorkerDB.findByBirthDate(startDate, endDate);
     }
-    
+
     static findWorkerByFirstName(keyword) {
         return WorkerDB.findByFirstName(keyword);
     }
@@ -39,15 +39,15 @@ class WorkerController {
         return WorkerDB.findById(workerId);
     }
     static updateWorker(workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) {
-        const worker = new Worker(firstName,lastName,birthDate,address,phoneNumber,professionalDiplomas,professions,bills,resume,motivationLetter, new Date());
+        const worker = new Worker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, new Date());
         return WorkerDB.update(workerId, worker);
     }
     static deleteWorker(workerId) {
         return WorkerDB.delete(workerId);
     }
     // ===========================================================
- 
-    
+
+
 
 }
 module.exports = WorkerController;
