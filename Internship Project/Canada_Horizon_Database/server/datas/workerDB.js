@@ -1,7 +1,7 @@
 
 
 const { MongoClient, ObjectId } = require('mongodb');
-const ConfigDB  = require('./configDB.js');
+const ConfigDB = require('./configDB.js');
 
 class WorkerDB {
     static async delete(workerId) {
@@ -9,12 +9,12 @@ class WorkerDB {
         try {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
-            const collection = db.collection(ConfigDB.workerCollection);  
+            const collection = db.collection(ConfigDB.workerCollection);
             const worker = await collection.deleteOne({ _id: new ObjectId(workerId) });
             return worker;
         }
         catch (err) {
-             
+
             console.log(`Error: ${err}`);
         }
         finally {
@@ -43,12 +43,12 @@ class WorkerDB {
                     motivationLetter: worker.motivationLetter,
                 }
             };
-            
+
             await collection.updateOne({ _id: new ObjectId(workerId) }, updateFields);
             return worker;
         }
         catch (err) {
-             
+
             console.log(`Error: ${err}`);
         }
         finally {
@@ -64,8 +64,8 @@ class WorkerDB {
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.workerCollection);
             await collection.insertOne(worker);
-            
-           return worker;
+
+            return worker;
         }
         catch (err) {
             console.log(`Error: ${err}`);
@@ -86,16 +86,16 @@ class WorkerDB {
             const result = await collection.find().toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
-        catch (err) {   
+        catch (err) {
         }
         finally {
             if (client) {
@@ -113,7 +113,7 @@ class WorkerDB {
             const start = new Date(startDate);
             const end = new Date(endDate);
             const query = {
-                createdDate : {
+                createdDate: {
                     $gte: start, // $gte stands for greater or equal than
                     $lte: end, // $lte stands for smaller or equal than
                 }
@@ -121,17 +121,17 @@ class WorkerDB {
             const result = await collection.find(query).toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {
@@ -148,7 +148,7 @@ class WorkerDB {
             const start = new Date(startDate);
             const end = new Date(endDate);
             const query = {
-                birthDate : {
+                birthDate: {
                     $gte: start, // $gte stands for greater or equal than
                     $lte: end, // $lte stands for smaller or equal than
                 }
@@ -156,17 +156,17 @@ class WorkerDB {
             const result = await collection.find(query).toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {
@@ -180,22 +180,22 @@ class WorkerDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.workerCollection);
-            const result = await collection.find( 
-                {firstName: { $regex: keyword, $options: 'i' }}
+            const result = await collection.find(
+                { firstName: { $regex: keyword, $options: 'i' } }
             ).toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {
@@ -203,29 +203,29 @@ class WorkerDB {
             }
         }
     }
-    
+
     static async findByLastName(keyword) {
         let client;
         try {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.workerCollection);
-            const result = await collection.find( 
-                {lastName: { $regex: keyword, $options: 'i' }}
+            const result = await collection.find(
+                { lastName: { $regex: keyword, $options: 'i' } }
             ).toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {
@@ -239,22 +239,22 @@ class WorkerDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.workerCollection);
-            const result = await collection.find( 
-                {address: { $regex: keyword, $options: 'i' }}
+            const result = await collection.find(
+                { address: { $regex: keyword, $options: 'i' } }
             ).toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {
@@ -268,22 +268,22 @@ class WorkerDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.workerCollection);
-            const result = await collection.find( 
-                {phoneNumber: { $regex: keyword, $options: 'i' }}
+            const result = await collection.find(
+                { phoneNumber: { $regex: keyword, $options: 'i' } }
             ).toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {
@@ -297,20 +297,20 @@ class WorkerDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.workerCollection);
-            const result =  await collection.find({professionalDiplomas : { $regex: keyword, $options: 'i' }}).toArray();
+            const result = await collection.find({ professionalDiplomas: { $regex: keyword, $options: 'i' } }).toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {
@@ -324,20 +324,20 @@ class WorkerDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.workerCollection);
-            const result =  await collection.find({professions : { $regex: keyword, $options: 'i' }}).toArray();
+            const result = await collection.find({ professions: { $regex: keyword, $options: 'i' } }).toArray();
             const modifiedResult = result.map(doc => {
                 if (doc._id instanceof ObjectId) {
-                  doc._id = doc._id.toString();
+                    doc._id = doc._id.toString();
                 } else {
-                  doc._id = String(doc._id);
+                    doc._id = String(doc._id);
                 }
                 return doc;
-              });
-        
-              return modifiedResult;
+            });
+
+            return modifiedResult;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {
@@ -351,13 +351,13 @@ class WorkerDB {
             client = await MongoClient.connect(ConfigDB.url);
             const db = client.db(ConfigDB.dbName);
             const collection = db.collection(ConfigDB.workerCollection);
-            const result = await collection.findOne( 
-                {_id: new ObjectId(id)}
+            const result = await collection.findOne(
+                { _id: new ObjectId(id) }
             );
             return result;
         }
         catch (err) {
-             
+
         }
         finally {
             if (client) {

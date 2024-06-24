@@ -268,18 +268,18 @@ ipcMain.handle('upload-file', async (event, filePath) => {
 ipcMain.handle('download-file', async (event, fileId) => {
     try {
         const result = await FileController.downloadFile(fileId);
-       return result;
+        return result;
     } catch (err) {
-       return err
+        return err
     }
 });
 
 ipcMain.handle('save-temp-file', async (event, fileId) => {
     try {
         const result = await FileController.saveTempFile(fileId);
-       return result;
+        return result;
     } catch (err) {
-       return err
+        return err
     }
 });
 
@@ -294,7 +294,7 @@ ipcMain.handle('open-file-window', async (event, filePath) => {
         }
     });
     fileWindow.maximize();
-    await fileWindow.loadFile(path.join(__dirname,'..', 'public', 'view-file-page.html'));
+    await fileWindow.loadFile(path.join(__dirname, '..', 'public', 'view-file-page.html'));
     fileWindow.webContents.send('display-file', filePath);
 });
 
@@ -302,12 +302,12 @@ ipcMain.handle('create-worker', async (event, firstName, lastName, birthDate, ad
     try {
         let resumeId = '';
         if (resume !== '') {
-            const resumeObject = await FileController.uploadFile(resume); 
+            const resumeObject = await FileController.uploadFile(resume);
             resumeId = resumeObject.fileId;
         }
         let motivationLetterId = ''
         if (motivationLetter !== '') {
-            const motivationLetterObject= await FileController.uploadFile(motivationLetter);
+            const motivationLetterObject = await FileController.uploadFile(motivationLetter);
             motivationLetterId = motivationLetterObject.fileId;
         }
         const worker = await WorkerController.createWorker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resumeId, motivationLetterId)
@@ -319,7 +319,7 @@ ipcMain.handle('create-worker', async (event, firstName, lastName, birthDate, ad
 })
 
 
-ipcMain.handle('update-worker', async (event, workerId,  firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => {
+ipcMain.handle('update-worker', async (event, workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => {
     try {
         const exsitingWorker = await WorkerController.findWorkerById(workerId);
         if (exsitingWorker.resume !== '') {
@@ -330,12 +330,12 @@ ipcMain.handle('update-worker', async (event, workerId,  firstName, lastName, bi
         }
         let resumeId = '';
         if (resume !== '') {
-            const resumeObject = await FileController.uploadFile(resume); 
+            const resumeObject = await FileController.uploadFile(resume);
             resumeId = resumeObject.fileId;
         }
         let motivationLetterId = ''
         if (motivationLetter !== '') {
-            const motivationLetterObject= await FileController.uploadFile(motivationLetter);
+            const motivationLetterObject = await FileController.uploadFile(motivationLetter);
             motivationLetterId = motivationLetterObject.fileId;
         }
         const worker = await WorkerController.updateWorker(workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resumeId, motivationLetterId)
@@ -470,8 +470,8 @@ const url = require('url');
 const CollectionController = require('./controllers/collectionController');
 ipcMain.handle('encode-file', async (event, filePath) => {
     try {
-            let encodedPath = url.pathToFileURL(filePath).href;
-            return encodedPath;
+        let encodedPath = url.pathToFileURL(filePath).href;
+        return encodedPath;
     } catch (error) {
         console.error('Error fetching workers:', error);
         return null;
@@ -480,8 +480,8 @@ ipcMain.handle('encode-file', async (event, filePath) => {
 
 ipcMain.handle('get-profession-collection', async () => {
     try {
-            const professionCollection = CollectionController.getProfessionList();
-            return professionCollection;
+        const professionCollection = CollectionController.getProfessionList();
+        return professionCollection;
     } catch (error) {
         console.error('Error fetching professionCollection:', error);
         return null;

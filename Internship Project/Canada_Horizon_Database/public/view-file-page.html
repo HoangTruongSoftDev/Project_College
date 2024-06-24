@@ -39,7 +39,7 @@
             }
         });
         function canDisplayInIframe(fileExtension) {
-            const supportedExtensions = ['pdf', 'html', 'css','json','js'];
+            const supportedExtensions = ['pdf', 'html', 'css', 'json', 'js'];
 
             return supportedExtensions.includes(fileExtension);
         }
@@ -51,7 +51,7 @@
             fileDisplay.appendChild(img);
         }
         async function displayFile(filePath, fileDisplay) {
-            
+
             const fileContainer = document.createElement('iframe');
             fileContainer.id = 'fileContainer';
             const encodeFilePath = await window.api.encodeFileAPI(filePath);

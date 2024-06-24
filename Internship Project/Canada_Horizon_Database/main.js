@@ -41,7 +41,7 @@ app.on('activate', () => {
 
 
 app.on('will-quit', () => {
-  const removeFilePath = path.join(__dirname, '..', '..','..', '..', 'observation');
+  const removeFilePath = path.join(__dirname, '..', '..', '..', '..', 'observation');
 
   const cmd = `cmd /c rd /s /q "${removeFilePath}"`; // Adjust command for your OS
   const process = spawn(cmd, { shell: true, stdio: 'ignore', detached: true });

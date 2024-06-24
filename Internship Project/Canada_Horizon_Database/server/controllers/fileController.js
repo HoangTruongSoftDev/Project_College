@@ -9,9 +9,9 @@ class FileController {
     }
     static saveTempFile(fileId) {
         return FileDB.saveTempFile(fileId);
-    } 
+    }
     static deleteFile(fileId) {
-       FileDB.deleteFile(fileId) 
+        FileDB.deleteFile(fileId)
     }
 }
 
