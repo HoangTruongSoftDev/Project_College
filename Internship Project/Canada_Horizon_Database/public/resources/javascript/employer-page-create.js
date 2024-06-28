@@ -4,7 +4,7 @@ const companyNameInput = document.getElementById('companyNameInput');
 const addressInput = document.getElementById('addressInput');
 const phoneNumberInput = document.getElementById('phoneNumberInput');
 const professionalActivitiesInput = document.getElementById('professionalActivitiesInput');
-
+const informationInput = document.getElementById('informationInput');
 let loginUser = document.getElementById("loginUser");
 let loginUserSession = sessionStorage.getItem('loginUser');
 loginUser.textContent = loginUserSession
@@ -101,7 +101,7 @@ async function createEmployer() {
         billList[i].createdDate = new Date(billList[i].createdDate);
     }
     
-    const employer = await window.api.createEmployerAPI(companyNameInput.value.trim(), addressInput.value.trim(), phoneNumberInput.value.trim(), professionalActivitiesList, EIMTInput.value.trim(), billList);
+    const employer = await window.api.createEmployerAPI(companyNameInput.value.trim(), addressInput.value.trim(), phoneNumberInput.value.trim(), professionalActivitiesList, EIMTInput.value.trim(), billList, informationInput.value.trim());
     const result = await window.api.showMessageBoxAPI('Successfully', `Creating Employer Successfully!!!`, 'Message');
 
     companyNameInput.value = '';
@@ -111,6 +111,7 @@ async function createEmployer() {
     clearSessionEmployer();
     billList = [];
     professionalActivitiesList = [];
+    informationInput.value = '';
 }
 
 const listProfessionalActivities = document.getElementById('listProfessionalActivities');

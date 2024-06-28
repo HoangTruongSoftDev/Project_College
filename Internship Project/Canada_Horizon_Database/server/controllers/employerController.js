@@ -3,12 +3,12 @@ const EmployerDB = require("../datas/employerDB.js");
 const Employer = require("../models/employer.js");
 
 class EmployerController {
-    static createEmployer(companyName, address, phoneNumber, professionalActivities, EIMT, bills) {
-        const employer = new Employer(companyName, address, phoneNumber, professionalActivities, EIMT, new Date(), bills);
+    static createEmployer(companyName, address, phoneNumber, professionalActivities, EIMT, bills, information) {
+        const employer = new Employer(companyName, address, phoneNumber, professionalActivities, EIMT, new Date(), bills, information);
         return EmployerDB.create(employer);
     }
-    static updateEmployer(employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills) {
-        const employer = new Employer(companyName, address, phoneNumber, professionalActivities, EIMT, new Date(), bills);
+    static updateEmployer(employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills, information) {
+        const employer = new Employer(companyName, address, phoneNumber, professionalActivities, EIMT, new Date(), bills, information);
         return EmployerDB.update(employerId, employer);
     }
     static deleteEmployer(employerId) {

@@ -56,7 +56,8 @@ class EmployerDB {
                     phoneNumber: employer.phoneNumber,
                     professionalActivities: employer.professionalActivities,
                     EIMT: employer.EIMT,
-                    bills: employer.bills
+                    bills: employer.bills,
+                    information: employer.information
                 }
             };
 

@@ -3,8 +3,8 @@ const WorkerDB = require("../datas/workerDB.js");
 const Worker = require("../models/worker.js");
 
 class WorkerController {
-    static createWorker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) {
-        const worker = new Worker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, new Date())
+    static createWorker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, information) {
+        const worker = new Worker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, new Date(), information)
         return WorkerDB.create(worker);
     }
     static getWorkerList() {
@@ -38,8 +38,8 @@ class WorkerController {
     static findWorkerById(workerId) {
         return WorkerDB.findById(workerId);
     }
-    static updateWorker(workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) {
-        const worker = new Worker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, new Date());
+    static updateWorker(workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, information) {
+        const worker = new Worker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, new Date(), information);
         return WorkerDB.update(workerId, worker);
     }
     static deleteWorker(workerId) {

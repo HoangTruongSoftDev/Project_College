@@ -1,5 +1,5 @@
 class Employer {
-    constructor(companyName, address, phoneNumber, professionalActivities, EIMT, createdDate, bills) {
+    constructor(companyName, address, phoneNumber, professionalActivities, EIMT, createdDate, bills, information) {
         this.companyName = companyName;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -7,6 +7,7 @@ class Employer {
         this.EIMT = EIMT;
         this.createdDate = createdDate;
         this.bills = bills;
+        this.information = information
     }
     getCompanyName() {
         return this.companyName;

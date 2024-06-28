@@ -1,5 +1,5 @@
 class Worker {
-    constructor(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, createdDate) {
+    constructor(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, createdDate, information) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
@@ -11,6 +11,7 @@ class Worker {
         this.resume = resume;
         this.motivationLetter = motivationLetter;
         this.createdDate = createdDate;
+        this.information = information
     }
     getFirstName() {
         return this.firstName;

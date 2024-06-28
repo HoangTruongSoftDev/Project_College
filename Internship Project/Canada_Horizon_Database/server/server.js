@@ -109,9 +109,9 @@ ipcMain.handle('create-bill', async (event, service, price, payment) => {
     }
 })
 
-ipcMain.handle('create-employer', async (event, companyName, address, phoneNumber, professionalActivities, EIMT, bills) => {
+ipcMain.handle('create-employer', async (event, companyName, address, phoneNumber, professionalActivities, EIMT, bills, information) => {
     try {
-        const employer = await EmployerController.createEmployer(companyName, address, phoneNumber, professionalActivities, EIMT, bills)
+        const employer = await EmployerController.createEmployer(companyName, address, phoneNumber, professionalActivities, EIMT, bills, information)
         return employer;
     } catch (error) {
         console.error('Error fetching employers:', error);
@@ -230,9 +230,9 @@ ipcMain.handle('get-employer-by-id', async (event, employerId) => {
     }
 })
 
-ipcMain.handle('update-employer', async (event, employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills) => {
+ipcMain.handle('update-employer', async (event, employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills, information) => {
     try {
-        const employer = await EmployerController.updateEmployer(employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills);
+        const employer = await EmployerController.updateEmployer(employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills, information);
         return employer;
     } catch (error) {
         console.error('Error fetching employers:', error);
@@ -298,7 +298,7 @@ ipcMain.handle('open-file-window', async (event, filePath) => {
     fileWindow.webContents.send('display-file', filePath);
 });
 
-ipcMain.handle('create-worker', async (event, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => {
+ipcMain.handle('create-worker', async (event, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, information) => {
     try {
         let resumeId = '';
         if (resume !== '') {
@@ -310,7 +310,7 @@ ipcMain.handle('create-worker', async (event, firstName, lastName, birthDate, ad
             const motivationLetterObject = await FileController.uploadFile(motivationLetter);
             motivationLetterId = motivationLetterObject.fileId;
         }
-        const worker = await WorkerController.createWorker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resumeId, motivationLetterId)
+        const worker = await WorkerController.createWorker(firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resumeId, motivationLetterId, information)
         return worker;
     } catch (error) {
         console.error('Error fetching worker:', error);
@@ -319,7 +319,7 @@ ipcMain.handle('create-worker', async (event, firstName, lastName, birthDate, ad
 })
 
 
-ipcMain.handle('update-worker', async (event, workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => {
+ipcMain.handle('update-worker', async (event, workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, information) => {
     try {
         const exsitingWorker = await WorkerController.findWorkerById(workerId);
         if (exsitingWorker.resume !== '') {
@@ -338,7 +338,7 @@ ipcMain.handle('update-worker', async (event, workerId, firstName, lastName, bir
             const motivationLetterObject = await FileController.uploadFile(motivationLetter);
             motivationLetterId = motivationLetterObject.fileId;
         }
-        const worker = await WorkerController.updateWorker(workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resumeId, motivationLetterId)
+        const worker = await WorkerController.updateWorker(workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resumeId, motivationLetterId, information)
         return worker;
     } catch (error) {
         console.error('Error fetching worker:', error);

@@ -41,6 +41,7 @@ class WorkerDB {
                     bills: worker.bills,
                     resume: worker.resume,
                     motivationLetter: worker.motivationLetter,
+                    information: worker.information
                 }
             };
 

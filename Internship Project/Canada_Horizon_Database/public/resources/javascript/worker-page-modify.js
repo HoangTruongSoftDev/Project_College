@@ -15,7 +15,7 @@ const resumeCreateButton = document.getElementById('resumeCreateButton');
 
 const addMotivationLetter = document.getElementById('addMotivationLetter');
 const motivationLetterCreateButton = document.getElementById('motivationLetterCreateButton');
-
+const informationInput = document.getElementById('informationInput');
 let resumeId = '';
 let motivationLetterId = '';
 const idInput = document.getElementById('idInput');
@@ -75,6 +75,7 @@ async function findWorkerById() {
     billList = worker.bills;
     resumeId = worker.resume;
     motivationLetterId = worker.motivationLetter;
+    informationInput.value = worker.information;
 
     if (resumeId !== '') {
         try {
@@ -249,6 +250,7 @@ async function updateWorker() {
                                                     billList,
                                                     resumePath,
                                                     motivationLetterPath,
+                                                    informationInput.value.trim()
     );
     const result = await window.api.showMessageBoxAPI('Successfully', `Updating Worker Successfully!!!`, 'Message');
 }

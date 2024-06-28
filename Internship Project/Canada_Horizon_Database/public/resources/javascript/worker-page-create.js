@@ -9,7 +9,7 @@ const addressInput = document.getElementById('addressInput');
 const phoneNumberInput = document.getElementById('phoneNumberInput');
 const professionalDiplomasInput = document.getElementById('professionalDiplomasInput');
 const professionsInput = document.getElementById('professionsInput');
-
+const informationInput = document.getElementById('informationInput');
 let resumePath = '';
 let motivationLetterPath = '';
 
@@ -154,7 +154,8 @@ async function createWorker() {
         professionsList,
         billList,
         resumePath,
-        motivationLetterPath
+        motivationLetterPath,
+        informationInput.value.trim()
     );
     const result = await window.api.showMessageBoxAPI('Successfully', `Creating Worker Successfully!!!`, 'Message');
 
@@ -170,6 +171,7 @@ async function createWorker() {
     motivationLetterPath = '';
     addResume.value ='';
     addMotivationLetter.value = ''
+    informationInput.value = ''
 }
 
 const listProfessionalDiplomas = document.getElementById('listProfessionalDiplomas');

@@ -12,7 +12,7 @@ contextBridge.exposeInMainWorld('api', {
     getAdminByIdAPI: (adminId) => ipcRenderer.invoke('get-admin-by-id', adminId),
     deleteAdminAPI: (adminId) => ipcRenderer.invoke('delete-admin', adminId),
     createBillAPI: (service, price, payment) => ipcRenderer.invoke('create-bill', service, price, payment),
-    createEmployerAPI: (companyName, address, phoneNumber, professionalActivities, EIMT, bills) => ipcRenderer.invoke('create-employer', companyName, address, phoneNumber, professionalActivities, EIMT, bills),
+    createEmployerAPI: (companyName, address, phoneNumber, professionalActivities, EIMT, bills, information) => ipcRenderer.invoke('create-employer', companyName, address, phoneNumber, professionalActivities, EIMT, bills, information),
     getEmployerListAPI: () => ipcRenderer.invoke('get-employer-list'),
 
     showMessageBoxAPI: (title, message, type) => ipcRenderer.invoke('show-message-dialog', title, message, type),
@@ -25,7 +25,7 @@ contextBridge.exposeInMainWorld('api', {
     getEmployerListByCreatedDateAPI: (startDate, endDate) => ipcRenderer.invoke('get-employers-by-created-date', startDate, endDate),
     getEmployerByIdAPI: (employerId) => ipcRenderer.invoke('get-employer-by-id', employerId),
 
-    updateEmployerAPI: (employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills) => ipcRenderer.invoke('update-employer', employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills),
+    updateEmployerAPI: (employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills, information) => ipcRenderer.invoke('update-employer', employerId, companyName, address, phoneNumber, professionalActivities, EIMT, bills, information),
     deleteEmployerAPI: (employerId) => ipcRenderer.invoke('delete-employer', employerId),
 
     uploadFileAPI: (filePath) => ipcRenderer.invoke('upload-file', filePath),
@@ -36,8 +36,8 @@ contextBridge.exposeInMainWorld('api', {
     displayFileAPI: (filePath) => ipcRenderer.invoke('open-file-window', filePath),
     onDisplayFile: (callback) => ipcRenderer.on('display-file', (event, filePath) => callback(filePath)),
 
-    createWorkerAPI: (firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => ipcRenderer.invoke('create-worker', firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter),
-    updateWorkerAPI: (workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter) => ipcRenderer.invoke('update-worker', workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter),
+    createWorkerAPI: (firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, information) => ipcRenderer.invoke('create-worker', firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, information),
+    updateWorkerAPI: (workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, information) => ipcRenderer.invoke('update-worker', workerId, firstName, lastName, birthDate, address, phoneNumber, professionalDiplomas, professions, bills, resume, motivationLetter, information),
     deleteWorkerAPI: (workerId) => ipcRenderer.invoke('delete-worker', workerId),
 
 

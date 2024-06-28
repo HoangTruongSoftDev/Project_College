@@ -22,7 +22,7 @@ const addressInput = document.getElementById('addressInput');
 const phoneNumberInput = document.getElementById('phoneNumberInput');
 const professionalActivitiesInput = document.getElementById('professionalActivitiesInput');
 const idInput = document.getElementById('idInput');
-
+const informationInput = document.getElementById('informationInput');
 document.addEventListener('DOMContentLoaded', () => {
     const checkingUpdate = sessionStorage.getItem('modifiedEmployer');
     if (checkingUpdate === null) {
@@ -55,6 +55,7 @@ async function findEmployerById() {
     professionalActivitiesList = employer.professionalActivities;
     billList = employer.bills;
     idInput.value = employerId;
+    informationInput.value = employer.information;
     sessionStorage.setItem('modifiedEmployer', employerId);
     if (employer.EIMT === 'Yes') {
         document.querySelector('input[name="EIMTInput"][value="Yes"]').checked = true;
@@ -136,18 +137,9 @@ async function updateEmployer() {
     for (let i = 0; i < billList.length; i++) {
         billList[i].createdDate = new Date(billList[i].createdDate);
     }
-    let strBill = ''
-    billList.forEach((bill) => {
-        strBill += bill.service + ', ';
-    });
     
-    // const testing = await window.api.showMessageBoxAPI('Successfully', `
-    // ID: ${idInput.value} \n Company Name: ${companyNameInput.value.trim()} \n Address: ${addressInput.value.trim()}
-    // \n Phone Number ${phoneNumberInput.value.trim()} \n professionalActivitiesList: ${professionalActivitiesList} 
-    // \n EIMT: ${EIMTInput.value.trim()} \n Bills: ${strBill}
-    // `, 'Message');
     const modifiedEmployer = sessionStorage.getItem('modifiedEmployer');
-    const employer = await window.api.updateEmployerAPI(modifiedEmployer, companyNameInput.value.trim(), addressInput.value.trim(), phoneNumberInput.value.trim(), professionalActivitiesList, EIMTInput.value.trim(), billList);
+    const employer = await window.api.updateEmployerAPI(modifiedEmployer, companyNameInput.value.trim(), addressInput.value.trim(), phoneNumberInput.value.trim(), professionalActivitiesList, EIMTInput.value.trim(), billList, informationInput.value.trim());
     const result = await window.api.showMessageBoxAPI('Successfully', `Updating Employer Successfully!!!`, 'Message');
 }
 

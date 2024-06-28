@@ -8,18 +8,20 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
-    icon: path.join(__dirname, 'public', 'build-assests', 'logo.png'),
-    // removeMenu: true,
+    icon: path.join(__dirname,  ' icon.ico'),
+     removeMenu: true,
     // autoHideMenuBar: true,
-    minimizable: false, // Disable the minimize option
+    minimizable: true, // Disable the minimize option
     webPreferences: {
       nodeIntegration: false,
       enableRemoteModule: false,
       contextIsolation: true,
       webSecurity: false,
       preload: path.join(__dirname, '..', '..', '..', '..', 'server', 'preload.js')
-    }
+    },
+    show: false
   })
+  win.on("ready-to-show",win.show)
   win.maximize();
   // win.loadFile(path.join(__dirname, 'public', 'index.html'));
   win.loadFile(path.join(__dirname, 'public', 'login-page.html'));
